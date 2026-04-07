@@ -1,3 +1,18 @@
+---
+area: GOVERNANCE
+confidentiality: INTERNAL
+depends_on:
+- Blueprint.md
+last_updated: 2026-04-06
+owner: System Architect
+scope: UCR26
+status: ARCHIVED
+title: UCR26_Fase_3A_Marco_Operativo_Minimo.md
+version:
+  major: 1
+  minor: 0
+---
+
 # FASE 3A --- MARCO OPERATIVO MÍNIMO
 
 ## UCR 2026 · Sistema de Extracción Estructural

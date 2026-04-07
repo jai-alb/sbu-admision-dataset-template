@@ -1,3 +1,18 @@
+---
+area: GOVERNANCE
+confidentiality: INTERNAL
+depends_on:
+- UCR26_Fase_4B_Bank-System.md
+last_updated: 2026-04-06
+owner: System Architect
+scope: UCR26
+status: ARCHIVED
+title: UCR26_Fase_5A_Governance_Bank-Build.md
+version:
+  major: 1
+  minor: 0
+---
+
 # F5_Governance_Bank-Build.md
 
 ## Scope

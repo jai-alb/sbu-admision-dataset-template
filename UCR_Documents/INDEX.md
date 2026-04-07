@@ -1,4 +1,23 @@
+---
+area: ARCHITECTURE
+confidentiality: INTERNAL
+depends_on: []
+last_updated: 2026-04-06
+owner: System Architect
+scope: UCR26
+status: ARCHIVED
+title: INDEX.md
+version:
+  major: 1
+  minor: 0
+---
+
 # INDEX — axion-u-content-engine
+
+> **Introducción del Repositorio**  
+> Este proyecto constituye el núcleo técnico diferencial (Technical Core) de **sbu-admision**, una unidad estratégica de negocio (SBU) perteneciente al holding **Cyboring Technologies LLC**. 
+> 
+> El propósito central de este motor fue resolver la alta complejidad técnica de realizar la **extracción estructural** y el procesamiento del contenido intelectual de los exámenes de admisión universitarios (UCR/UNA). Mediante un modelo estricto de **Producción Industrial IA** operado bajo protocolo *Clean Room*, el sistema decodificó el mapa cognitivo oficial en una taxonomía cerrada de habilidades nucleares para asimilar patrones lógicos, abstrayendo dependencias de fuentes estáticas. El resultado es la síntesis de Propiedad Intelectual (IP) propietaria: un banco de preguntas dinámico, rigurosamente estructurado y enriquecido con metadatos, que funge como el principal activo defensible (SSoT) de la infraestructura formativa comercial.
 
 **Sistema:** UCR 2026 Content Engine  
 **Estado:** **CLOSED (ARCHIVED PRODUCTION SYSTEM)**  

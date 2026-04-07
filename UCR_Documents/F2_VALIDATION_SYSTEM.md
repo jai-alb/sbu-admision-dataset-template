@@ -1,3 +1,18 @@
+---
+area: VALIDATION
+confidentiality: INTERNAL
+depends_on:
+- F2_Explanation-System_Spec_v1.md
+last_updated: 2026-04-06
+owner: System Architect
+scope: UCR26
+status: ARCHIVED
+title: F2_VALIDATION_SYSTEM.md
+version:
+  major: 1
+  minor: 0
+---
+
 # F2 — Validation System
 
 Status: ACTIVE  

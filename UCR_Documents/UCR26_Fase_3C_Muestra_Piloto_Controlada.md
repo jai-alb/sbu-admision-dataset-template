@@ -1,3 +1,18 @@
+---
+area: VALIDATION
+confidentiality: INTERNAL
+depends_on:
+- UCR26_Fase_3B_Protocolo_Extraccion_Estructural.md
+last_updated: 2026-04-06
+owner: System Architect
+scope: UCR26
+status: ARCHIVED
+title: UCR26_Fase_3C_Muestra_Piloto_Controlada.md
+version:
+  major: 1
+  minor: 0
+---
+
 # FASE 3C --- MUESTRA PILOTO CONTROLADA
 
 ## UCR 2026 · Validación del Protocolo de Extracción
