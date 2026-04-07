@@ -66,35 +66,42 @@ version:
 
 ---
 
-## Capa 2: Datos y Core Assets (Absolute SSoT)
+## Capa 2: Árbol de Datos y Artefactos (UCR26_Content)
 **Ubicación:** `/UCR26_Content/`
 
-### Output Final Operativo:
-- **`03_ITEM_PRODUCTION/bank_v1_enriched.json`** → **FINAL DATASET (SSoT)**  
-  El banco final compilado que actúa como única fuente de verdad validada. Contiene la totalidad de los ítems cognitivos (`252`) y es el único archivo listo para consumo runtime. No se permite regeneración ni modificación.
+Este mapa detalla estrictamente la estructura estática consolidada (SSoT) tras finalizar la ejecución inmutable del motor. Todos los objetos en esta capa asumen su nomenclatura estructural basándose en el modelo fundacional definido en `UCR26_Fase_3A_Marco_Operativo_Minimo.md`.
 
-### Recursos Raw y Estructurales (Históricos):
-
-| Subdirectorio / Archivo | Descripción |
-|---|---|
-| **`00_SOURCE_RAW/UCR_2025_V1.md`** | Fuente raw del examen UCR 2025 en formato Markdown. Insumo estricto original para extracción estructural. Inmutable. |
-| **`01_EXTRACTION_STRUCTURAL/UCR_2025_V1.md`** | Extracción estructural y clasificación de tipología cognitiva ítem por ítem del examen UCR_2025_V1 siguiendo F3A. |
-| **`01_EXTRACTION_STRUCTURAL/UCR_2025_V3.md`** | Segunda fuente independiente utilizada para Cross-Source Convergence Check validado transversalmente. |
-| **`02_PATTERN_REGISTRY/MASTER_Structural_Patterns.md`** | Registro maestro base con leyes y patrones estructurales lógicos detectados repetidamente (Placeholder base; reglas se embebieron por pipeline). |
-| **`03_ITEM_PRODUCTION/BATCHES/`** | Directorio con evidencia transitoria de ejecución temporal por automatización (Not SSoT). |
-
----
-
-## Capa 3: Ejecución, Validación y Gobernanza
-**Ubicación:** `/UCR26_Content/04_VALIDATION/` y `/UCR26_Content/05_GOVERNANCE/`  
-*Propósito: Rastrear decisiones operativas de modificación masiva y justificar alteraciones métricas sobre la marcha.*
-
-| Archivo | Descripción |
-|---|---|
-| **`04_VALIDATION/Cross_Review_Log.md`** | Log de evidencia de revisión cruzada inter-agente durante la extracción de datos inicial. Los conflictos relevantes terminaban en el Decision Log. |
-| **`05_GOVERNANCE/Decision_Log.md`** | Registro oficial y de máxima autoridad humana sobre gobernanza. Contiene overriding estructurado (ej. ajuste oficial GOV-004 validando el tamaño del banco a 252 ítems por recortes estructurales vs targets originales). |
-| **`05_GOVERNANCE/Version_Log.md`** | Historial progresivo de los estados de arquitectura (ej. v1.5: cierre definitivo, pipeline frozen, SSoT declarado). |
-| **`05_GOVERNANCE/UCR_2025_V1_aggregates_v2.md`** | Resumen cuantitativo generado sobre métricas extraídas en fases investigativas. |
-| **`05_GOVERNANCE/UCR_2025_V1_comparison_FINAL.md`** | Registro final sobre la comparación estructural (Cross-Source Convergence Check evidenciado). |
-| **`05_GOVERNANCE/UCR_2025_V1_dataset_validation.md`** | Validación comprobada de cumplimiento de fase inicial (3B/3C). |
-| **`05_GOVERNANCE/UCR_2025_V1_pilot_selection.md`** | Elección y registro explícito que determinó por qué un examen piloto específico operaría como muestra base en las validaciones tempranas. |
+```text
+UCR26_Content/
+├── 00_SOURCE_RAW/
+│   ├── UCR_2025_V1.md                            # Insumo estricto original para extracción. Inmutable.
+│   └── UCR_2025_V3.pdf                           # Examen independiente usado para alineación visual cruzada.
+├── 01_EXTRACTION_STRUCTURAL/
+│   ├── UCR_2025_V1.md                            # Primer vector: Clasificación de tipología cognitiva ítem por ítem.
+│   └── UCR_2025_V3.md                            # Segundo vector: Validación de consistencia transversal (Convergence Check).
+├── 02_PATTERN_REGISTRY/
+│   └── MASTER_Structural_Patterns.md             # Base maestra histórica de patrones lógicos subyacentes.
+├── 03_ITEM_PRODUCTION/
+│   ├── BATCHES/                                  # Lotes pre-calculados (e.g. batch_001.json). Output transitorio evidencial.
+│   ├── DRAFT/                                    # Recursos de trabajo estático temporal creados en pipeline.
+│   ├── REJECTED/                                 # Almacenamiento frío de ítems defectuosos bloqueados por QA heurístico.
+│   ├── SYSTEM_BOOTSTRAP/                         # Respuestas cognitivas de calentamiento, logs de inicialización inerte.
+│   ├── VALIDATED/                                # Aprobaciones puras resultantes post-Adversarial Validation.
+│   ├── _deprecated/                              # Reciclaje histórico y dumps analíticos previos.
+│   ├── audit_bank.js                             # [SCRIPT] Node.js automatizado para control volumétrico y conteo.
+│   ├── check_keys.js                             # [SCRIPT] Utilidad Node.js para integridad llave-valor de JSON strings.
+│   ├── final_audit.js                            # [SCRIPT] Inspector profundo JS exigido antes del pasaje a Fase 5.
+│   ├── inspect_pool.js                           # [SCRIPT] Visor en-memoria de segmentos lógicos (RCV vs RCM).
+│   └── bank_v1_enriched.json                     # [ABSOLUTE SSoT] Dataset compilado inmutable de 252 ítems listos para platform runtime.
+├── 04_VALIDATION/
+│   ├── audit.ps1                                 # [SCRIPT] PowerShell crawler para auditoría y verificación de hashes en Windows.
+│   ├── audit_script.py                           # [SCRIPT] Python JSON parser y validador algorítmico estricto.
+│   └── Cross_Review_Log.md                       # Track record de revisión cruzada de agentes y resolución semántica.
+└── 05_GOVERNANCE/
+    ├── Decision_Log.md                           # SSoT de Gobernanza y directivas históricas (e.g. ajustes de cuotas [GOV-XXX]).
+    ├── Version_Log.md                            # Timeline histórico y sellos de aprobación para estados de arquitectura.
+    ├── UCR_2025_V1_aggregates_v2.md              # Datos de convergencia sobre exámenes experimentales.
+    ├── UCR_2025_V1_comparison_FINAL.md           # Reporte de Cierre: Cross-Source Convergence Check entre exámenes.
+    ├── UCR_2025_V1_dataset_validation.md         # Conformidad probatoria del cumplimiento 3B/3C sobre la muestra controlada.
+    └── UCR_2025_V1_pilot_selection.md            # Razonamiento metodológico de la selección del piloto evaluado.
+```
