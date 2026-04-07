@@ -1,0 +1,579 @@
+{
+  "batch_id": "BATCH_016",
+  "generated_at": "2026-03-24T17:04:14-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_1",
+  "target_items": 10,
+  "pipeline_status": "ACTIVE — sim_1 accumulation continues",
+  "segment_note": "sim_1_count pasa de 15 a 25. Contribuye exclusivamente a sim_1_count.",
+  "skill_plan": {
+    "H2_RCM": 2,
+    "H3_RCV": 1,
+    "H4_RCM": 2,
+    "H5_RCV": 3,
+    "H6_RCM": 1,
+    "H7_RCM": 1,
+    "macro_RCV": 4,
+    "macro_RCM": 6,
+    "note": "Calibrado contra STRAT residual: después de B013, faltan H2:5, H3:4, H4:4, H5:5, H6:4, H7:2 en 30 items restantes. Este batch aporta H2:2, H3:1, H4:2, H5:3, H6:1, H7:1."
+  },
+  "difficulty_plan": {
+    "nivel_1": 3,
+    "nivel_2": 5,
+    "nivel_3": 2,
+    "note": "Mantiene distribución progresiva. Acumulado B013+B016: N1:7, N2:12, N3:6 / 25 items."
+  },
+  "h1_plan": {
+    "target_pct_alta": "30-40%",
+    "note": "3-4 items con H1=alta. Acumulado sim_1: ~33% after this batch."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B016",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "c = precio cuaderno",
+        "equation": "5c + 3(200) = 2200 → 5c = 1600 → c = 320",
+        "correct_option": "C",
+        "correct_answer_value": 320,
+        "verification": "5(320) + 3(200) = 1600 + 600 = 2200 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Se compran 5 cuadernos y 3 lápices. Cada lápiz cuesta ₡200 y el total de la compra es ₡2 200. ¿Cuánto cuesta cada cuaderno?",
+      "opciones": {
+        "A": "₡280",
+        "B": "₡300",
+        "C": "₡320",
+        "D": "₡340"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea c = precio del cuaderno. Total: 5c + 3(200) = 2200 → 5c + 600 = 2200 → 5c = 1600.",
+        "paso_2": "c = 1600 ÷ 5 = 320. ✓",
+        "paso_critico": "Calcular primero el costo fijo de los lápices (3×200=600) y restarlo del total antes de dividir entre 5.",
+        "error_tipico": "A (₡280): 5c=1400→c=280, resta solo 2 lápices. B (₡300): 5c=1500→c=300, no suma el tercer lápiz. D (₡340): 5c=1700→c=340, suma en lugar de restar el costo de los lápices."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 1,
+        "estimated_time_sec": 70,
+        "error_type": "Modelado incorrecto",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "5c+600=2200→c=320=C ✓. Verif: 5(320)+3(200)=2200 ✓. A solo 2 lápices. B no suma tercer lápiz. D suma costo. H2/N1/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: ecuación lineal con costo fijo y variable ✓. N1: 1 paso operacional ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto cuadernos/lápices — distinto de B013 (mangos, vendedora, edades) y diagnóstico (arroz/frijoles, boletos-cine, horas-laborales, descuento-porcentual)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B016",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: vacuna se formula cada año para adaptarse; segunda: especialistas recomiendan vacunarse anualmente → consecuencia directa de la formulación anual",
+        "connector_type": "consecuencial",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La vacuna contra la gripe se formula cada año para adaptarse a las cepas virales predominantes de cada temporada. __________, los especialistas en salud pública recomiendan vacunarse anualmente.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Por esta razón",
+        "C": "No obstante",
+        "D": "En contraste"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La primera oración explica por qué la vacuna cambia cada año (adaptación a cepas). La segunda enuncia la recomendación que se deriva de ese hecho: vacunarse anualmente.",
+        "paso_2": "'Por esta razón' (B) expresa que la recomendación es la consecuencia lógica directa de la formulación anual. ✓",
+        "paso_critico": "El segundo enunciado es la respuesta práctica esperada dada la información de la primera. No hay contraste ni contradicción.",
+        "error_tipico": "A, C y D (adversativos/contrastivos): implicarían que la recomendación de vacunarse existe A PESAR de que la fórmula cambia — ilógico. La trampa es activar el modo adversativo al leer 'se formula cada año' como si fuera una limitación."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 1,
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B único consecuencial: formulación anual → recomendación derivada. A/C/D adversativos (ilógicos en este contexto). H5/N1/RCV ✓. N1: relación causal directa, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto vacuna-gripe/salud-pública — distinto de todos los B013 H5 (parques/municipios, exploración-espacial, invierno-patógenos, contrarrecíprocos) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B016",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "tasa: 320 g / 4 porciones = 80 g/porción",
+        "step_2": "10 porciones × 80 g = 800 g",
+        "correct_option": "C",
+        "correct_answer_value": 800,
+        "verification": "320/4 = 800/10 = 80 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Para preparar 4 porciones de un pastel se necesitan 320 gramos de harina. Si se mantiene la misma proporción, ¿cuántos gramos de harina se necesitan para preparar 10 porciones?",
+      "opciones": {
+        "A": "720",
+        "B": "750",
+        "C": "800",
+        "D": "840"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 320 g ÷ 4 porciones = 80 g por porción.",
+        "paso_2": "Para 10 porciones: 80 × 10 = 800 g. ✓",
+        "paso_critico": "Calcular la tasa unitaria (gramos por porción) antes de escalar al nuevo volumen.",
+        "error_tipico": "A (720): 320 + (320/4)×(10-4) = 320+480... error de escalado incompleto. B (750): error de tasa (75 g/porción). D (840): 320 × (10/4) redondeado incorrectamente o suma de diferencia errónea."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 1,
+        "estimated_time_sec": 60,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "80×10=800=C ✓. Verif: 320/4=800/10=80 ✓. A escalado incompleto. B tasa incorrecta. D error de redondeo o suma errónea. H6/N1/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad ✓. N1: tasa directa + aplicación, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto receta-pastel/harina — distinto de B013 (autobús/vel, fábrica/eficiencia) y diagnóstico (páginas-lectura, laboratorio-cómputo, ingenieros-proyectos, líneas-producción)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B016",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42",
+        "differences": "4, 6, 8, 10, 12 (crecen de 2 en 2)",
+        "correct_option": "B",
+        "correct_answer_value": 42,
+        "verification": "30+12=42; diferencias: 4,6,8,10,12 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 2, 6, 12, 20, 30, ___?",
+      "opciones": {
+        "A": "40",
+        "B": "42",
+        "C": "44",
+        "D": "38"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos consecutivos: 6−2=4, 12−6=6, 20−12=8, 30−20=10. Las diferencias crecen de 2 en 2.",
+        "paso_2": "Siguiente diferencia: 12. Siguiente término: 30 + 12 = 42. ✓",
+        "paso_critico": "La regularidad no está entre los términos directamente, sino entre sus diferencias (crecen aritméticamente de 2 en 2).",
+        "error_tipico": "A (40): 30+10=40, repite la última diferencia (10) sin incrementarla. C (44): 30+14=44, incrementa la diferencia en 4 en lugar de 2. D (38): 30+8=38, retrocede en el incremento."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 2,
+        "estimated_time_sec": 115,
+        "error_type": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Diferencias 4,6,8,10→siguiente=12; 30+12=42=B ✓. Patrón n(n+1) verificado ✓. A repite última diferencia. C incrementa de 4. D retrocede. H4/N2/RCM ✓. Skill H4=Generalización-y-Patrones: detección de patrón cuadrático vía diferencias ✓. N2: identificar regularidad en diferencias (2 pasos de análisis) ✓. H1=media ✓. simulation_id=sim_1 ✓. Regla diferencias-+2 distinta de B013 (×2+3) y B015-diagnostic (diferencias-×2, segundo orden)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B016",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "la separación doméstica de residuos reduce el impacto ambiental al facilitar el reciclaje y aliviar la presión sobre rellenos sanitarios",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La separación de residuos en el hogar contribuye significativamente a reducir la cantidad de desechos que llegan a los rellenos sanitarios. Al clasificar el vidrio, el papel y los materiales plásticos, las familias facilitan su posterior procesamiento industrial. Este hábito, cuando se generaliza, disminuye la presión sobre los ecosistemas y prolonga la vida útil de los rellenos.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los rellenos sanitarios son la principal causa de contaminación ambiental en las ciudades modernas.",
+        "B": "La separación doméstica de residuos reduce el impacto ambiental al facilitar el reciclaje y aliviar los rellenos.",
+        "C": "Las familias que clasifican sus residuos reciben incentivos económicos de las autoridades municipales.",
+        "D": "El vidrio y los plásticos son los únicos materiales que pueden reciclarse eficientemente a escala industrial."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto presenta: acción (separar residuos), mecanismo (facilita procesamiento industrial), efecto (reduce presión sobre ecosistemas y prolonga rellenos).",
+        "paso_2": "B integra los tres elementos: la acción (separación doméstica), el mecanismo (facilitar reciclaje) y el efecto (aliviar rellenos). ✓",
+        "paso_critico": "La idea central conecta la acción específica del hogar con su efecto sistémico ambiental. No se trata solo del problema de los rellenos ni solo del reciclaje.",
+        "error_tipico": "A introduce 'principal causa de contaminación' — generalización excesiva que el texto no sostiene. C introduce 'incentivos económicos' — no mencionados. D introduce exclusividad (únicos materiales) — el texto no establece jerarquía entre materiales."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 105,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: acción+mecanismo+efecto integrados. A generalización excesiva. C incentivos no en texto. D exclusividad no sostenida. H3/N2/RCV ✓. Skill H3=Síntesis-y-Estructura-Global: identificación de idea central multi-componente ✓. N2: síntesis de los tres elementos del argumento ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto reciclaje-doméstico/rellenos — distinto de B013 (lectura-sostenida, pensiones, tecnología-neutral) y diagnóstico (sueño-adultos, urbanismo, información-parálisis)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B016",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: animales nocturnos desarrollan adaptaciones visuales; segunda: TAMBIÉN poseen capacidades sensoriales alternativas → aditivo, no contrastivo",
+        "connector_type": "aditivo",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Los animales nocturnos desarrollan adaptaciones visuales extraordinarias para orientarse en la oscuridad. __________, muchas de estas especies poseen capacidades sensoriales alternativas —como el olfato agudizado o la ecolocalización— igualmente sofisticadas.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Además",
+        "C": "Por el contrario",
+        "D": "No obstante"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El primer enunciado afirma que los animales nocturnos desarrollan adaptaciones visuales. El segundo agrega que TAMBIÉN poseen otras capacidades sensoriales de igual sofisticación.",
+        "paso_2": "'Además' (B) introduce información adicional que complementa lo dicho, sin invalidar ni contradecir la primera afirmación. ✓",
+        "paso_critico": "El segundo enunciado suma información, no la contradice. La palabra 'igualmente sofisticadas' confirma que ambas capacidades coexisten.",
+        "error_tipico": "A, C y D (adversativos): implicarían que las capacidades alternativas se dan EN LUGAR DE o A PESAR DE las visuales — pero el texto dice que tienen ambas. La trampa es leer 'alternativas' como 'en vez de'."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B único aditivo: capacidades alternativas + visuales coexisten. A/C/D adversativos (implican sustitución, no coexistencia). H5/N2/RCV ✓. N2: identificar relación aditiva vs. adversativa — la trampa es 'alternativas' activando lectura de contraste ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto animales-nocturnos/sentidos — distinto de todos los H5 anteriores en B013 y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B016",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "h = horas trabajadas",
+        "equation": "15000h + 25000 = 85000 → 15000h = 60000 → h = 4",
+        "correct_option": "B",
+        "correct_answer_value": 4,
+        "verification": "15000(4) + 25000 = 60000 + 25000 = 85000 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un fontanero cobra ₡15 000 por hora de trabajo más ₡25 000 por concepto de visita técnica. Si el costo total del servicio fue ₡85 000, ¿cuántas horas trabajó el fontanero?",
+      "opciones": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea h = horas trabajadas. Ecuación: 15000h + 25000 = 85000 → 15000h = 60000.",
+        "paso_2": "h = 60000 ÷ 15000 = 4 horas. ✓ Verificación: 15000(4) + 25000 = 85000 ✓.",
+        "paso_critico": "Identificar que el costo de visita (₡25 000) es un costo FIJO que debe restarse del total antes de dividir entre la tarifa horaria.",
+        "error_tipico": "A (3): 85000÷25000≈3, divide el total entre el costo de visita en lugar de la tarifa horaria. C (5): 85000÷15000≈5.67≈5, divide el total entre la tarifa sin restar el costo fijo. D (6): error aritmético en el despeje."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "15000h+25000=85000→h=4=B ✓. Verif: 85000 ✓. A divide total entre costo fijo. C no resta costo fijo. D error aritmético. H2/N2/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: ecuación con costo fijo + variable ✓. N2: identificar estructura costo-fijo/variable antes de despejar ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto fontanero/tarifa-fija — distinto de B013 (mangos, vendedora, edades) y diagnóstico (arroz/frijoles, horas-laborales, boletos-cine, descuento)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B016",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: consumo de ultraprocesados ha aumentado; segunda: tasas de obesidad también escalaron en el MISMO período → co-ocurrencia paralela temporal",
+        "connector_type": "aditivo-paralelo",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El consumo de ultraprocesados ha aumentado notablemente en los últimos veinte años. __________, las tasas de obesidad y enfermedades metabólicas también han escalado de forma significativa durante el mismo período.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "No obstante",
+        "C": "Asimismo",
+        "D": "Por el contrario"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración describe el aumento del consumo. La segunda describe un fenómeno paralelo que ha ocurrido simultáneamente ('durante el mismo período'). No hay contraste ni consecuencia explícita.",
+        "paso_2": "'Asimismo' (C) registra que un segundo hecho ha ocurrido de manera análoga en el mismo período — co-ocurrencia paralela. ✓",
+        "paso_critico": "El texto no establece causalidad explícita (no dice 'por esta razón') ni contraste. El 'también' en la segunda oración confirma adición paralela, no contraste.",
+        "error_tipico": "A, B y D (adversativos): implicarían que la obesidad aumentó A PESAR del aumento de ultraprocesados — ilógico. La trampa es que 'también escalaron' puede confundirse con un enunciado que necesita contraste, cuando en realidad suma."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único aditivo-paralelo: co-ocurrencia temporal explícita ('mismo período') + 'también'. A/B/D adversativos (implican contraste ausente). H5/N2/RCV ✓. N2: desambiguación adición paralela vs. contraste — trampa es 'también escalaron' ✓. H1=alta: la distinción correlación-paralela vs. causalidad requiere inferencia sobre la relación argumentativa ✓. simulation_id=sim_1 ✓. Contexto ultraprocesados/obesidad — distinto de B013 H5 items y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B016",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "alternating rule: +1 then ×2: 3→4(+1)→8(×2)→9(+1)→18(×2)→19(+1)→38(×2)",
+        "correct_option": "B",
+        "correct_answer_value": 38,
+        "verification": "19 × 2 = 38 ✓; sequence verified: 3,4,8,9,18,19,38",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 3, 4, 8, 9, 18, 19, ___?",
+      "opciones": {
+        "A": "36",
+        "B": "38",
+        "C": "20",
+        "D": "40"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Analizar las operaciones entre términos consecutivos: 3→4(+1), 4→8(×2), 8→9(+1), 9→18(×2), 18→19(+1), 19→?(×2).",
+        "paso_2": "La regla alterna: +1, ×2, +1, ×2... Siguiente operación: ×2. Entonces: 19 × 2 = 38. ✓",
+        "paso_critico": "Reconocer que no hay una sola regla uniforme — la secuencia alterna entre dos operaciones distintas (+1 y ×2).",
+        "error_tipico": "A (36): 18×2=36, duplica el término anterior equivocado (18 en lugar de 19). C (20): 19+1=20, aplica +1 en lugar de ×2 (no detecta la alternancia). D (40): 20×2=40, aplica +1 y luego ×2 al resultado erróneo."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 3,
+        "estimated_time_sec": 175,
+        "error_type": "Generalización excesiva",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "19×2=38=B ✓. Verif: 3,4,8,9,18,19,38 — regla alterna +1/×2 ✓. A duplica término equivocado. C aplica +1 (no detecta alternancia). D encadena error. H4/N3/RCM ✓. Skill H4=Generalización-y-Patrones: patrón alternante dual (+1/×2) ✓. N3: regla no explícita, multi-nivel, trampa fuerte (solo se ve un +1 al final) ✓. H1=alta ✓. simulation_id=sim_1 ✓. Patrón alternante — distinto de B013 (×2+3), B016-ítem4 (n(n+1)), B015 diagnóstico (diferencias×2 segundo orden)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B016",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "rombo con diagonales d1=8 y d2=6",
+        "step_2": "área = (d1 × d2) / 2 = (8 × 6) / 2 = 48 / 2 = 24 cm²",
+        "correct_option": "C",
+        "correct_answer_value": 24,
+        "verification": "8×6/2 = 24 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un rombo tiene diagonales que miden 8 cm y 6 cm respectivamente. ¿Cuál es el área del rombo?",
+      "opciones": {
+        "A": "14 cm²",
+        "B": "18 cm²",
+        "C": "24 cm²",
+        "D": "48 cm²"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El área de un rombo se calcula con sus diagonales: Área = (d₁ × d₂) ÷ 2.",
+        "paso_2": "Área = (8 × 6) ÷ 2 = 48 ÷ 2 = 24 cm². ✓",
+        "paso_critico": "Identificar que la fórmula del rombo usa las diagonales divididas entre 2, a diferencia del rectángulo (base × altura). La figura implícita a visualizar es que las diagonales se bisectan perpendicularmente.",
+        "error_tipico": "A (14 cm²): 8 + 6 = 14, suma las diagonales en lugar de multiplicarlas. B (18 cm²): (8+6)÷2 × ... error de fórmula. D (48 cm²): 8 × 6 = 48, multiplica sin dividir entre 2 — confunde con fórmula de rectángulo."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "difficulty": 2,
+        "estimated_time_sec": 120,
+        "error_type": "Error de cálculo",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "(8×6)/2=24=C ✓. A suma diagonales. B fórmula errónea. D multiplica sin /2 (confunde rectángulo). H7/N2/RCM ✓. Skill H7=Análisis-Espacial-y-Geométrico: propiedad geométrica rombo (diagonales perpendiculares bisectrices → área=(d1×d2)/2) en figura implícita ✓. N2: 2 pasos (identificar fórmula rombo + calcular) ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto rombo/diagonales — distinto de B013 (triángulo-Pitágoras-perímetro) y B014 diagnóstico (cuadrado-círculo-inscrito) y B015 (rectángulo-área)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_016",
+    "item_type": "simulation",
+    "simulation_id": "sim_1",
+    "total_generated": 10,
+    "approved": 10,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_1": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 2,
+      "H3": 1,
+      "H4": 2,
+      "H5": 3,
+      "H6": 1,
+      "H7": 1,
+      "H2_note": "Items 1, 7",
+      "H3_note": "Item 5",
+      "H4_note": "Items 4, 9",
+      "H5_note": "Items 2, 6, 8",
+      "H6_note": "Item 3",
+      "H7_note": "Item 10"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 5,
+      "nivel_3": 2,
+      "nivel_1_items": "1 (H2), 2 (H5), 3 (H6)",
+      "nivel_2_items": "4 (H4), 5 (H3), 6 (H5), 7 (H2), 8 (H5), 10 (H7)",
+      "nivel_3_items": "9 (H4)"
+    },
+    "macro_area_distribution": {
+      "RCV": 4,
+      "RCM": 6,
+      "RCV_items": "2 (H5), 5 (H3), 6 (H5), 8 (H5)",
+      "RCM_items": "1 (H2), 3 (H6), 4 (H4), 7 (H2), 9 (H4), 10 (H7)"
+    },
+    "h1_distribution": {
+      "baja": 3,
+      "media": 5,
+      "alta": 2,
+      "pct_alta": 0.300,
+      "constraint": "30% ✓ — mínimo del rango 30-40% para sim_1"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "2 uses (items 1, 7)",
+      "T_H3_RCV_L2_01": "1 use (item 5)",
+      "T_H4_RCM_L2_01": "2 uses (items 4, 9)",
+      "T_H5_RCV_L2_01": "3 uses (items 2, 6, 8)",
+      "T_H6_RCM_L2_01": "1 use (item 3)",
+      "T_H7_RCM_L2_01": "1 use (item 10)",
+      "all_templates_active": true
+    },
+    "sim_1_accumulation": {
+      "sim_1_count_before": 15,
+      "items_added": 10,
+      "sim_1_count_after": 25,
+      "sim_1_target": 45,
+      "sim_1_remaining": 20,
+      "status": "in_progress"
+    },
+    "cumulative_sim_1_skill_tracking": {
+      "B013_contribution": {"H2":3,"H3":3,"H4":1,"H5":5,"H6":2,"H7":1},
+      "B016_contribution": {"H2":2,"H3":1,"H4":2,"H5":3,"H6":1,"H7":1},
+      "cumulative_25": {"H2":5,"H3":4,"H4":3,"H5":8,"H6":3,"H7":2},
+      "strat_target_45": {"H2":8,"H3":7,"H4":5,"H5":10,"H6":6,"H7":3},
+      "remaining_20": {"H2":3,"H3":3,"H4":2,"H5":2,"H6":3,"H7":1}
+    }
+  }
+}

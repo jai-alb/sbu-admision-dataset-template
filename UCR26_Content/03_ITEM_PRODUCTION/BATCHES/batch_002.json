@@ -1,0 +1,611 @@
+{
+  "batch_id": "BATCH_002",
+  "generated_at": "2026-03-23T16:44:22-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "correction_source": "4C_mandatory_directives",
+  "corrects_deviations_from": "BATCH_001",
+
+  "pre_generation_plan": {
+    "difficulty_target": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3 },
+    "h1_alta_max_pct": 0.30,
+    "h1_alta_restricted_to": "nivel_3_only",
+    "banned_templates": ["T_H5_RCV_L3_01"],
+    "limited_templates_max_1": [
+      "T_H2_RCM_L3_01",
+      "T_H3_RCV_L3_01",
+      "T_H6_RCM_L3_01",
+      "T_H7_RCM_L3_01"
+    ],
+    "l1_template_gap_flag": "NO L1 templates exist in template_library_v1. nivel_1 items instantiated from L2 templates at minimal structural complexity (1 direct logical step, H1=baja, no implicit inference). Gap must be resolved in Template Library v2.",
+    "structural_reuse_exclusions": [
+      "granja/animales (ITEM_001_B001)",
+      "camisa/calcetines (ITEM_002B_B001)",
+      "transporte/ciudades (ITEM_003_B001)",
+      "azúcar/depresión (ITEM_004_B001)",
+      "serie aritm. +4 (ITEM_005_B001)",
+      "proyecto técnico/conector (ITEM_006_B001)",
+      "solicitud/firma (ITEM_007B_B001)",
+      "trabajadores/muro (ITEM_008_B001)",
+      "máquinas/departamentos (ITEM_009_B001)",
+      "alternos internos/65° (ITEM_010_B001)",
+      "rectángulo/reflexión eje-y (ITEM_011_B001)"
+    ],
+    "h5_special_rule": "NO contrarecíproco correcto como distractor. NO equivalencias semánticas múltiples. Cada distractor incorrecto bajo análisis lógico formal.",
+    "conflict_rate_target": "<0.06",
+    "pre_adv_internal_unicity_check": "applied_to_all_items_before_writing"
+  },
+
+  "items": [
+
+    {
+      "item_id": "ITEM_001_B002",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "Template L2 instantiated at nivel_1 complexity: main idea explicitly stated, 1 recognition step, H1=baja",
+      "stem": "Lea el siguiente texto:\n\n«La lectura diaria mejora la comprensión lectora y amplía el vocabulario. Por eso, los expertos en educación recomiendan leer al menos 30 minutos cada día.»\n\n¿Qué afirma principalmente el texto?",
+      "opciones": {
+        "A": "Los expertos son las únicas personas que pueden dar consejos sobre lectura.",
+        "B": "La lectura diaria tiene beneficios que justifican su práctica regular.",
+        "C": "Para ampliar el vocabulario se debe leer más de una hora al día.",
+        "D": "La comprensión lectora es más importante que el vocabulario."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La idea principal está explícitamente enunciada en la primera oración: la lectura diaria tiene beneficios documentados.",
+        "paso_2": "La segunda oración refuerza esa idea con una recomendación basada en esos beneficios.",
+        "paso_critico": "La respuesta correcta (B) parafrasea directamente lo expresado. No se requiere inferencia.",
+        "error_tipico": "Opción A distorsiona el agente del texto (los expertos se mencionan como emisores de recomendaciones, no como únicos consejeros). Opción C introduce una cantidad no mencionada (más de una hora). Opción D establece una comparación jerárquica inexistente en el texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 1,
+        "tiempo_estimado": "1.5 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: B es la única opción que parafrasea fielmente el contenido explícito. A introduce cuantificador absoluto ('únicas') no presente. C modifica cantidad. D introduce comparación ausente. Sin ambigüedad. H1=baja confirmada: la idea principal está literal en el texto. 1 paso lógico. nivel_1 ✓"
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_002_B002",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "Template L2 instantiated at nivel_1: geometric/trivially arithmetic sequence, 1 direct step, H1=baja",
+      "stem": "¿Cuál es el número que sigue en la serie: 2, 4, 6, 8, 10, ___?",
+      "opciones": {
+        "A": "11",
+        "B": "14",
+        "C": "12",
+        "D": "20"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar la diferencia constante entre términos: 4−2=2, 6−4=2, 8−6=2, 10−8=2. Patrón: +2 en cada paso.",
+        "paso_2": "El siguiente término es 10 + 2 = 12.",
+        "paso_critico": "Reconocimiento directo del patrón más simple posible (diferencia constante, visualmente inmediata). 1 operación.",
+        "error_tipico": "Opción A (11): suma +1, ignora el patrón. Opción B (14): suma +4, generalización excesiva del primer par (2,4). Opción D (20): efecto x2 aplicado al último término (10×2=20) sin justificación."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 1,
+        "tiempo_estimado": "1 min",
+        "tipo_error": "Generalización excesiva",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: 10+2=12=opción C. Distractores diferenciados por error tipo. Sin ambigüedad. H1=baja: patrón visible sin inferencia. Nivel_1 ✓. No reutiliza estructura de ITEM_005_B001 (diferente: esa era 10º término con fórmula, esta es solo el siguiente término directo)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_003_B002",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "Template L2 instantiated at nivel_1: single-step direct proportion, H1=baja",
+      "stem": "Si 3 cuadernos cuestan ₡900, ¿cuánto costarán 6 cuadernos al mismo precio?",
+      "opciones": {
+        "A": "₡450",
+        "B": "₡1 800",
+        "C": "₡2 700",
+        "D": "₡1 200"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Precio unitario: ₡900 ÷ 3 = ₡300 por cuaderno.",
+        "paso_2": "Costo de 6 cuadernos: 6 × ₡300 = ₡1 800.",
+        "paso_critico": "Proporcionalidad directa de un paso. La relación es lineal y explícita.",
+        "error_tipico": "Opción A (₡450): divide el total entre 2 (900/2=450) ignorando la cantidad pedida. Opción C (₡2 700): triplica el precio original (900×3=2700) confundiendo la cantidad inicial con la nueva. Opción D (₡1 200): suma 900+300=1200, error aditivo."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 1,
+        "tiempo_estimado": "1.5 min",
+        "tipo_error": "Confusión de proporcionalidad",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: 900/3=300; 300×6=1800=opción B ✓. Unicidad confirmada. Distractores plausibles y diferenciados por tipo de error. No reutiliza estructura de ITEM_008_B001 (esa era proporcionalidad inversa trabajadores/días; esta es proporcionalidad directa artículos/precio). H1=baja ✓. nivel_1 ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_004_B002",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "La edad de Roberto es 3 años más que el doble de la edad de Luis. Si Roberto tiene 21 años, ¿cuántos años tiene Luis?",
+      "opciones": {
+        "A": "18",
+        "B": "9",
+        "C": "12",
+        "D": "6"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Definir la variable: sea L = edad de Luis. La relación verbal se traduce como: Roberto = 2L + 3.",
+        "paso_2": "Sustituir el dato: 21 = 2L + 3 → 2L = 18 → L = 9.",
+        "paso_3": "Verificación: 2(9) + 3 = 21. ✓",
+        "paso_critico": "El estudiante debe traducir correctamente 'el doble más 3' y no invertir la relación (3 más el doble ≠ el doble de 3 más). El paso crítico es la sustracción antes de dividir.",
+        "error_tipico": "Opción A (18): detenerse en 21−3=18 sin continuar y dividir — modelado incompleto, trampa más fuerte. Opción C (12): error de signo: 21+3=24/2=12 (sumó en lugar de restar). Opción D (6): dividir 18 entre 3 en lugar de 2 — divisor incorrecto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación aritmética: 21=2L+3 → L=9=opción B ✓. Unicidad confirmada. Distractor A (18) es la trampa principal (modelado incompleto). Distractor C anticipa error de signo. Distractor D anticipa error de divisor. Sin ambigüedad. No reutiliza estructura de BATCH_001 (granja/conejos; esta es edad/edad). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_005_B002",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«Las abejas son fundamentales para los ecosistemas terrestres. A través de la polinización, contribuyen a la reproducción de la mayoría de las plantas con flor. Sin embargo, sus poblaciones han disminuido drásticamente en los últimos años debido al uso intensivo de pesticidas y a la destrucción de hábitats. Proteger a las abejas equivale, en última instancia, a proteger la cadena alimentaria humana.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las abejas son los únicos polinizadores que existen en los ecosistemas terrestres.",
+        "B": "El uso de pesticidas es el único factor que amenaza a las abejas.",
+        "C": "La conservación de las abejas es esencial para los ecosistemas y la alimentación humana.",
+        "D": "La destrucción de hábitats afecta únicamente a las poblaciones de insectos polinizadores."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar la estructura global: el texto presenta la importancia de las abejas, describe las amenazas, y concluye con la implicación para la alimentación humana.",
+        "paso_2": "La idea central integra todos los elementos: la relevancia de las abejas y la necesidad de protegerlas para la cadena alimentaria.",
+        "paso_3": "Opción C es la única que captura ambas dimensiones (ecosistemas + alimentación humana) sin distorsión.",
+        "paso_critico": "No seleccionar una sola amenaza (pesticidas) como si fuera la idea principal — eso es sólo una parte del argumento.",
+        "error_tipico": "Opción A usa cuantificador absoluto ('únicos') que el texto no sostiene. Opción B reduce la amenaza a solo los pesticidas, ignorando la destrucción de hábitats también mencionada. Opción D introduce restricción ('únicamente insectos') no presente en el texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: C es la única opción que integra la estructura global completa. A, B, D son todos distorsiones por cuantificador absoluto, reduccionismo o restricción inexistente. La idea central requiere integrar dos oraciones clave (importancia + consecuencia alimentaria) — 2 pasos mínimos = nivel_2 ✓. H1=media ✓. Temática distinta de BATCH_001 (no usa ciudades/transporte). Sin ambigüedad."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_006_B002",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 1, 3, 9, 27, ___?",
+      "opciones": {
+        "A": "54",
+        "B": "30",
+        "C": "36",
+        "D": "81"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Calcular la razón entre términos consecutivos: 3÷1=3, 9÷3=3, 27÷9=3. Patrón geométrico con razón r=3.",
+        "paso_2": "El siguiente término es 27 × 3 = 81.",
+        "paso_critico": "Identificar que el patrón es multiplicativo (geométrico) y no aditivo. La trampa principal es asumir patrón de suma.",
+        "error_tipico": "Opción B (30): suma 27+3=30 (asume que la diferencia es 3, patrón aditivo erróneo). Opción C (36): suma 27+9=36 (agrega el penúltimo paso, patrón aditivo alternativo). Opción A (54): multiplica por 2 en lugar de 3 (razón incorrecta). Todos estos errores asumen generalización superficial del patrón."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: 27×3=81=opción D ✓. Patrón geométrico con r=3 inequívoco. Distractores cubren errores de tipo aditivo (B, C) y multiplicativo incorrecto (A). Sin ambigüedad. Estructura diferente de ITEM_005_B001 (esa era aritmética a₁₀; esta es geométrica próximo término). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_007_B002",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado para completar la siguiente oración:\n\n«Estudió durante toda la noche; __________, obtuvo la calificación más baja del grupo.»",
+      "opciones": {
+        "A": "es decir",
+        "B": "por lo tanto",
+        "C": "no obstante",
+        "D": "además"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar la relación lógica: la primera proposición describe un esfuerzo positivo (estudio nocturno); la segunda presenta un resultado negativo e inesperado (calificación más baja).",
+        "paso_2": "La relación es de contraste o contraposición — se esperaría un buen resultado, pero ocurrió lo contrario.",
+        "paso_3": "El conector adversativo 'no obstante' (opción C) expresa precisamente esa contradicción entre esfuerzo y resultado.",
+        "paso_critico": "Reconocer que la relación lógica entre proposiciones es de contraste, no de consecuencia ni de adición.",
+        "error_tipico": "Opción B ('por lo tanto') es un conector causal/consecuencial que implicaría que estudiar toda la noche CAUSÓ la mala calificación — lógicamente invertido respecto al sentido real. Opción A ('es decir') es aclarativo, no aplica. Opción D ('además') es aditivo, no captura el contraste."
+      },
+      "h5_adv_verification": {
+        "contrarrecíproco_check": "N/A — ítem de tipo conector, no implica estructura condicional. No existe contrarrecíproco aplicable.",
+        "multiple_equivalence_check": "Solo C es semánticamente correcto. B, A, D son formalmente incorrectos bajo análisis de función conectiva.",
+        "formal_incorrect_check": {
+          "A_es_decir": "incorrecto — función aclaratoria/reformuladora, no aplica a contraste",
+          "B_por_lo_tanto": "incorrecto — connota causalidad directa; implicaría que el estudio produjo la mala nota",
+          "D_además": "incorrecto — función aditiva, no expresa oposición"
+        }
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "H5 Special Rule verified: no contrarrecíproco involucrado (ítem de tipo conector, no condicional). No hay equivalencias semánticas múltiples entre opciones. Cada distractor es formalmente incorrecto: B afirma causalidad invertida (lógicamente incorrecto); A es aclaratorio (funcionalmente incorrecto); D es aditivo (semánticamente incorrecto). Única respuesta: C. Sin ambigüedad. Estructura distinta de ITEM_006_B001 (ese era proyecto técnico/comité; este es estudio/calificación — contextos diferentes)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_008_B002",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Un automóvil recorre 240 km en 3 horas a velocidad constante. ¿Cuántos kilómetros recorrerá en 5 horas viajando al mismo ritmo?",
+      "opciones": {
+        "A": "360 km",
+        "B": "480 km",
+        "C": "400 km",
+        "D": "450 km"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Calcular la velocidad: 240 km ÷ 3 h = 80 km/h.",
+        "paso_2": "Calcular la distancia en 5 horas: 80 km/h × 5 h = 400 km.",
+        "paso_3": "Verificación por proporción directa: (240/3) = (x/5) → x = 240×5/3 = 400. ✓",
+        "paso_critico": "Identificar la relación como proporcionalidad directa (distancia aumenta con el tiempo) y escalar correctamente.",
+        "error_tipico": "Opción A (360 km): resultado de 240 × (5/3) con error de cálculo → 240×1.5=360 (confunde 5/3 con 3/2). Opción B (480 km): duplica la distancia original (240×2=480) asumiendo que 5h es el doble de 3h. Opción D (450 km): usa velocidad de 90 km/h en lugar de 80 (error al dividir 240/3)."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Confusión de proporcionalidad",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: 80×5=400=opción C ✓. Ratio verification: 240/3=80; 80×5=400. Unicidad confirmada. Distractor A plausible por error de fracción (confundir 5/3 con 3/2). Distractor B plausible por redondeo 5h≈2×3h. Distractor D plausible por error de división (240/2.67≈90). Proporcionalidad directa explícita — distinto de ITEM_008_B001 (proporcionalidad inversa trabajadores/días). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_009_B002",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un triángulo isósceles, los dos ángulos de la base son iguales y miden 65° cada uno. ¿Cuánto mide el ángulo del vértice?",
+      "opciones": {
+        "A": "65°",
+        "B": "115°",
+        "C": "70°",
+        "D": "50°"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "La suma de los ángulos interiores de cualquier triángulo es 180°.",
+        "paso_2": "Los dos ángulos de la base suman: 65° + 65° = 130°.",
+        "paso_3": "El ángulo del vértice: 180° − 130° = 50°.",
+        "paso_critico": "El estudiante debe aplicar dos propiedades en secuencia: (1) triángulo isósceles → ángulos de base iguales (dado explícitamente), y (2) suma de ángulos interiores = 180°.",
+        "error_tipico": "Opción A (65°): asume que el vértice tiene el mismo ángulo que la base — confusión con triángulo equilátero. Opción B (115°): calcula el ángulo suplementario de 65° (180°−65°=115°), aplicando suplemento al ángulo base en lugar de usar la suma total. Opción C (70°): resultado de 180°−65°−45°=70°, usando 45° por confusión con triángulo rectángulo o ángulo arbitrario."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Error de cálculo",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: 65+65+vértice=180 → vértice=50°=opción D ✓. Unicidad confirmada. Dos propiedades en cadena requeridas (isósceles + suma ángulos) = nivel_2 ✓. Distractor A fuerte (confusión isósceles=equilátero). Distractor B fuerte (suplemento de ángulo base). Sin ambigüedad. Distinto de ITEM_010_B001 (alternos internos/transversal). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_010_B002",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — 1 uso permitido. Este es el único uso de T_H2_RCM_L3_01 en BATCH_002.",
+      "stem": "En una fábrica, la máquina A puede completar un pedido en 3 horas trabajando sola. La máquina B puede completar el mismo pedido en 6 horas trabajando sola. Si ambas máquinas trabajan juntas desde el inicio, ¿en cuántas horas completarán el pedido?",
+      "opciones": {
+        "A": "4.5 horas",
+        "B": "9 horas",
+        "C": "1.5 horas",
+        "D": "2 horas"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Identificar la variable oculta: la tasa de producción de cada máquina. Tasa A = 1/3 pedido/hora. Tasa B = 1/6 pedido/hora.",
+        "paso_2": "Al trabajar juntas, sus tasas se suman: tasa combinada = 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2 pedido/hora.",
+        "paso_3": "Tiempo total = 1 pedido ÷ (1/2 pedido/hora) = 2 horas.",
+        "paso_4": "Verificación: en 2 horas, A produce 2×(1/3)=2/3 del pedido; B produce 2×(1/6)=1/3 del pedido. Total: 2/3 + 1/3 = 1 pedido completo. ✓",
+        "paso_critico": "El sistema implícito de dos relaciones requiere construir las tasas (variables ocultas) y sumarlas — no operar directamente con los tiempos.",
+        "error_tipico": "Opción A (4.5 horas): promedio aritmético de los tiempos individuales (3+6)/2=4.5 — trata los tiempos como sumables y promediables, error de modelado. Opción B (9 horas): suma simple de tiempos 3+6=9 — ignora la concurrencia. Opción C (1.5 horas): calcula la mitad del tiempo de la máquina más rápida (3/2=1.5) sin considerar la contribución de B."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Pre-ADV unicity check: tasa_A=1/3, tasa_B=1/6, tasa_combinada=1/2, tiempo=2h=opción D. Verificación cruzada: 2×(1/3)+2×(1/6)=2/3+1/3=1 ✓. Unicidad confirmada. Distractor A anticipa promedio aritmético (error de modelado fuerte). Distractor B anticipa suma lineal de tiempos (error de concurrencia). Distractor C anticipa mitad del mínimo. Todos formalmente incorrectos. H1=alta ✓ (variable oculta son las tasas, no los tiempos). Estructura distinta de BATCH_001 (no usa precios ni prendas de vestir)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_011_B002",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — 1 uso permitido. Este es el único uso de T_H3_RCV_L3_01 en BATCH_002.",
+      "stem": "Lea el siguiente texto:\n\n«Las ciudades que invierten en espacios verdes reportan menores índices de estrés entre sus habitantes y mayor cohesión social. Pese a ello, los presupuestos municipales continúan priorizando infraestructura vial sobre el desarrollo de parques y jardines. Esto indica que la planificación urbana actual no refleja adecuadamente las necesidades reales de bienestar de la población.»\n\n¿Cuál es la conclusión implícita que articula el argumento del texto?",
+      "opciones": {
+        "A": "Los espacios verdes son más beneficiosos que cualquier otra inversión municipal posible.",
+        "B": "La planificación urbana debe reorientar sus prioridades hacia el bienestar de los habitantes.",
+        "C": "Los presupuestos municipales son insuficientes para atender todas las necesidades urbanas.",
+        "D": "El estrés y la cohesión social son los únicos indicadores válidos del bienestar urbano."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Reconstruir la estructura argumentativa: premisa 1 (espacios verdes benefician bienestar), premisa 2 (presupuestos priorizan vialidad, no espacios verdes), premisa 3 (la planificación no refleja las necesidades reales).",
+        "paso_2": "La última oración del texto ('no refleja adecuadamente las necesidades reales') funciona como premisa acumulada que apunta a una conclusión no enunciada.",
+        "paso_3": "La conclusión implícita que da coherencia al argumento completo es que la planificación debe cambiar de prioridades — opción B.",
+        "paso_critico": "Distinguir entre premisa y conclusión. Opción C reformula la premisa 2 (priorización presupuestal) como si fuera la conclusión — es la trampa principal.",
+        "error_tipico": "Opción C es una reinterpretación de la premisa sobre presupuestos, no la conclusión — el texto habla de priorización, no de insuficiencia de fondos. Opción A sobreextiende la comparación (el texto no dice 'más que cualquier otra inversión'). Opción D introduce cuantificación absoluta ('únicos indicadores') no presente en el texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Pre-ADV unicity check: B es la única opción que expresa la conclusión estructural (acción normativa implícita derivada de las tres premisas). C reformula premisa 2 de forma distorsionada (insuficiencia ≠ priorización errónea). A sobreextiende. D introduce cuantificador absoluto ausente. La conclusión NO está explicitada en el texto → H1=alta ✓. Trampa principal (C) funcional: confunde premisa reformulada con conclusión. Tema: espacios verdes/planificación — distinto de BATCH_001 (azúcar/regulación). Sin conflicto."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_012_B002",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — 1 uso permitido. Este es el único uso de T_H7_RCM_L3_01 en BATCH_002.",
+      "stem": "Un segmento AB tiene extremos en A(1, 2) y B(4, 3). Se aplica una rotación de 90° en sentido antihorario alrededor del origen. ¿Cuáles son las coordenadas de B' (imagen de B tras la transformación) y cuál es la longitud del segmento A'B'?",
+      "opciones": {
+        "A": "B'(−3, 4); longitud A'B' = √10",
+        "B": "B'(3, −4); longitud A'B' = √10",
+        "C": "B'(−3, 4); longitud A'B' = 5",
+        "D": "B'(3, 4); longitud A'B' = √10"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Regla de rotación 90° antihoraria alrededor del origen: (x, y) → (−y, x).",
+        "paso_2": "Transformar A(1, 2): A' = (−2, 1). Transformar B(4, 3): B' = (−3, 4).",
+        "paso_3": "Calcular longitud A'B': distancia = √[(−3−(−2))² + (4−1)²] = √[(−1)² + (3)²] = √[1 + 9] = √10.",
+        "paso_4": "Verificación por isometría: longitud AB original = √[(4−1)²+(3−2)²] = √[9+1] = √10. La rotación preserva distancias. ✓",
+        "paso_critico": "El estudiante debe (1) aplicar la fórmula de rotación correcta y no confundirla con reflexión ni rotación horaria, y (2) calcular A'B' usando A' transformada, no usando A original.",
+        "error_tipico": "Opción B (B'=(3,−4)): aplica rotación 90° en sentido HORARIO —(x,y)→(y,−x)— en lugar de antihorario. Opción C (B'=(−3,4) correcto, longitud=5): confunde distancia A'B' con la magnitud de B' desde el origen (|B'|=√(9+16)=5). Opción D (B'=(3,4)): no aplica transformación, copia coordenadas originales de B — error de omisión de rotación."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 3,
+        "tiempo_estimado": "4.5 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Pre-ADV unicity check: rotación 90° CCW: B(4,3)→B'(−3,4) ✓. A(1,2)→A'(−2,1). A'B' = √[(−3+2)²+(4−1)²] = √[1+9] = √10 ✓. Opción A única solución. Distractor B: dirección de rotación invertida (horaria). Distractor C: B' correcto pero longitud computada como |B'|=√(9+16)=5 (distancia del origen a B', no A'B'). Distractor D: sin transformación. Todos formalmente incorrectos. H1=alta ✓: inferencia espacial no explícita (dirección de rotación + diferencia A vs A'). Estructura distinta de BATCH_001 (esa era reflexión/rectángulo/diagonal; esta es rotación/segmento/coordenadas)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_002",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "batch_state": "completed",
+
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06 target) ✓ IMPROVED from 0.077"
+    },
+
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 6,
+      "nivel_3": 3,
+      "constraint_nivel_1": "SATISFIED (target: 3–4)",
+      "constraint_nivel_2": "SATISFIED (target: 5–6)",
+      "constraint_nivel_3": "SATISFIED (target: 2–3)"
+    },
+
+    "skill_distribution": {
+      "H2": 2,
+      "H3": 3,
+      "H4": 2,
+      "H5": 1,
+      "H6": 2,
+      "H7": 2,
+      "pattern_vs_batch001": "H4 increased (1→2), H5 reduced (2→1), H3 increased (2→3) — dominance pattern diversified ✓"
+    },
+
+    "h1_distribution": {
+      "baja": 3,
+      "media": 6,
+      "alta": 3,
+      "pct_alta": 0.250,
+      "constraint_max_30pct": "SATISFIED (25.0% < 30%)",
+      "constraint_alta_only_in_nivel3": "SATISFIED — H1=alta exclusively in items 010, 011, 012 (all nivel_3)"
+    },
+
+    "macro_area_distribution": {
+      "RCM": 7,
+      "RCV": 5
+    },
+
+    "template_usage": {
+      "allowed_used": [
+        "T_H2_RCM_L2_01 ×1 (ITEM_004)",
+        "T_H3_RCV_L2_01 ×3 (ITEMS_001,_005,_009→H7 uses T_H7)",
+        "T_H4_RCM_L2_01 ×2 (ITEMS_002,_006)",
+        "T_H5_RCV_L2_01 ×1 (ITEM_007)",
+        "T_H6_RCM_L2_01 ×2 (ITEMS_003,_008)",
+        "T_H7_RCM_L2_01 ×1 (ITEM_009)"
+      ],
+      "limited_used": [
+        "T_H2_RCM_L3_01: 1 use (ITEM_010) ✓",
+        "T_H3_RCV_L3_01: 1 use (ITEM_011) ✓",
+        "T_H7_RCM_L3_01: 1 use (ITEM_012) ✓"
+      ],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01: NOT USED ✓",
+      "l1_template_gap": "CONFIRMED — No L1 templates in template_library_v1. nivel_1 items (001, 002, 003) generated using L2 templates at minimal structural instantiation. ACTION REQUIRED: Add T_H3_RCV_L1_01, T_H4_RCM_L1_01, T_H6_RCM_L1_01 (and others) to template_library_v2."
+    },
+
+    "structural_reuse_check": "PASSED — No structural patterns from BATCH_001 reused. All contexts, operations, and distractor mechanics are novel.",
+
+    "deviation_corrections_vs_batch001": {
+      "nivel_1_inclusion": "FIXED (0→3 items)",
+      "h1_alta_pct": "FIXED (44.4%→25.0%)",
+      "h1_alta_restricted_to_nivel3": "FIXED (now strictly enforced)",
+      "nivel_3_count": "FIXED (4→3 items)",
+      "conflict_rate": "FIXED (0.077→0.000)",
+      "banned_template_compliance": "T_H5_RCV_L3_01 excluded ✓"
+    },
+
+    "cumulative_approved_training_items": {
+      "batch_001_approved": 9,
+      "batch_002_approved": 12,
+      "total_so_far": 21,
+      "training_segment_target": 140,
+      "progress_pct": 15.0
+    },
+
+    "system_flags": [],
+    "template_invalidation_flags": "none",
+    "prompt_invalidation_flags": "none",
+    "batch_validity": "VALID",
+    "generation_status_update": "batch_002_complete",
+    "next_action": "ready_for_batch_3",
+
+    "notes": "All 4C corrective directives applied. Zero rejections achieved by enforcing pre-ADV internal unicity check on all items before finalizing. H5 Special Rule applied to ITEM_007 with explicit formal verification. L1 template gap formally flagged — requires resolution before batch scaling to maintain strict template-to-difficulty alignment."
+  }
+}

@@ -1,0 +1,419 @@
+{
+  "batch_id": "BATCH_022",
+  "generated_at": "2026-03-24T18:50:30-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_2",
+  "target_items": 7,
+  "pipeline_status": "ACTIVE — sim_2 CLOSURE BATCH",
+  "segment_note": "BATCH_022 es el batch de cierre estructural de sim_2. sim_2_count pasa de 38 a 45 exacto. Mandato: 6 RCV + 1 RCM; H2×1 (único déficit); N1×4 + N2×2 + N3×1; H1_alta=2 para quedar en 15/45=33.3% acumulado.",
+  "skill_plan": {
+    "H2_RCM": 1, "H3_RCV": 3, "H5_RCV": 3,
+    "macro_RCV": 6, "macro_RCM": 1,
+    "note": "Solo H2 en déficit (1 ítem). H3 y H5 son las skills RCV disponibles (H3≥7 y H5≥10 permiten agregados). 3 H3 + 3 H5 para distribución equilibrada dentro del bloque RCV."
+  },
+  "difficulty_plan": {
+    "nivel_1": 4, "nivel_2": 2, "nivel_3": 1,
+    "note": "4 N1 + 2 N2 + 1 N3 para alcanzar target exacto: N1=12, N2=22, N3=11. Distribución acumulada resultante: N1=12, N2=22, N3=11 ✓."
+  },
+  "h1_plan": {
+    "items_baja": 4, "items_media": 1, "items_alta": 2,
+    "pct_alta_batch": 0.286,
+    "note": "2 altas (items 6 y 7). Cumulative H1_alta: 13+2=15/45=33.3% — dentro de rango 30-40% ✓."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B022",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "x = edad actual de Ana",
+        "equation": "Edad de Carlos = x + 7; suma actual: x + (x+7) = 41 → 2x + 7 = 41 → 2x = 34 → x = 17. Carlos = 24.",
+        "correct_option": "B",
+        "correct_answer_value": 17,
+        "verification": "Ana=17, Carlos=24; 17+24=41 ✓; 24−17=7 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Ana y Carlos tienen juntos 41 años. Carlos es 7 años mayor que Ana. ¿Cuántos años tiene Ana?",
+      "opciones": {
+        "A": "15",
+        "B": "17",
+        "C": "19",
+        "D": "21"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea x = edad de Ana. Edad de Carlos = x + 7. Suma total: x + (x + 7) = 41 → 2x + 7 = 41 → 2x = 34.",
+        "paso_2": "x = 17. Verificación: Ana=17, Carlos=24; 17+24=41 ✓; 24−17=7 ✓.",
+        "paso_critico": "Expresar la edad de Carlos en función de la de Ana (x+7) antes de aplicar la condición de suma. Dividir 41÷2=20.5 directamente ignora la diferencia de 7 años entre ellos.",
+        "error_tipico": "A (15): 2x=41−7=34→x=17 correcto, pero si el alumno opera (41−7)/2=17 y luego resta 2 más obtiene 15. C (19): asume x+7+x=41 y despeja errando en la división. D (21): opera 41/2≈20.5 y redondea al entero impar superior siguiente, ignorando la diferencia."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H2", "difficulty": 1,
+        "estimated_time_sec": 60, "error_type": "Modelado incorrecto", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "2x+7=41→x=17=B ✓. Verif: 17+24=41; 24-17=7 ✓. A/C/D fallan verificación directa. H2/N1/RCM ✓. N1: traducción directa de relación verbal a ecuación lineal, 2 pasos. H1=baja: la variable aparece una vez por lado, sin dependencias implícitas. simulation_id=sim_2 ✓. Contexto edades/suma — distinto de B021 (ropa/precios, teatro/asistentes) y todos los H2 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B022",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: el sueño insuficiente afecta negativamente la regulación emocional; segunda: quienes no duermen bien presentan reacciones emocionales desproporcionadas — consecuencia directa del mecanismo enunciado",
+        "connector_type": "consecuencial",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La privación de sueño altera la actividad de la amígdala cerebral, reduciendo su capacidad de regular respuestas emocionales ante estímulos adversos. __________, las personas con déficit de sueño tienden a reaccionar de manera desproporcionada frente a situaciones que normalmente no generarían angustia.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "A pesar de esto",
+        "C": "Como resultado",
+        "D": "Por el contrario"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración establece el mecanismo: la privación de sueño reduce la capacidad de regulación emocional de la amígdala. La segunda describe el efecto observable: reacciones desproporcionadas ante estímulos adversos.",
+        "paso_2": "'Como resultado' (C) introduce de forma precisa la consecuencia que se deriva causalmente del mecanismo descrito. La relación entre ambas proposiciones es causal-directa, sin contraste ni concesión. ✓",
+        "paso_critico": "Las reacciones desproporcionadas SON el resultado esperable de la reducción en regulación emocional. La trampa es que el léxico técnico (amígdala, regulación emocional) puede inducir a buscar una relación más compleja.",
+        "error_tipico": "A y B (adversativos/concesivos): implicarían que hay reacciones desproporcionadas A PESAR DE la alteración de la amígdala — lógicamente contradictorio. D ('Por el contrario') introduce contraste donde hay derivación causal directa."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 1,
+        "estimated_time_sec": 55, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C único consecuencial: privación-sueño→regulación-reducida→reacciones-desproporcionadas. A/B adversativos (ilógicos). D introduce contraste donde hay causalidad directa. H5/N1/RCV ✓. N1: relación causal explícita de 1 paso. H1=baja ✓. simulation_id=sim_2 ✓. Contexto sueño/amígdala/regulación-emocional — distinto de B021 (ruido/sueño/memoria, lectura/atención) y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B022",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "El texto presenta evidencia anecdótica (estudio japonés) → afirma que el contacto con entornos naturales reduce el estrés → concluye que las ciudades deberían integrar espacios verdes como intervención de salud pública, no de estética.",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Un estudio realizado con trabajadores en Tokio demostró que caminar 20 minutos entre árboles reduce el nivel de cortisol en sangre en un 12% en promedio. Estos hallazgos se suman a una creciente base de evidencia que relaciona la exposición a entornos naturales con la reducción del estrés crónico. Por ello, la planificación urbana debería incorporar la presencia de parques y zonas verdes no como un ornamento estético, sino como una inversión en salud pública.»\n\n¿Cuál es la idea central que el texto desarrolla?",
+      "opciones": {
+        "A": "La evidencia científica justifica integrar zonas verdes urbanas como una medida de salud pública.",
+        "B": "Caminar entre árboles durante veinte minutos es la actividad más efectiva para reducir el estrés en trabajadores urbanos.",
+        "C": "El gobierno japonés ha liderado políticas de urbanismo verde basadas en estudios sobre cortisol.",
+        "D": "La presencia de parques en ciudades mejora la estética urbana y contribuye indirectamente al bienestar ciudadano."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto estructura: (1) evidencia puntual (reducción de cortisol al caminar entre árboles); (2) generalización de la evidencia (base creciente); (3) conclusión aplicada: zonas verdes como inversión en salud pública, no ornamento estético.",
+        "paso_2": "A captura la estructura completa: evidencia científica → integración de zonas verdes → medida de salud pública. ✓",
+        "paso_critico": "La idea central no es el dato del estudio en sí (B) sino la conclusión que ese dato fundamenta: la justificación de una política de salud urbana. Elegir el detalle empírico en lugar de la estructura argumentativa completa es la trampa principal.",
+        "error_tipico": "B focaliza en el dato del estudio sin capturar la conclusión normativa. C inventa un actor político (gobierno japonés) ausente en el texto. D introduce 'estética urbana' como beneficio — el texto lo rechaza explícitamente ('no como ornamento estético')."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 1,
+        "estimated_time_sec": 65, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "A única: evidencia-científica → zonas-verdes-como-salud-pública (no estética). B focaliza dato sin conclusión. C introduce actor político ausente. D adoptó el framing que el texto rechaza explícitamente. H3/N1/RCV ✓. N1: idea central explicitada en la conclusión del texto, 1 paso inferencial. H1=baja ✓. simulation_id=sim_2 ✓. Contexto urbanismo-verde/cortisol — distinto de B021 (brecha-digital/ciudadanía) y B020 (expansión-urbana) y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B022",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: el ejercicio físico regular mejora la función cognitiva en adultos mayores; segunda: las personas mayores que se ejercitan regularmente mantienen mayor capacidad de memoria de trabajo — consecuencia directa",
+        "connector_type": "consecuencial",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La actividad física aeróbica estimula la producción de BDNF, una proteína que promueve el crecimiento y la supervivencia de neuronas en regiones asociadas a la memoria. __________, los adultos mayores que mantienen una rutina de ejercicio aeróbico presentan puntuaciones significativamente más altas en pruebas de memoria de trabajo en comparación con sus pares sedentarios.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Aunque",
+        "C": "En cambio",
+        "D": "De ahí que"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "La primera oración establece el mecanismo biológico: el ejercicio aeróbico estimula el BDNF, que promueve el crecimiento neuronal en zonas de memoria. La segunda describe la consecuencia medida: mejores puntuaciones en memoria de trabajo.",
+        "paso_2": "'De ahí que' (D) introduce una consecuencia derivada directamente del mecanismo enunciado. Preserva la relación causal sin añadir contraste ni condición. ✓",
+        "paso_critico": "Los mejores resultados en memoria de trabajo SON la consecuencia esperable del aumento de BDNF y el crecimiento neuronal en zonas de memoria. No existe contraste ni condición adicional.",
+        "error_tipico": "A y B (adversativos/concesivos): implican que los adultos mayores rinden mejor A PESAR DE el mecanismo BDNF — lógicamente incoherente. C ('En cambio') introduce contraste o cambio de perspectiva donde hay derivación causal."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 1,
+        "estimated_time_sec": 60, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "D único consecuencial: ejercicio→BDNF→neuronas-memoria→mayor-puntuación-memoria-trabajo. A/B adversativos (ilógicos). C introduce contraste inexistente. H5/N1/RCV ✓. N1: relación causal explícita, 1 paso. H1=baja ✓. simulation_id=sim_2 ✓. Contexto ejercicio-aeróbico/BDNF/memoria — distinto de B022 ITEM_002 (privación-sueño/amígdala), B021 (lectura/atención, ruido/sueño) y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B022",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "El texto describe el fenómeno del monocultivo digital (pocas plataformas dominantes) → señala sus riesgos estructurales (concentración de poder informativo, fragilidad ante colapsos) → concluye que la diversidad de plataformas es condición de robustez ecosistémica informativa.",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Cuando la mayoría de la comunicación pública pasa por dos o tres plataformas tecnológicas, el ecosistema informativo adquiere la fragilidad de un monocultivo: una sola falla, un solo cambio de política corporativa o una sola decisión gubernamental puede silenciar a millones de forma simultánea. La diversidad de canales no es solo una cuestión de preferencia; es una condición de resiliencia democrática.»\n\n¿Cuál es la idea principal que estructura el argumento del texto?",
+      "opciones": {
+        "A": "Las principales plataformas tecnológicas deberían ser reguladas por el Estado para evitar monopolios informativos.",
+        "B": "Los gobiernos utilizan plataformas digitales para censurar información política y controlar la opinión pública.",
+        "C": "La concentración informativa en pocas plataformas genera vulnerabilidad estructural; la diversidad de canales es una necesidad democrática.",
+        "D": "Los usuarios deberían distribuir su consumo informativo entre múltiples plataformas para reducir el riesgo de desinformación."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto construye el argumento en dos movimientos: (1) la concentración en pocas plataformas = fragilidad (monocultivo); (2) la diversidad de canales = condición de resiliencia democrática.",
+        "paso_2": "C captura fielmente ambos movimientos: concentración → vulnerabilidad estructural; diversidad → necesidad democrática. ✓",
+        "paso_critico": "La idea central no es una propuesta de acción política (A, D) ni una descripción de conducta gubernamental (B), sino la relación estructural entre concentración y fragilidad, y su inverso.",
+        "error_tipico": "A introduce 'regulación estatal' que el texto no menciona; solo describe consecuencias estructurales. B introduce 'censura gubernamental' como causa — el texto menciona la decisión gubernamental como uno de varios vectores de riesgo, no como causa central. D convierte el argumento sistémico en prescripción individual de consumo."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 2,
+        "estimated_time_sec": 120, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C única: concentración→vulnerabilidad-estructural + diversidad→necesidad-democrática. A introduce regulación-estatal ausente. B introduce censura-gubernamental como causa central (distorsión). D convierte argumento sistémico en prescripción individual. H3/N2/RCV ✓. N2: la idea central requiere articular ambos movimientos del argumento, no solo reconocer el más obvio. H1=media ✓. simulation_id=sim_2 ✓. Contexto monocultivo-digital/resiliencia-democrática — distinto de B022 ITEM_003 (urbanismo-verde) y B021 (brecha-digital)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B022",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "original_structure": "negación: la abundancia de información no garantiza la comprensión; afirmación: lo que determina la comprensión es la capacidad de discriminar lo relevante de lo irrelevante.",
+        "key_elements": ["abundancia-información ≠ garantía-comprensión (negación)", "capacidad-discriminación = determinante real de comprensión (afirmación)"],
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«Tener acceso a mucha información no asegura que se comprenda bien algo; lo que determina la comprensión real es la habilidad para distinguir lo que es relevante de lo que no lo es.»",
+      "opciones": {
+        "A": "Para comprender bien cualquier tema es necesario consultar la mayor cantidad posible de fuentes de información confiables.",
+        "B": "La comprensión no depende del volumen de información disponible, sino de la capacidad de seleccionar lo pertinente.",
+        "C": "Quien tiene acceso ilimitado a información siempre comprende mejor que quien tiene acceso limitado, siempre que sepa organizarla.",
+        "D": "La clave para comprender bien es conocer técnicas de síntesis y organización de información que reduzcan el volumen de datos."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El enunciado original articula: (i) abundancia de información ≠ garantía de comprensión (negación); (ii) la habilidad para discriminar relevancia = determinante de la comprensión (afirmación positiva).",
+        "paso_2": "B preserva ambos elementos con léxico alternativo: 'no depende del volumen' = la abundancia no garantiza; 'capacidad de seleccionar lo pertinente' = habilidad para distinguir relevancia. ✓",
+        "paso_critico": "La equivalencia debe preservar tanto la negación (volumen no garantiza) como la afirmación positiva sobre la discriminación, sin añadir condiciones nuevas ni absolutizar.",
+        "error_tipico": "A convierte la negación en prescripción positiva ('consultar más fuentes'): el original niega que más cantidad garantice. C absolutiza con 'siempre' y añade condición de organización ausente en el original. D introduce 'técnicas de síntesis' y 'reducir el volumen' — el original habla de capacidad de discriminar, no de reducir ni de técnicas específicas."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 2,
+        "estimated_time_sec": 160, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "B única equivalente: negación-de-volumen-como-garantía + capacidad-discriminación-como-determinante. A convierte negación en prescripción-positiva. C absolutiza con 'siempre' sin sustento. D introduce 'técnicas-síntesis' y 'reducción-volumen' ausentes. H5/N2/RCV ✓. Equivalencia semántica compleja: preservar negación implícita + afirmación causal con vocabulario alternativo, sin introducir prescripciones adicionales. H1=alta: distinguir entre negación-de-cantidad y afirmación-de-discriminación requiere análisis estructural fino. simulation_id=sim_2 ✓. Contexto información/comprensión/discriminación — distinto de B021 (decisión/información/rapidez) y sim_1 (automatización, transparencia-verificabilidad)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B022",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "Premisa 1 implícita: la ciencia avanza mediante la refutación de teorías previas, no solo mediante la acumulación. Premisa 2: el error documentado es el mecanismo que permite la corrección y el avance. Conclusión: una cultura que teme publicar errores bloquea el progreso científico.",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Una cultura científica que penaliza el error inhibe inevitablemente el progreso. La ciencia no avanza acumulando certezas, sino identificando y documentando sus propios fallos. Cuando los investigadores temen publicar resultados negativos o revocaciones de teorías previas, el conocimiento se estanca: se repiten experimentos fallidos inconscientemente, se desperdician recursos y se retrasa la corrección de errores sistémicos. Tolerar el error documentado y revisable no es una debilidad epistemológica; es una condición estructural del método científico.»\n\n¿Cuál es la conclusión principal que el autor defiende?",
+      "opciones": {
+        "A": "La aceptación institucional del error documentado y sujeto a revisión es una condición necesaria para el avance científico.",
+        "B": "Los investigadores que publican resultados negativos deberían recibir incentivos económicos para compensar el estigma cultural.",
+        "C": "El progreso científico se ve afectado principalmente por la falta de financiamiento para replicar experimentos fallidos.",
+        "D": "La cultura científica debe transformarse hacia una mayor tolerancia a la incertidumbre y la ambigüedad metodológica."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto articula: (1) penalizar el error inhibe el progreso; (2) la ciencia avanza identificando fallos, no acumulando certezas; (3) consecuencias negativas de temer publicar errores; (4) conclusión: tolerar el error documentado y revisable es condición estructural del método.",
+        "paso_2": "A capta fielmente la conclusión del texto: aceptación del error documentado y revisable = condición necesaria para el avance científico. La palabra 'condición estructural' del texto se preserva en la opción como 'condición necesaria'. ✓",
+        "paso_critico": "La conclusión es normativa sobre la institución científica (aceptación del error), no es una propuesta de política económica (B) ni una atribución de causas económicas (C) ni una reforma sobre ambigüedad (D). La trampa es elegir propuestas de acción concretas que se derivan plausiblemente del texto pero que no son la conclusión que el autor defiende.",
+        "error_tipico": "B introduce incentivos económicos — el texto no los menciona; el argumento es epistemológico, no económico. C introduce 'falta de financiamiento' como causa — el texto menciona desperdicio de recursos como consecuencia del problema, no la causa. D introduce 'ambigüedad metodológica' que el texto no menciona; el texto defiende el error documentado y revisable, no la ambigüedad."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 3,
+        "estimated_time_sec": 200, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "A única: aceptación-error-documentado-revisable = condición-necesaria-avance-científico. B introduce incentivos-económicos ausentes (desplazamiento de dominio). C convierte consecuencia (desperdicio-recursos) en causa principal (falta-financiamiento). D generaliza a ambigüedad-metodológica que el texto no defiende; el texto distingue entre error-documentado-revisable (positivo) y ambigüedad no estructurada. H3/N3/RCV ✓. N3: la conclusión requiere reconstruir la estructura argumentativa completa y distinguirla de consecuencias y propuestas derivadas plausibles. H1=alta: la conclusión normativa está formulada indirectamente ('no es una debilidad... es una condición estructural'); requiere inferir la afirmación positiva desde la negación del prejuicio. simulation_id=sim_2 ✓. Contexto cultura-científica/error-documentado — distinto de B022 ITEM_005 (monocultivo-digital), B021 (brecha-digital, decisión/información) y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_022",
+    "item_type": "simulation",
+    "simulation_id": "sim_2",
+    "total_generated": 7,
+    "approved": 7,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_2": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true,
+      "exact_item_count_7": true
+    },
+    "skill_distribution": {
+      "H2": 1, "H3": 3, "H4": 0, "H5": 3, "H6": 0, "H7": 0,
+      "H2_note": "Item 1 (L1/N1) — cierre del déficit H2",
+      "H3_note": "Items 3 (L2/N1), 5 (L2/N2), 7 (L3/N3)",
+      "H5_note": "Items 2 (L2/N1), 4 (L2/N1), 6 (L3/N2)"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 4,
+      "nivel_2": 2,
+      "nivel_3": 1,
+      "nivel_1_items": "1 (H2), 2 (H5), 3 (H3), 4 (H5)",
+      "nivel_2_items": "5 (H3), 6 (H5)",
+      "nivel_3_items": "7 (H3)"
+    },
+    "macro_area_distribution": {
+      "RCV": 6, "RCM": 1,
+      "RCV_items": "2 (H5), 3 (H3), 4 (H5), 5 (H3), 6 (H5), 7 (H3)",
+      "RCM_items": "1 (H2)"
+    },
+    "h1_distribution": {
+      "baja": 4, "media": 1, "alta": 2,
+      "items_baja": "1 (H2/N1), 2 (H5/N1), 3 (H3/N1), 4 (H5/N1)",
+      "items_media": "5 (H3/N2)",
+      "items_alta": "6 (H5/N2), 7 (H3/N3)",
+      "pct_alta_batch": 0.286,
+      "constraint": "✓ 28.6% en este batch — dentro de rango operacional"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "1 use (item 1)",
+      "T_H3_RCV_L2_01": "2 uses (items 3, 5)",
+      "T_H3_RCV_L3_01": "1 use (item 7)",
+      "T_H5_RCV_L2_01": "2 uses (items 2, 4)",
+      "T_H5_RCV_L3_01": "1 use (item 6)",
+      "all_templates_active": true
+    },
+    "sim_2_accumulation": {
+      "sim_2_count_before": 38,
+      "items_added": 7,
+      "sim_2_count_after": 45,
+      "sim_2_target": 45,
+      "sim_2_remaining": 0,
+      "status": "COMPLETE — sim_2 cerrado en 45 exacto ✓"
+    },
+    "cumulative_sim_2_final_skill": {
+      "cumulative_38": {"H2":7, "H3":7, "H4":5, "H5":10, "H6":6, "H7":3},
+      "B022_contribution": {"H2":1, "H3":3, "H4":0, "H5":3, "H6":0, "H7":0},
+      "cumulative_final_45": {"H2":8, "H3":10, "H4":5, "H5":13, "H6":6, "H7":3},
+      "strat_targets": {"H2":"=8 ✓", "H3":"≥7 (10) ✓", "H4":"=5 ✓", "H5":"≥10 (13) ✓", "H6":"=6 ✓", "H7":"=3 ✓"},
+      "compliance": "ALL STRAT SKILL TARGETS MET ✓"
+    },
+    "cumulative_sim_2_final_difficulty": {
+      "cumulative_38": {"N1":8, "N2":20, "N3":10},
+      "B022_contribution": {"N1":4, "N2":2, "N3":1},
+      "cumulative_final_45": {"N1":12, "N2":22, "N3":11},
+      "strat_targets": {"N1":"=12 ✓", "N2":"=22 ✓", "N3":"=11 ✓"},
+      "compliance": "ALL STRAT DIFFICULTY TARGETS MET — EXACT ✓"
+    },
+    "cumulative_sim_2_final_macro": {
+      "cumulative_38": {"RCV":17, "RCM":21},
+      "B022_contribution": {"RCV":6, "RCM":1},
+      "cumulative_final_45": {"RCV":23, "RCM":22},
+      "strat_targets": {"RCV":"=23 ✓", "RCM":"=22 ✓"},
+      "compliance": "ALL STRAT MACRO TARGETS MET — EXACT ✓"
+    },
+    "cumulative_h1_final": {
+      "cumulative_alta_38": 13,
+      "B022_alta": 2,
+      "cumulative_alta_45": 15,
+      "pct_alta_cumulative": 0.333,
+      "constraint": "✓ 33.3% — within 30-40% cumulative target"
+    },
+    "structural_isolation_check": {
+      "vs_sim_1": "All 7 items verified structurally distinct from sim_1 pool. Contexts (edades/suma, amígdala/sueño/emoción, urbanismo-verde/cortisol, BDNF/ejercicio/memoria, monocultivo-digital, información/comprensión/discriminación, cultura-científica/error-documentado) are novel.",
+      "vs_B021": "All 7 items verified structurally distinct from BATCH_021. No repetition of contexts, connector scenarios, argument structures, or algebraic configurations.",
+      "vs_B020": "All 7 items verified structurally distinct from BATCH_020.",
+      "vs_prior_sim_2": "All 7 items verified structurally distinct from all prior sim_2 batches (B018–B021).",
+      "vs_diagnostic": "All items verified distinct from diagnostic pool.",
+      "status": "PASS"
+    },
+    "batch_validation_result": {
+      "integrity_passed": true,
+      "consistency_passed": true,
+      "all_items_sim_2": true,
+      "zero_metadata_gaps": true,
+      "zero_traceability_gaps": true,
+      "metrics_within_threshold": true,
+      "item_count_exact": "7 of 7 ✓",
+      "final_verdict": "BATCH_022 — batch_state = completed. sim_2 CERRADO en 45 exacto. Apto para envío a 4B."
+    },
+    "pipeline_closure": {
+      "diagnostic_count": 19,
+      "diagnostic_target": "18-20",
+      "diagnostic_status": "complete ✓",
+      "sim_1_count": 45,
+      "sim_1_target": 45,
+      "sim_1_status": "complete ✓",
+      "sim_2_count": 45,
+      "sim_2_target": 45,
+      "sim_2_status": "complete ✓",
+      "training_count": 141,
+      "training_target": 140,
+      "training_status": "complete ✓",
+      "all_segments_complete": true,
+      "pipeline_ready_for_4B": true,
+      "pipeline_state_transition": "active → completed",
+      "note": "Todos los segmentos satisfechos. Pipeline listo para cierre total y transferencia a Bank System (4B)."
+    }
+  }
+}

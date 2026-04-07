@@ -1,0 +1,282 @@
+{
+  "batch_id": "BATCH_004",
+  "generated_at": "2026-03-23T17:28:20-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "items": [
+    {
+      "item_id": "ITEM_001_B004",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: main idea explicitly stated, 1 recognition step",
+      "stem": "Lea el siguiente texto:\n\n«El ejercicio regular fortalece el sistema cardiovascular y contribuye a mantener un peso saludable. Por esta razón, los médicos recomiendan realizar al menos 30 minutos de actividad física moderada al día.»\n\n¿Qué afirma principalmente el texto?",
+      "opciones": { "A": "Los médicos son los únicos profesionales que pueden recomendar actividad física.", "B": "La actividad física regular tiene beneficios comprobados que justifican su práctica diaria.", "C": "Solo el ejercicio intenso fortalece el sistema cardiovascular.", "D": "Mantener el peso es el único beneficio del ejercicio regular." },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La idea principal está explícitamente en la primera oración: el ejercicio tiene beneficios comprobados.",
+        "paso_2": "La segunda oración refuerza con la recomendación médica.",
+        "paso_critico": "B parafrasea fielmente el contenido explícito. 1 paso: reconocimiento directo.",
+        "error_tipico": "A introduce 'únicos' ausente. C contradice 'moderada' del texto. D usa 'único' e ignora el beneficio cardiovascular."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 1, "tiempo_estimado": "1.5 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único. A/C/D distorsionan con cuantificadores absolutos o contradicen el texto. Sin inferencia requerida. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B004",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: geometric halving pattern, 1 direct step",
+      "stem": "¿Cuál es el número que sigue en la serie: 64, 32, 16, 8, ___?",
+      "opciones": { "A": "2", "B": "6", "C": "4", "D": "0" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Razón entre términos: 32÷64=½, 16÷32=½, 8÷16=½. Patrón: dividir entre 2.",
+        "paso_2": "Siguiente término: 8÷2 = 4. ✓",
+        "paso_critico": "Patrón de division constante por 2, visible directamente.",
+        "error_tipico": "A(2): divide entre 4. B(6): resta 2 (patrón aditivo erróneo). D(0): salta al 0 sin justificación."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Generalización excesiva", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "8÷2=4=C ✓. Patrón ÷2 inequívoco. No reutiliza patrones de B001-B003 (eran +4, ×3, +2, −3, Fibonacci). nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B004",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: single-step direct proportion, halving",
+      "stem": "Un automóvil consume 8 litros de combustible por cada 100 km. ¿Cuántos litros necesitará para recorrer 50 km?",
+      "opciones": { "A": "8", "B": "2", "C": "6", "D": "4" },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "50 km es la mitad de 100 km → el consumo es la mitad de 8 L = 4 L. ✓",
+        "paso_critico": "Proporcionalidad directa de 1 paso. Relación explícita.",
+        "error_tipico": "A(8): usa el mismo consumo sin ajustar la distancia. B(2): divide 8÷4 confundiendo el factor. C(6): 8−2=6, reste sin base."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Confusión de proporcionalidad", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "4=D ✓. 1 paso (mitad). Contexto combustible/km — nuevo. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B004",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un almacén hay 4 veces más cajas de manzanas que de naranjas. Si en total hay 75 cajas, ¿cuántas cajas de naranjas hay?",
+      "opciones": { "A": "60", "B": "15", "C": "20", "D": "25" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea n = naranjas. Manzanas = 4n. Total: n + 4n = 5n = 75 → n = 15. ✓",
+        "paso_2": "Verificación: 15 + 60 = 75. ✓",
+        "paso_critico": "Plantear 5n=75, no 4n=75. La variable es naranjas, no manzanas.",
+        "error_tipico": "A(60): calcula manzanas en lugar de naranjas (4×15=60). Trampa más fuerte. C(20): 75÷4≈18.75≈20 (divide por 4 sin sumar las naranjas). D(25): 75÷3=25 (usa divisor 3 incorrecto)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "5n=75→n=15=B ✓. A fuerte (calcula manzanas). C y D por divisor incorrecto. Contexto almacén/cajas — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B004",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Un conductor maneja hoy 6 km más que el doble de la distancia que manejó ayer. Si hoy manejó 42 km, ¿cuántos km manejó ayer?",
+      "opciones": { "A": "36", "B": "18", "C": "24", "D": "9" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Ecuación: hoy = 2(ayer) + 6 → 42 = 2Y + 6 → 2Y = 36 → Y = 18. ✓",
+        "paso_2": "Verificación: 2(18) + 6 = 36 + 6 = 42. ✓",
+        "paso_critico": "Restar la constante antes de dividir. Detenerse en 2Y=36 es la trampa principal.",
+        "error_tipico": "A(36): para en 42−6=36, no divide. Trampa más fuerte (modelado incompleto). C(24): (42+6)/2=48/2=24, suma en lugar de restar. D(9): 36÷4=9, divisor incorrecto."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "42−6=36, 36÷2=18=B ✓. A fuerte (paso incompleto). C error de signo. D divisor incorrecto. Contexto conductor/km — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B004",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Complete la siguiente oración con el conector más adecuado:\n\n«El experimento fue diseñado con precisión metodológica; __________, los resultados no pudieron replicarse en condiciones distintas.»",
+      "opciones": { "A": "por lo tanto", "B": "no obstante", "C": "puesto que", "D": "es decir" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Primera proposición: condición positiva (precisión metodológica). Segunda: resultado negativo e inesperado (no se replicó).",
+        "paso_2": "Relación de contraste: se esperaría replicabilidad dado el diseño riguroso, pero falló. Conector adversativo.",
+        "paso_3": "'No obstante' (B) expresa el contraste expectativa-realidad. ✓",
+        "pas_critico": "Reconocer antagonismo lógico entre proposiciones.",
+        "error_tipico": "A('por lo tanto'): causal — implicaría que la precisión causó la no-replicación. Ilógico. C('puesto que'): explicativo-causal, misma dirección ilógica. D('es decir'): aclaratorio, no aplica."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A_por_lo_tanto": "incorrecto: causalidad invertida", "C_puesto_que": "incorrecto: causal explicativo", "D_es_decir": "incorrecto: aclaratorio" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único. Todos los distractores formalmente incorrectos. Sin contrarrecíproco. Contexto experimento/replicación — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B004",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 1, 4, 9, 16, 25, ___?",
+      "opciones": { "A": "35", "B": "30", "C": "36", "D": "40" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos: 3, 5, 7, 9 (incrementos de +2 cada vez). Siguiente diferencia: 11.",
+        "paso_2": "Siguiente término: 25 + 11 = 36. ✓",
+        "paso_3": "Verificación: los términos son 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36. ✓",
+        "paso_critico": "Identificar que las diferencias forman una progresión de números impares, o reconocer la secuencia de cuadrados perfectos.",
+        "error_tipico": "A(35): usa Δ=10 en vez de 11. B(30): repite Δ=5 (segunda diferencia, no la siguiente). D(40): usa Δ=15 (sobreestima el incremento)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "25+11=36=C ✓. Doble verificación: n²=6²=36. Distractores por errores en Δ. Cuadrados perfectos — nuevo patrón (previos: +4, ×3, +2, −3, Fibonacci, ÷2). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B004",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Complete la siguiente oración con el conector más adecuado:\n\n«Las redes sociales permiten comunicación instantánea a nivel global. __________, también han sido señaladas como fuente de desinformación y aislamiento social.»",
+      "opciones": { "A": "Por esta razón", "B": "En efecto", "C": "Sin embargo", "D": "Además" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Primera proposición: beneficio (comunicación global). Segunda: consecuencia negativa (desinformación, aislamiento).",
+        "paso_2": "La segunda contrasta con la primera: aspecto positivo frente a aspecto negativo. Relación adversativa.",
+        "paso_3": "'Sin embargo' (C) es el único conector adversativo que expresa el contraste. ✓",
+        "paso_critico": "La segunda proposición no es consecuencia de la primera sino su contrapunto negativo.",
+        "error_tipico": "A('Por esta razón'): causal — implicaría que la comunicación global causa la desinformación. Formalmente incorrecto. B('En efecto'): confirmatorio, misma dirección que la primera proposición. D('Además'): aditivo — no captura la oposición entre positivo y negativo."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A_por_esta_razon": "incorrecto: causal invertida", "B_en_efecto": "incorrecto: confirmatorio, no hay contraste", "D_ademas": "incorrecto: aditivo" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "C único. A/B/D formalmente incorrectos. Sin contrarrecíproco. Contexto redes-sociales — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B004",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un triángulo rectángulo, los catetos miden 6 cm y 8 cm. ¿Cuánto mide la hipotenusa?",
+      "opciones": { "A": "14", "B": "7", "C": "10", "D": "√48" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Teorema de Pitágoras: h² = a² + b² = 6² + 8² = 36 + 64 = 100.",
+        "paso_2": "h = √100 = 10. ✓",
+        "paso_critico": "Aplicar Pitágoras correctamente: sumar cuadrados, luego extraer raíz.",
+        "error_tipico": "A(14): 6+8=14, suma catetos directamente sin elevar al cuadrado. Trampa principal. B(7): (6+8)/2=7, promedia los catetos. D(√48): √(6×8)=√48, multiplica catetos en lugar de sumar sus cuadrados — error conceptual de fórmula."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Error de cálculo", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "√(36+64)=√100=10=C ✓. A fuerte (suma lineal). D plausible (multiplica en lugar de sumar cuadrados). Sin reutilización: previos usaron alternos-internos, isósceles, ángulo-exterior, reflexiones, rotaciones. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B004",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_004",
+      "stem": "Lea el siguiente texto:\n\n«La automatización de procesos industriales ha incrementado significativamente la productividad en varios sectores. Sin embargo, este avance ha generado la eliminación de puestos de trabajo que antes desempeñaban personas. A pesar de los beneficios operativos evidentes, los gobiernos no han implementado políticas de reconversión laboral a la velocidad que el cambio tecnológico lo demanda.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "La automatización es un proceso inevitable que ningún gobierno puede detener.",
+        "B": "Los gobiernos deben acelerar el desarrollo de políticas de reconversión laboral ante el avance de la automatización.",
+        "C": "La productividad generada por la automatización es suficiente para compensar la pérdida de empleos.",
+        "D": "Los trabajadores desplazados deben adaptarse por su cuenta sin esperar apoyo gubernamental."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura: beneficio (productividad) → problema (pérdida de empleos) → brecha (políticas insuficientemente rápidas).",
+        "paso_2": "La frase 'no han implementado...a la velocidad que el cambio lo demanda' señala una brecha sin nombrar la solución.",
+        "paso_3": "La conclusión implícita: los gobiernos DEBEN acelerar esas políticas — opción B. ✓",
+        "paso_critico": "Distinguir entre la premisa sobre brechas de política (premisa) y la prescripción que se infiere (conclusión).",
+        "error_tipico": "A introduce 'inevitable' y 'ningún gobierno puede' — universalización no sostenida. C introduce comparación cuantitativa compensación ausente en el texto. D contradice la dirección del argumento (el texto implica necesidad de apoyo, no autosuficiencia)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: prescripción normativa implícita no enunciada. A sobreuniversaliza. C introduce comparación cuantitativa ausente. D contradice dirección del argumento. H1=alta ✓. Tema automatización/empleo — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B004",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_004",
+      "stem": "Un ciclista recorre los primeros 30 km a 30 km/h y los siguientes 30 km a 15 km/h. ¿Cuál es su velocidad promedio durante todo el recorrido?",
+      "opciones": { "A": "22.5 km/h", "B": "20 km/h", "C": "15 km/h", "D": "30 km/h" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tiempo tramo 1: 30 km ÷ 30 km/h = 1 hora.",
+        "paso_2": "Tiempo tramo 2: 30 km ÷ 15 km/h = 2 horas.",
+        "paso_3": "Velocidad promedio = distancia total ÷ tiempo total = 60 km ÷ 3 h = 20 km/h. ✓",
+        "paso_4": "Verificación: 1h×30 + 2h×15 = 30+30 = 60 km. ✓",
+        "paso_critico": "La variable oculta es el tiempo de cada tramo. No se puede promediar velocidades directamente — hay que calcular tiempos primero.",
+        "error_tipico": "A(22.5 km/h): promedio aritmético de velocidades (30+15)/2=22.5 — trampa más frecuente, ignora que los tiempos son distintos. C(15): usa solo la velocidad del segundo tramo. D(30): usa solo la del primero."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "60÷3=20=B ✓. A es la trampa canónica de velocidad promedio (promedio aritmético de velocidades). Transformación intermedia obligatoria: calcular tiempos. H1=alta ✓. Contexto ciclista — nuevo (previos: grifo/tanque, dptos/máquinas)." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B004",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_004",
+      "stem": "Un cuadrado ABCD tiene vértices en A(1,1), B(3,1), C(3,3) y D(1,3). Se aplica una rotación de 180° alrededor del centro del cuadrado (2,2). ¿Cuáles son las coordenadas del vértice A' tras la transformación?",
+      "opciones": { "A": "(3, 3)", "B": "(−1, −1)", "C": "(1, 3)", "D": "(3, 1)" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Fórmula de rotación 180° alrededor del punto (h,k): (x,y) → (2h−x, 2k−y).",
+        "paso_2": "Centro = (2,2), punto A(1,1): A' = (2×2−1, 2×2−1) = (4−1, 4−1) = (3,3). ✓",
+        "paso_3": "Verificación: A'=(3,3) coincide con el vértice C — consistente con una rotación de 180° en un cuadrado (vértice opuesto).",
+        "paso_critico": "Aplicar la fórmula de rotación alrededor de un centro distinto del origen. La trampa es usar el origen como centro.",
+        "error_tipico": "B(−1,−1): rotación 180° alrededor del origen: A(1,1)→(−1,−1). Confunde centro de rotación. C(1,3): reflexión sobre la recta horizontal y=2: (x,y)→(x,2k−y)=(1,3). D(3,1): reflexión sobre la recta vertical x=2: (x,y)→(2h−x,y)=(3,1). Ambos confunden reflexión con rotación."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "(2×2−1, 2×2−1)=(3,3)=A ✓. B usa origen como centro. C y D aplican reflexiones parciales. Unicidad confirmada. Inferencia espacial: centro no-origen + coincidencia con vértice opuesto. H1=alta ✓. Distinto de todas las transformaciones previas." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_004",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06) ✓ third consecutive zero"
+    },
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint_exactly_0.25": "SATISFIED ✓", "alta_in_nivel3_only": "SATISFIED ✓" },
+    "macro_area_distribution": { "RCM": 7, "RCV": 5 },
+    "template_usage": {
+      "limited_used": [ "T_H3_RCV_L3_01: 1 (ITEM_010) ✓", "T_H6_RCM_L3_01: 1 (ITEM_011) ✓", "T_H7_RCM_L3_01: 1 (ITEM_012) ✓" ],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 still open"
+    },
+    "structural_reuse_check": "PASSED — all 12 contexts structurally distinct from BATCH_001–003",
+    "drift_check_vs_batch003": {
+      "skill_delta": "0 — identical distribution",
+      "difficulty_delta": "0 — identical (3/6/3)",
+      "h1_alta_delta": "0.0% — stable at 25%",
+      "conflict_delta": "0.000 — stable",
+      "drift_signal": "NONE DETECTED ✓"
+    },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12,
+      "total_approved": 45,
+      "training_target": 140,
+      "progress_pct": 32.1
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 3,
+      "consecutive_zero_rejection_batches": 3,
+      "consecutive_exact_distribution_batches": 3
+    },
+    "system_flags": ["FLAG_001 open — L1 template gap"],
+    "next_action": "ready_for_batch_5"
+  }
+}

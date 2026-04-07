@@ -1,0 +1,23 @@
+{
+  "N_max_retries": 3,
+  "thresholds": {
+    "ambiguity_rate": 0.10,
+    "gen_vs_adv_conflict_rate": 0.08,
+    "rejection_rate": 0.25
+  },
+  "rules": {
+    "template_invalidation": [
+      "≥2 rechazos consecutivos",
+      "ambiguity_rate > threshold",
+      "conflict_rate recurrente"
+    ],
+    "prompt_invalidation": [
+      "gen_vs_adv_conflict_rate > threshold sostenido"
+    ],
+    "auto_actions": {
+      "ambiguity_high": "adjust_prompt",
+      "conflict_high": "invalidate_prompt",
+      "rejection_high": "invalidate_template"
+    }
+  }
+}

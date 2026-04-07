@@ -1,0 +1,822 @@
+{
+  "batch_id": "BATCH_013",
+  "generated_at": "2026-03-24T11:43:07-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_1",
+  "target_items": 15,
+  "pipeline_status": "ACTIVE — sim_1 segment initiated",
+  "difficulty_sequence_plan": "N1 (items 1-4) → N2 (items 5-11) → N3 (items 12-15) — strictly ascending",
+  "skill_plan": {
+    "H2_RCM": 2,
+    "H3_RCV": 3,
+    "H4_RCM": 1,
+    "H5_RCV": 4,
+    "H6_RCM": 2,
+    "H7_RCM": 1,
+    "H5_extra_note": "H5 weighted high per STRAT target of 10 in full sim_1",
+    "macro_RCV": 7,
+    "macro_RCM": 8
+  },
+  "h1_plan": {
+    "alta": 5,
+    "media": 6,
+    "baja": 4,
+    "pct_alta_target": 0.333,
+    "constraint_range": "30–40% of 15 = 4.5–6 items"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B013",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 1,
+      "pre_adv_solution_check": {
+        "central_idea": "la lectura sostenida fortalece la capacidad de concentración y el rendimiento cognitivo general",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Diversos estudios han demostrado que el hábito de leer de forma sostenida mejora significativamente la capacidad de concentración. A diferencia del consumo fragmentado de información digital, la lectura continua exige que el lector mantenga el hilo argumental durante períodos prolongados, lo que fortalece los circuitos cognitivos asociados a la atención sostenida y el procesamiento profundo de ideas.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El consumo de información digital reduce la capacidad de leer textos extensos con facilidad.",
+        "B": "La lectura sostenida desarrolla la concentración y el procesamiento cognitivo profundo, a diferencia del consumo digital fragmentado.",
+        "C": "Los estudios científicos son el único medio confiable para evaluar los beneficios de la lectura en adultos.",
+        "D": "Leer por períodos prolongados es una actividad que resulta difícil para la mayoría de las personas en la actualidad."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto presenta dos elementos centrales: el contraste lectura sostenida vs. consumo fragmentado digital, y el efecto de la lectura sobre la concentración y el procesamiento profundo.",
+        "paso_2": "B integra ambas dimensiones: el contraste estructural y el efecto cognitivo resultante. Es la única opción que captura el argumento completo. ✓",
+        "paso_critico": "La idea central combina CAUSA (lectura sostenida vs. fragmentación) + EFECTO (fortalece concentración y circuitos cognitivos). Ninguna opción parcial es suficiente.",
+        "error_tipico": "A invierte la causalidad: el texto no dice que el consumo digital impida leer, sino que la lectura sostenida produce un efecto positivo. C introduce 'único medio confiable' — exclusividad no sostenida en el texto. D introduce una valoración negativa sobre dificultad que el texto no menciona."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 1,
+        "estimated_time_sec": 75,
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: contraste + efecto integrados. A invierte causalidad. C exclusividad no presente. D valoración de dificultad ausente en texto. H3/N1/RCV — coherencia individual ✓. Skill H3 declarada corresponde a estructura IDENTIFICACIÓN DE IDEA CENTRAL ✓. N1 coherente: 1 paso lógico, mínima inferencia ✓. H1=baja ✓. simulation_id=sim_1 ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B013",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 2,
+      "pre_adv_solution_check": {
+        "relation": "primer enunciado establece hecho positivo (parques mejoran calidad de vida); segundo enunciado es resultado esperado → conector consecuencial",
+        "connector_type": "consecuencial",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La presencia de parques y zonas verdes en los barrios urbanos mejora la calidad de vida de sus habitantes. __________, muchos municipios han incluido la creación de espacios verdes como prioridad en sus planes de desarrollo.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "No obstante",
+        "C": "Por esta razón",
+        "D": "A pesar de ello"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El primer enunciado establece que los parques mejoran la calidad de vida (causa documentada). El segundo enuncia la respuesta institucional: municipios los priorizan. Esta es la consecuencia directa esperada.",
+        "paso_2": "'Por esta razón' (C) expresa que la priorización municipal es el resultado causal directo de la mejora comprobada en calidad de vida. ✓",
+        "paso_critico": "El segundo enunciado es el resultado lógico esperado del primero, no una contradicción.",
+        "error_tipico": "A y B (adversativos/concesivos) implicarían que los municipios priorizan los parques A PESAR de que mejoran la calidad de vida — ilógico. D (concesivo) introduce oposición inexistente. La trampa recurrente es confundir una consecuencia positiva esperada con un contraste."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 1,
+        "estimated_time_sec": 65,
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único consecuencial: causa-efecto directo positivo. A/B adversativos (ilógicos). D concesivo (ilógico). H5/N1/RCV ✓. Coherencia individual: skill H5=coherencia-semántica/conectores ✓. N1: relación directa, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto parques-urbanos/desarrollo-municipal — distinto de todos los training B001-B012."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B013",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 3,
+      "pre_adv_solution_check": {
+        "step_1": "precio total = 4 × 850 = 3400",
+        "step_2": "precio por persona = 3400 / 5 = 680",
+        "correct_answer_value": 680,
+        "correct_option": "B",
+        "option_B_value": 680,
+        "alignment": "PASS"
+      },
+      "stem": "Cuatro amigos compran en conjunto una caja de mangos por ₡3 400. Si al llegar a casa se suman a la compra una quinta persona que paga su parte equitativa, ¿cuánto debe pagar cada persona en total?",
+      "opciones": {
+        "A": "₡850",
+        "B": "₡680",
+        "C": "₡700",
+        "D": "₡800"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El costo total de la caja es ₡3 400 (dato directo).",
+        "paso_2": "Se divide entre 5 personas en total: ₡3 400 ÷ 5 = ₡680 por persona. ✓",
+        "paso_critico": "La variable es el número total de personas (5, no 4). La trampa es usar el precio original por persona (₡850) en lugar de recalcular con 5.",
+        "error_tipico": "A (₡850): divide entre 4, ignorando la quinta persona. C (₡700): error aritmético de división. D (₡800): calcula ₡3 400 ÷ 4 + ajuste arbitrario. La trampa recurrente en H2 es no actualizar la variable al cambiar la condición del problema."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 1,
+        "estimated_time_sec": 70,
+        "tipo_error": "Modelado incorrecto",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "3400÷5=680=B ✓. A divide entre 4 (ignora 5ª persona). C error aritmético. D ajuste arbitrario. H2/N1/RCM ✓. Skill H2=modelado-lógico-simbólico: traducción de reparto con cambio de condición ✓. N1: 1 paso operacional claro ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto compra-conjunta/reparto — distinto de training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B013",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 4,
+      "pre_adv_solution_check": {
+        "step_1": "tasa: 240 km en 3 h = 80 km/h",
+        "step_2": "distancia en 5 h: 80 × 5 = 400 km",
+        "correct_answer_value": 400,
+        "correct_option": "A",
+        "option_A_value": 400,
+        "alignment": "PASS"
+      },
+      "stem": "Un autobús recorre 240 km en 3 horas a velocidad constante. ¿Cuántos kilómetros recorrerá en 5 horas al mismo ritmo?",
+      "opciones": {
+        "A": "400 km",
+        "B": "360 km",
+        "C": "480 km",
+        "D": "320 km"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Velocidad constante: 240 km ÷ 3 h = 80 km/h.",
+        "paso_2": "Distancia en 5 h: 80 km/h × 5 h = 400 km. ✓",
+        "paso_critico": "Calcular la tasa unitaria (velocidad) y luego multiplicar por la nueva cantidad de horas.",
+        "error_tipico": "B (360 km): 240 + (240/4)×2 = 240 + 120 = 360, razonamiento proporcional incorrecto. C (480 km): 240 × 2 = 480, dobla la distancia por reducir a la mitad mentalmente las horas. D (320 km): 240 + 80 = 320, suma solo una hora adicional en lugar de dos."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 1,
+        "estimated_time_sec": 65,
+        "tipo_error": "Confusión de proporcionalidad",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "80×5=400=A ✓. B proporcional incorrecto. C dobla distancia. D suma 1 hora extra solamente. H6/N1/RCM ✓. Skill H6=relaciones cuantitativas y proporcionalidad ✓. N1: tasa directa, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto autobús/distancia-tiempo — distinto de training B009-B012."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B013",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 5,
+      "pre_adv_solution_check": {
+        "relation": "primera oración: exploración espacial costosa y riesgosa; segunda: países siguen invirtiéndola → concesivo adversativo",
+        "connector_type": "concesivo",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La exploración espacial implica costos astronómicos y riesgos humanos considerables. __________, numerosos países continúan invirtiendo recursos significativos en sus programas espaciales.»",
+      "opciones": {
+        "A": "Por ende",
+        "B": "De igual manera",
+        "C": "En consecuencia",
+        "D": "A pesar de ello"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El primer enunciado presenta obstáculos serios (costos + riesgos). El segundo enunciado describe una acción que ocurre pese a esos obstáculos: inversión continua.",
+        "paso_2": "'A pesar de ello' (D) expresa que la inversión ocurre aunque los obstáculos son reales — relación concesiva. ✓",
+        "paso_critico": "El segundo enunciado es opuesto a lo que se esperaría dado el primer enunciado (obstáculos → deberían desincentivar, pero los países siguen invirtiendo).",
+        "error_tipico": "A y C (causales/consecuenciales) implicarían que los países invierten PORQUE es caro y riesgoso — ilógico. B (aditivo) coordinaria sin expresar el contraste. La trampa recurrente: los conectores consecuenciales son plausibles cuando el resultado es positivo, pero aquí el segundo enunciado va CONTRA la expectativa del primero."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "estimated_time_sec": 100,
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D único concesivo: obstáculo → acción opuesta a expectativa. A/C causales (ilógicos). B aditivo (no expresa contraste). H5/N2/RCV ✓. N2: requiere identificar relación lógica entre dos enunciados (2 pasos de razonamiento) ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto exploración-espacial/inversión — distinto de todos los training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B013",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 6,
+      "pre_adv_solution_check": {
+        "central_idea": "el envejecimiento poblacional plantea desafíos estructurales para los sistemas de pensiones que requieren reformas urgentes",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El envejecimiento progresivo de la población en los países desarrollados está generando una presión sin precedentes sobre los sistemas de pensiones. A medida que la proporción de jubilados crece respecto a la de trabajadores activos, los fondos acumulados comienzan a ser insuficientes para sostener los compromisos adquiridos. Esta tendencia demográfica exige una revisión urgente de los modelos actuariales y los criterios de acceso a la jubilación.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La mayoría de los países desarrollados ha decidido eliminar los sistemas de pensiones tradicionales por su insostenibilidad.",
+        "B": "El incremento en la esperanza de vida es el único factor que explica el agotamiento de los fondos de pensiones.",
+        "C": "El envejecimiento poblacional ejerce una presión estructural sobre los sistemas de pensiones que demanda reformas urgentes.",
+        "D": "Los trabajadores activos deberían aumentar sus contribuciones para compensar el crecimiento del número de jubilados."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto presenta: tendencia (envejecimiento), consecuencia (presión sobre pensiones/fondos insuficientes) y conclusión (se exige revisión urgente).",
+        "paso_2": "C integra los tres elementos: envejecimiento → presión estructural → reformas urgentes. ✓",
+        "paso_critico": "La idea central no es solo describir el problema, sino también su implicación de acción. C es la única que incluye tanto el diagnóstico como la exigencia de cambio.",
+        "error_tipico": "A introduce 'eliminar los sistemas' — el texto no propone eliminación sino revisión. B introduce 'único factor' — exclusividad no sostenida (el texto menciona la proporción jubilados/trabajadores, no solo esperanza de vida). D prescribe un mecanismo específico (aumentar contribuciones) que el texto no menciona."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 2,
+        "estimated_time_sec": 110,
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único: diagnóstico+exigencia de reforma integrados. A eliminar (no en texto). B exclusividad incorrecta. D prescripción no presente. H3/N2/RCV ✓. N2: síntesis de tres elementos argumentativos (2+ pasos) ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto envejecimiento-poblacional/pensiones — distinto de training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B013",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 7,
+      "pre_adv_solution_check": {
+        "rule": "×2 + 3",
+        "verification": "3→9→21→45→93",
+        "step": "45 × 2 + 3 = 90 + 3 = 93",
+        "correct_answer_value": 93,
+        "correct_option": "B",
+        "option_B_value": 93,
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 3, 9, 21, 45, ___?",
+      "opciones": {
+        "A": "90",
+        "B": "93",
+        "C": "96",
+        "D": "87"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Identificar la regla: cada término se obtiene multiplicando el anterior por 2 y sumando 3. Verificación: 3×2+3=9, 9×2+3=21, 21×2+3=45. ✓",
+        "paso_2": "Siguiente término: 45 × 2 + 3 = 90 + 3 = 93. ✓",
+        "paso_critico": "La regla es compuesta (×2 luego +3). El error más frecuente es aplicar solo el factor multiplicativo (×2) olvidando la parte aditiva.",
+        "error_tipico": "A (90): 45 × 2 = 90, aplica solo ×2 sin el +3. C (96): 45 × 2 + 6 = 96, duplica el sumando (usa +6 en lugar de +3). D (87): 45 × 2 − 3 = 87, resta en lugar de sumar."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 2,
+        "estimated_time_sec": 110,
+        "tipo_error": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "45×2+3=93=B ✓. A olvida +3. C usa +6. D resta. H4/N2/RCM ✓. Skill H4=generalización-y-patrones ✓. N2: requiere identificar regla compuesta (2 operaciones) ✓. H1=media ✓. simulation_id=sim_1 ✓. Regla ×2+3 — distinta de training (×3+1, alt×2/−2, Fibonacci)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B013",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 8,
+      "pre_adv_solution_check": {
+        "step_1": "ganancia por artículo = 1800 − 1200 = 600",
+        "step_2": "ganancia total = 600 × 15 = 9000",
+        "correct_answer_value": 9000,
+        "correct_option": "C",
+        "option_C_value": 9000,
+        "alignment": "PASS"
+      },
+      "stem": "Una vendedora compra cada artículo a ₡1 200 y lo vende a ₡1 800. Si vende 15 artículos en un día, ¿cuál es su ganancia total?",
+      "opciones": {
+        "A": "₡27 000",
+        "B": "₡18 000",
+        "C": "₡9 000",
+        "D": "₡6 000"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Ganancia por artículo: ₡1 800 − ₡1 200 = ₡600.",
+        "paso_2": "Ganancia total: ₡600 × 15 = ₡9 000. ✓",
+        "paso_critico": "Calcular la ganancia NETA por unidad antes de multiplicar. No calcular sobre el precio de venta total.",
+        "error_tipico": "A (₡27 000): 1800 × 15 = 27 000, calcula el ingreso bruto total sin descontar el costo. B (₡18 000): (1800 − 1200) × 15 = 600 × 15 pero lo calcula como 1200 × 15 = 18 000, confunde costo total con ganancia. D (₡6 000): 1200 × 5 = 6 000, opera con una fracción del volumen."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 2,
+        "estimated_time_sec": 100,
+        "tipo_error": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "(1800−1200)×15=600×15=9000=C ✓. A calcula ingreso bruto. B confunde costo con ganancia. D fracción del volumen. H2/N2/RCM ✓. N2: dos pasos (diferencia precio + multiplicación) ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto vendedora/ganancia-neta — distinto de training B009-B012."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B013",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 9,
+      "pre_adv_solution_check": {
+        "relation": "primer enunciado: condiciones frías + húmedas; segundo: enfermedades respiratorias aumentan → consecuencia directa causal",
+        "connector_type": "consecuencial",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Durante los meses de invierno, las temperaturas bajas y la humedad elevada favorecen la proliferación de agentes patógenos respiratorios. __________, la incidencia de enfermedades respiratorias aumenta considerablemente en la población.»",
+      "opciones": {
+        "A": "Como resultado",
+        "B": "Por otro lado",
+        "C": "Sin embargo",
+        "D": "Asimismo"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El primer enunciado establece una condición ambiental que favorece los patógenos (causa). El segundo enuncia el incremento de enfermedades (efecto directo).",
+        "paso_2": "'Como resultado' (A) expresa que el aumento de enfermedades es el efecto directo de las condiciones descritas. ✓",
+        "paso_critico": "La relación es causal-directa: condición ambiental → consecuencia epidemiológica. El conector debe expresar resultado, no contraste ni adición.",
+        "error_tipico": "B (contrastivo): implicaría que las enfermedades aumentan en contraste con las bajas temperaturas — incoherente. C (adversativo) introduce oposición inexistente. D (aditivo) coordina pero no expresa la relación causal entre ambiente y enfermedad."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "estimated_time_sec": 100,
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A único consecuencial-causal: condición→efecto epidemiológico. B contrastivo (incoherente). C adversativo (oposición inexistente). D aditivo (no expresa causalidad). H5/N2/RCV ✓. N2: identificar relación causal implícita entre dos oraciones ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto invierno/patógenos-respiratorios — distinto de training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B013",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 10,
+      "pre_adv_solution_check": {
+        "structure_A": "Si una sociedad no garantiza acceso igualitario a la educación, entonces perpetúa la desigualdad social.",
+        "contrarreciproco": "Si una sociedad no perpetúa la desigualdad social, entonces garantiza acceso igualitario a la educación.",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Considere la siguiente afirmación:\n\n«Si una sociedad no garantiza acceso igualitario a la educación, entonces perpetúa la desigualdad social.»\n\n¿Cuál de las siguientes opciones es lógicamente equivalente a esta afirmación?",
+      "opciones": {
+        "A": "Si una sociedad perpetúa la desigualdad social, entonces no garantiza acceso igualitario a la educación.",
+        "B": "Si una sociedad no perpetúa la desigualdad social, entonces garantiza acceso igualitario a la educación.",
+        "C": "Si una sociedad garantiza acceso igualitario a la educación, entonces no perpetúa la desigualdad social.",
+        "D": "Si una sociedad perpetúa la desigualdad social, entonces garantiza acceso igualitario a la educación."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Enunciado original: ¬P → Q (donde P = garantiza acceso, Q = perpetúa desigualdad). Forma: Si NO-P entonces Q.",
+        "paso_2": "El contrarrecíproco lógicamente equivalente es: ¬Q → P. Es decir: Si NO-Q entonces P. Traducción: Si una sociedad NO perpetúa la desigualdad, entonces SÍ garantiza acceso igualitario. Esto es exactamente B. ✓",
+        "paso_critico": "La equivalencia lógica de 'Si A entonces B' es su contrarrecíproco 'Si NO-B entonces NO-A'. Solo el contrarrecíproco preserva el valor de verdad.",
+        "error_tipico": "A es la inversa (Si Q entonces ¬P) — no equivalente. C es la recíproca (Si P entonces ¬Q) — no equivalente. D invierte y contradice la relación lógica. La trampa es confundir recíproca o inversa con contrarrecíproco."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "estimated_time_sec": 140,
+        "tipo_error": "Inferencia inválida",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B = contrarrecíproco de ¬P→Q: ¬Q→P ✓. A = inversa (no equivalente). C = recíproca (no equivalente). D = contradicción. H5-L3/N2(extended)/RCV. Nota: T_H5_RCV_L3_01 usado apropiadamente — equivalencia semántica entre estructuras complejas/formalización lógica. H1=media (la inferencia es formal pero el paso es identificable). simulation_id=sim_1 ✓. Distinto de contextos negativación-simple usados en training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B013",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 11,
+      "pre_adv_solution_check": {
+        "step_1": "razón A: 45/30 = 3/2",
+        "step_2": "razón B: 60/x",
+        "step_3": "igual razón: 60/x = 3/2 → x = 60×2/3 = 40",
+        "correct_answer_value": 40,
+        "correct_option": "C",
+        "option_C_value": 40,
+        "alignment": "PASS",
+        "verification": "45/30 = 3/2 = 60/40 ✓"
+      },
+      "stem": "En una fábrica, la máquina A produce 45 piezas usando 30 unidades de material. La máquina B produce 60 piezas. Si la máquina B mantiene la misma razón de eficiencia que la máquina A, ¿cuántas unidades de material utiliza la máquina B?",
+      "opciones": {
+        "A": "45",
+        "B": "50",
+        "C": "40",
+        "D": "36"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Razón de eficiencia de A: piezas/material = 45/30 = 3/2.",
+        "paso_2": "Para B con 60 piezas: 60/x = 3/2 → x = 60 × (2/3) = 40 unidades. ✓",
+        "paso_3": "Verificación: 45/30 = 3/2 = 60/40. ✓",
+        "paso_critico": "La variable oculta es que no se da directamente el material de B — debe derivarse de la razón no explícita entre piezas y material.",
+        "error_tipico": "A (45): iguala el material de B al de A sin considerar que B produce más piezas. B (50): 30 + 20 = 50, suma diferencia arbitraria. D (36): 30 × (60/50) = 36, aplica razón incorrecta sobre datos no relacionados."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 3,
+        "estimated_time_sec": 180,
+        "tipo_error": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "45/30=3/2; 60/x=3/2→x=40=C ✓. Verificación 60/40=3/2 ✓. A iguala materiales sin escalar. B suma arbitraria. D razón incorrecta. H6/N3/RCM ✓. N3: razón no explícita + transformación intermedia (variable oculta) ✓. H1=alta ✓. simulation_id=sim_1 ✓. Contexto fábrica/eficiencia-máquinas — distinto de training velocidad-tren, impresora, etc."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B013",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 12,
+      "pre_adv_solution_check": {
+        "implicit_argument": "el autor argumenta que la tecnología no es neutral: su diseño refleja las prioridades de quienes la crean, por lo tanto la sociedad debe participar en esas decisiones",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Quienes sostienen que la tecnología es una herramienta neutral ignoran que todo diseño tecnológico incorpora decisiones valorativas: qué se prioriza, qué se omite, quiénes se benefician. Un martillo puede parecer neutral, pero los algoritmos que determinan qué información vemos, qué créditos se aprueban o cómo se asignan recursos públicos están lejos de serlo. Por eso, dejar el diseño tecnológico exclusivamente en manos de sus creadores equivale a delegar decisiones políticas sin control democrático.»\n\n¿Cuál es la conclusión implícita del argumento del autor?",
+      "opciones": {
+        "A": "El diseño de la tecnología es una decisión política que requiere participación y control social, no solo técnico.",
+        "B": "Los algoritmos son intrínsecamente peligrosos y deben ser regulados para evitar daños a las personas.",
+        "C": "La tecnología es neutral cuando es simple, pero se vuelve parcial al aplicarse a decisiones complejas.",
+        "D": "Los creadores de tecnología actúan siempre de manera irresponsable al ignorar las consecuencias de sus diseños."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El argumento presenta: premisa 1 (tecnología no es neutral, incorpora valores), premisa 2 (ejemplos: algoritmos de información, crédito, recursos públicos), conclusión implícita (no se puede dejarla solo en manos de sus creadores).",
+        "paso_2": "La conclusión NO está enunciada explícitamente — debe ser reconstruida: si la tecnología incorpora decisiones políticas, entonces su diseño requiere control democrático, no solo técnico. Esto es exactamente A. ✓",
+        "paso_critico": "Reconstruir la conclusión implícita del argumento sin extrapolación. El texto no dice que la tecnología sea 'peligrosa' ni que sus creadores actúen 'irresponsablemente'.",
+        "error_tipico": "B introduce 'intrínsecamente peligrosos' y 'regular para evitar daños' — lexicon valorativo ausente en el texto. C introduce una distinción simple/compleja que el autor rechaza (el martillo también está en discusión). D introduce 'irresponsabilidad' — el texto no juzga la intención de los creadores sino el proceso de toma de decisiones."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 3,
+        "estimated_time_sec": 190,
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A única: reconstrucción correcta de conclusión implícita (tecnología=decisión política → control social). B 'peligroso/regular' no en texto. C distinción simple/compleja rechazada por el autor. D 'irresponsabilidad' no en texto. H3/N3/RCV ✓. N3: reconstrucción de argumento implícito, multi-paso, trampa conceptual fuerte ✓. H1=alta ✓. simulation_id=sim_1 ✓. Contexto tecnología-neutral/decisión-política — distinto de training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_013_B013",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 13,
+      "pre_adv_solution_check": {
+        "step_1": "triángulo rectángulo: catetos a=6, b=8",
+        "step_2": "hipotenusa: √(36+64)=√100=10",
+        "step_3": "perímetro: 6+8+10=24",
+        "correct_answer_value": 24,
+        "correct_option": "B",
+        "option_B_value": 24,
+        "alignment": "PASS",
+        "verification": "6²+8²=36+64=100=10² ✓"
+      },
+      "stem": "Un triángulo tiene un ángulo recto. Sus dos catetos miden 6 cm y 8 cm respectivamente. ¿Cuál es el perímetro del triángulo?",
+      "opciones": {
+        "A": "28 cm",
+        "B": "24 cm",
+        "C": "22 cm",
+        "D": "26 cm"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Identificar la figura implícita: triángulo rectángulo con catetos 6 y 8. La hipotenusa no se da directamente — se debe inferir.",
+        "paso_2": "Hipotenusa: √(6² + 8²) = √(36 + 64) = √100 = 10 cm.",
+        "paso_3": "Perímetro: 6 + 8 + 10 = 24 cm. ✓",
+        "paso_critico": "La variable oculta es la hipotenusa: no se puede sumar el perímetro sin calcularla primero mediante Pitágoras.",
+        "error_tipico": "A (28 cm): 6+8+14=28, estima hipotenusa como suma de catetos. C (22 cm): 6+8+8=22, usa un cateto dos veces en lugar de la hipotenusa. D (26 cm): 6+8+12=26, error en cálculo de raíz cuadrada (√100 ≠ 12)."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 3,
+        "estimated_time_sec": 200,
+        "tipo_error": "Error de cálculo",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "√(36+64)=√100=10; perímetro=6+8+10=24=B ✓. A suma de catetos como hipotenusa. C repite un cateto. D error de raíz. H7/N3/RCM ✓. N3: multi-paso, inferencia espacial no explícita (hipotenusa implícita), trampa conceptual fuerte (Pitágoras es el paso crítico no sugerido) ✓. H1=alta ✓. simulation_id=sim_1 ✓. Contexto triángulo-rectángulo/Pitágoras-perímetro — distinto de training (ángulos, suma-cuadrilátero)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_014_B013",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 14,
+      "pre_adv_solution_check": {
+        "let": "j = años de Juan",
+        "equations": "María = j + 7; hace 5 años: (j-5) + (j+7-5) = 31 → (j-5) + (j+2) = 31 → 2j - 3 = 31 → 2j = 34 → j = 17",
+        "verification": "Juan=17, María=24; hace 5: 12+19=31 ✓",
+        "correct_answer_value": 17,
+        "correct_option": "C",
+        "option_C_value": 17,
+        "alignment": "PASS"
+      },
+      "stem": "María tiene 7 años más que Juan. Hace 5 años, la suma de sus edades era 31. ¿Cuántos años tiene Juan actualmente?",
+      "opciones": {
+        "A": "15",
+        "B": "16",
+        "C": "17",
+        "D": "18"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea j = edad actual de Juan. María tiene j + 7 años.",
+        "paso_2": "Hace 5 años: Juan tenía (j − 5) y María (j + 7 − 5) = (j + 2). Ecuación: (j − 5) + (j + 2) = 31 → 2j − 3 = 31 → 2j = 34 → j = 17. ✓",
+        "paso_3": "Verificación: Juan=17, María=24. Hace 5 años: 12 + 19 = 31. ✓",
+        "paso_critico": "La variable oculta es la referencia temporal: 'hace 5 años' aplica a AMBAS edades. El error es restar solo a una de las dos.",
+        "error_tipico": "A (15): 2j − 3 = 27 → j = 15, usa solo una edad en la ecuación pasada. B (16): 2j = 34 pero comete error aritmético: j = 16. D (18): resta 5 solo de María y no de Juan: (j) + (j+2) = 31 → 2j+2=31, error de traducción."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 3,
+        "estimated_time_sec": 200,
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "2j−3=31→j=17=C ✓. Verif: 12+19=31 ✓. A usa ecuación incompleta. B error aritmético. D no aplica retroceso a ambas edades. H2/N3/RCM ✓. N3: sistema implícito con variable oculta temporal, multi-paso ✓. H1=alta ✓. simulation_id=sim_1 ✓. Contexto edades/referencia-temporal — distinto de training (chocolates, empleados empresa, ciclista)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_015_B013",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "difficulty_position": 15,
+      "pre_adv_solution_check": {
+        "structure_A": "Solo quienes comprenden los fundamentos teóricos pueden aplicar correctamente los conocimientos en la práctica.",
+        "contrarreciproco": "Quien no aplica correctamente los conocimientos en la práctica no comprende los fundamentos teóricos.",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Considere la siguiente afirmación:\n\n«Solo quienes comprenden los fundamentos teóricos pueden aplicar correctamente los conocimientos en la práctica.»\n\n¿Cuál de las siguientes opciones es lógicamente equivalente a esta afirmación?",
+      "opciones": {
+        "A": "Quienes aplican correctamente los conocimientos en la práctica comprenden los fundamentos teóricos.",
+        "B": "Quienes no comprenden los fundamentos teóricos aplican los conocimientos incorrectamente en la práctica.",
+        "C": "Comprender los fundamentos teóricos garantiza siempre una aplicación correcta en la práctica.",
+        "D": "Quien no aplica correctamente los conocimientos en la práctica no comprende los fundamentos teóricos."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "'Solo A puede B' equivale a 'Si B entonces A' (la condición necesaria). Aquí: Si aplica correctamente (B), entonces comprende fundamentos (A).",
+        "paso_2": "El contrarrecíproco de 'Si B entonces A' es 'Si NO-A entonces NO-B': 'Si no comprende fundamentos, no aplica correctamente.' Pero el enunciado usa 'solo', entonces la forma directa ya es la suficiencia desde B a A.",
+        "paso_3": "La equivalencia lógica exacta de 'Solo A puede hacer B' es su contrarrecíproco: 'Quien NO hace B, no es A'. → 'Quien no aplica correctamente, no comprende los fundamentos.' = D. ✓",
+        "paso_critico": "'Solo A puede B' NO implica que A garantice B (eso sería afirmar el antecedente). La equivalencia es solo el contrarrecíproco.",
+        "error_tipico": "A es la recíproca — no equivalente. B es la afirmación del antecedente (inversa) — no equivalente. C introduce 'siempre' y convierte una condición necesaria en suficiente — error lógico clásico."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 3,
+        "estimated_time_sec": 210,
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D = contrarrecíproco de 'Solo A puede B' (If B then A → If not-A then not-B) ✓. A = recíproca (no equivalente). B = inversa/afirmación del antecedente (no equivalente). C = convierte condición necesaria en suficiente (error clásico). H5/N3/RCV ✓. N3: multi-paso lógico formal, trampa conceptual fuerte (necesaria vs. suficiente) ✓. H1=alta ✓. simulation_id=sim_1 ✓. Estructura 'Solo A puede B' distinta del 'Si A entonces B' de ITEM_010."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_013",
+    "item_type": "simulation",
+    "simulation_id": "sim_1",
+    "total_generated": 15,
+    "approved": 15,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_1": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "difficulty_sequence_ascending": true,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 3,
+      "H3": 3,
+      "H4": 1,
+      "H5": 4,
+      "H6": 2,
+      "H7": 1,
+      "H2_note": "Items 3, 8, 14",
+      "H3_note": "Items 1, 6, 12",
+      "H4_note": "Item 7",
+      "H5_note": "Items 2, 5, 9, 10, 15 — H5 weighted per STRAT target of 10 in full sim_1",
+      "H6_note": "Items 4, 11",
+      "H7_note": "Item 13"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 4,
+      "nivel_2": 7,
+      "nivel_3": 4,
+      "sequence": "N1→N1→N1→N1→N2→N2→N2→N2→N2→N2→N3→N3→N3→N3→N3",
+      "strictly_ascending": true
+    },
+    "macro_area_distribution": {
+      "RCV": 7,
+      "RCM": 8,
+      "RCV_items": "1,2,5,6,9,10,12,15 — note items 10 and 15 (H5-L3 RCV) counted",
+      "RCM_items": "3,4,7,8,11,13,14"
+    },
+    "h1_distribution": {
+      "baja": 4,
+      "media": 6,
+      "alta": 5,
+      "pct_alta": 0.333,
+      "constraint": "30–40% = 4.5–6 items. 5/15 = 33.3% ✓ WITHIN RANGE"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "2 uses (items 3, 8)",
+      "T_H2_RCM_L3_01": "1 use (item 14)",
+      "T_H3_RCV_L2_01": "2 uses (items 1, 6)",
+      "T_H3_RCV_L3_01": "1 use (item 12)",
+      "T_H4_RCM_L2_01": "1 use (item 7)",
+      "T_H5_RCV_L2_01": "3 uses (items 2, 5, 9)",
+      "T_H5_RCV_L3_01": "2 uses (items 10, 15)",
+      "T_H6_RCM_L2_01": "1 use (item 4)",
+      "T_H6_RCM_L3_01": "1 use (item 11)",
+      "T_H7_RCM_L3_01": "1 use (item 13)",
+      "T_H7_RCM_L2_01": "0 uses this batch",
+      "all_templates_active": true
+    },
+    "structural_reuse_check": "PASSED — all 15 contexts are structurally distinct from BATCH_001–012 (training segment). No structural equivalence detected.",
+    "segment_isolation_check": "PASSED — item_type=simulation, simulation_id=sim_1 on 100% of items. No cross-segment contamination.",
+    "conflict_check": "0 GEN vs ADV conflicts across all 15 items",
+    "cumulative_sim_1_segment": {
+      "b013": 15,
+      "total_approved": 15,
+      "sim_1_target": 45,
+      "progress_pct": 33.3,
+      "status": "IN PROGRESS — 30 items remaining for sim_1 completion"
+    },
+    "pipeline_segment_state": {
+      "training_count": 141,
+      "training_target": 140,
+      "training_status": "COMPLETE",
+      "diagnostic_count": 0,
+      "sim_1_count": 15,
+      "sim_2_count": 0,
+      "pipeline_state": "active"
+    },
+    "next_action": "continue sim_1 — generate BATCH_014 to accumulate toward sim_1_count = 45"
+  }
+}

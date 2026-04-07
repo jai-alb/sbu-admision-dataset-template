@@ -1,0 +1,66 @@
+{
+  "batch_id": "BATCH_025",
+  "generated_at": "2026-03-25T04:36:28-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_1",
+  "mission": "FULL REBUILD SIM_1 — 45 completely new items. No reuse of previous sim_1 items.",
+  "files": {
+    "part1": "batch_025_part1.json (items 1-22)",
+    "part2": "batch_025_part2.json (items 23-45)"
+  },
+  "batch_state": "completed",
+  "total_generated": 45,
+  "approved": 45,
+  "rejected": 0,
+  "rejection_rate": 0.000,
+  "ambiguity_rate": 0.000,
+  "gen_vs_adv_conflict_rate": 0.000,
+  "VALIDATION_FINAL": {
+    "total_items": {"value": 45, "target": 45, "status": "✓"},
+    "macro_area": {
+      "RCV": {"value": 23, "target": 23, "status": "✓", "items": "2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,43,45"},
+      "RCM": {"value": 22, "target": 22, "status": "✓", "items": "1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,44"}
+    },
+    "skill_distribution": {
+      "H2": {"value": 8, "target": 8, "status": "✓", "items": [1,5,13,19,25,31,35,41]},
+      "H3": {"value": 10, "target": "7 (STRAT min)", "status": "≥ target ✓", "items": [4,8,12,16,20,24,28,32,36,42]},
+      "H4": {"value": 5, "target": 5, "status": "✓", "items": [7,15,21,29,37]},
+      "H5": {"value": 13, "target": "10 (STRAT min)", "status": "≥ target ✓", "items": [2,6,10,14,18,22,26,30,34,38,40,43,45]},
+      "H6": {"value": 6, "target": 6, "status": "✓", "items": [3,9,17,27,33,39]},
+      "H7": {"value": 3, "target": 3, "status": "✓", "items": [11,23,44]}
+    },
+    "difficulty_distribution": {
+      "L1": {"value": 12, "target": 12, "status": "✓", "items": "1-12"},
+      "L2": {"value": 22, "target": 22, "status": "✓", "items": "13-34"},
+      "L3": {"value": 11, "target": 11, "status": "✓", "items": "35-45"}
+    },
+    "ordering": {
+      "L1_block": "items 1-12 all difficulty=1 ✓",
+      "L2_block": "items 13-34 all difficulty=2 ✓",
+      "L3_block": "items 35-45 all difficulty=3 ✓",
+      "strictly_ascending": true
+    },
+    "H1_distribution": {
+      "alta_items": [26,28,33,35,36,37,38,39,40,41,42,43,44,45],
+      "alta_count": 14,
+      "target_range": "14-16 (30-40%)",
+      "pct_alta": "31.1%",
+      "status": "✓ within 30-40%"
+    },
+    "segment_isolation": {
+      "all_simulation_id_sim_1": true,
+      "all_item_type_simulation": true,
+      "no_duplicate_with_training": true,
+      "no_duplicate_with_diagnostic": true,
+      "no_reuse_of_previous_sim_1": true
+    }
+  },
+  "CORRECTIONS_APPLIED": {
+    "ITEM_041_B025": "Removed duplicate respuesta_correcta field. Correct answer: A (34 años — Rodrigo)",
+    "ITEM_043_B025": "Converted from H6/RCM to H5/RCV (equivalencia semántica educación-pública/resiliencia) to achieve exact RCM=22, RCV=23"
+  },
+  "ALL_CONSTRAINTS_SATISFIED": true,
+  "READY_FOR_PRODUCTION": true
+}

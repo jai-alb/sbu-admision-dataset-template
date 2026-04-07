@@ -1,0 +1,576 @@
+{
+  "batch_id": "BATCH_014",
+  "generated_at": "2026-03-24T13:59:52-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "diagnostic",
+  "simulation_id": null,
+  "target_items": 10,
+  "pipeline_status": "ACTIVE — diagnostic segment initiated",
+  "segment_note": "Este batch inicia el segmento diagnostic desde diagnostic_count=0. Contribuye exclusivamente a diagnostic_count.",
+  "skill_plan": {
+    "H2_RCM": 3,
+    "H3_RCV": 2,
+    "H5_RCV": 2,
+    "H6_RCM": 2,
+    "H7_RCM": 1,
+    "macro_RCV": 4,
+    "macro_RCM": 6,
+    "note": "H2 weighted 3 por énfasis STRAT H1+H2 en diagnóstico. Distribución proporcional 6 habilidades activas."
+  },
+  "difficulty_plan": {
+    "nivel_1": 2,
+    "nivel_2": 6,
+    "nivel_3": 2,
+    "note": "Mayoría N2 per STRAT diagnóstico. N1 y N3 en proporción minoritaria."
+  },
+  "h1_plan": {
+    "target_pct_alta": "≥ 0.40",
+    "note": "H1_rate diagnóstico debe superar sim_1 (33.3%) y training (≥30%) per 4B enforcement."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B014",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "x = precio por kilo de arroz",
+        "equation": "3x + 2(x+150) = 2850 → 5x + 300 = 2850 → 5x = 2550 → x = 510",
+        "correct_answer_value": 510,
+        "correct_option": "B",
+        "verification": "3(510) + 2(660) = 1530 + 1320 = 2850 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Una familia compró 3 kilos de arroz y 2 kilos de frijoles. El precio por kilo de frijoles es ₡150 más que el precio por kilo de arroz. Si el total de la compra fue ₡2 850, ¿cuánto cuesta cada kilo de arroz?",
+      "opciones": {
+        "A": "₡480",
+        "B": "₡510",
+        "C": "₡540",
+        "D": "₡570"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea x = precio por kilo de arroz. Entonces el precio del frijol es x + 150.",
+        "paso_2": "Ecuación: 3x + 2(x + 150) = 2850 → 3x + 2x + 300 = 2850 → 5x = 2550 → x = 510. ✓",
+        "paso_critico": "Traducir la relación verbal 'el frijol cuesta ₡150 más que el arroz' a la expresión algebraica correcta antes de plantear la ecuación total.",
+        "error_tipico": "A (₡480): error de suma 5x = 2400 → x = 480, omite sumar el +300 correctamente. C (₡540): 5x = 2700 → x = 540, añade 300 en lugar de restarlo. D (₡570): usa solo 3+2=5 sin ajustar la constante diferencial."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 110,
+        "error_type": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "3x+2(x+150)=2850→x=510=B ✓. Verificación: 1530+1320=2850 ✓. A omite constante. C suma en lugar de restar. D no ajusta diferencial. H2/N2/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: traducción relación verbal→ecuación lineal con una incógnita ✓. N2: 2 pasos (traducción + resolución) ✓. H1=media: inferencia de variable implícita (x+150) no explícita ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto arroz/frijoles — structuralmente distinto de training (chocolates, empleados, ciclista) y sim_1 (mangos, vendedora, edades)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B014",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "central_idea": "la fragmentación del sueño en adultos mayores afecta la consolidación de la memoria y el bienestar cognitivo general",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La investigación contemporánea sobre el sueño en adultos mayores revela que, a diferencia de lo observado en jóvenes, los patrones de sueño fragmentado son considerablemente más frecuentes en este grupo etario. Esta fragmentación no es inocua: durante las fases de sueño profundo, el cerebro consolida los recuerdos y depura los desechos metabólicos. Cuando estas fases se interrumpen reiteradamente, la memoria episódica se deteriora y el bienestar cognitivo general disminuye.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los adultos mayores duermen menos horas que los jóvenes debido a cambios hormonales propios del envejecimiento.",
+        "B": "El sueño profundo es la única fase del ciclo nocturno que tiene valor funcional para el cerebro humano.",
+        "C": "La fragmentación del sueño en adultos mayores altera procesos cerebrales críticos como la consolidación de la memoria.",
+        "D": "Los investigadores han descubierto que los adultos mayores presentan patrones de sueño idénticos a los de los jóvenes."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto establece: (1) los adultos mayores tienen sueño fragmentado con más frecuencia, (2) el sueño profundo está vinculado a consolidación de memoria y depuración metabólica, (3) la interrupción de esas fases deteriora la memoria episódica.",
+        "paso_2": "C integra los tres elementos: la causa (fragmentación en adultos mayores) y su efecto sobre procesos cognitivos críticos (memoria). ✓",
+        "paso_critico": "La idea central une el fenómeno específico (fragmentación en adultos mayores) con su consecuencia funcional (deterioro cognitivo), no solo describe el fenómeno.",
+        "error_tipico": "A introduce 'causas hormonales' que el texto nunca menciona. B introduce 'única fase con valor' — exclusividad no sostenida. D contradice el texto (el texto dice que es diferente al de jóvenes, no idéntico)."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 115,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C única: fusiona causa+efecto del argumento completo. A causas hormonales (no en texto). B exclusividad de fase (no en texto). D contradice directamente el texto. H3/N2/RCV ✓. Skill H3=Síntesis-y-Estructura-Global: identificación de idea central en texto con distractores parciales plausibles ✓. N2: síntesis de múltiples partes del texto ✓. H1=media ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto sueño-adultos-mayores/cognición — distinto de sim_1 (lectura sostenida, envejecimiento-pensiones, tecnología-neutral)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B014",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "h = horas trabajadas por Luis",
+        "equation": "Luis = h; Ana = h + 4; Total = h + (h+4) = 44 → 2h + 4 = 44 → 2h = 40 → h = 20; Ana = 24",
+        "correct_answer_value": 24,
+        "correct_option": "A",
+        "verification": "20 + 24 = 44 ✓; 24 - 20 = 4 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Ana y Luis trabajaron juntos un total de 44 horas esta semana. Ana trabajó 4 horas más que Luis. ¿Cuántas horas trabajó Ana?",
+      "opciones": {
+        "A": "24",
+        "B": "22",
+        "C": "20",
+        "D": "26"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Sea h = horas de Luis. Ana trabajó h + 4. Ecuación: h + (h + 4) = 44 → 2h + 4 = 44 → h = 20.",
+        "paso_2": "Horas de Ana: 20 + 4 = 24. ✓ Verificación: 20 + 24 = 44 ✓; diferencia = 4 ✓.",
+        "paso_critico": "La pregunta pide las horas de ANA, no de Luis. Error de asignación final frecuente después de resolver h para Luis.",
+        "error_tipico": "B (22): 44 ÷ 2 = 22, divide el total en partes iguales ignorando la diferencia. C (20): reporta las horas de Luis en lugar de las de Ana. D (26): 44 ÷ 2 + 4 = 26, aplica la diferencia al resultado de división equitativa."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "h=20→Ana=24=A ✓. Verif: 20+24=44; 24-20=4 ✓. B divide equitativamente (ignora diferencia). C reporta h de Luis. D aplica diferencia sobre cociente equitativo. H2/N2/RCM ✓. Skill H2=ecuación lineal con relación entre dos variables ✓. N2: 2 pasos (plantear+resolver+reasignar variable correcta) ✓. H1=media: trampa de asignación final (pide Ana no Luis) requiere inferencia de qué variable recuperar ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto horas-laborales — distinto de training y sim_1 (mangos/reparto, arroz/frijoles-ítem1)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B014",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "30 páginas → 45 minutos; razón = 45/30 = 1.5 min/página",
+        "step_2": "50 páginas → 50 × 1.5 = 75 minutos",
+        "correct_answer_value": 75,
+        "correct_option": "C",
+        "verification": "30/45 = 50/75 → 0.667 = 0.667 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un estudiante tarda 45 minutos en leer 30 páginas. Si mantiene el mismo ritmo de lectura, ¿cuántos minutos tardará en leer 50 páginas?",
+      "opciones": {
+        "A": "60",
+        "B": "70",
+        "C": "75",
+        "D": "80"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 45 minutos ÷ 30 páginas = 1.5 minutos por página.",
+        "paso_2": "50 páginas × 1.5 min/pág = 75 minutos. ✓",
+        "paso_critico": "Calcular la tasa unitaria (minutos por página) antes de escalar al nuevo volumen.",
+        "error_tipico": "A (60): 45 + 15 = 60, suma aritméticamente la diferencia de páginas (20 páginas × 0.75 = 15, razón incompleta). B (70): 45 + 25 = 70, escala la diferencia de páginas por precio unitario incorrecto. D (80): 45 + 35 = 80, sobreestima la tasa."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 2,
+        "estimated_time_sec": 100,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "45/30=1.5; 50×1.5=75=C ✓. Verificación razón: 30/45=50/75=0.667 ✓. A suma diferencia con tasa incompleta. B tasa unitaria incorrecta. D sobreestima. H6/N2/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad ✓. N2: dos pasos (tasa unitaria + escalar) ✓. H1=alta: la tasa min/página es inversa al dato primario (páginas/minuto) — requiere inferencia no explícita de dirección de razón ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto páginas-lectura — distinto de sim_1 (autobús/velocidad, fábrica/eficiencia) y training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B014",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: acceso a internet es desigual; segunda: zonas rurales permanecen sin conectividad → consecuencia directa que ejemplifica la desigualdad",
+        "connector_type": "consecuencial-ejemplificador",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El acceso a internet sigue siendo profundamente desigual en el país. __________, amplias zonas rurales permanecen sin cobertura de banda ancha confiable.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "De hecho",
+        "C": "Por el contrario",
+        "D": "En cambio"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El primer enunciado afirma que el acceso es desigual. El segundo especifica una consecuencia concreta que confirma y ejemplifica esa desigualdad: zonas rurales sin cobertura.",
+        "paso_2": "'De hecho' (B) introduce evidencia concreta que ratifica la afirmación anterior. El segundo enunciado no contradice sino que ejemplifica con evidencia real. ✓",
+        "paso_critico": "El segundo enunciado amplifica la primera afirmación con evidencia específica. No introduce contraste ni contradicción.",
+        "error_tipico": "A (No obstante) y C/D (contrastivos) implican que las zonas sin cobertura se dan A PESAR de la afirmación anterior — pero la segunda oración confirma la desigualdad, no la contradice. La trampa es activar el modo 'adversativo' ante el término 'desigual'."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B único confirmatorio/ejemplificador: segunda oración amplifica la primera con evidencia. A/C/D adversativos (incoherentes logic: segunda oración ratifica, no contradice). H5/N2/RCV ✓. N2: identificar relación lógica entre dos enunciados, desambiguar confirmación vs. contraste ✓. H1=alta: la relación entre las oraciones es de confirmación-con-evidencia, no obvia — requiere inferencia sobre dirección argumentativa ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto acceso-internet/brecha-digital — distinto de sim_1 (exploración-espacial, invierno/patógenos) y training."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B014",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "n = número de naranjas; m = número de mangos",
+        "system": "n + m = 30; n = 2m - 6",
+        "solving": "(2m - 6) + m = 30 → 3m = 36 → m = 12; n = 18",
+        "correct_answer_value": 18,
+        "correct_option": "D",
+        "verification": "18 + 12 = 30 ✓; 18 = 2(12) - 6 = 24 - 6 = 18 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En una canasta hay 30 frutas entre naranjas y mangos. El número de naranjas es 6 menos que el doble del número de mangos. ¿Cuántas naranjas hay en la canasta?",
+      "opciones": {
+        "A": "14",
+        "B": "16",
+        "C": "20",
+        "D": "18"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Definir variables: m = mangos, n = naranjas. Ecuación 1: n + m = 30. Ecuación 2: n = 2m − 6.",
+        "paso_2": "Sustitución: (2m − 6) + m = 30 → 3m − 6 = 30 → 3m = 36 → m = 12.",
+        "paso_3": "Naranjas: n = 2(12) − 6 = 24 − 6 = 18. ✓ Verificación: 18 + 12 = 30 ✓.",
+        "paso_critico": "Traducir correctamente 'el número de naranjas es 6 MENOS que el doble del número de mangos' como n = 2m − 6, evitando la inversión m = 2n − 6.",
+        "error_tipico": "A (14): usa n = 2m + 6 (suma en lugar de restar, inversión de la constante). B (16): error aritmético en la sustitución: 3m = 33 → m = 11 → n = 16. C (20): invierte las variables del sistema: resuelve para naranjas como base y da el resultado de mangos."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 3,
+        "estimated_time_sec": 195,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "n=2m-6; n+m=30→m=12→n=18=D ✓. Verificación: 18+12=30; 2(12)-6=18 ✓. A usa +6 (inversión constante). B error aritmético. C invierte variables. H2/N3/RCM ✓. N3: sistema implícito de dos ecuaciones encadenadas con variable oculta (relación entre n y m no directamente dada) ✓. H1=alta: la traducción 'naranjas es 6 menos que el doble de mangos' requiere inferencia precisa de estructura relacional; inversión de signo es trampa conceptual fuerte ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto canasta-frutas — distinto de sim_1 (edades/María-Juan, tem 14) — distinto structuralmente."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B014",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "implicit_argument": "el autor argumenta que las ciudades diseñadas solo para automóviles sacrifican calidad de vida humana, por lo tanto el urbanismo debe rediseñarse para priorizar a los peatones",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Cuando una ciudad organiza sus calles, aceras y espacios públicos en función prioritaria del automóvil, está tomando una decisión implícita: que la fluidez del tráfico vale más que la calidad de vida de quienes la habitan. Los efectos son measurables: mayores tasas de sedentarismo, menor cohesión social, espacios públicos deshumanizados. No es casualidad que las ciudades reconocidas como más habitables del mundo sean también aquellas que han reducido sistemáticamente la prioridad del automóvil en su planificación.»\n\n¿Cuál es la conclusión implícita del argumento del autor?",
+      "opciones": {
+        "A": "El urbanismo que privilegia el automóvil produce efectos negativos comprobables sobre la vida humana y debe ser reorientado.",
+        "B": "Eliminar completamente los automóviles de las ciudades es la única solución posible para mejorar la calidad de vida urbana.",
+        "C": "Las ciudades habitables son aquellas que invierten más en transporte público, según los datos internacionales disponibles.",
+        "D": "Los habitantes de las ciudades deberían cambiar voluntariamente sus hábitos de movilidad para mejorar el entorno urbano."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El argumento construye: premisa 1 (priorizar automóvil = decisión de sacrificar calidad de vida), premisa 2 (efectos negativos medibles), evidencia (ciudades habitables = reducción de prioridad al automóvil).",
+        "paso_2": "La conclusión implícita no aparece explícita: el texto muestra que el diseño car-centric tiene efectos negativos comprobables y que hay un modelo alternativo exitoso. La inferencia obligatoria es que el urbanismo debe reorientarse.",
+        "paso_critico": "Reconstructir la conclusión sin extrapolar. El texto no dice 'eliminar autos', sino 'reducir su prioridad'. La conclusión debe respetar esa distinción.",
+        "error_tipico": "B introduce 'eliminar completamente' — el texto dice 'reducir prioridad', no eliminar. C introduce 'transporte público' como mecanismo — el texto no menciona transporte público explícitamente. D prescribe acción individual de habitantes — el argumento está orientado al diseño urbano sistémico, no a hábitos individuales."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 3,
+        "estimated_time_sec": 185,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A única: reconstructs conclusión implícita sin extrapolar (efectos negativos + reorientación). B 'eliminar' excede lo que dice el texto. C introduce mecanismo (transporte público) no mencionado. D prescribe acción individual (argumento es sistémico). H3/N3/RCV ✓. N3: reconstrucción de argumento implícito multi-paso, trampa conceptual fuerte (reducir≠eliminar; sistémico≠individual) ✓. H1=alta ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto urbanismo-automóvil/calidad-vida — distinto de sim_1 (tecnología-neutral, ítem 12)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B014",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "razón estudiantes/computadoras = 24/6 = 4 estudiantes por computadora",
+        "step_2": "para 40 estudiantes: 40 ÷ 4 = 10 computadoras",
+        "correct_answer_value": 10,
+        "correct_option": "B",
+        "verification": "24/6 = 40/10 = 4 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En un laboratorio de cómputo, 24 estudiantes comparten 6 computadoras. Si se mantiene la misma proporción, ¿cuántas computadoras se necesitarían para 40 estudiantes?",
+      "opciones": {
+        "A": "8",
+        "B": "10",
+        "C": "12",
+        "D": "16"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Relación de proporcionalidad: 24 estudiantes → 6 computadoras. Razón: 24/6 = 4 estudiantes por computadora.",
+        "paso_2": "Para 40 estudiantes: 40 ÷ 4 = 10 computadoras. ✓",
+        "paso_critico": "Identificar la unidad correcta de la razón (estudiantes por computadora = 4) y usarla para dividir el nuevo total.",
+        "error_tipico": "A (8): 40 × (6/30) = 8, usa diferencia 40−24=16 y no la razón base. C (12): 40 × (6/20) = 12, escala por fracción incorrecta. D (16): 40 − 24 = 16, resta en lugar de proporcionar."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 2,
+        "estimated_time_sec": 90,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "24/6=4; 40/4=10=B ✓. Verificación: 24/6=40/10=4 ✓. A usa diferencia aritmética. C fracción incorrecta. D resta en lugar de proporcionar. H6/N2/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad ✓. N2: tasa directa + aplicación a nuevo volumen ✓. H1=media ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto laboratorio-cómputo/estudiantes — distinto de sim_1 (autobús/km-h, fábrica/eficiencia) y ítem 4 de este batch (páginas/minutos)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B014",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: el ejercicio físico reduce el estrés; segunda: participantes reportaron menor ansiedad → evidencia directa que confirma la primera afirmación con dato empírico",
+        "connector_type": "confirmatorio-evidencial",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El ejercicio físico regular ha demostrado reducir significativamente los niveles de estrés. __________, en el estudio realizado, el 78% de los participantes reportó una disminución notable en su ansiedad tras ocho semanas de entrenamiento.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "A pesar de eso",
+        "C": "Por el contrario",
+        "D": "En efecto"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El primer enunciado afirma que el ejercicio reduce el estrés. El segundo aporta evidencia empírica cuantitativa (78%, 8 semanas) que confirma esa afirmación.",
+        "paso_2": "'En efecto' (D) introduce evidencia que ratifica lo dicho: la segunda oración es prueba empírica de la primera. ✓",
+        "paso_critico": "El segundo enunciado amplifica y confirma con datos concretos la afirmación general de la primera oración. No introduce contraste.",
+        "error_tipico": "A, B y C (adversativos/contrastivos) implicarían que los participantes reportaron mayor ansiedad pese al ejercicio — contradice el contexto. La trampa es interpretar automáticamente que 'un estudio' debe introducir un giro inesperado cuando aquí confirma."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 90,
+        "error_type": "Interpretación literal errónea",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D único confirmatorio-evidencial: segunda oración = prueba empírica de la primera. A/B/C adversativos (contradicen la dirección semántica del texto). H5/N2/RCV ✓. N2: evaluación de coherencia semántica entre dos enunciados, desambiguación de relación lógica ✓. H1=alta: el dato estadístico ('78%') puede activar la expectativa de refutación — inferencia sobre dirección argumentativa es no obvia ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto ejercicio-físico/ansiedad — distinto de sim_1 y ítem 5 de este batch (internet/brecha-digital)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B014",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "cuadrado de lado 8: área = 64 cm²",
+        "step_2": "círculo inscrito: radio = 8/2 = 4 cm; área = π(4²) = 16π ≈ 50.27 cm²",
+        "step_3": "área sombreada = 64 - 16π ≈ 64 - 50.27 = 13.73 cm²",
+        "correct_answer_value": "64 − 16π",
+        "correct_option": "C",
+        "alignment": "PASS",
+        "verification": "área cuadrado - área círculo: 64 - 50.27 ≈ 13.73 ✓ → opción exacta: 64 − 16π"
+      },
+      "stem": "Un cuadrado tiene 8 cm de lado. Dentro del cuadrado se inscribe un círculo que toca los cuatro lados. ¿Cuál es el área de la región sombreada (la región del cuadrado que queda fuera del círculo)?",
+      "opciones": {
+        "A": "64 − 8π",
+        "B": "64 − 4π",
+        "C": "64 − 16π",
+        "D": "64 − 64π"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Área del cuadrado: 8² = 64 cm².",
+        "paso_2": "El círculo inscrito toca los cuatro lados, por lo tanto su diámetro = lado del cuadrado = 8 cm → radio = 4 cm. Área del círculo: π(4²) = 16π cm².",
+        "paso_3": "Área sombreada = Área cuadrado − Área círculo = 64 − 16π. ✓",
+        "paso_critico": "Inferir el radio del círculo inscrito a partir del lado del cuadrado: radio = lado ÷ 2 = 4. El error más común es usar el lado entero (8) como radio.",
+        "error_tipico": "A (64 − 8π): usa radio = 8 (el lado completo) en lugar de radio = 4. B (64 − 4π): usa radio = 2 (lado ÷ 4). D (64 − 64π): usa radio = 8 y aplica el cuadrado: π(8²) = 64π, confunde radio con lado completo y además eleva al cuadrado el resultado erróneo."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H7",
+        "difficulty": 2,
+        "estimated_time_sec": 130,
+        "error_type": "Error de cálculo",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "radio=4; área_círculo=16π; área_sombreada=64−16π=C ✓. A usa radio=8 (lado completo). B usa radio=2. D usa radio=8 elevado al cuadrado. H7/N2/RCM ✓. Skill H7=Análisis-Espacial-y-Geométrico: identificación de propiedad geométrica (círculo inscrito → radio=lado/2) en figura implícita ✓. N2: 2 pasos (inferir radio + calcular diferencia de áreas), no explícito ✓. H1=alta: la relación radio=lado/2 debe inferirse de 'toca los cuatro lados' — no se da directamente ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto cuadrado-círculo-inscrito — distinto de sim_1 (triángulo-Pitágoras, ítem 13)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_014",
+    "item_type": "diagnostic",
+    "simulation_id": null,
+    "total_generated": 10,
+    "approved": 10,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_diagnostic": true,
+      "all_items_simulation_id_null": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true,
+      "segment": "diagnostic",
+      "segment_isolation_confirmed": true
+    },
+    "skill_distribution": {
+      "H2": 3,
+      "H3": 2,
+      "H5": 2,
+      "H6": 2,
+      "H7": 1,
+      "H4": 0,
+      "H2_note": "Items 1, 3, 6 — énfasis STRAT H1+H2 en diagnóstico",
+      "H3_note": "Items 2, 7",
+      "H5_note": "Items 5, 9",
+      "H6_note": "Items 4, 8",
+      "H7_note": "Item 10"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 0,
+      "nivel_2": 8,
+      "nivel_3": 2,
+      "nivel_2_items": "1, 2, 3, 4, 5, 8, 9, 10",
+      "nivel_3_items": "6, 7",
+      "note": "Mayoría N2 per STRAT diagnóstico ✓"
+    },
+    "macro_area_distribution": {
+      "RCV": 4,
+      "RCM": 6,
+      "RCV_items": "2 (H3), 5 (H5), 7 (H3), 9 (H5)",
+      "RCM_items": "1 (H2), 3 (H2), 4 (H6), 6 (H2), 8 (H6), 10 (H7)"
+    },
+    "h1_distribution": {
+      "baja": 0,
+      "media": 4,
+      "alta": 6,
+      "pct_alta": 0.600,
+      "constraint": "Diagnostic H1_rate (60.0%) > sim_1 H1_rate (33.3%) ✓ | Diagnostic H1_rate (60.0%) > training H1_rate (≥30%) ✓ | Cumple regla 4B: Diagnostic_H1_rate > max(sim, training) ✓"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "2 uses (items 1, 3)",
+      "T_H2_RCM_L3_01": "1 use (item 6)",
+      "T_H3_RCV_L2_01": "1 use (item 2)",
+      "T_H3_RCV_L3_01": "1 use (item 7)",
+      "T_H5_RCV_L2_01": "2 uses (items 5, 9)",
+      "T_H6_RCM_L2_01": "2 uses (items 4, 8)",
+      "T_H7_RCM_L2_01": "1 use (item 10)",
+      "all_templates_active": true
+    },
+    "segment_state": {
+      "diagnostic_count_before": 0,
+      "diagnostic_count_after": 10,
+      "diagnostic_target": "18-20",
+      "diagnostic_remaining": "8-10 items needed",
+      "status": "in_progress"
+    }
+  }
+}

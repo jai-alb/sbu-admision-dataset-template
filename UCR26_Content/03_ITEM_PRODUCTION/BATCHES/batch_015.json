@@ -1,0 +1,578 @@
+{
+  "batch_id": "BATCH_015",
+  "generated_at": "2026-03-24T16:00:22-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "diagnostic",
+  "simulation_id": null,
+  "target_items": 9,
+  "pipeline_status": "ACTIVE — diagnostic segment closure",
+  "segment_note": "Este batch cierra el segmento diagnostic. diagnostic_count pasa de 10 a 19 (dentro del rango 18–20). PROHIBIDO exceder 20.",
+  "closure_control": {
+    "diagnostic_count_before": 10,
+    "items_this_batch": 9,
+    "diagnostic_count_after": 19,
+    "target_range": "18–20",
+    "within_range": true,
+    "segment_status_after": "complete"
+  },
+  "skill_plan": {
+    "H2_RCM": 3,
+    "H3_RCV": 1,
+    "H4_RCM": 1,
+    "H5_RCV": 1,
+    "H6_RCM": 2,
+    "H7_RCM": 1,
+    "macro_RCV": 3,
+    "macro_RCM": 6,
+    "note": "H2 mantiene énfasis STRAT. H4 introducido por primera vez en el segmento diagnostic para asegurar representación proporcional de todas las habilidades activas."
+  },
+  "difficulty_plan": {
+    "nivel_1": 0,
+    "nivel_2": 7,
+    "nivel_3": 2,
+    "note": "Mayoría N2 per STRAT diagnóstico. Sin N1 en este batch (ya hay representación suficiente por defecto de nivel)."
+  },
+  "h1_plan": {
+    "target_pct_alta_batch": "≥ 0.55",
+    "note": "5 de 9 ítems con H1=alta para mantener tasa acumulada del segmento diagnóstico > 33.3% (sim_1). Acumulado estimado: 11 alta / 19 = 57.9%."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B015",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "b = boletos adulto; b - 15 = boletos niño",
+        "equation": "b + (b - 15) = 85 → 2b - 15 = 85 → 2b = 100 → b = 50; niño = 35",
+        "correct_answer_value": 35,
+        "correct_option": "B",
+        "verification": "50 + 35 = 85 ✓; 50 - 35 = 15 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En un cine se vendieron 85 boletos entre adultos y niños. La cantidad de boletos para adultos es 15 más que la cantidad de boletos para niños. ¿Cuántos boletos para niños se vendieron?",
+      "opciones": {
+        "A": "30",
+        "B": "35",
+        "C": "40",
+        "D": "50"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea n = boletos de niños. Adultos = n + 15. Ecuación: (n + 15) + n = 85 → 2n + 15 = 85 → 2n = 70 → n = 35.",
+        "paso_2": "Boletos de niños = 35. ✓ Verificación: 35 + 50 = 85 ✓; 50 − 35 = 15 ✓.",
+        "paso_critico": "La pregunta pide los boletos de NIÑOS, no de adultos. Luego de resolver n correctamente, no reportar el valor del adulto (50).",
+        "error_tipico": "A (30): error aritmético 2n = 60 → n = 30. C (40): resuelve como si la diferencia fuera 5, no 15. D (50): reporta la cantidad de adultos (n + 15 = 50) en lugar de la de niños."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "n=35=B ✓. Verif: 35+50=85; 50-35=15 ✓. A error aritmético. C diferencia incorrecta. D reporta adultos. H2/N2/RCM ✓. Skill H2=ecuación lineal con relación verbal entre dos variables ✓. N2: 2 pasos (plantear + resolver + asignar variable correcta) ✓. H1=media: trampa de asignación final (pide niños no adultos) ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto cine/boletos — distinto de B014 (horas-laborales, arroz/frijoles, canasta-frutas) y sim_1 (mangos-reparto, vendedora, edades)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B015",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "rule": "diferencias: 7, 14, 21, 28 → diferencias crecen de 7 en 7 (progresión aritmética de segundo orden)",
+        "sequence": "5, 12, 26, 47, 75, __",
+        "verification": "5→12(+7)→26(+14)→47(+21)→75(+28)→110(+35)",
+        "correct_answer_value": 110,
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 5, 12, 26, 47, 75, ___?",
+      "opciones": {
+        "A": "100",
+        "B": "105",
+        "C": "110",
+        "D": "114"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Calcular las diferencias entre términos consecutivos: 12−5=7, 26−12=14, 47−26=21, 75−47=28.",
+        "paso_2": "Las diferencias crecen de 7 en 7: 7, 14, 21, 28, 35. La siguiente diferencia es 35.",
+        "paso_3": "Siguiente término: 75 + 35 = 110. ✓",
+        "paso_critico": "Reconocer que no existe una regla directa entre términos — la regularidad está en las DIFERENCIAS de las diferencias (segundo nivel de análisis).",
+        "error_tipico": "A (100): 75 + 25 = 100, añade la diferencia del penúltimo paso (25 inexistente). B (105): 75 + 30 = 105, interpola incorrectamente la siguiente diferencia. D (114): 75 + 39 = 114, dobla la última diferencia (28×2=56, error) o añade número arbitrario."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 2,
+        "estimated_time_sec": 120,
+        "error_type": "Generalización excesiva",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Diferencias: 7,14,21,28,35→75+35=110=C ✓. A usa diferencia de 25 (inexistente). B interpola a 30. D sobreestima. H4/N2/RCM ✓. Skill H4=Generalización-y-Patrones: patrón de segundo orden (diferencias de diferencias) ✓. N2: identificar regularidad en las diferencias + aplicar incremento ✓. H1=alta: el patrón primario no es visible directamente — requiere inferencia del nivel de diferencias ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto serie-numérica-diferencias-segundo-orden — distinto de sim_1 (ítem 7: regla ×2+3) y training (Fibonacci, ×3+1)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B015",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "razón: 5 ingenieros → 3 proyectos en 4 semanas",
+        "step_2": "¿cuántos ingenieros para 9 proyectos en 4 semanas? → razón proyectos/ingenieros = 3/5; para 9 proyectos: 9 × (5/3) = 15 ingenieros",
+        "correct_answer_value": 15,
+        "correct_option": "A",
+        "verification": "5/3 = 15/9 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un equipo de 5 ingenieros puede completar 3 proyectos en 4 semanas. Si se mantiene el mismo ritmo de trabajo, ¿cuántos ingenieros se necesitan para completar 9 proyectos en el mismo período de 4 semanas?",
+      "opciones": {
+        "A": "15",
+        "B": "12",
+        "C": "18",
+        "D": "10"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Razón de productividad: 5 ingenieros producen 3 proyectos. Entonces 1 proyecto requiere 5/3 ingenieros.",
+        "paso_2": "Para 9 proyectos: 9 × (5/3) = 45/3 = 15 ingenieros. ✓",
+        "paso_critico": "Escalar linealmente la razón ingenieros/proyecto, no la cantidad de semanas (el tiempo es constante en ambos casos).",
+        "error_tipico": "B (12): 5 + 3 + 4 = 12, suma los tres valores originales aritméticamente. C (18): 9 × (2) = 18, duplica el factor de proyecto sin respetar la razón original. D (10): 5 × (9/3) / (ajuste incorrecto) = 10, divide por un factor que no corresponde."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 2,
+        "estimated_time_sec": 105,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "9×(5/3)=15=A ✓. Verificación: 5/3=15/9 ✓. B suma aritmética de valores. C dobla factor sin razón. D factor incorrecto. H6/N2/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad ✓. N2: razón unitaria + escalar ✓. H1=alta: el tiempo (4 semanas) es variable de distracción — el estudiante debe inferir que es constante y no entra en la razón ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto ingenieros/proyectos — distinto de B014 (páginas-lectura, laboratorio-cómputo) y sim_1 (autobús/km-h, fábrica/eficiencia)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B015",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "a = edad actual de Andrea; b = edad actual de Bruno",
+        "system": "a = b + 5; en 6 años: (a+6) = 2(b+6) - 3",
+        "solving": "(b+5+6) = 2(b+6) - 3 → b+11 = 2b+12-3 → b+11 = 2b+9 → 11-9 = 2b-b → b = 2; a = 7",
+        "correct_answer_value": 7,
+        "correct_option": "D",
+        "verification": "Andrea=7, Bruno=2; en 6 años: 13 vs. 2(8)-3=13 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Andrea tiene 5 años más que Bruno. En 6 años, la edad de Andrea será igual al doble de la edad de Bruno en ese momento menos 3 años. ¿Cuántos años tiene Andrea actualmente?",
+      "opciones": {
+        "A": "11",
+        "B": "9",
+        "C": "5",
+        "D": "7"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Sea b = edad de Bruno. Andrea = b + 5. En 6 años: Andrea tendrá b + 11 y Bruno tendrá b + 6.",
+        "paso_2": "Ecuación futura: (b + 11) = 2(b + 6) − 3 → b + 11 = 2b + 12 − 3 → b + 11 = 2b + 9 → b = 2.",
+        "paso_3": "Andrea actualmente: b + 5 = 2 + 5 = 7. ✓ Verificación: en 6 años Andrea=13, Bruno=8; 2(8)−3=13. ✓",
+        "paso_critico": "Sumar las 6 años a AMBAS edades en la ecuación futura. La trampa: olvidar sumar 6 a la edad de Andrea al plantear la igualdad y solo hacerlo para Bruno.",
+        "error_tipico": "A (11): no aplica el −3 en la ecuación futura → (b+5+6)=2(b+6)→b+11=2b+12→b=−1 (inválido, ajuste erróneo lleva a 11). B (9): suma solo 6 a Bruno y no a Andrea en la ecuación. C (5): reporta la diferencia de edades como si fuera la edad de Andrea."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 3,
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "b=2→Andrea=7=D ✓. Verif: Andrea_futura=13; 2(8)-3=13 ✓. A omite −3. B asimetría en proyección temporal. C reporta diferencia. H2/N3/RCM ✓. N3: sistema implícito con referencia temporal futura (+6 años) y variable oculta (−3 anclado a edad proyectada de Bruno), multi-paso ✓. H1=alta: la frase 'doble de la edad de Bruno en ese momento menos 3' requiere inferencia de que '−3' aplica al resultado futuro, no al presente ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto edades-futuras — distinto de sim_1 (edades-pasadas: Juan-María, ítem 14) y B014 (canasta)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B015",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "central_idea": "la sobreabundancia de información dificulta la toma de decisiones porque el exceso de opciones paraliza en lugar de empoderar",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«En un mundo con acceso ilimitado a la información, paradójicamente, tomar decisiones se ha vuelto más difícil. Cuando el número de opciones disponibles supera nuestra capacidad de evaluarlas, se produce lo que los psicólogos denominan 'parálisis por análisis': el individuo, abrumado por la cantidad de alternativas, termina por no decidir o por decidir de forma arbitraria. Más información no siempre equivale a mayor claridad.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El acceso ilimitado a la información es el principal problema de la sociedad contemporánea.",
+        "B": "El exceso de información puede obstaculizar la toma de decisiones al generar parálisis cognitiva.",
+        "C": "Los psicólogos estudian los efectos negativos de las redes sociales en la capacidad de atención.",
+        "D": "Tomar decisiones de forma arbitraria es siempre el resultado de no tener suficiente información."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto presenta: (1) paradoja entre más información y mayor dificultad de decidir, (2) mecanismo: parálisis por análisis cuando las opciones superan la capacidad evaluativa, (3) conclusión: más información ≠ más claridad.",
+        "paso_2": "B captura la paradoja central (exceso de información → parálisis) sin sobreextender. ✓",
+        "paso_critico": "La idea central es la PARADOJA específica (más información = más dificultad), no una crítica general a la información.",
+        "error_tipico": "A introduce 'principal problema de la sociedad contemporánea' — generalización excesiva no contenida en el texto. C introduce redes sociales y atención — el texto no menciona redes sociales. D invierte la causalidad: el texto dice que LA SOBREABUNDANCIA genera decisiones arbitrarias, no la falta de información."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: captura paradoja específica exceso→parálisis. A generalización excesiva. C introduce elemento ausente (redes sociales). D invierte causalidad (exceso→arbitrario ≠ falta→arbitrario). H3/N2/RCV ✓. Skill H3=Síntesis-y-Estructura-Global: identificación de idea central con parálisis-paradoja como estructura argumentativa ✓. N2: síntesis de paradoja + mecanismo + conclusión ✓. H1=media ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto información-exceso/parálisis-decisión — distinto de B014 (sueño-adultos, urbanismo) y sim_1 (lectura-sostenida, envejecimiento-pensiones, tecnología-neutral)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B015",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: el modelo tradicional ha demostrado ser ineficiente; segunda: instituciones adoptan enfoques alternativos → consecuencia directa-causal de la ineficiencia demostrada",
+        "connector_type": "consecuencial",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El modelo tradicional de evaluación estudiantil ha demostrado ser un predictor deficiente del desempeño en entornos laborales reales. __________, numerosas instituciones educativas han comenzado a adoptar sistemas de evaluación basados en competencias y desempeño práctico.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "Por otro lado",
+        "C": "Por esta razón",
+        "D": "En contraste"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El primer enunciado establece un diagnóstico negativo (el modelo tradicional es deficiente). El segundo describe la respuesta institucional: adopción de sistemas alternativos.",
+        "paso_2": "'Por esta razón' (C) expresa que la adopción de nuevos sistemas es consecuencia directa del diagnóstico de ineficiencia. ✓",
+        "paso_critico": "El segundo enunciado es la respuesta esperada y lógica al problema descrito en el primero. No hay contraste — hay consecuencia.",
+        "error_tipico": "A y D (adversativos/contrastivos): implicarían que las instituciones adoptan sistemas alternativos A PESAR de que el modelo tradicional funciona — ilógico. B (aditivo lateral): se usa para introducir un tema diferente, no para expresar consecuencia causalmente derivada."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único consecuencial: diagnóstico negativo → respuesta institucional derivada. A/D adversativos (ilógicos). B lateral (no expresa derivación causal). H5/N2/RCV ✓. Skill H5=Coherencia-y-Equivalencia-Semántica: conector que expresa la relación lógica entre dos enunciados ✓. N2: evaluar relación entre enunciados, discriminar consecuencia vs. contraste ✓. H1=media ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto evaluación-educativa/competencias — distinto de B014 (internet/brecha, ejercicio/ansiedad) y sim_1 (parques/municipios, exploración-espacial, invierno/patógenos)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B015",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "Razón de producción A: 120 unidades / 8 horas = 15 unidades/hora",
+        "step_2": "Razón de producción B: 90 unidades / 6 horas = 15 unidades/hora — misma razón",
+        "step_3": "Para 200 unidades combinadas en x horas: 15x + 15x = 200 → 30x = 200 → x = 200/30 = 20/3 ≈ 6.67 horas",
+        "correct_answer_value": "20/3",
+        "correct_option": "B",
+        "verification": "A produce 15×(20/3)=100; B produce 15×(20/3)=100; total=200 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "La máquina A produce 120 unidades en 8 horas y la máquina B produce 90 unidades en 6 horas. Si ambas máquinas trabajan simultáneamente, ¿cuántas horas tardarán en producir conjuntamente 200 unidades?",
+      "opciones": {
+        "A": "7",
+        "B": "20/3",
+        "C": "8",
+        "D": "6"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Razón de A: 120/8 = 15 unidades/hora. Razón de B: 90/6 = 15 unidades/hora.",
+        "paso_2": "Producción conjunta: 15 + 15 = 30 unidades/hora. Tiempo para 200 unidades: 200 ÷ 30 = 20/3 horas ≈ 6 horas 40 minutos. ✓",
+        "paso_critico": "La variable oculta es que las razones de ambas máquinas deben calcularse POR SEPARADO antes de sumarlas. El error es sumar las unidades y dividir entre el promedio de horas.",
+        "error_tipico": "A (7): (8+6)/2 = 7, promedia las horas directamente sin calcular razones. C (8): usa las horas de la máquina A como referencia sin escalar. D (6): usa las horas de la máquina B como referencia sin escalar."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 3,
+        "estimated_time_sec": 190,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "15+15=30 u/h; 200/30=20/3=B ✓. Verif: 15×(20/3)=100 cada una; total=200 ✓. A promedia horas. C usa horas de A. D usa horas de B. H6/N3/RCM ✓. N3: razones no explícitas de dos máquinas + combinación simultánea + transformación intermedia ✓. H1=alta: la razón conjunta requiere derivar primero cada razón individual — no explícito ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto producción-conjunta/máquinas — distinto de B014 (laboratorio-cómputo, páginas-lectura) y sim_1 (fábrica/eficiencia-razón, ítem 11)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B015",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "let": "p = precio del libro en colones",
+        "equation": "p - 0.20p = 6400 → 0.80p = 6400 → p = 8000",
+        "correct_answer_value": 8000,
+        "correct_option": "C",
+        "verification": "8000 × 0.20 = 1600 descuento; 8000 - 1600 = 6400 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Una librería aplica un descuento del 20% sobre el precio original de un libro. Si el precio con descuento es ₡6 400, ¿cuál es el precio original del libro?",
+      "opciones": {
+        "A": "₡7 680",
+        "B": "₡7 200",
+        "C": "₡8 000",
+        "D": "₡8 400"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea p = precio original. El precio con descuento del 20% es p − 0.20p = 0.80p.",
+        "paso_2": "Ecuación: 0.80p = 6400 → p = 6400 ÷ 0.80 = 8000. ✓",
+        "paso_critico": "El precio con descuento representa el 80% del original, no el 80% más algo. Hay que dividir entre 0.80, no multiplicar.",
+        "error_tipico": "A (₡7 680): 6400 × 1.20 = 7680, suma el 20% al precio con descuento en lugar de dividir. B (₡7 200): 6400 + 6400×0.125 = 7200, aplica un porcentaje incorrecto. D (₡8 400): 6400 + 6400×0.3125 = 8400, calcula error de redondeo en la recuperación del porcentaje."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 105,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "0.80p=6400→p=8000=C ✓. Verif: 8000×0.20=1600; 8000-1600=6400 ✓. A suma 20% al precio descuento (error dirección). B porcentaje incorrecto. D cálculo erróneo de recuperación. H2/N2/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: traducción de descuento porcentual a ecuación lineal ✓. N2: 2 pasos (plantear precio_descuento=80%p + despejar p) ✓. H1=alta: requiere inferir que 6400=80% del original — la dirección de conversión (precio→original) es la trampa cognitiva ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto descuento-porcentual/librería — distinto de B014 y B015 (boletos-cine, horas-Ana-Luis, arroz-frijoles, canasta-frutas, edades)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B015",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": null,
+      "item_type": "diagnostic",
+      "pre_adv_solution_check": {
+        "step_1": "rectángulo: largo = 2w + 3; ancho = w",
+        "step_2": "perímetro = 2(largo + ancho) = 2(2w+3+w) = 2(3w+3) = 6w+6 = 54 → 6w = 48 → w = 8",
+        "step_3": "largo = 2(8)+3 = 19; área = 19 × 8 = 152 cm²",
+        "correct_answer_value": 152,
+        "correct_option": "A",
+        "verification": "P = 2(19+8) = 2(27) = 54 ✓; A = 19×8 = 152 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "El largo de un rectángulo es 3 cm más que el doble de su ancho. Si el perímetro del rectángulo es 54 cm, ¿cuál es el área del rectángulo?",
+      "opciones": {
+        "A": "152 cm²",
+        "B": "144 cm²",
+        "C": "162 cm²",
+        "D": "136 cm²"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Sea w = ancho. Largo = 2w + 3. Perímetro: 2(w + 2w + 3) = 54 → 2(3w + 3) = 54 → 6w + 6 = 54 → 6w = 48 → w = 8 cm.",
+        "paso_2": "Largo: 2(8) + 3 = 19 cm. Área: 19 × 8 = 152 cm². ✓",
+        "paso_3": "Verificación: P = 2(19 + 8) = 2(27) = 54 ✓. Área = 152 cm². ✓",
+        "paso_critico": "El problema pide el ÁREA, no el perímetro ni las dimensiones. Tras hallar w y largo, calcular L × A. La trampa es detenerse al encontrar las dimensiones sin completar el cálculo del área.",
+        "error_tipico": "B (144): calcula 18 × 8 = 144, error en largo: usa 2(8)+2=18 en lugar de 2(8)+3=19 (olvida el +3). C (162): largo incorrecto 2(9)+3=21, usa w=9 por error aritmético en el despeje. D (136): 17 × 8 = 136, largo=17 por error de operación con la constante."
+      },
+      "metadata": {
+        "item_type": "diagnostic",
+        "simulation_id": null,
+        "macro_area": "RCM",
+        "skill": "H7",
+        "difficulty": 3,
+        "estimated_time_sec": 210,
+        "error_type": "Error de cálculo",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "w=8; largo=19; área=152=A ✓. Verif: P=2(27)=54 ✓. B usa largo=18 (olvida +3). C w=9 por error aritmético. D largo=17 por error de constante. H7/N3/RCM ✓. Skill H7=Análisis-Espacial-y-Geométrico: relación largo-ancho como sistema implícito + cálculo de área a partir de perímetro ✓. N3: inferencia espacial (largo en función de ancho) + sistema implícito (perímetro → despeje → área) — multi-paso, trampa conceptual: pide área no dimensiones ✓. H1=alta ✓. item_type=diagnostic ✓. simulation_id=null ✓. Contexto rectángulo-dimensiones-área — distinto de B014 (cuadrado-círculo-inscrito, ítem 10) y sim_1 (triángulo-Pitágoras)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_015",
+    "item_type": "diagnostic",
+    "simulation_id": null,
+    "total_generated": 9,
+    "approved": 9,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_diagnostic": true,
+      "all_items_simulation_id_null": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true,
+      "segment": "diagnostic",
+      "segment_isolation_confirmed": true,
+      "diagnostic_count_within_range": true,
+      "diagnostic_count_final": 19,
+      "target_range_check": "19 ∈ [18,20] ✓"
+    },
+    "skill_distribution": {
+      "H2": 3,
+      "H3": 1,
+      "H4": 1,
+      "H5": 1,
+      "H6": 2,
+      "H7": 1,
+      "H2_note": "Items 1, 4, 8 — énfasis STRAT H2 en diagnóstico",
+      "H3_note": "Item 5",
+      "H4_note": "Item 2 — primera presencia de H4 en segmento diagnostic",
+      "H5_note": "Item 6",
+      "H6_note": "Items 3, 7",
+      "H7_note": "Item 9"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 0,
+      "nivel_2": 7,
+      "nivel_3": 2,
+      "nivel_2_items": "1, 2, 3, 5, 6, 8",
+      "nivel_3_items": "4, 7, 9",
+      "note": "Mayoría N2 per STRAT diagnóstico ✓"
+    },
+    "macro_area_distribution": {
+      "RCV": 3,
+      "RCM": 6,
+      "RCV_items": "5 (H3), 6 (H5)",
+      "RCM_items": "1 (H2), 2 (H4), 3 (H6), 4 (H2), 7 (H6), 8 (H2), 9 (H7)"
+    },
+    "h1_distribution": {
+      "baja": 0,
+      "media": 3,
+      "alta": 6,
+      "pct_alta": 0.667,
+      "constraint": "H1_alta_batch=66.7% > sim_1 (33.3%) ✓ | > training (≥30%) ✓"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "2 uses (items 1, 8)",
+      "T_H2_RCM_L3_01": "1 use (item 4)",
+      "T_H3_RCV_L2_01": "1 use (item 5)",
+      "T_H4_RCM_L2_01": "1 use (item 2)",
+      "T_H5_RCV_L2_01": "1 use (item 6)",
+      "T_H6_RCM_L2_01": "1 use (item 3)",
+      "T_H6_RCM_L3_01": "1 use (item 7)",
+      "T_H7_RCM_L3_01": "1 use (item 9)",
+      "all_templates_active": true
+    },
+    "segment_closure": {
+      "diagnostic_count_before_batch": 10,
+      "items_added": 9,
+      "diagnostic_count_final": 19,
+      "target_range": "18–20",
+      "within_range": true,
+      "segment_status": "complete",
+      "closure_note": "Segmento diagnostic cerrado en 19 ítems. Rango [18,20] satisfecho. No se excedió el límite de 20."
+    },
+    "cumulative_diagnostic_metrics": {
+      "total_items": 19,
+      "skill_distribution_cumulative": {
+        "H2": 6,
+        "H3": 3,
+        "H4": 1,
+        "H5": 3,
+        "H6": 4,
+        "H7": 2,
+        "note": "H2 dominante (6/19=31.6%) per énfasis STRAT. Todas las habilidades representadas."
+      },
+      "difficulty_distribution_cumulative": {
+        "nivel_1": 0,
+        "nivel_2": 15,
+        "nivel_3": 4,
+        "pct_nivel_2": 0.789,
+        "note": "78.9% N2 — mayoría N2 ✓ per STRAT diagnóstico"
+      },
+      "h1_cumulative": {
+        "alta": 12,
+        "media": 7,
+        "baja": 0,
+        "pct_alta": 0.632,
+        "constraint": "Diagnostic H1_rate=63.2% > sim_1(33.3%) ✓ | Diagnostic H1_rate > training(≥30%) ✓ | Regla 4B satisfecha ✓"
+      }
+    }
+  }
+}

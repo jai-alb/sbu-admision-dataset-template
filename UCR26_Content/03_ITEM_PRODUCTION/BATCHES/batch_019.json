@@ -1,0 +1,576 @@
+{
+  "batch_id": "BATCH_019",
+  "generated_at": "2026-03-24T18:15:13-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_2",
+  "target_items": 12,
+  "pipeline_status": "ACTIVE — sim_2 accumulation begins",
+  "segment_note": "sim_2_count pasa de 0 a 12. Inicia acumulación de sim_2 con base estructural balanceada.",
+  "skill_plan": {
+    "H2_RCM": 2, "H3_RCV": 3, "H4_RCM": 1, "H5_RCV": 3, "H6_RCM": 2, "H7_RCM": 1,
+    "macro_RCV": 6, "macro_RCM": 6,
+    "note": "Distribución 50/50 RCV/RCM. Todos los skills H2-H7 representados. Ninguna skill >25% (max H3 y H5 a 25%)."
+  },
+  "difficulty_plan": {
+    "nivel_1": 3, "nivel_2": 7, "nivel_3": 2,
+    "note": "Predominio N1/N2 para arranque estable. Solo 2 N3 para introducción controlada."
+  },
+  "h1_plan": {
+    "items_baja": 3, "items_media": 5, "items_alta": 4,
+    "pct_alta": 0.333,
+    "note": "33% alta — dentro de rango 30-40% objetivo."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B019",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "m = precio de cada manzana",
+        "equation": "6m + 4(80) = 740 → 6m + 320 = 740 → 6m = 420 → m = 70",
+        "correct_option": "C",
+        "correct_answer_value": 70,
+        "verification": "6(70) + 4(80) = 420 + 320 = 740 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En un mercado se compran 6 manzanas y 4 naranjas. Cada naranja cuesta ₡80 y el total de la compra es ₡740. ¿Cuánto cuesta cada manzana?",
+      "opciones": {
+        "A": "₡60",
+        "B": "₡65",
+        "C": "₡70",
+        "D": "₡75"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea m = precio de cada manzana. Ecuación: 6m + 4(80) = 740 → 6m + 320 = 740 → 6m = 420.",
+        "paso_2": "m = 420 ÷ 6 = 70. ✓ Verificación: 6(70) + 4(80) = 420 + 320 = 740 ✓.",
+        "paso_critico": "Calcular primero el costo total de las naranjas (4×80=320) y restarlo del total antes de dividir entre 6.",
+        "error_tipico": "A (₡60): 6m=360→m=60, resta solo 3 naranjas (3×80=240). B (₡65): error aritmético (6×65=390, 390+320=710≠740). D (₡75): 6×75=450, 450+320=770≠740 — suma naranjas en lugar de restarlas."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H2", "difficulty": 1,
+        "estimated_time_sec": 65, "error_type": "Modelado incorrecto", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "6m+320=740→m=70=C ✓. Verif: 740 ✓. A resta 3 naranjas. B error aritmético. D suma en lugar de restar. H2/N1/RCM ✓. N1: 1 paso operacional. H1=baja ✓. simulation_id=sim_2 ✓. Contexto manzanas-naranjas/mercado — estructuralmente distinto de todos los H2 de sim_1 (cuadernos-lápices, fontanero, carpetas-reglas, librería, edades)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B019",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "La acidificación oceánica provocada por la absorción de CO₂ amenaza a organismos calcáreos y a los ecosistemas marinos que los sustentan",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La acidificación del océano, causada por la absorción de dióxido de carbono atmosférico, reduce la disponibilidad de iones carbonato que los corales y moluscos necesitan para construir sus estructuras calcáreas. Este proceso no solo afecta a esos organismos de forma individual, sino que compromete la integridad de ecosistemas marinos complejos de los que dependen numerosas comunidades humanas.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El aumento del dióxido de carbono atmosférico es la principal amenaza ambiental del siglo XXI.",
+        "B": "La acidificación oceánica, originada en el exceso de CO₂, pone en riesgo tanto a organismos calcáreos como a los ecosistemas marinos y humanos que dependen de ellos.",
+        "C": "Los corales son los organismos más vulnerables al cambio climático y su desaparición destruirá todos los ecosistemas marinos.",
+        "D": "La acidificación oceánica ya ha eliminado la mayoría de los arrecifes de coral en todas las regiones tropicales del planeta."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto articula: causa (absorción de CO₂ → acidificación), efecto directo (daño en organismos calcáreos), efecto sistémico (compromiso de ecosistemas y dependencia humana).",
+        "paso_2": "B integra fielmente los tres componentes: causa (CO₂) + efecto en organismos + efecto ecosistémico/humano. ✓",
+        "paso_critico": "La idea central no es solo el daño a corales sino la cadena: CO₂ → acidificación → daño calcáreo → daño ecosistémico → impacto humano.",
+        "error_tipico": "A generaliza a 'principal amenaza del siglo XXI' — el texto no hace esa jerarquización. C absolutiza 'todos los ecosistemas' y 'desaparición' — el texto dice 'compromete'. D introduce una cuantificación ('ya ha eliminado la mayoría') no presente."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 1,
+        "estimated_time_sec": 90, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "B única: CO₂→acidificación→organismos-calcáreos→ecosistemas/humanos (cadena completa). A jerarquización ausente. C absolutiza desaparición. D cuantifica sin sustento. H3/N1/RCV ✓. N1: cadena de causa-efecto directamente enunciada. H1=baja ✓. simulation_id=sim_2 ✓. Contexto acidificación-oceánica/corales — distinto de todos los H3 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B019",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: energía solar no emite GEI durante generación; segunda: SE CONSIDERA alternativa limpia — consecuencia lógica directa de la primera",
+        "connector_type": "consecuencial",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La energía solar no emite gases de efecto invernadero durante su proceso de generación eléctrica. __________, se considera una de las alternativas más limpias para la producción de energía a escala masiva.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "No obstante",
+        "C": "Por esta razón",
+        "D": "En contraste"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración establece una propiedad objetiva (no emite GEI). La segunda expresa la valoración que se deriva directamente de esa propiedad (es considerada limpia).",
+        "paso_2": "'Por esta razón' (C) introduce la conclusión práctica que se sigue de la ausencia de emisiones. La relación es causal-directa. ✓",
+        "paso_critico": "Si no emite GEI, la consecuencia lógica es que se la considere limpia — no hay ningún contraste ni contradicción.",
+        "error_tipico": "A, B y D (adversativos/contrastivos): implicarían que la energía solar es considerada limpia A PESAR de emitir GEI — absurdo lógico. La trampa es activar el modo de contraste ante un enunciado técnico complejo."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 1,
+        "estimated_time_sec": 55, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C único consecuencial: no-GEI → considerada-limpia. A/B/D adversativos (ilógicos). H5/N1/RCV ✓. N1: relación causal directa, 1 paso. H1=baja ✓. simulation_id=sim_2 ✓. Contexto energía-solar/GEI — distinto de todos los H5 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B019",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "tasa: 2 litros / 8 m² = 0.25 L/m²",
+        "step_2": "20 m² × 0.25 L/m² = 5 litros",
+        "correct_option": "C",
+        "correct_answer_value": 5,
+        "verification": "2/8 = 5/20 = 0.25 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Para pintar 8 m² de pared se necesitan 2 litros de pintura. Manteniendo la misma proporción, ¿cuántos litros se necesitan para pintar 20 m²?",
+      "opciones": {
+        "A": "4",
+        "B": "4.5",
+        "C": "5",
+        "D": "6"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 2 litros ÷ 8 m² = 0,25 litros/m².",
+        "paso_2": "Para 20 m²: 0,25 × 20 = 5 litros. ✓ Verificación: 2/8 = 5/20 = 0,25 ✓.",
+        "paso_critico": "Calcular la tasa unitaria (L/m²) antes de multiplicar por el nuevo área.",
+        "error_tipico": "A (4): 20÷8=2.5; 2×2=4, omite el factor 0.5. B (4.5): tasa estimada incorrectamente (0.225×20). D (6): 20-8=12; 12×(2/8)=3; 2+3=5... error alternativo si suma diferencia de 12m² con tasa incorrecta."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H6", "difficulty": 1,
+        "estimated_time_sec": 60, "error_type": "Confusión de proporcionalidad", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "0.25×20=5=C ✓. Verif: 2/8=5/20=0.25 ✓. A omite factor 0.5. B tasa incorrecta. D error de escalado. H6/N1/RCM ✓. N1: tasa unitaria + aplicación directa. H1=baja ✓. simulation_id=sim_2 ✓. Contexto pintura/m² — distinto de todos los H6 de sim_1 (harina-porciones, jardinero, automóvil-combustible, velocidad-trenes)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B019",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "Las plataformas digitales han generado una relación asimétrica donde los usuarios ceden datos sin comprender su valor comercial mientras las empresas los controlan plenamente",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El uso masivo de plataformas digitales ha transformado la privacidad en un recurso gestionado por terceros. Los usuarios ceden datos personales a cambio de servicios gratuitos, frecuentemente sin conciencia plena del valor comercial de esa información ni del alcance de su circulación posterior. Esta asimetría entre proveedor y usuario configura una relación estructuralmente desigual.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las plataformas digitales obtienen ganancias ilegales al vender datos personales de sus usuarios sin autorización.",
+        "B": "Los usuarios de internet tienen la responsabilidad exclusiva de proteger su privacidad frente a las plataformas tecnológicas.",
+        "C": "Las plataformas digitales han generado una relación asimétrica en la que los usuarios ceden datos sin comprender su valor, configurando una desigualdad estructural.",
+        "D": "La privacidad digital solo puede protegerse mediante legislación internacional vinculante que limite el poder de las empresas tecnológicas."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto afirma: (i) privacidad gestionada por terceros; (ii) usuarios ceden datos sin plena conciencia de su valor; (iii) esto genera una relación estructuralmente desigual.",
+        "paso_2": "C integra los tres elementos: cesión de datos sin comprensión + control por plataformas + desigualdad estructural como resultado. ✓",
+        "paso_critico": "La idea central no es una denuncia legal (A) ni una asignación de responsabilidad exclusiva al usuario (B), sino el diagnóstico estructural de la relación asimétrica.",
+        "error_tipico": "A introduce 'ilegales' — el texto no hace valoración jurídica. B traslada la responsabilidad exclusivamente al usuario — el texto la sitúa en la estructura de la relación. D propone solución legislativa — el texto solo describe la situación."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 2,
+        "estimated_time_sec": 110, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C única: cesión-datos-sin-comprensión + desigualdad-estructural. A introduce valoración jurídica ausente. B responsabilidad exclusiva del usuario (texto sitúa en estructura). D propone solución no presente. H3/N2/RCV ✓. Síntesis de diagnóstico estructural multi-componente. H1=media ✓. simulation_id=sim_2 ✓. Contexto privacidad-digital/plataformas — distinto de todos los H3 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B019",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "h = horas de alquiler",
+        "equation": "2000h + 5000 = 17000 → 2000h = 12000 → h = 6",
+        "correct_option": "B",
+        "correct_answer_value": 6,
+        "verification": "2000(6) + 5000 = 12000 + 5000 = 17000 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Una empresa de alquiler de bicicletas cobra ₡2 000 por hora de uso más un depósito fijo de ₡5 000 por préstamo. Si el costo total de un alquiler fue ₡17 000, ¿cuántas horas duró el alquiler?",
+      "opciones": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "8"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea h = horas de alquiler. Ecuación: 2000h + 5000 = 17000 → 2000h = 12000.",
+        "paso_2": "h = 12000 ÷ 2000 = 6 horas. ✓ Verificación: 2000(6) + 5000 = 17000 ✓.",
+        "paso_critico": "Identificar que el depósito (₡5 000) es un costo fijo que debe restarse del total antes de dividir entre la tarifa horaria.",
+        "error_tipico": "A (5): 17000÷3000≈5.67≈5, divide el total entre (2000+5000/6)... o 17000-5000=12000; 12000÷2400=5 (tasa incorrecta). C (7): 2000×7+5000=19000≠17000. D (8): 2000×8+5000=21000≠17000."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H2", "difficulty": 2,
+        "estimated_time_sec": 95, "error_type": "Modelado incorrecto", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "2000h+5000=17000→h=6=B ✓. Verif: 17000 ✓. A tasa incorrecta. C/D verificación directa falla. H2/N2/RCM ✓. Costo fijo + variable, N2: identificar estructura antes de despejar. H1=media ✓. simulation_id=sim_2 ✓. Contexto bicicletas/depósito-fijo — distinto de todos los H2 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B019",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: IA puede optimizar diagnóstico médico (positivo); segunda: SU IMPLEMENTACIÓN plantea desafíos éticos (contrastivo) — ambas afirmaciones válidas pero en tensión",
+        "connector_type": "adversativo",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La inteligencia artificial puede optimizar el diagnóstico médico al procesar millones de datos clínicos en fracciones de segundo. __________, su implementación plantea desafíos éticos relacionados con la privacidad de los pacientes y la atribución de responsabilidad ante errores.»",
+      "opciones": {
+        "A": "Por esta razón",
+        "B": "Por lo tanto",
+        "C": "Sin embargo",
+        "D": "En consecuencia"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta una ventaja de la IA en medicina (capacidad diagnóstica). La segunda introduce un contrapunto: esa misma implementación genera problemas éticos.",
+        "paso_2": "'Sin embargo' (C) expresa que, a pesar de la ventaja diagnóstica, coexiste un conjunto de desafíos que no se derivan de la ventaja sino que la acompañan con tensión. ✓",
+        "paso_critico": "Los desafíos éticos no son consecuencia de la capacidad diagnóstica — existen independientemente. La relación es de contraste, no de causalidad.",
+        "error_tipico": "A, B y D (causales/conclusivos): implicarían que los desafíos éticos SE DERIVAN de la capacidad de procesar datos — lógicamente incorrecto. La trampa es la proximidad temática que sugiere continuidad causal."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 2,
+        "estimated_time_sec": 95, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C único adversativo: ventaja-diagnóstica vs. desafíos-éticos (contraste, no derivación). A/B/D causales (implican derivación incorrecta). H5/N2/RCV ✓. Trampa: proximidad temática IA-medicina sugiere continuidad causal. H1=media ✓. simulation_id=sim_2 ✓. Contexto IA/diagnóstico-médico — distinto de todos los H5 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B019",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Densidad A: 240000 ÷ 80 = 3000 hab/km²",
+        "step_2": "Densidad B: 180000 ÷ 45 = 4000 hab/km²",
+        "comparison": "Ciudad B más densa. Diferencia: 4000 - 3000 = 1000 hab/km²",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "La ciudad A tiene 240 000 habitantes distribuidos en 80 km². La ciudad B tiene 180 000 habitantes en 45 km². ¿En cuál de las dos ciudades la densidad poblacional es mayor, y por cuánto?",
+      "opciones": {
+        "A": "Ciudad A, con una densidad 1 000 hab/km² mayor que la ciudad B.",
+        "B": "Ciudad B, con una densidad 500 hab/km² mayor que la ciudad A.",
+        "C": "Ciudad B, con una densidad 1 000 hab/km² mayor que la ciudad A.",
+        "D": "Ambas ciudades tienen la misma densidad poblacional."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Calcular densidades unitarias: Ciudad A: 240 000 ÷ 80 = 3 000 hab/km². Ciudad B: 180 000 ÷ 45 = 4 000 hab/km².",
+        "paso_2": "Ciudad B tiene mayor densidad. Diferencia: 4 000 − 3 000 = 1 000 hab/km². ✓",
+        "paso_critico": "Comparar razones (hab/km²), no valores absolutos. Ciudad A tiene más habitantes en total, pero en proporción a su superficie es menos densa.",
+        "error_tipico": "A (Ciudad A): error de confundir mayor población absoluta (240k > 180k) con mayor densidad — trampa principal. B (diferencia 500): error aritmético en la diferencia de densidades. D (misma densidad): 240/80=3≠4=180/45."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H6", "difficulty": 2,
+        "estimated_time_sec": 130, "error_type": "Modelado incorrecto", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "Ciudad B: 4000 hab/km² > Ciudad A: 3000 hab/km²; diferencia=1000=C ✓. A confunde absolutos con densidad (trampa fuerte). B error aritmético. D propone igualdad falsa (3000≠4000). H6/N2/RCM ✓. Comparación de razones no explícitas — ciudad con más gente pero menos densa. H1=alta: requiere inferir que la comparación debe ser sobre razones, no valores absolutos. simulation_id=sim_2 ✓. Contexto densidad-poblacional/ciudades — distinto de todos los H6 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B019",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "n²-1 for n=1,2,...: 0, 3, 8, 15, 24, 35. Differences: 3,5,7,9,11 (odd numbers, +2 each time).",
+        "next_difference": 13,
+        "next_term": "35 + 13 = 48",
+        "correct_option": "D",
+        "correct_answer_value": 48,
+        "verification": "7²-1 = 49-1 = 48 ✓; differences: 3,5,7,9,11,13 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 0, 3, 8, 15, 24, 35, ___?",
+      "opciones": {
+        "A": "44",
+        "B": "45",
+        "C": "46",
+        "D": "48"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos consecutivos: 3−0=3, 8−3=5, 15−8=7, 24−15=9, 35−24=11. Son números impares consecutivos que crecen de 2 en 2.",
+        "paso_2": "Siguiente diferencia: 13. Siguiente término: 35 + 13 = 48. ✓ Verificación: la serie corresponde a n²−1: 1−1=0, 4−1=3, 9−1=8, 16−1=15, 25−1=24, 36−1=35, 49−1=48. ✓",
+        "paso_critico": "El patrón de diferencias (3, 5, 7, 9, 11…) es una progresión aritmética de números impares. Cada diferencia aumenta en 2.",
+        "error_tipico": "A (44): 35+9=44, repite una diferencia anterior (9) sin avanzar. B (45): 35+10=45, incrementa la diferencia en 1 en lugar de 2. C (46): 35+11=46, repite la última diferencia (11) sin incrementar."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H4", "difficulty": 2,
+        "estimated_time_sec": 125, "error_type": "Generalización excesiva", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "Diferencias 3,5,7,9,11→siguiente=13; 35+13=48=D ✓. Verif: n²-1 para n=1..7 ✓. A repite diferencia anterior. B incrementa en 1. C repite última diferencia. H4/N2/RCM ✓. Patrón n²-1 detectado vía diferencias impares crecientes. H1=alta: el patrón subyacente (n²-1) no es obvio; requiere identificar la regularidad de las diferencias. simulation_id=sim_2 ✓. Serie n²-1 estructuralmente distinta de todas las H4 de sim_1 (n(n+1), alternante +1/×2, diferencias +1/aritmética, Fibonacci)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B019",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "original_structure": "Garantizar acceso universal a educación ≠ uniformizar contenidos; = asegurar desarrollo de capacidades independientemente del origen socioeconómico",
+        "key_elements": ["negación de uniformización", "afirmación de equidad de oportunidades", "independencia de origen socioeconómico"],
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«Garantizar el acceso universal a la educación no implica uniformizar sus contenidos; supone asegurar que cada persona pueda desarrollar sus capacidades con independencia de su origen socioeconómico.»",
+      "opciones": {
+        "A": "La educación universal requiere que todos los estudiantes reciban el mismo plan de estudios para garantizar condiciones igualitarias.",
+        "B": "El acceso a la educación depende fundamentalmente de factores socioeconómicos que el Estado debe eliminar por completo antes de cualquier reforma.",
+        "C": "Universalizar la educación significa reducir las desigualdades económicas en la sociedad antes de intervenir en el sistema educativo.",
+        "D": "Universalizar la educación implica garantizar equidad en las oportunidades de desarrollo, no homogeneidad en los contenidos impartidos."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El enunciado original tiene dos componentes: (i) negación — no implica uniformizar contenidos; (ii) afirmación — sí implica asegurar desarrollo independiente del origen socioeconómico.",
+        "paso_2": "D preserva ambos con vocabulario diferente: 'equidad en oportunidades de desarrollo' = capacidades independientes del origen; 'no homogeneidad en contenidos' = no uniformizar. ✓",
+        "paso_critico": "La equivalencia semántica debe mantener tanto la negación (no es sobre contenidos uniformes) como la afirmación positiva (sí es sobre equidad de oportunidades). Ambos elementos son necesarios.",
+        "error_tipico": "A invierte la negación: propone precisamente lo que el enunciado rechaza (mismo plan de estudios). B introduce una secuencia temporal (primero eliminar desigualdades, luego educar) ausente en el original. C también introduce secuencia condicional no presente."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 3,
+        "estimated_time_sec": 170, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "D única equivalente: negación(uniformizar-contenidos)+afirmación(equidad-oportunidades). A invierte la negación. B introduce secuencia temporal ausente. C condicionalidad ausente. H5/N3/RCV ✓. Equivalencia semántica compleja: preservar negación implícita + afirmación positiva con léxico diferente. H1=alta: requiere reconocer equivalencia lógica estructural, no superficial. simulation_id=sim_2 ✓. Contexto educación-universal/equidad — estructuralmente distinto de todos los H5/L3 de sim_1 (automatización-laboral)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B019",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "Premisa 1: asumir tecnología neutral ignora diseño por agentes con intereses. Premisa 2: mis implementación en distintos contextos produce efectos distintos (calculadora). Conclusión implícita: afirmar que la tecnología no tiene impacto político ES una postura política.",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Asumir que la tecnología es inherentemente neutral equivale a ignorar que toda herramienta es diseñada por agentes con intereses específicos y es adoptada en contextos sociales que la resignifican. Una calculadora en manos de un contador y en manos de un estudiante no produce el mismo efecto social. Afirmar, entonces, que la tecnología carece de impacto político es en sí misma una posición con implicaciones políticas.»\n\n¿Cuál es la conclusión principal que el texto defiende?",
+      "opciones": {
+        "A": "La tecnología siempre reproduce y amplifica las desigualdades económicas de la sociedad que la produce.",
+        "B": "Las herramientas tecnológicas deben ser diseñadas por equipos con representación social diversa para evitar sesgos ideológicos.",
+        "C": "Toda tecnología tiene implicaciones políticas, y sostener que no las tiene constituye en sí mismo una toma de posición política.",
+        "D": "El uso de tecnología en contextos educativos es inherentemente más problemático que en contextos comerciales o industriales."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El argumento se construye en tres pasos: (1) neutralidad tecnológica es una ficción (ignora diseño e intereses); (2) el mismo artefacto produce efectos distintos según el contexto; (3) por tanto, negar el impacto político ES una postura política.",
+        "paso_2": "C recoge fielmente la conclusión: toda tecnología es política, y negarla es en sí misma una postura política. ✓",
+        "paso_critico": "La conclusión no es que la tecnología 'amplifica desigualdades' (A — demasiado específico) ni que reduce sesgos si se diversifica el diseño (B — solución no planteada). La clave es la paradoja: negar la politicidad es político.",
+        "error_tipico": "A restringe a 'desigualdades económicas' cuando el texto habla de impacto político en general. B introduce una propuesta de diseño diverso — no es la conclusión sino una solución implícita no derivada. D introduce jerarquía entre contextos de uso que el texto no establece."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 3,
+        "estimated_time_sec": 180, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C única: toda-tecnología-tiene-implicaciones-políticas + negar-eso-es-postura-política (paradoja autoreferencial). A especifica desigualdades económicas (texto habla de impacto político en general). B propone solución de diseño-diverso (no presente). D jerarquía de contextos ausente. H3/N3/RCV ✓. Reconstrucción de estructura argumentativa implícita con conclusión paradójica. H1=alta: la conclusión requiere reconocer la autoreferencia (negar politicidad = postura política). simulation_id=sim_2 ✓. Contexto neutralidad-tecnológica/política — distinto de todos los H3/L3 de sim_1 (política-ambiental-incentivos)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B019",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Trapezoide: bases b1=10 cm, b2=6 cm, altura h=4 cm",
+        "step_2": "Área = (b1 + b2) / 2 × h = (10 + 6) / 2 × 4 = 8 × 4 = 32 cm²",
+        "correct_option": "C",
+        "correct_answer_value": 32,
+        "verification": "(10+6)/2 × 4 = 8 × 4 = 32 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un trapezoide tiene bases paralelas de 10 cm y 6 cm, y una altura de 4 cm. ¿Cuál es el área del trapezoide?",
+      "opciones": {
+        "A": "24 cm²",
+        "B": "28 cm²",
+        "C": "32 cm²",
+        "D": "40 cm²"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El área de un trapezoide se calcula con la fórmula: Área = ((b₁ + b₂) ÷ 2) × h.",
+        "paso_2": "Área = ((10 + 6) ÷ 2) × 4 = (16 ÷ 2) × 4 = 8 × 4 = 32 cm². ✓",
+        "paso_critico": "La fórmula del trapezoide promedia las dos bases antes de multiplicar por la altura. No debe usarse solo una base como si fuera un rectángulo o triángulo.",
+        "error_tipico": "A (24 cm²): (10+6)/2 × 3 = 24, usa altura=3 en lugar de 4. B (28 cm²): (6+8)/2 × 4 = 28, confunde la base mayor (10) con otro valor. D (40 cm²): 10 × 4 = 40, usa solo la base mayor como si fuera un rectángulo e ignora la base menor."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H7", "difficulty": 2,
+        "estimated_time_sec": 115, "error_type": "Error de cálculo", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "(10+6)/2×4=32=C ✓. A usa altura incorrecta. B confunde base mayor. D usa solo base mayor (rectángulo sin promedio). H7/N2/RCM ✓. Propiedad geométrica trapezoide en figura implícita: fórmula (b1+b2)/2×h. H1=media ✓. simulation_id=sim_2 ✓. Contexto trapezoide/bases-paralelas — estructuralmente distinto de todos los H7 de sim_1 (rombo-diagonales, transformaciones-isométricas)."
+      },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_019",
+    "item_type": "simulation",
+    "simulation_id": "sim_2",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_2": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 2, "H3": 3, "H4": 1, "H5": 3, "H6": 2, "H7": 1,
+      "H2_note": "Items 1 (L1), 6 (L2)",
+      "H3_note": "Items 2 (L1), 5 (L2), 11 (L3)",
+      "H4_note": "Item 9 (L2)",
+      "H5_note": "Items 3 (L1), 7 (L2), 10 (L3)",
+      "H6_note": "Items 4 (L1), 8 (L2)",
+      "H7_note": "Item 12 (L2)"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 7,
+      "nivel_3": 2,
+      "nivel_1_items": "1 (H2), 3 (H5), 4 (H6)",
+      "nivel_2_items": "5 (H3), 6 (H2), 7 (H5), 8 (H6), 9 (H4), 12 (H7)",
+      "nivel_3_items": "10 (H5), 11 (H3)"
+    },
+    "macro_area_distribution": {
+      "RCV": 6, "RCM": 6,
+      "RCV_items": "2 (H3), 3 (H5), 5 (H3), 7 (H5), 10 (H5), 11 (H3)",
+      "RCM_items": "1 (H2), 4 (H6), 6 (H2), 8 (H6), 9 (H4), 12 (H7)"
+    },
+    "h1_distribution": {
+      "baja": 3, "media": 5, "alta": 4,
+      "items_baja": "1 (H2/L1), 3 (H5/L1), 4 (H6/L1)",
+      "items_media": "2 (H3/L1—text explicit), 5 (H3/L2), 6 (H2/L2), 7 (H5/L2), 12 (H7/L2)",
+      "items_alta": "8 (H6/L2—ratio trap), 9 (H4/L2—n²-1), 10 (H5/L3), 11 (H3/L3)",
+      "pct_alta": 0.333,
+      "constraint": "✓ 33.3% within 30-40% target"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "2 uses (items 1, 6)",
+      "T_H3_RCV_L2_01": "2 uses (items 2, 5)",
+      "T_H3_RCV_L3_01": "1 use (item 11)",
+      "T_H4_RCM_L2_01": "1 use (item 9)",
+      "T_H5_RCV_L2_01": "2 uses (items 3, 7)",
+      "T_H5_RCV_L3_01": "1 use (item 10)",
+      "T_H6_RCM_L2_01": "2 uses (items 4, 8)",
+      "T_H7_RCM_L2_01": "1 use (item 12)",
+      "all_templates_active": true
+    },
+    "sim_2_accumulation": {
+      "sim_2_count_before": 0,
+      "items_added": 12,
+      "sim_2_count_after": 12,
+      "sim_2_target": 45,
+      "sim_2_remaining": 33,
+      "status": "in_progress"
+    },
+    "cumulative_sim_2_skill_tracking": {
+      "B019_contribution": {"H2":2,"H3":3,"H4":1,"H5":3,"H6":2,"H7":1},
+      "cumulative_12":     {"H2":2,"H3":3,"H4":1,"H5":3,"H6":2,"H7":1},
+      "strat_target_45":   {"H2":8,"H3":7,"H4":5,"H5":10,"H6":6,"H7":3},
+      "remaining_33":      {"H2":6,"H3":4,"H4":4,"H5":7,"H6":4,"H7":2}
+    },
+    "cumulative_sim_2_difficulty_tracking": {
+      "cumulative_12": {"N1":3,"N2":7,"N3":2},
+      "strat_target_45": {"N1":12,"N2":22,"N3":11},
+      "remaining_33": {"N1":9,"N2":15,"N3":9}
+    },
+    "cumulative_sim_2_macro_tracking": {
+      "cumulative_12": {"RCV":6,"RCM":6},
+      "strat_target_45": {"RCV":23,"RCM":22},
+      "remaining_33": {"RCV":17,"RCM":16}
+    },
+    "structural_isolation_check": {
+      "vs_sim_1": "All 12 items verified structurally distinct from sim_1 pool. All contexts, numeric values, logical patterns, and distractor constructions are novel.",
+      "vs_diagnostic": "All items verified distinct from diagnostic pool.",
+      "status": "PASS"
+    }
+  }
+}

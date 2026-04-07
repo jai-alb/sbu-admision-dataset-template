@@ -1,0 +1,779 @@
+{
+  "batch_id": "BATCH_026",
+  "part": "1_of_2",
+  "generated_at": "2026-03-25T05:05:00-06:00",
+  "note": "FULL REBUILD SIM_2 — 45 completely new items. Strict anti-pattern rules applied.",
+  "simulation_id": "sim_2",
+  "item_type": "simulation",
+  "structure_targets": {
+    "total": 45,
+    "RCV": 23,
+    "RCM": 22,
+    "RCV_skills": {"H3": 9, "H5": 14}, 
+    "RCM_skills": {"H2": 8, "H4": 5, "H6": 6, "H7": 3},
+    "note": "RCV adjusted to H3=9, H5=14 to reach exactly 23"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H2_RCM_L1_02",
+        "estimated_time_sec": 65,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Un agricultor tiene 480 manzanas y decide empacarlas en cajas de 12 unidades cada una para su venta. Si logra vender 30 cajas el primer día, ¿cuántas manzanas le quedan sin vender?",
+      "opciones": {
+        "A": "360",
+        "B": "120",
+        "C": "450",
+        "D": "300"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Calcular cuántas cajas en total puede formar: 480 ÷ 12 = 40 cajas.",
+        "paso_2": "Calcular cajas restantes: 40 − 30 = 10 cajas.",
+        "paso_3": "Convertir las cajas restantes a manzanas: 10 × 12 = 120 manzanas. ✓ (Alternativa: 30×12 = 360 vendidas; 480 − 360 = 120 sobran).",
+        "paso_critico": "La pregunta pide el número de MANZANAS sin vender, no la cantidad de cajas ni las manzanas vendidas.",
+        "error_tipico": "A (360) es la cantidad de manzanas vendidas. C (450) resta 30 manzanas al total. D (300) es un error de sustracción."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "480 - (30*12) = 120. B=120 ✓. A=vendidas. C=resta cajas como unidades. D=error. N1/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_002_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L1_02",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector que completa correctamente la siguiente afirmación:\n\n«Para aplicar al programa de intercambio académico, los estudiantes deben mantener un promedio superior a 90. __________, el comité evaluador exige presentar una carta de recomendación de un profesor titular del área de interés.»",
+      "opciones": {
+        "A": "De la misma forma",
+        "B": "En contraste",
+        "C": "Por lo tanto",
+        "D": "Sin embargo"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El primer enunciado establece un primer requisito (promedio). El segundo enunciado añade un segundo requisito paralelo (carta de recomendación).",
+        "paso_2": "Ambos son requisitos normativos de la misma categoría que se suman, por lo que se requiere un conector de adición o equivalencia procedimental. 'De la misma forma' cumple esta función. ✓",
+        "paso_critico": "No hay relación causal ni adversativa; simplemente se enumeran condiciones acumulativas.",
+        "error_tipico": "B y D son de contraste, lo cual es ilógico. C es de consecuencia, sugiriendo que la carta se exige PORQUE piden promedio, lo cual no tiene sentido."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "A es aditivo (equivalencia). B/D adversativos. C causal. Adición de requisitos ✓. N1/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_003_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H6_RCM_L1_02",
+        "estimated_time_sec": 60,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Una receta para hacer 15 galletas requiere 200 gramos de harina. Si se desea preparar exactamente 45 galletas usando la misma receta, ¿cuántos gramos de harina se necesitarán?",
+      "opciones": {
+        "A": "500",
+        "B": "600",
+        "C": "400",
+        "D": "800"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Es una relación de proporcionalidad directa. Factor de escala: 45 / 15 = 3 (se triplica la receta).",
+        "paso_2": "Harina necesaria: 200 × 3 = 600 gramos. ✓",
+        "paso_critico": "Identificar que al triplicar la cantidad producida, los ingredientes se deben escalar por el mismo factor.",
+        "error_tipico": "A (500) escalado incorrecto (como si sumara 300). C (400) sería para 30 galletas. D (800) sería para 60 galletas."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Factor 3. 200*3=600. B=600 ✓. A=error aritmético. C=duplica. D=cuadruplica. N1/H6 directa básica ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_004_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L1_02",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente fragmento:\n\n«Aunque las plantas carnívoras capturan insectos, no lo hacen para obtener energía, sino para extraer nitrógeno y fósforo de los cuales carecen los suelos pobres donde suelen crecer. La fotosíntesis sigue siendo su principal motor energético, como en el resto de las plantas.»\n\n¿Cuál es el propósito central de este texto?",
+      "opciones": {
+        "A": "Explicar que las plantas carnívoras realizan la fotosíntesis mejor que las plantas comunes.",
+        "B": "Demostrar que los suelos sin nitrógeno impiden el crecimiento normal de cualquier tipo de vegetación.",
+        "C": "Aclarar el motivo real por el cual las plantas carnívoras consumen insectos.",
+        "D": "Argumentar que los insectos son la principal fuente de energía en ciertos ecosistemas."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto contrasta una suposición común (capturan insectos para energía) con el motivo real (capturan para obtener nutrientes porque el suelo es pobre).",
+        "paso_2": "El objetivo del autor es corregir un malentendido sobre la función de esta dieta especializada, lo que se ajusta a la opción C. ✓",
+        "paso_critico": "El texto no detalla la fotosíntesis ni condena los suelos, se enfoca estrictamente en aclarar el porqué del comportamiento carnívoro.",
+        "error_tipico": "A introduce una comparación cualitativa de 'mejor que' ausente en el texto. B es una generalización extrema sobre 'cualquier tipo'. D confunde energía (que obtienen de la fotosíntesis) con nutrientes."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C captura el propósito de aclarar motivo nutricional vs energético. A/B/D errores clásicos (comparación, generalización, confusión causal). N1/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_005_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H2_RCM_L1_02",
+        "estimated_time_sec": 65,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "En un torneo de ajedrez escolar participan 16 estudiantes. Si cada estudiante debe jugar exactamente una partida contra cada uno de los demás jugadores, en total se juegan 120 partidas. Sin embargo, 4 estudiantes se retiran antes de iniciar el torneo. ¿Contra cuántos oponentes jugará cada uno de los estudiantes que permanecen?",
+      "opciones": {
+        "A": "15",
+        "B": "12",
+        "C": "11",
+        "D": "10"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Número inicial de estudiantes: 16. Se retiran 4, quedan: 16 - 4 = 12 estudiantes.",
+        "paso_2": "Si cada estudiante juega contra TODOS los demás de los 12 que quedaron, jugará contra 12 - 1 (él mismo) = 11 oponentes. ✓",
+        "paso_critico": "La pregunta es sutil: pide saber 'contra cuántos oponentes jugará CADA UNO', no el total de partidas del torneo (que es distractor).",
+        "error_tipico": "A (15) es la cantidad de oponentes si nadie se retira. B (12) no resta al jugador mismo. D (10) asume un descuento incorrecto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Jugadores=12. Oponentes per capita=11. C=11 ✓. A=caso original. B=no resta sí mismo. El dato '120 partidas' es distractor de sobreinformación, muy buen diseño para H2 N1 sin ser complejo. N1/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_006_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L1_02",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Determine qué oración es esencialmente equivalente a la siguiente:\n\n«Solo si hay luz solar directa durante al menos seis horas, los paneles solares alcanzarán su máxima capacidad de carga.»",
+      "opciones": {
+        "A": "Si los paneles solares alcanzaron su máxima capacidad de carga, entonces hubo luz solar directa durante al menos seis horas.",
+        "B": "Cualquier panel solar expuesto a luz directa durante seis horas alcanzará su máxima capacidad.",
+        "C": "La luz solar directa garantiza que los paneles solares alcancen su máxima capacidad rápidamente.",
+        "D": "Si no hay al menos seis horas de luz solar directa, los paneles nunca se cargarán en absoluto."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "La estructura 'Solo si A, B' indica que A es una condición necesaria para B. Por lo tanto, si ocurre B, debió haber ocurrido A (B implica A).",
+        "paso_2": "Aquí, A = 'luz solar ≥ 6 horas' y B = 'alcanzan máxima capacidad'. Esto es lógicamente equivalente a 'Si B, entonces A', que es exactamente lo que enuncia la opción A. ✓",
+        "paso_critico": "No confundir condición necesaria con suficiente. El texto no dice que las seis horas garantizan la carga (podría estar roto el panel), sino que sin ellas es imposible la carga máxima.",
+        "error_tipico": "B confunde necesario con suficiente (solo si → siempre que). C introduce 'garantiza' y 'rápidamente' (falsa suficiencia). D lleva la negación al extremo diciendo que no se cargarán 'en absoluto' (el texto habla de máxima capacidad)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Equivalencia lógica 'Solo si A, B' ≡ 'Si B, A'. A=Correcta ✓. B=Si A, B (error clásico). C=Añade elementos. D=Extrapolación extrema. Cumple anti-patrón de sim_1 forzando equivalencia en lugar de simple conector. N1/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_007_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H4_RCM_L1_02",
+        "estimated_time_sec": 60,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el número que completa la siguiente secuencia alternada?\n\n10, 50, 15, 45, 20, 40, 25, ___",
+      "opciones": {
+        "A": "35",
+        "B": "30",
+        "C": "45",
+        "D": "50"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Identificar que no es una serie progresiva simple, sino dos subsecuencias entrelazadas.",
+        "paso_2": "Subsecuencia 1 (posiciones impares): 10, 15, 20, 25 (aumenta de 5 en 5).",
+        "paso_3": "Subsecuencia 2 (posiciones pares): 50, 45, 40 (disminuye de 5 en 5). El siguiente número corresponde a la posición par, siguiendo a 40. 40 - 5 = 35. ✓",
+        "paso_critico": "Ver el patrón alternante. Aplicar la regla decreciente al término correcto.",
+        "error_tipico": "B (30) es el siguiente de la serie impar (25+5). C y D rompen la lógica de resta en la serie par."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Secuencia alternada: impar +5, par -5. Pide par tras 40 -> 35. A=35 ✓. B=30 (siguiente impar). Cumple regla anti-patrón de H4 (patrones no lineales/alternancia en L1). N1/H4 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_008_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L1_02",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente apunte histórico:\n\n«Durante el siglo XIX, el aluminio era considerado más valioso que el oro. Reyes y gobernantes celebraban banquetes con platos de aluminio para deslumbrar a sus invitados, mientras que los súbditos de menor rango comían en vajillas de oro. No fue hasta que se desarrolló un proceso químico barato para extraerlo de la bauxita que su precio se desplomó y se volvió de uso común.»\n\n¿Por qué el aluminio era considerado un metal de lujo en el siglo XIX?",
+      "opciones": {
+        "A": "Porque su brillo superaba al del oro en los banquetes reales.",
+        "B": "Porque la nobleza emitió leyes prohibiendo su uso a los plebeyos.",
+        "C": "Porque era extremadamente difícil y costoso extraerlo antes de las nuevas tecnologías químicas.",
+        "D": "Porque el oro perdió temporalmente su valor en el mercado internacional."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto menciona que el aluminio era usado en banquetes para deslumbrar y era más valioso que el oro.",
+        "paso_2": "La causa del cambio se explicita en la frase: 'No fue hasta que se desarrolló un proceso químico barato para extraerlo... que su precio se desplomó'. Esto implica lógicamente que ANTES de ese proceso, extraerlo era costoso/difícil, lo que causaba su alto valor. ✓",
+        "paso_critico": "Inferir la condición anterior (costoso) a partir de la causa del cambio posterior (un proceso barato lo abarató).",
+        "error_tipico": "A asume propiedades estéticas no mencionadas. B inventa de forma especulativa prohibiciones legales ausentes. D es una suposición económica fuera del texto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Inferencia de causalidad hacia atrás. C es correcta ✓. A/B/D no presentes en el texto. Cumple anti-patrón de H3 (inferencia estructural y no idea central directa). N1/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_009_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H6_RCM_L1_02",
+        "estimated_time_sec": 65,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "En un videojuego, se establece que por cada 3 monstruos derrotados, el jugador gana 50 puntos de experiencia. Para subir del nivel 1 al nivel 2, el jugador necesita obtener 450 puntos de experiencia en total. ¿Cuántos monstruos necesita derrotar exactamente para alcanzar este nivel?",
+      "opciones": {
+        "A": "27",
+        "B": "9",
+        "C": "30",
+        "D": "15"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Calcular cuántas veces se debe obtener el bloque de puntos: 450 totales / 50 por bloque = 9 bloques.",
+        "paso_2": "Multiplicar los bloques obtenidos por la cantidad de monstruos que requiere cada uno: 9 bloques × 3 monstruos = 27 monstruos. ✓",
+        "paso_critico": "Aplicar la proporcionalidad en dos pasos. Entender que el set es [3 monstruos = 50 puntos].",
+        "error_tipico": "B (9) es la cantidad de 'veces' que gana los puntos, olvida multiplicar por 3. C (30) es una aproximación visual incorrecta (450/15). D (15) es un error de razón."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "[3]=50p. x=?=450p. 450/50*3 = 27. A=27 ✓. B=solo halla el factor sin aplicar la razón subyacente. N1/H6 compuesta sencilla (2 pasos) ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_010_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L1_02",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector que completa correctamente la siguiente relación funcional:\n\n«El teatro griego clásico no buscaba el entretenimiento trivial, __________ tenía un propósito profundamente cívico y religioso orientado a la catarsis colectiva.»",
+      "opciones": {
+        "A": "sino que",
+        "B": "mientras que",
+        "C": "en síntesis",
+        "D": "porque"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "La primera o oración hace una negación explícita de un propósito ('no buscaba el entretenimiento trivial').",
+        "paso_2": "La segunda oración enuncia el propósito real que reemplaza a la negación ('tenía un propósito... cívico'). La estructura 'No X... [conector] Y' exige un conector adversativo exclusivo, también llamado correctivo. 'Sino que' es el conector gramaticalmente exacto para esta función correctora. ✓",
+        "paso_critico": "Identificar el patrón de negación y corrección ('no esto, sino aquello').",
+        "error_tipico": "B (mientras que) opone dos cosas distintas, no corrige sobre el mismo sujeto de forma exclusiva. D (porque) establecería causa, como si el propósito cívico explicara la falta de entretenimiento trivial, lo que cambia el sentido."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Sino que (corrección tras negación). A=✓. Estructura sintáctica rigurosa. D=cambio de sentido radical. Cumple requerimientos de diversidad H5. N1/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_011_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H7_RCM_L1_02",
+        "estimated_time_sec": 70,
+        "error_type": "Inferencia espacial"
+      },
+      "stem": "Una habitación rectangular tiene dimensiones de 4 metros de largo por 3 metros de ancho. Se desea cubrir el piso con baldosas cuadradas que miden 1 metro de lado. ¿Cuántas baldosas se necesitan en total para cubrir exactamente todo el piso?",
+      "opciones": {
+        "A": "12",
+        "B": "14",
+        "C": "7",
+        "D": "24"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Calcular el área total de la habitación rectangular: 4 m × 3 m = 12 m².",
+        "paso_2": "Calcular el área que cubre una baldosa: 1 m × 1 m = 1 m².",
+        "paso_3": "Dividir para obtener el total de baldosas: 12 m² / 1 m² = 12 baldosas. ✓",
+        "paso_critico": "Conectar el concepto abstracto de Área (b × h) con el concepto espacial de recabar superficie con unidades (baldosas).",
+        "error_tipico": "B (14) es el perímetro de la habitación (4+4+3+3), error clásico. C (7) es la suma de lados (4+3). D (24) es el perímetro multiplicado por algo o el área doble."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Área = 4x3=12. Baldosa = 1x1=1. 12/1 = 12. A=✓. B=perímetro. C=suma lados. N1/H7 básica de recubrimiento espacial ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_012_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L1_02",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Es común pensar que los desiertos no tienen vida. Sin embargo, zorros, escarabajos y cactus han desarrollado adaptaciones fisiológicas extremas: riñones que reciclan humedad, caparazones que condensan la niebla y espinas que reducen la transpiración. El desierto no es un ambiente vacío, sino un laboratorio de resistencia evolutiva.»\n\n¿Cuál es la premisa subyacente que el autor está refutando a lo largo del texto?",
+      "opciones": {
+        "A": "La idea popular de que los ambientes desérticos son regiones carentes de seres vivos.",
+        "B": "La teoría evolutiva de que los animales del desierto consumen menos agua que los de la selva.",
+        "C": "El supuesto de que la flora es siempre más resistente a la temperatura que la fauna.",
+        "D": "La creencia de que todos los ecosistemas del planeta están perdiendo biodiversidad."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto inicia declarando la idea que va a atacar: 'Es común pensar que los desiertos no tienen vida'.",
+        "paso_2": "Luego provee evidencia en contra (ejemplos biológicos) y concluye reiterando la refutación: 'no es un ambiente vacío'. Por tanto, la premisa refutada es esa idea popular original. ✓",
+        "paso_critico": "Distinguir entre lo que el autor AFIRMA y lo que el autor REFUTA (ataca).",
+        "error_tipico": "B, C y D mencionan teorías y conceptos no planteados en el texto (comparaciones con selvas, competencia flora-fauna, crisis de biodiversidad global) que escapan totalmente al alcance de este fragmento."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Pide identificar qué se refuta. 'Es común pensar...'. A=✓. B/C/D sobrepasan la información dada. H3 evaluando estructura de refutación en nivel fácil. N1/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_013_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_02",
+        "estimated_time_sec": 95,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Una librería en línea factura envíos semanales a una escuela. El costo base del envío es de ₡2 500 y se agregan ₡400 adicionales por cada libro transportado en el paquete. Si en un envío la escuela pagó un total de ₡8 100, ¿cuántos libros contenía el paquete?",
+      "opciones": {
+        "A": "14",
+        "B": "20",
+        "C": "12",
+        "D": "15"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Establecer la ecuación donde Costo = Base + (Costo por libro × Cantidad de libros).",
+        "paso_2": "8 100 = 2 500 + 400x.",
+        "paso_3": "Restar el costo base: 8 100 - 2 500 = 5 600.",
+        "paso_4": "Dividir entre el costo por libro: 5 600 / 400 = 14 libros. ✓",
+        "paso_critico": "No olvidar restar el costo base del total ANTES de dividir por el costo unitario.",
+        "error_tipico": "B (20) se obtiene aproximando (8100/400). C (12) error de resta (4800/400). D (15) error aritmético común al dividir."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "(8100-2500)/400 = 5600/400 = 14. A=14 ✓. Ecuación lineal estándar no duplicada temática. N2/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_014_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_02",
+        "estimated_time_sec": 90,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Identifique la opción que traduce correctamente la condición descrita:\n\n«Es indispensable que la temperatura de la cámara frigorífica se mantenga por debajo de los -5 °C para que las vacunas conserven su viabilidad.»",
+      "opciones": {
+        "A": "Si la temperatura desciende por debajo de los -5 °C, automáticamente se garantiza la viabilidad de las vacunas.",
+        "B": "Solo cuando las vacunas pierden su viabilidad, la temperatura de la cámara debe estar por debajo de los -5 °C.",
+        "C": "Si las vacunas conservaron su viabilidad, se puede deducir que la temperatura de la cámara se mantuvo por debajo de los -5 °C.",
+        "D": "Para que la temperatura llegue a -5 °C, primero debe garantizarse la viabilidad biológica de las vacunas."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto plantea que T < -5 °C es condición INDISPENSABLE (necesaria) para Viabilidad (V). Lógicamente: Para V, se requiere T. O sea: Si V, entonces T.",
+        "paso_2": "La opción C dice: Si conservaron la viabilidad (ocurrió V), entonces la temperatura estuvo bajo -5 °C (ocurrió T). Es la traducción exacta de la condición necesaria. ✓",
+        "paso_critico": "No asumir que 'indispensable' significa 'suficiente'. Una temperatura correcta NO garantiza viabilidad (pudieron romperse), pero la viabilidad SÍ garantiza en retrospectiva que la temperatura fue la correcta.",
+        "error_tipico": "A vuelve la condición suficiente (falso lógico). B invierte la relación temporal/causal. D invierte la flecha causal haciendo la viabilidad el requisito de la temperatura."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'A indispensable para B' → 'Si B, entonces A'. C formula esto. A formula 'Si A, B' (suficiencia falsa). Causalidad abstracta clara. Diversidad H5 ✓. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_015_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_02",
+        "estimated_time_sec": 110,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "Analice la lógica de la siguiente progresión:\n\n2, 3, 5, 9, 17, ___ \n\n¿Qué número sigue en la secuencia?",
+      "opciones": {
+        "A": "25",
+        "B": "35",
+        "C": "31",
+        "D": "33"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Calcular las diferencias entre los términos consecutivos.",
+        "paso_2": "Diferencias: (3-2)=1, (5-3)=2, (9-5)=4, (17-9)=8. Es decir, las diferencias son: 1, 2, 4, 8.",
+        "paso_3": "El patrón de las diferencias es que se van duplicando (potencias de 2). La siguiente diferencia debe ser 8 × 2 = 16.",
+        "paso_4": "Siguiente término: 17 + 16 = 33. ✓",
+        "paso_critico": "Identificar que el patrón no es aritmético, sino que la diferencia misma sigue una progresión geométrica oculta bajo los términos.",
+        "error_tipico": "A (25) suma 8, repitiendo la última diferencia. B (35) asume una regla diferente de multiplicación (por 2 y resta un patrón erróneo). C (31) suma 14 sin razón geométrica clara."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Dif: 1,2,4,8 -> next 16. 17+16=33. D=✓. H1=alta por capa oculta (diferencias de segundo orden en N2). Patrón no lineal válido para anti-patrón. N2/H4 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_016_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_02",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto argumentativo:\n\n«Algunos críticos de arte sostienen que la pintura abstracta no requiere talento, argumentando que un niño pequeño podría salpicar pintura al azar sobre un lienzo con resultados similares. Confunden, sin embargo, el caos accidental con el caos deliberado; mientras el infante no tiene noción de la interacción cromática o el peso visual, el artista abstracto utiliza la ausencia de forma como herramienta para expresar tensiones formales que requieren un dominio profundo de los fundamentos visuales.»\n\n¿Cuál es la premisa que el autor defiende implícitamente?",
+      "opciones": {
+        "A": "El arte infantil no posee ningún valor expresivo ni estético.",
+        "B": "La pintura abstracta requiere un conocimiento técnico igual o superior al de la pintura realista.",
+        "C": "La similitud superficial entre dos obras no garantiza que ambas requieran el mismo nivel de intención ni de conocimiento.",
+        "D": "Cualquier persona, con el entrenamiento adecuado, puede dominar los fundamentos de la pintura abstracta."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El autor responde a quienes dicen que el arte abstracto es 'como el de un niño' (similitud superficial).",
+        "paso_2": "Su defensa se basa en que el niño obedece al accidente, mientras que el artista obedece al dominio y a la intención deliberada.",
+        "paso_3": "Por tanto, su argumento se sostiene sobre la premisa subyacente de que el que las cosas se vean parecidas no significa que provengan del mismo nivel cognitivo o técnico. Opción C. ✓",
+        "paso_critico": "No buscar una repetición literal, sino aislar el principio lógico que hace funcionar al argumento.",
+        "error_tipico": "A es un ataque de hombre de paja al texto (el autor no desprecia a los niños, solo los deslinda). B introduce la 'pintura realista' que nunca es mencionada. D aborda el tema de si la habilidad se puede aprender, lo cual está fuera del foco."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Premisa implícita identificada: apariencia similar != intención/conocimiento similar. C=✓. Anti-patrón aplicado: no pide resumen literal, pide aislación de principio lógico normativo. N2/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_017_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_02",
+        "estimated_time_sec": 105,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Si 4 programadores trabajando al mismo ritmo pueden codificar y probar un módulo de software en 15 días, ¿cuántos programadores adicionales se necesitan contratar para realizar exactamente el mismo trabajo en solo 6 días?",
+      "opciones": {
+        "A": "10",
+        "B": "6",
+        "C": "2",
+        "D": "8"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Es una proporcionalidad inversa. Total de trabajo necesario = 4 programadores × 15 días = 60 programadores-días.",
+        "paso_2": "Para terminar en 6 días, el número de programadores requeridos en total es: 60 / 6 = 10 programadores.",
+        "paso_3": "La pregunta pide el número de programadores ADICIONALES. Ya se tienen 4, por lo que se requieren: 10 - 4 = 6 programadores más. ✓",
+        "paso_critico": "Trampa doble: (1) relacionar inversamente, no directamente; y (2) responder lo 'adicional', no el total requerido.",
+        "error_tipico": "A (10) es el total requerido, no los adicionales. C (2) aplica reglas aritméticas lineales sin sentido. D (8) cálculo erróneo de regla de 3 directa."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Trabajo=60. T2=6 -> P2=10. Adicional = 10-4=6. B=6 ✓. A trampa total. Proporcionalidad inversa exigida por anti-patrones de H6. H1=alta por segunda trampa lingüística de 'adicionales'. N2/H6 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_018_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_02",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Siendo verdadera la afirmación: «Todos los plásticos expuestos prolongedamente al sol sufren degradación estructural», ¿cuál de las siguientes conclusiones se deriva lógicamente de ella?",
+      "opciones": {
+        "A": "Si un material sufre degradación estructural, entonces es un plástico que estuvo expuesto al sol prolongadamente.",
+        "B": "No existen plásticos que conserven su estructura intacta si se exponen al sol por largos periodos.",
+        "C": "Los plásticos que no reciben exposición solar prolongada jamás sufren degradación de su estructura.",
+        "D": "La exposición al sol es la única causa de la degradación estructural en los materiales sintéticos."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La premisa tiene estructura: 'Todo A (plástico expuesto al sol) pertenece a B (sufre degradación)'.",
+        "paso_2": "Esto significa lógicamente que 'No existe un solo A que no pertenezca a B'. Es decir: No hay plástico expuesto al sol (A) que mantenga su estructura intacta (no-B). Esta es la opción B. ✓",
+        "paso_critico": "Identificar equivalencia entre universal afirmativa (Todo A es B) y negación de la existencia de excepciones (Ningún A es no-B).",
+        "error_tipico": "A comete la falacia de afirmar el consecuente (cree que B obliga a A). C niega el antecedente asumiendo erróneamente que la falta de sol protege permanentemente (podría degradarse por calor o químicos). D generaliza hacia la exclusividad ('única causa'), lo cual es inventado."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Todo P(s) es D. ≡ No existe P(s) que no(D). B=✓. Aplicación formal de inferencia sintáctica pura sin dobles efectos. Cumple anti-patrón de reforma de sim_1. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_019_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_02",
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "La factura eléctrica de Ana detalla dos componentes: el impuesto fijo mensual de ₡3 000 y el consumo de energía en kilovatios. Por cada kilovatio consumido le cobran ₡65. Si este mes Ana consumió 120 kilovatios, decidió apagar la termoducha y al mes siguiente su consumo bajó a 90 kilovatios. ¿Cuánto ahorro monetario vio reflejado en total de una factura a otra?",
+      "opciones": {
+        "A": "₡2 950",
+        "B": "₡1 950",
+        "C": "₡7 800",
+        "D": "₡4 950"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El impuesto fijo de ₡3 000 se cobra en ambos meses, por lo que NO afecta a la diferencia o 'ahorro monetario' entre facturas. Se cancela.",
+        "paso_2": "El ahorro proviene exclusivamente de los kilovatios no consumidos: 120 - 90 = 30 kilovatios de ahorro.",
+        "paso_3": "Multiplicar el ahorro en kilovatios por la tarifa: 30 × ₡65 = ₡1 950. ✓",
+        "paso_critico": "Darse cuenta de que en diferencias relativas, los costos fijos se anulan, ahorrando tiempo de cálculo. Alternativa larga: Factura1 = 3000+(120×65)=10800. Factura2 = 3000+(90×65)=8850. Diferencia = 10800-8850=1950.",
+        "error_tipico": "A suma erróneamente 1000 al ahorro. C (7800) es el cobro total sólo de energía del primer mes (120×65). D (4950) suma el impuesto fijo a la diferencia (1950+3000)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Ahorro es Δconsumo * tarifa. ΔKw = 30. 30 * 65 = 1950. B=✓. D es trampa al sumar costo fijo. N2/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_020_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_02",
+        "estimated_time_sec": 115,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea detenidamente:\n\n«Al evaluar el desempeño de los estudiantes en ciencias empíricas, los examinadores se enfocan excesivamente en la memorización de las fórmulas finales, ignorando el entendimiento del protocolo que llevó a descubrirlas. Paradójicamente, las personas que realizan los grandes descubrimientos en ciencias empíricas son aquellas que dudan del conocimiento y prefieren enfocarse en el error de los protocolos ajenos, y no quienes memorizan los libros de texto.»\n\n¿Qué inferencia sobre la enseñanza tradicional se deduce más rigurosamente del texto?",
+      "opciones": {
+        "A": "La evaluación tradicional califica capacidades que no son representativas del razonamiento necesario para descubrir conocimiento nuevo.",
+        "B": "Los estudiantes que reproban los exámenes de fórmulas tienen mayores probabilidades de convertirse en grandes científicos.",
+        "C": "Los libros de texto de ciencias contienen errores en los protocolos que los científicos prefieren estudiar en lugar de memorizar.",
+        "D": "Para mejorar la ciencia, el sistema educativo debería eliminar por completo la memorización y enfocarse solo en dudar."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto contrasta lo que se evalúa (memorización de fórmulas finales) con lo que realmente usan los científicos para descubrir (duda funcional y revisión de protocolos).",
+        "paso_2": "La conclusión que emerge y se infiere es que el sistema actual no está midiendo las capacidades reales de creación científica, sino otra cosa (memoria). Esto corresponde a la opción A. ✓",
+        "paso_critico": "Extraer la premisa moral-evaluativa sin polarizarla como absoluto. La inferencia trata sobre la desconexión métrica vs realidad.",
+        "error_tipico": "B es una falsa extrapolación (que la memoria no sea lo central, no hace que el fracasar en ella garantice el éxito). C tergiversa, los libros no están 'llenos de errores', el tema era el error en los protocolos descubridores. D propone un mandato extremo (eliminar POR COMPLETO) que el texto no justifica."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Tradición evalúa Q. Ciencia real usa P. → Tradición no evalúa factor representativo P.' Inferencia correcta A=✓. B/C tergiversaciones. D imposición extremista. H1=alta. N2/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_021_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_02",
+        "estimated_time_sec": 100,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "Considere la siguiente serie y determine su comportamiento:\n\n4, 11, 23, 40, 62, ___",
+      "opciones": {
+        "A": "88",
+        "B": "91",
+        "C": "84",
+        "D": "89"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Las diferencias primarias entre términos son: (11-4)=7; (23-11)=12; (40-23)=17; (62-40)=22.",
+        "paso_2": "Observar la sucesión de las diferencias primarias: 7, 12, 17, 22. Existe una diferencia constante de 5 entre ellas (diferencias secundarias).",
+        "paso_3": "La próxima diferencia primaria debe ser: 22 + 5 = 27.",
+        "paso_4": "El próximo número de la serie es: 62 + 27 = 89. ✓",
+        "paso_critico": "Descubrir la capa cuadrática de la progresión evaluando la segunda diferencia (constante).",
+        "error_tipico": "A (88) asume diferencia 26 errónezmente. B (91) asume suma de 29. C (84) repite la diferencia de 22 sumándola directo. "
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "D1: 7,12,17,22... D2: 5,5,5. next D1 = 27. 62+27=89. D=✓. Serie de diferencias aritméticas encadenadas (cuadrática). Cumple diversidad H4. N2/H4 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_022_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_02",
+        "estimated_time_sec": 90,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector lógico que unifica esta disertación de manera coherente:\n\n«Gran parte de las estrategias corporativas asumen que otorgar bonos económicos aumenta el rendimiento de todas las tareas. __________, las pruebas de psicología organizacional muestran que, en tareas que requieren creatividad en lugar de repetición motriz, los incentivos financieros excesivos en realidad disminuyen el desempeño.»",
+      "opciones": {
+        "A": "Al contrario",
+        "B": "En efecto",
+        "C": "De igual manera",
+        "D": "Pese a lo cual"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "La O1 dice que las firmas asumen un efecto POSITIVO de los bonos en TODAS las tareas.",
+        "paso_2": "La O2 dice que las pruebas muestran un efecto NEGATIVO en tareas CREATIVAS. Existe una oposición directa de premisas y conclusiones.",
+        "paso_3": "El conector 'Al contrario' establece esta oposición tajante refutando de tajo la generalización asunta en primer lugar. ✓",
+        "paso_critico": "No confundir el adversativo fuerte ('al contrario', rectifica un error) con el concesivo ('pese a lo cual'), que sugeriría que el segundo ocurre aunque no le importe el primer caso.",
+        "error_tipico": "B confirma algo que no es cierto. C suma cuando deben restar. D (pese a lo cual) relaja demasiado la relación; no es una excepción amistosa, es una refutación directa basada en datos contra supuestos."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Oposición O1(H) vs O2(~H para subgrupo). 'Al contrario' refuta la expectativa general. A=✓. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    }
+  ]
+}

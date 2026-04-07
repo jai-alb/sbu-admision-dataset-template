@@ -1,0 +1,283 @@
+{
+  "batch_id": "BATCH_005",
+  "generated_at": "2026-03-23T17:45:55-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "items": [
+    {
+      "item_id": "ITEM_001_B005",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: main idea explicitly stated, 1 recognition step",
+      "stem": "Lea el siguiente texto:\n\n«El agua es un recurso indispensable para la vida en la Tierra. Sin ella, ni plantas ni animales, incluyendo los seres humanos, podrían sobrevivir.»\n\n¿Qué afirma principalmente el texto?",
+      "opciones": { "A": "Los seres humanos necesitan más agua que las plantas.", "B": "El agua es un recurso esencial sin el cual la vida no sería posible.", "C": "Las plantas pueden sobrevivir con menos agua que los animales.", "D": "La Tierra tiene suficiente agua para mantener toda la vida existente." },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La idea principal está explícita en la primera oración: el agua es indispensable para la vida.",
+        "paso_2": "La segunda oración confirma y amplía esta idea. B la parafrasea directamente. ✓",
+        "paso_critico": "1 paso: reconocimiento de enunciado explícito.",
+        "error_tipico": "A y C introducen comparaciones entre organismos no presentes. D introduce 'suficiente' — el texto no evalúa la cantidad disponible."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 1, "tiempo_estimado": "1.5 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único. Sin inferencia. nivel_1 ✓. Contexto agua/vida — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B005",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: geometric ×2 pattern, 1 direct step",
+      "stem": "¿Cuál es el número que sigue en la serie: 1, 2, 4, 8, 16, ___?",
+      "opciones": { "A": "24", "B": "32", "C": "18", "D": "20" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Razón entre términos: 2÷1=2, 4÷2=2, 8÷4=2, 16÷8=2. Patrón geométrico ×2.",
+        "paso_2": "Siguiente término: 16×2 = 32. ✓",
+        "paso_critico": "Patrón multiplicativo directo. 1 operación.",
+        "error_tipico": "A(24): 16+8=24 (suma el penúltimo término — patrón aditivo erróneo). C(18): 16+2=18 (suma primero del patrón). D(20): 16+4=20 (suma diferencia 4 inicial sin razón)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Generalización excesiva", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "16×2=32=B ✓. Distinto de ×3 (B002), ÷2 (B004), patrones aritméticos previos. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B005",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: 1-step causal recognition",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«María olvidó poner el despertador; __________, llegó tarde al trabajo.»",
+      "opciones": { "A": "sin embargo", "B": "no obstante", "C": "por eso", "D": "aunque" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Olvidar el despertador causa la tardanza. Relación causal directa.",
+        "paso_2": "'Por eso' es el único conector causal. ✓",
+        "paso_critico": "1 paso: reconocer la consecuencia lógica directa.",
+        "error_tipico": "A y B son adversativos (no hay contraste). D es concesivo (requeriría otra estructura gramatical)."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A": "incorrecto: adversativo", "B": "incorrecto: adversativo", "D": "incorrecto: concesivo" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "C único. Todos los distractores formalmente incorrectos. Sin contrarrecíproco. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B005",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Una fábrica produce 3 veces más unidades del producto B que del producto A por hora. Si en 2 horas produce un total de 320 unidades entre ambos productos, ¿cuántas unidades del producto A produce por hora?",
+      "opciones": { "A": "80", "B": "40", "C": "120", "D": "160" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea a = unidades de A por hora. B por hora = 3a. Total por hora = 4a.",
+        "paso_2": "En 2 horas: 8a = 320 → a = 40. ✓",
+        "paso_3": "Verificación: 2h×(40+120) = 2×160 = 320. ✓",
+        "paso_critico": "Incluir las 2 horas en la ecuación. La trampa es ignorar el factor temporal.",
+        "error_tipico": "A(80): 320÷4=80, ignora las 2 horas (trata como producción de 1h). C(120): 3×40=120, calcula B en lugar de A. D(160): 320÷2=160, divide por horas sin considerar la relación entre productos."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "3 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "8a=320→a=40=B ✓. A fuerte (omite factor 2h). C da producción de B. D ignora relación doble. Contexto fábrica/productos — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B005",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Carlos obtuvo el triple de puntos que Diego en la feria científica de su escuela. Si entre los dos suman 200 puntos, ¿cuántos puntos obtuvo Carlos?",
+      "opciones": { "A": "100", "B": "50", "C": "150", "D": "200" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea D = puntos de Diego. Carlos = 3D. Total: 3D + D = 4D = 200 → D = 50.",
+        "paso_2": "Carlos = 3×50 = 150. ✓",
+        "paso_3": "Verificación: 150 + 50 = 200. ✓",
+        "paso_critico": "Calcular primero el valor de Diego como variable base, luego multiplicar.",
+        "error_tipico": "A(100): 200÷2=100, divide en partes iguales sin aplicar la relación triple. Trampa más fuerte. B(50): da los puntos de Diego, no de Carlos (variable intermedia). D(200): reporta el total en lugar del valor pedido."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "4D=200→D=50→Carlos=150=C ✓. A fuerte (divisón igualitaria). B variable intermedia. D total. Contexto feria científica — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B005",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 2, 5, 8, 11, 14, ___?",
+      "opciones": { "A": "16", "B": "17", "C": "18", "D": "15" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencia constante: 5−2=3, 8−5=3, 11−8=3, 14−11=3. Patrón: +3.",
+        "paso_2": "Siguiente término: 14+3 = 17. ✓",
+        "paso_critico": "Identificar correctamente la diferencia (+3, no +2 ni +4) y aplicarla.",
+        "error_tipico": "A(16): 14+2=16 (confunde diferencia con +2). C(18): 14+4=18 (confunde con +4, patrón del BATCH_001). D(15): 14+1=15 (diferencia mínima posible)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "14+3=17=B ✓. Distractores por diferencias adyacentes (+2, +4, +1). Patrón +3 distinto de todos los previos usados en nivel_2. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B005",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Complete la siguiente oración con el conector más adecuado:\n\n«El informe fue redactado con información actualizada y verificada. __________, las conclusiones presentadas resultaron ser incorrectas.»",
+      "opciones": { "A": "Por consiguiente", "B": "Puesto que", "C": "A pesar de ello", "D": "En consecuencia" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Primera proposición: condición positiva (información rigurosa). Segunda: resultado negativo e inesperado (conclusiones incorrectas).",
+        "paso_2": "La relación es de contraste: la calidad de los datos no garantizó la corrección de las conclusiones.",
+        "paso_3": "'A pesar de ello' (C) expresa el contraste concesivo. ✓",
+        "paso_critico": "Reconocer que el resultado es contrario a lo esperado dado el rigor de la fuente.",
+        "error_tipico": "A y D son conectores causales/consecuenciales: implicarían que la calidad de la información causó las conclusiones incorrectas — relación ilógica. B es explicativo-causal, misma dirección incorrecta."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A_por_consiguiente": "incorrecto: consecuencial", "B_puesto_que": "incorrecto: causal", "D_en_consecuencia": "incorrecto: consecuencial" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "C único. Distractores formalmente incorrectos (causales vs contraste). Sin contrarrecíproco. Contexto informe/conclusiones — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B005",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Una impresora puede imprimir 120 páginas en 4 minutos. ¿Cuántas páginas imprimirá en 10 minutos trabajando al mismo ritmo?",
+      "opciones": { "A": "480", "B": "300", "C": "240", "D": "30" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa: 120 páginas ÷ 4 min = 30 páginas/min.",
+        "paso_2": "En 10 min: 30 × 10 = 300 páginas. ✓",
+        "paso_3": "Verificación por proporción: 120/4 = x/10 → x = 300. ✓",
+        "paso_critico": "Calcular la tasa unitaria y luego escalar al nuevo tiempo.",
+        "error_tipico": "A(480): 120×4=480, multiplica por el tiempo original en lugar de calcular la tasa. C(240): 120×2=240, asume 10≈2×5 o simplemente duplica sin razón. D(30): reporta la tasa por minuto, no el total en 10 min."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Confusión de proporcionalidad", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "30×10=300=B ✓. A multiplica por tiempo original. C duplica. D da tasa sin escalar. Contexto impresora/páginas — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B005",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Los ángulos α y β son suplementarios. Si α = 3β, ¿cuánto mide β?",
+      "opciones": { "A": "60°", "B": "45°", "C": "135°", "D": "90°" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Ángulos suplementarios: α + β = 180°. Relación dada: α = 3β.",
+        "paso_2": "Sustituir: 3β + β = 180° → 4β = 180° → β = 45°. ✓",
+        "paso_3": "Verificación: α = 3×45°=135°. 135°+45°=180°. ✓",
+        "paso_critico": "Plantear el sistema con las dos condiciones y resolver para la variable pedida (β, no α).",
+        "error_tipico": "A(60°): 180°÷3=60°, divide por 3 ignorando la ecuación de suma. C(135°): calcula α en lugar de β (variable intermedia). D(90°): 180°÷2=90°, asume ángulos iguales."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Error de cálculo", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "4β=180→β=45=B ✓. C da α (trampa intermedia). A error de divisor. D asume igualdad. Contexto ángulos suplementarios — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B005",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_005",
+      "stem": "Lea el siguiente texto:\n\n«Los sistemas de calificación numérica en las escuelas priorizan la medición cuantitativa sobre el desarrollo integral del estudiante. Esto ha generado una cultura donde los alumnos estudian para obtener notas, no para comprender. Sin embargo, la mayoría de las reformas educativas propuestas continúan basándose en métricas numéricas como indicador principal de calidad.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "Las calificaciones numéricas deben eliminarse de todos los sistemas educativos de inmediato.",
+        "B": "Las reformas educativas deberían adoptar modelos de evaluación que prioricen la comprensión integral sobre las métricas numéricas.",
+        "C": "Los estudiantes estudian para obtener notas debido a la presión familiar.",
+        "D": "La medición cuantitativa es objetivamente superior al enfoque cualitativo para evaluar el aprendizaje."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura: problema (notas sobre comprensión) → consecuencia cultural (estudio para nota) → paradoja (reformas siguen con métricas).",
+        "paso_2": "La paradoja final ('reformas siguen con métricas a pesar del problema') apunta a una conclusión no enunciada.",
+        "paso_3": "B expresa la prescripción implícita: las reformas deben cambiar su enfoque evaluativo. ✓",
+        "paso_critico": "La conclusión no está escrita — se infiere de la contradicción entre el problema diagnosticado y las reformas actuales.",
+        "error_tipico": "A introduce 'de inmediato' y 'todos' — radicalización no sostenida. C introduce la familia como causa — no mencionada. D contradice la dirección del argumento."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: conclusión prescriptiva implícita. A radicaliza. C introduce agente externo ausente. D contradice. H1=alta ✓. Tema educación/calificaciones — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B005",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_005",
+      "stem": "En una tienda se venden dos artículos: el artículo X a ₡1 500 por unidad y el artículo Y a ₡2 000 por unidad. El mes pasado se vendieron 40 unidades en total. Si las ventas del artículo X generaron ₡36 000, ¿cuántas unidades del artículo Y se vendieron?",
+      "opciones": { "A": "24", "B": "16", "C": "20", "D": "10" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Calcular unidades de X vendidas: ₡36 000 ÷ ₡1 500 = 24 unidades.",
+        "paso_2": "Unidades de Y: 40 − 24 = 16 unidades. ✓",
+        "paso_3": "Verificación: 24×₡1500 + 16×₡2000 = ₡36000 + ₡32000 = ₡68000. ✓",
+        "paso_critico": "Transformación intermedia obligatoria: revenue→unidades de X, luego subtraction. La variable oculta son las unidades de X.",
+        "error_tipico": "A(24): reporta unidades de X en lugar de Y (variable intermedia). C(20): 40÷2=20, divide en partes iguales. D(10): 36000÷(1500+2000)≈10.3≈10, divide el revenue entre el precio combinado erróneamente."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "36000÷1500=24; 40−24=16=B ✓. A fuerte (variable intermedia). C división igualitaria. D división combinada errónea. H1=alta ✓. Contexto artículos/ventas — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B005",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_005",
+      "stem": "Dos triángulos son semejantes con razón de semejanza 3:2. Si el área del triángulo mayor es 72 cm², ¿cuál es el área del triángulo menor?",
+      "opciones": { "A": "48 cm²", "B": "32 cm²", "C": "24 cm²", "D": "16 cm²" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Razón de semejanza lineal = 3:2. Razón de áreas = (3)²:(2)² = 9:4.",
+        "paso_2": "Si área mayor = 9 partes = 72 cm², entonces 1 parte = 8 cm².",
+        "paso_3": "Área menor = 4 partes = 4×8 = 32 cm². ✓",
+        "paso_4": "Verificación: 72×(4/9) = 32. ✓",
+        "paso_critico": "El área escala con el cuadrado de la razón de semejanza, no linealmente. La inferencia no explícita es que hay que elevar al cuadrado.",
+        "error_tipico": "A(48): aplica razón lineal 2/3 al área: 72×(2/3)=48. Trampa más fuerte — no eleva la razón al cuadrado. C(24): 72÷3=24, divide por el numerador de la razón lineal. D(16): 72×(2/9)=16, usa razón invertida (9:4 → 4:9 → 4/9 de 72=32... pero usa 2/9 por error en el numerador)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "72×(4/9)=32=B ✓. A fuerte (no eleva al cuadrado). C divide por numerador. D usa fracción incorrecta. Inferencia no explícita: área escala como razón². H1=alta ✓. Triángulos semejantes/áreas — nuevo." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_005",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06) — 4th consecutive zero"
+    },
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint": "EXACT TARGET ✓" },
+    "macro_area_distribution": { "RCM": 7, "RCV": 5 },
+    "template_usage": {
+      "limited_used": [ "T_H3_RCV_L3_01: 1 (ITEM_010) ✓", "T_H6_RCM_L3_01: 1 (ITEM_011) ✓", "T_H7_RCM_L3_01: 1 (ITEM_012) ✓" ],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 still open"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–004",
+    "drift_check_vs_batch004": {
+      "all_metric_deltas": "0.000",
+      "distribution_delta": "0 — exact replication",
+      "drift_signal": "NONE DETECTED ✓"
+    },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12, "b005": 12,
+      "total_approved": 57,
+      "training_target": 140,
+      "progress_pct": 40.7
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 4,
+      "consecutive_zero_rejection_batches": 4,
+      "consecutive_exact_distribution_batches": 4
+    },
+    "system_flags": ["FLAG_001 open — L1 template gap"],
+    "next_action": "ready_for_batch_6"
+  }
+}

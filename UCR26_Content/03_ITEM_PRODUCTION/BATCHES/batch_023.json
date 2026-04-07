@@ -1,0 +1,313 @@
+{
+  "batch_id": "BATCH_023",
+  "generated_at": "2026-03-24T20:13:57-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "correction_batch": true,
+  "correction_target": "Phase 4B structural violations — training segment",
+  "pipeline_status": "CORRECTION — targeted generation only. No existing items modified.",
+  "correction_rationale": {
+    "violation_1": "H1_alta_rate below 30% in training segment. Pre-correction: 41/146 = 28.1%. Post-correction (4 items all H1=alta): 45/150 = 30.0%.",
+    "violation_2": "H4 L3 coverage = 0. Minimum required: 2-3 per 4B doc section 4.4. Generating +2 new H4-L3 items.",
+    "violation_3": "H5 L3 coverage = 2. Generating +2 additional H5-L3 items to consolidate coverage and contribute to H1 rate fix."
+  },
+  "generation_constraints": {
+    "item_type": "training",
+    "difficulty": 3,
+    "H1": "alta",
+    "H4_macro_area": "RCM",
+    "H5_macro_area": "RCV",
+    "existing_H4_L3_training": 0,
+    "existing_H5_L3_training": 2,
+    "existing_H5_L3_contexts": [
+      "ITEM_007_B001: conditional-equivalence / documentos-proyecto / contrapositive",
+      "ITEM_007B_B001: conditional-equivalence / solicitud-firma / contrapositive"
+    ]
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B023",
+      "template_id": "T_H4_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "correction_note": "H4 L3 +1. Fills H4_L3 gap (was 0). Distinct from all sim_1/sim_2 H4 sequences.",
+      "pre_adv_solution_check": {
+        "pattern_analysis": "Series: 3, 6, 11, 18, 27, 38. Differences: 3, 5, 7, 9, 11 (odd numbers increasing by 2). Next difference: 13. Next term: 38 + 13 = 51.",
+        "correct_option": "B",
+        "correct_answer_value": 51,
+        "verification": "Differences: 6-3=3, 11-6=5, 18-11=7, 27-18=9, 38-27=11 → next diff=13 → 38+13=51 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el siguiente término en la serie: 3, 6, 11, 18, 27, 38, ___?",
+      "opciones": {
+        "A": "48",
+        "B": "51",
+        "C": "49",
+        "D": "53"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Calcular las diferencias entre términos consecutivos: 6−3=3, 11−6=5, 18−11=7, 27−18=9, 38−27=11.",
+        "paso_2": "Las diferencias forman la secuencia 3, 5, 7, 9, 11, … que crece de 2 en 2 (números impares consecutivos).",
+        "paso_3": "La siguiente diferencia es 13. Siguiente término: 38 + 13 = 51. ✓",
+        "paso_critico": "El patrón NO está en los términos directamente sino en la secuencia de diferencias, que a su vez es aritmética de razón 2. Se requiere análisis de segundo orden.",
+        "inferencia_critica_H1": "La regla opera sobre las diferencias, no sobre los términos. Identificar que las diferencias son los impares 3, 5, 7, 9, 11, … requiere abstracción del patrón subyacente.",
+        "error_tipico": "A (48): 38 + 10 = 48 — repite la diferencia anterior (11−1=10), error de ajuste. C (49): 38 + 11 = 49 — repite la última diferencia observada (11) sin incrementarla. D (53): 38 + 15 = 53 — incrementa la diferencia en 4 en lugar de 2."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 3,
+        "estimated_time_sec": 195,
+        "error_type": "Generalización excesiva",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Diferencias 3,5,7,9,11 → razón +2 → siguiente=13 → 38+13=51=B ✓. Verificación: 6-3=3,11-6=5,18-11=7,27-18=9,38-27=11 ✓. A repite diferencia-1. C repite última diferencia sin incremento. D incrementa en 4. H4/L3/RCM ✓. Patrón segundo orden — diferencias impares consecutivas. H1=alta: regla opera sobre diferencias, no términos directos; requiere inferencia de estructura no explícita. item_type=training ✓. Contexto: impares-como-diferencias — distinto de sim_1-B017-ITEM_008 (diffs+1, inicio 2), sim_1-B017-ITEM_009 (Fibonacci), sim_2 H4 items. Sin colisión con H4_L2 training (series más simples)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B023",
+      "template_id": "T_H4_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "correction_note": "H4 L3 +2. Fills H4_L3 gap. Distinct from ITEM_001_B023 (uses multiplicative-additive two-layer rule vs. arithmetic differences).",
+      "pre_adv_solution_check": {
+        "pattern_analysis": "Series: 2, 5, 14, 41, 122. Rule: each term = previous × 3 − 1. Verification: 2×3−1=5, 5×3−1=14, 14×3−1=41, 41×3−1=122. Next: 122×3−1 = 366−1 = 365.",
+        "correct_option": "C",
+        "correct_answer_value": 365,
+        "verification": "2→5 (×3−1), 5→14 (×3−1), 14→41 (×3−1), 41→122 (×3−1), 122→365 (×3−1) ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el siguiente término en la serie: 2, 5, 14, 41, 122, ___?",
+      "opciones": {
+        "A": "366",
+        "B": "367",
+        "C": "365",
+        "D": "363"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Analizar la relación entre términos consecutivos: 5÷2=2.5 (no exacto), 14÷5=2.8 (no exacto). Probar regla compuesta: 2×3=6, 6−1=5 ✓. Verificar: 5×3=15, 15−1=14 ✓. 14×3=42, 42−1=41 ✓. 41×3=123, 123−1=122 ✓.",
+        "paso_2": "Regla confirmada: Tₙ = Tₙ₋₁ × 3 − 1.",
+        "paso_3": "Siguiente término: 122 × 3 = 366; 366 − 1 = 365. ✓",
+        "paso_critico": "La regla no es una razón geométrica pura (×3) ni aritmética (diferencias constantes); es una regla compuesta multiplicativa-aditiva. Identificarla requiere probar hipótesis de dos operaciones.",
+        "inferencia_critica_H1": "Descubrir la regla ×3−1 obliga a descartar primero la razón geométrica simple, luego inferir corrección aditiva a partir de los residuos. Proceso inferencial de dos etapas no explícito en el enunciado.",
+        "error_tipico": "A (366): 122 × 3 = 366 — aplica solo la multiplicación, olvida restar 1. B (367): error aritmético menor. D (363): 122 × 3 − 3 = 363 — resta 3 en lugar de 1 (confunde con la razón)."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 3,
+        "estimated_time_sec": 200,
+        "error_type": "Generalización excesiva",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "122×3−1=365=C ✓. Verificación: 2→5→14→41→122→365 con regla ×3−1 ✓. A olvida −1. B error aritmético. D resta 3 en lugar de 1. H4/L3/RCM ✓. Regla compuesta ×3−1 de descubrimiento inductivo — requiere probar hipótesis, no observable directamente. H1=alta: inferencia de regla no explícita mediante eliminación y verificación. item_type=training ✓. Contexto compuesto-multiplicativo-con-resta — distinto de ITEM_001_B023 (diferencias impares), B012-ITEM_006 (×3+1 en training-L2), sim H4 items (diffs+1, Fibonacci, etc.). Variante ×3−1 vs. ×3+1 — diferencia suficiente por signo y valor: 2→5→14 vs. 1→4→13; términos y contexto numérico distintos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B023",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "correction_note": "H5 L3 +1. Existing H5-L3 training items use contrapositive of conditionals. This item uses semantic paraphrase of a biconditional/double-implication structure — distinct.",
+      "pre_adv_solution_check": {
+        "original_statement": "Un sistema es eficiente si y solo si minimiza el consumo de recursos sin reducir su rendimiento.",
+        "structure": "biconditional: eficiente ↔ (minimiza recursos ∧ ¬reduce rendimiento)",
+        "correct_equivalence": "Option D: Un sistema que no minimiza recursos o que reduce su rendimiento no puede ser calificado de eficiente — equivalent via contrapositive of biconditional.",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa el mismo significado lógico que el siguiente enunciado?\n\n«Un sistema es eficiente si y solo si minimiza el consumo de recursos sin reducir su rendimiento.»",
+      "opciones": {
+        "A": "Si un sistema minimiza el consumo de recursos, entonces es eficiente, independientemente de su rendimiento.",
+        "B": "Para que un sistema sea eficiente basta con que no reduzca su rendimiento.",
+        "C": "Un sistema eficiente siempre mejora su rendimiento al mismo tiempo que reduce el consumo de recursos.",
+        "D": "Un sistema que no minimiza el consumo de recursos, o que reduce su rendimiento, no puede ser considerado eficiente."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El enunciado original es un bicondicional (si y solo si): eficiente ↔ (minimiza recursos ∧ mantiene rendimiento). Esto implica dos cosas simultáneamente: (a) si es eficiente → minimiza recursos ∧ mantiene rendimiento; (b) si minimiza recursos ∧ mantiene rendimiento → es eficiente.",
+        "paso_2": "D reformula la contraposición de (a): si ¬(minimiza recursos ∧ mantiene rendimiento) → ¬eficiente. Por ley de De Morgan: si (no minimiza recursos ∨ reduce rendimiento) → no eficiente. Esto es lógicamente equivalente a la dirección (a) del bicondicional. ✓",
+        "paso_3": "A elimina la condición de rendimiento — viola la conjunción del bicondicional. B dice que solo basta con no reducir rendimiento — ignora la condición de minimizar recursos. C introduce 'siempre mejora' (suena más fuerte que 'mantiene') — distorsiona el contenido.",
+        "paso_critico": "El enunciado es un bicondicional con condición conjuntiva. Equivale a: 'ni A ni B' implica 'no eficiente' (contrapositiva). Requiere identificar el tipo lógico del enunciado y aplicar su contraposición.",
+        "inferencia_critica_H1": "Reconocer la estructura bicondicional, descomponer la condición conjuntiva, aplicar De Morgan y la contrapositiva — secuencia inferencial de tercer nivel no explícita en el vocabulario del enunciado."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 3,
+        "estimated_time_sec": 210,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D único equivalente: contraposición correcta del bicondicional con conjunción. A omite condición de rendimiento (viola conjunción). B omite condición de minimizar recursos (insuficiencia). C distorsiona 'mantiene' en 'mejora'. H5/L3/RCV ✓. Estructura bicondicional con De Morgan + contrapositiva — distinto de B001 H5-L3 items (condicional simple / documentos, solicitud). H1=alta: inferencia de tres pasos (bicondicional → conjunción → De Morgan → contrapositiva) no explícita. item_type=training ✓. Un solo answer: D unívoco — ninguna ambigüedad. Distractores fuertes: A (condición parcial, plausible), B (condición parcial simétrica), C (distorsión sutil de grado)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B023",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "correction_note": "H5 L3 +2. H1=alta. Semantic equivalence via double negation and implicit quantifier — distinct from B001 contrapositives and ITEM_003_B023 biconditional.",
+      "pre_adv_solution_check": {
+        "original_statement": "Solo los estudiantes que aprobaron todas las evaluaciones parciales tienen derecho a presentar el examen final.",
+        "structure": "Universal conditional with universal quantifier: ∀x [derecho_final(x) → aprobó_todas(x)]. Contrapositive: ∀x [¬aprobó_todas(x) → ¬derecho_final(x)].",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa el mismo significado lógico que el siguiente enunciado?\n\n«Solo los estudiantes que aprobaron todas las evaluaciones parciales tienen derecho a presentar el examen final.»",
+      "opciones": {
+        "A": "Si un estudiante aprobó todas las evaluaciones parciales, entonces tiene derecho a presentar el examen final.",
+        "B": "Los estudiantes que no aprobaron alguna evaluación parcial pueden presentar el examen final si obtienen una nota compensatoria.",
+        "C": "Ningún estudiante que haya reprobado al menos una evaluación parcial tiene derecho a presentar el examen final.",
+        "D": "Aprobar todas las evaluaciones parciales es la única actividad que realizan los estudiantes con derecho a examen final."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El enunciado original con 'solo' establece una condición necesaria: tener derecho al final → aprobó todas las parciales. En lógica: derecho(x) → aprobó_todas(x).",
+        "paso_2": "La contrapositiva es: ¬aprobó_todas(x) → ¬derecho(x). '¬aprobó_todas' equivale a 'reprobó al menos una'. C reformula esto como proposición universal: 'ningún estudiante que reprobó al menos una tiene derecho'. Esto es lógicamente equivalente. ✓",
+        "paso_3": "A invierte la dirección: expresa aprobó_todas → derecho, que es la suficiencia, no la necesidad. El enunciado original solo garantiza la necesidad (el 'solo si'). A no es equivalente. B introduce una posibilidad (nota compensatoria) inexistente. D confunde 'derecho a examen' con 'lo único que hacen'.",
+        "paso_critico": "El 'solo' en el enunciado marca condición necesaria, no suficiente. La equivalencia lógica procede por contrapositiva, no por conversión directa.",
+        "inferencia_critica_H1": "Interpretar 'solo' como condición necesaria (y no suficiente), aplicar correctamente la contrapositiva, y reconocer que A es la condición suficiente (distractor trampa clásico) — todo en secuencia no explicitada en el enunciado."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 3,
+        "estimated_time_sec": 205,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único equivalente: contraposición de la necesidad establecida por 'solo'. A invierte dirección (suficiencia vs. necesidad — error clásico y distractor fuerte). B introduce compensación inexistente. D confunde dominio y actividad. H5/L3/RCV ✓. 'Solo' como marcador de condición necesaria + contrapositiva — distinto de B001 H5-L3 (condicional directo sin 'solo'), ITEM_003_B023 (bicondicional). H1=alta: cadena inferencial 'solo'→necesaria→contrapositiva no explícita. Un solo answer: C unívoco — ninguna ambigüedad. Distractor A es trampa fuerte (conversión incorrecta) ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_023",
+    "batch_type": "correction",
+    "correction_target": "Phase 4B training segment structural violations",
+    "item_type": "training",
+    "total_generated": 4,
+    "approved": 4,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_training": true,
+      "all_items_difficulty_3": true,
+      "all_items_H1_alta": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H4": 2,
+      "H5": 2,
+      "H4_note": "ITEM_001 (series-impares-diferencias), ITEM_002 (serie-×3−1)",
+      "H5_note": "ITEM_003 (bicondicional-De-Morgan-contrapositiva), ITEM_004 (solo-necesaria-contrapositiva)"
+    },
+    "difficulty_distribution": {
+      "nivel_3": 4,
+      "note": "All 4 items are difficulty=3 per correction spec."
+    },
+    "macro_area_distribution": {
+      "RCM": 2,
+      "RCV": 2,
+      "RCM_items": "ITEM_001 (H4), ITEM_002 (H4)",
+      "RCV_items": "ITEM_003 (H5), ITEM_004 (H5)"
+    },
+    "h1_distribution": {
+      "alta": 4,
+      "media": 0,
+      "baja": 0,
+      "pct_alta_batch": 1.000,
+      "note": "All new items H1=alta per correction spec."
+    },
+    "stop_condition_verification": {
+      "H4_L3_new_items": 2,
+      "H4_L3_status": "SATISFIED — target was ≥2 new items ✓",
+      "H5_L3_total_training": 4,
+      "H5_L3_status": "SATISFIED — was 2, now 4 total ✓",
+      "H1_alta_rate_pre": "41/146 = 28.1% (VIOLATION — below 30%)",
+      "H1_alta_rate_post": "45/150 = 30.0% (SATISFIED — at minimum threshold ✓)",
+      "overshoot_check": "4 items generated — minimum required to satisfy all three constraints simultaneously. No overshoot."
+    },
+    "correction_compliance_matrix": {
+      "rule_1_H1_rate_ge30pct": {
+        "pre_correction": "28.1% — FAIL",
+        "post_correction": "30.0% — PASS ✓",
+        "items_contributing": "All 4 (ITEM_001 through ITEM_004)"
+      },
+      "rule_2_H4_L3_coverage": {
+        "pre_correction": "0 items — FAIL",
+        "post_correction": "2 items — PASS ✓",
+        "items": "ITEM_001_B023, ITEM_002_B023"
+      },
+      "rule_3_H5_L3_coverage": {
+        "pre_correction": "2 items — borderline",
+        "post_correction": "4 items — PASS ✓",
+        "items": "ITEM_003_B023, ITEM_004_B023"
+      },
+      "no_existing_items_modified": true,
+      "no_reclassification": true,
+      "no_segment_migration": true,
+      "prod_compliance_all_items": true
+    },
+    "anti_collision_verification": {
+      "H4_L3_training_existing": 0,
+      "H4_ITEM_001_context": "diferencias-impares-3,5,7,9,11 — not in any existing batch",
+      "H4_ITEM_002_context": "serie-×3−1-base-2 — distinct from B012-ITEM_006 (×3+1 L2) by rule sign and difficulty",
+      "H5_L3_training_existing": [
+        "ITEM_007_B001: condicional-simple/documentos-proyecto/contrapositive",
+        "ITEM_007B_B001: condicional-simple/solicitud-firma/contrapositive"
+      ],
+      "H5_ITEM_003_context": "bicondicional-si-y-solo-si/eficiencia-recursos-rendimiento/De-Morgan — new structure",
+      "H5_ITEM_004_context": "solo-necesaria/evaluaciones-parciales-examen-final/contrapositiva-necesidad — new operator 'solo'"
+    },
+    "training_cumulative_post_correction": {
+      "total_approved": 150,
+      "training_target_original": 140,
+      "overage_note": "150 items — 4B doc requires ≥140 and ≥18 per skill. All satisfied.",
+      "H1_alta_count": 45,
+      "H1_alta_rate": "45/150 = 30.0%",
+      "H4_L3_count": 2,
+      "H5_L3_count": 4,
+      "status": "COMPLIANT — all Phase 4B violations resolved"
+    }
+  }
+}

@@ -1,0 +1,375 @@
+{
+  "batch_id": "BATCH_012",
+  "generated_at": "2026-03-23T19:25:45-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "pipeline_status": "FINAL BATCH — full-system freeze active",
+  "option_consistency_protocol": "ACTIVE — solution computed before options; alignment verified on all items",
+  "l1_diversity_plan": {
+    "ITEM_001_H3": "structure=IDENTIFICATION/explicit-central-idea, context=applied/water-cycle-descriptive, distractor=exclusivity-injection",
+    "ITEM_002_H6": "structure=UNIT-RATE/scaling-up, context=applied/store-libretas, distractor=operation-inversion",
+    "ITEM_003_H7": "structure=SUPPLEMENTARY-ANGLES/recall, context=geometric/angle-pair, distractor=complementary-confusion"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B012",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: IDENTIFICATION/explicit-central-idea — 1-step, applied/water-cycle context, distractor=exclusivity-injection",
+      "pre_adv_solution_check": { "central_idea": "ciclo continuo que sostiene ecosistemas y disponibilidad de agua dulce", "correct_option": "B", "alignment": "PASS" },
+      "stem": "Lea el siguiente texto:\n\n«El ciclo del agua es un proceso continuo en el que el agua de la superficie terrestre se evapora, se condensa en nubes y regresa a la tierra en forma de precipitación. Este ciclo es fundamental para el mantenimiento de los ecosistemas y la disponibilidad de agua dulce en el planeta.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El agua se evapora únicamente en los mares y océanos antes de condensarse en nubes.",
+        "B": "El ciclo del agua es un proceso continuo de evaporación, condensación y precipitación que sostiene los ecosistemas y la disponibilidad de agua dulce.",
+        "C": "Las nubes son el elemento más importante del ciclo del agua porque almacenan toda el agua del planeta.",
+        "D": "La precipitación es el único mecanismo por el que el agua regresa a la superficie terrestre."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto describe las fases del ciclo (evaporación, condensación, precipitación) y su función (sostener ecosistemas y agua dulce).",
+        "paso_2": "B integra la estructura del proceso y su función. Ninguna otra opción captura ambas dimensiones. ✓",
+        "paso_critico": "1 paso: identificar que la idea central combina proceso + función, sin añadir información ausente.",
+        "error_tipico": "A introduce 'únicamente en mares y océanos' — exclusividad no sostenida. C introduce 'más importante' y 'almacenan toda el agua' — ambos sin respaldo. D introduce 'único mecanismo' — el texto menciona también evaporación y condensación, no solo precipitación."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: proceso+función integrados. A exclusividad no sostenida. C jerarquización arbitraria. D 'único mecanismo' contradice el texto. Contexto ciclo-del-agua/descriptivo — nuevo, distinto de B011(movilidad-urbana/bicicleta, IA/selección-laboral), B010(turismo, sedentarismo), B009(automatización). H1=baja ✓. nivel_1 IDENTIFICATION explícita ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B012",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: UNIT-RATE/scaling-up — 1-step, applied/store-libretas context, distractor=operation-inversion",
+      "pre_adv_solution_check": { "rate": "1500 / 5 = 300 por libreta", "target": "300 × 8 = 2400", "correct_answer_value": 2400, "correct_option": "C", "option_C_value": 2400, "alignment": "PASS" },
+      "stem": "Una tienda vende 5 libretas por ₡1 500. ¿Cuánto costarán 8 libretas al mismo precio?",
+      "opciones": { "A": "₡1 900", "B": "₡3 000", "C": "₡2 400", "D": "₡2 100" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Precio unitario: ₡1 500 ÷ 5 = ₡300 por libreta.",
+        "paso_2": "Costo de 8 libretas: 8 × ₡300 = ₡2 400. ✓",
+        "paso_critico": "1 paso: calcular la tasa unitaria y multiplicar por la nueva cantidad.",
+        "error_tipico": "A(₡1 900): ₡1 500 + ₡400 = ₡1 900, suma diferencia arbitraria. B(₡3 000): ₡1 500 × 2 = ₡3 000, dobla el precio original sin calcular tasa. D(₡2 100): ₡1 500 + 3 × ₡200 = ₡2 100, suma un múltiplo sin base en la razón."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Confusión de proporcionalidad", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "300×8=2400=C único. A suma arbitraria. B dobla sin razón. D suma múltiplo incorrecto. Contexto tienda/libretas — nuevo, distinto de B011(impresora/páginas), B010(grifo/llenado, velocidad-media), B009(ciclista, receta). UNIT-RATE/scaling-up distinto de B009-N1(DIRECT-PROPORTION/travel). H1=baja ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B012",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: SUPPLEMENTARY-ANGLES/180° recall — 1-step, geometric/angle-pair context, distractor=complementary-confusion",
+      "pre_adv_solution_check": { "theorem": "ángulos suplementarios suman 180°", "computation": "180 - 65 = 115", "correct_answer_value": 115, "correct_option": "C", "option_C_value": "115°", "alignment": "PASS" },
+      "stem": "Dos ángulos son suplementarios. Si uno de ellos mide 65°, ¿cuánto mide el otro?",
+      "opciones": { "A": "90°", "B": "25°", "C": "115°", "D": "295°" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Ángulos suplementarios: su suma es 180°.",
+        "paso_2": "Ángulo desconocido = 180° − 65° = 115°. ✓",
+        "paso_critico": "1 paso: aplicar la propiedad suplementaria (180°), no la complementaria (90°).",
+        "error_tipico": "A(90°): usa la propiedad complementaria (suma 90°) en lugar de la suplementaria. B(25°): 90° − 65° = 25°, aplica primero complementario y luego resta. D(295°): 360° − 65° = 295°, usa la vuelta completa en lugar del ángulo llano."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Error de cálculo", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "180-65=115=C único. A aplica complementario. B aplica complementario luego resta. D usa 360°. Ángulos suplementarios — nuevo, distinto de B011(ángulo-exterior-triángulo), B010(Pitágoras-terna), B009(triángulo-isósceles), B008(cuadrilátero-suma-ángulos). H1=baja ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B012",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "step_1": "3 × 24 = 72", "step_2": "72 - 15 = 57", "correct_answer_value": 57, "correct_option": "A", "option_A_value": 57, "alignment": "PASS" },
+      "stem": "Sofía compró 3 cajas de chocolates. Cada caja contiene 24 chocolates. Si regaló 15 chocolates en total, ¿cuántos chocolates le quedan?",
+      "opciones": { "A": "57", "B": "72", "C": "45", "D": "33" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Total de chocolates: 3 × 24 = 72.",
+        "paso_2": "Chocolates restantes: 72 − 15 = 57. ✓",
+        "paso_critico": "Calcular el total primero y luego restar. No restar antes de multiplicar.",
+        "error_tipico": "B(72): calcula el total pero olvida restar los regalados. C(45): 3 × 15 = 45, multiplica las cajas por los chocolates regalados. D(33): 72 − 15 − 24 = 33, resta los regalados y además descuenta una caja completa."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "3×24−15=72−15=57=A ✓. B olvida restar. C multiplica cajas×regalados. D descuenta extra. Contexto cajas-chocolates/compra-regalo — nuevo, distinto de B011(cine/entradas-dos-precios), B010(ferretería/compra-mixta→ya es H4), B009(papelería). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B012",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "central_idea": "desperdicio alimentario urbano: causas múltiples (estética + fechas) + necesidad de cambios en consumo y distribución", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Lea el siguiente texto:\n\n«En las ciudades modernas, el desperdicio de alimentos representa uno de los problemas ambientales más subestimados. Gran parte de los productos desechados corresponde a alimentos que no se consumen por razones estéticas —forma o tamaño— o por el vencimiento de fechas de consumo antes de su uso. Reducir este desperdicio requiere cambios tanto en los hábitos de consumo individual como en las políticas de distribución y comercialización.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El desperdicio de alimentos urbano es un problema ambiental relevante con causas múltiples que exige cambios en el consumo individual y en las políticas de distribución.",
+        "B": "Las ciudades deben prohibir el uso de fechas de caducidad en los productos para eliminar el desperdicio alimentario.",
+        "C": "El desperdicio de alimentos se produce exclusivamente por criterios estéticos en los procesos de selección y comercialización.",
+        "D": "Los hábitos individuales de consumo son la única causa del desperdicio de alimentos; las políticas de distribución no tienen incidencia."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Primera parte: desperdicio alimentario como problema ambiental subestimado.",
+        "paso_2": "Segunda parte: causas múltiples (estética + fechas de vencimiento).",
+        "paso_3": "Tercera parte: solución requiere cambios individuales Y de política. A integra las tres dimensiones. ✓",
+        "paso_critico": "La idea central incluye tanto las causas como los niveles de acción requeridos.",
+        "error_tipico": "B introduce 'prohibir fechas de caducidad' — medida radical no mencionada. C introduce 'exclusivamente estéticos' — el texto menciona también las fechas de vencimiento. D introduce 'única causa' — el texto señala explícitamente también las políticas de distribución."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A única: causas-múltiples + cambios-dos-niveles. B prohibición radical. C exclusividad-estética (ignora fechas). D causa-única individual (ignora distribución). Contexto desperdicio-alimentario/urbano — nuevo, distinto de B012-ITEM_001(agua/ciclo), B011(bicicleta, IA), B010(turismo, sedentarismo). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B012",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "rule": "×3 + 1", "verification": "1→4→13→40→121→364", "step": "121 × 3 + 1 = 363 + 1 = 364", "correct_answer_value": 364, "correct_option": "C", "option_C_value": 364, "alignment": "PASS" },
+      "stem": "¿Cuál es el término que sigue en la serie: 1, 4, 13, 40, 121, ___?",
+      "opciones": { "A": "243", "B": "363", "C": "364", "D": "360" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Patrón: cada término se obtiene multiplicando el anterior por 3 y sumando 1. Verificación: 1×3+1=4, 4×3+1=13, 13×3+1=40, 40×3+1=121.",
+        "paso_2": "Siguiente: 121 × 3 + 1 = 363 + 1 = 364. ✓",
+        "paso_critico": "Identificar la regla compuesta ×3+1, no solo ×3. El error más frecuente es omitir el +1.",
+        "error_tipico": "A(243): 3⁵ = 243, aplica potencia de 3 pura (ignora el +1). B(363): 121 × 3 = 363, multiplica por 3 pero olvida sumar 1. D(360): 121 × 3 − 3 = 360, resta en lugar de sumar."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "121×3+1=364=C ✓. A aplica ×3 puro. B olvida +1. D resta en lugar de sumar. Regla ×3+1 — nueva, distinto de B012-ITEM_008(alt×2−2), B011(diffs-incrementales, alt+3−1), B010(geométrica-decreciente, diffs-duplicadas), B009(Fibonacci). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B012",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "pre_adv_solution_check": { "relation": "publicación tras años de trabajo → tardaron décadas en aceptar: resultado opuesto al esperado", "connector_type": "adversativo", "correct_answer_value": "No obstante", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Seleccione el conector más adecuado:\n\n«Los investigadores publicaron sus hallazgos tras años de trabajo experimental. __________, la comunidad científica tardó décadas en aceptar plenamente sus conclusiones.»",
+      "opciones": { "A": "No obstante", "B": "Por esta razón", "C": "Asimismo", "D": "De igual manera" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "La publicación de hallazgos tras años de trabajo → expectativa de aceptación rápida. El segundo enunciado contradice esa expectativa: la aceptación tardó décadas.",
+        "paso_2": "'No obstante' (A) expresa el contraste entre la publicación rigurosa y la demora en la aceptación. ✓",
+        "paso_critico": "El segundo enunciado es un resultado opuesto al esperado de la publicación científica.",
+        "error_tipico": "B (causal): implicaría que la comunidad tardó décadas PORQUE publicaron sus hallazgos — ilógico. C y D (aditivos): añaden información coordinada sin expresar contraste."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "B": "incorrecto: causal — lógicamente incompatible", "C": "incorrecto: aditivo — no expresa contraste", "D": "incorrecto: aditivo — no expresa contraste" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A único adversativo. B causal (ilógico). C/D aditivos. Contexto científico/aceptación-tardía — nuevo, distinto de B012-ITEM_003(conferencia), B011(financiero/dividendos), B010(político/debate), B009(laboral/proyecto). H1=media ✓. Sin contrarrecíproco ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B012",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "rule": "× 2, − 2, alternating", "verification": "5→10→8→16→14→28→26", "step": "26 × 2 = 52", "correct_answer_value": 52, "correct_option": "C", "option_C_value": 52, "alignment": "PASS" },
+      "stem": "¿Cuál es el término que sigue en la serie: 5, 10, 8, 16, 14, 28, 26, ___?",
+      "opciones": { "A": "50", "B": "24", "C": "52", "D": "54" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La serie alterna dos reglas: ×2 y −2. Pasos: 5×2=10, 10−2=8, 8×2=16, 16−2=14, 14×2=28, 28−2=26.",
+        "paso_2": "Siguiente paso: ×2. → 26 × 2 = 52. ✓",
+        "paso_critico": "Identificar que la regla que corresponde en la posición 8 es ×2, no −2.",
+        "error_tipico": "A(50): 26 × 2 − 2 = 50, aplica ambas reglas juntas en un solo paso. B(24): 26 − 2 = 24, aplica la regla −2 cuando corresponde ×2. D(54): 28 + 26 = 54, suma los dos últimos términos (confusión con Fibonacci)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "26×2=52=C ✓. A aplica ambas reglas en un paso. B aplica −2 fuera de turno. D confunde con Fibonacci. ALTERNATING ×2/−2 — distinto de B012-ITEM_006(×3+1), B011-ITEM_002(alt+3−1) y demás patrones anteriores. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B012",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "pre_adv_solution_check": { "relation": "propuestas vecinales → autoridades implementaron plan basado en ellas: consecuencia directa esperada", "connector_type": "consecuencial", "correct_answer_value": "En consecuencia", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Seleccione el conector más adecuado:\n\n«La asociación de vecinos presentó propuestas detalladas para reducir el ruido en el barrio. __________, las autoridades municipales implementaron un plan de acción basado en esas propuestas.»",
+      "opciones": { "A": "En consecuencia", "B": "Sin embargo", "C": "No obstante", "D": "Asimismo" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Las propuestas de los vecinos son la causa directa; la implementación del plan es el resultado esperado y lógico.",
+        "paso_2": "'En consecuencia' (A) expresa que el plan municipal es el resultado directo de las propuestas vecinales. ✓",
+        "paso_critico": "El segundo enunciado es el resultado esperado y lógico de las propuestas del primero.",
+        "error_tipico": "B y C (adversativos/concesivos): implicarían que el plan fue implementado A PESAR DE las propuestas — ilógico. D (aditivo): añade información coordinada pero no expresa la relación causal entre propuestas e implementación."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "B": "incorrecto: adversativo — lógicamente incompatible con causa-efecto directo", "C": "incorrecto: concesivo — lógicamente incompatible", "D": "incorrecto: aditivo — no expresa causalidad" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A único consecuencial. B/C adversativos/concesivos (ilógicos). D aditivo (no expresa causalidad). Contexto comunitario/vecinos-municipio — nuevo, distinto de B012-ITEM_007(científico/adversativo), B011(financiero/adversativo, comunitario-N1/adversativo), B010(movilidad/causal, político/consecuencial). H1=media ✓. Sin contrarrecíproco ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B012",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H2_RCM_L3_01 en BATCH_012",
+      "pre_adv_solution_check": {
+        "let": "d = directivos",
+        "equations": "técnicos = 4d, administrativos = d + 6, total: d + 4d + (d + 6) = 90",
+        "step_1": "6d + 6 = 90",
+        "step_2": "6d = 84",
+        "step_3": "d = 14",
+        "verification": "14 + 56 + 20 = 90 ✓",
+        "correct_answer_value": 14,
+        "correct_option": "B",
+        "option_B_value": 14,
+        "alignment": "PASS"
+      },
+      "stem": "Una empresa tiene técnicos, administrativos y directivos. El número de técnicos es el cuádruple del número de directivos. El número de administrativos es 6 más que el número de directivos. Si en total hay 90 empleados, ¿cuántos directivos hay?",
+      "opciones": { "A": "12", "B": "14", "C": "15", "D": "20" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea d = número de directivos. Técnicos = 4d. Administrativos = d + 6.",
+        "paso_2": "Ecuación total: d + 4d + (d + 6) = 90 → 6d + 6 = 90 → 6d = 84 → d = 14. ✓",
+        "paso_3": "Verificación: directivos=14, técnicos=56, administrativos=20. Total: 14 + 56 + 20 = 90. ✓",
+        "paso_critico": "Variable oculta: la constante +6 debe restarse antes de dividir. No dividir el total directamente entre el coeficiente.",
+        "error_tipico": "A(12): 6d = 72 → d = 12, resta 18 en lugar de 6 a ambos lados (error algebraico). C(15): 90 ÷ 6 = 15, divide el total entre el coeficiente ignorando la constante +6. D(20): entrega el número de administrativos (d + 6 = 14 + 6 = 20), variable intermedia."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "6d+6=90→d=14=B ✓. Verificación: 14+56+20=90 ✓. A error algebraico (resta 18). C ignora constante +6. D entrega administrativos (var. intermedia). Variable oculta: constante aditiva en sistema tripartito — nuevo perfil, distinto de B011(cine/entradas-dos-precios H2-N2), B010(tres-salarios/sistema-3var-constante), B009(papelería), B006(inversión). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B012",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_012",
+      "pre_adv_solution_check": {
+        "step_1": "distancia = 3 h × 120 km/h = 360 km",
+        "step_2": "velocidad_nueva = 360 km ÷ 2 h = 180 km/h",
+        "correct_answer_value": 180,
+        "correct_option": "B",
+        "option_B_value": "180 km/h",
+        "alignment": "PASS",
+        "verification": "2 h × 180 km/h = 360 km = distancia original ✓"
+      },
+      "stem": "Un tren cubre la distancia entre dos ciudades en 3 horas viajando a 120 km/h. Si se desea cubrir la misma distancia en 2 horas, ¿a qué velocidad debe viajar el tren?",
+      "opciones": { "A": "160 km/h", "B": "180 km/h", "C": "240 km/h", "D": "80 km/h" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Distancia total: 3 h × 120 km/h = 360 km. (Variable oculta: la distancia no se da explícitamente.)",
+        "paso_2": "Velocidad requerida: 360 km ÷ 2 h = 180 km/h. ✓",
+        "paso_3": "Verificación: 2 h × 180 km/h = 360 km. ✓",
+        "paso_critico": "La variable oculta es calcular la distancia primero. No operar directamente sobre la velocidad sin derivar la distancia.",
+        "error_tipico": "A(160 km/h): 120 + 40 = 160, suma diferencia arbitraria sin derivar la distancia. C(240 km/h): 120 × 2 = 240, dobla la velocidad por reducir a la mitad el tiempo sin calcular la distancia (aplica razón inversa directa incorrectamente al multiplicar en lugar de derivar). D(80 km/h): 120 × (2/3) = 80, aplica la razón de tiempos en dirección inversa."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "3×120=360, 360÷2=180=B ✓. Verificación: 2×180=360 ✓. A suma arbitraria. C×2 aplica razón inversa incorrecto. D aplica ratio en dirección equivocada. Variable oculta: distancia implícita — nuevo, distinto de B011(trabajo-combinado-dos-operarios), B010(velocidad-media-dos-tramos), B008(producción-horaria). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B012",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_012",
+      "pre_adv_solution_check": {
+        "theorem": "suma ángulos interiores cuadrilátero = 360°",
+        "known_angles": "95° + 110° + 85° = 290°",
+        "step": "360° − 290° = 70°",
+        "correct_answer_value": 70,
+        "correct_option": "C",
+        "option_C_value": "70°",
+        "alignment": "PASS",
+        "verification": "95 + 110 + 85 + 70 = 360 ✓"
+      },
+      "stem": "En un cuadrilátero, tres de sus ángulos interiores miden 95°, 110° y 85°. ¿Cuánto mide el cuarto ángulo?",
+      "opciones": { "A": "80°", "B": "90°", "C": "70°", "D": "100°" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Propiedad: la suma de los ángulos interiores de un cuadrilátero es 360°.",
+        "paso_2": "Suma de los tres ángulos conocidos: 95° + 110° + 85° = 290°.",
+        "paso_3": "Cuarto ángulo: 360° − 290° = 70°. ✓",
+        "paso_4": "Verificación: 95 + 110 + 85 + 70 = 360°. ✓",
+        "paso_critico": "Recordar que la suma es 360° (cuadrilátero), no 180° (triángulo). El paso inferencial crítico es aplicar la propiedad correcta al polígono correcto.",
+        "error_tipico": "A(80°): error de suma: 95 + 110 + 85 = 280 (olvidó sumar 10 en 110 o cometió error en la adición) → 360 − 280 = 80. B(90°): 360 ÷ 4 = 90, asume ángulos iguales distribuidos uniformemente. D(100°): 360 − (95 + 80 + 85) = 100, sustituye 110° por 80° — error de lectura del dato."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Error de cálculo", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "360−(95+110+85)=360−290=70=C ✓. Verificación: 95+110+85+70=360 ✓. A error aritmético en suma de los tres. B asume distribución uniforme. D error de lectura (110→80). Cuarto ángulo cuadrilátero — nuevo, distinto de B011(ángulo-exterior-triángulo), B010(Pitágoras), B009(triángulo-isósceles), B008(suma-ángulos-cuadrilátero-N1 que fue solo la propiedad, ahora se aplica con tres datos). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_012",
+    "pipeline_closure": "FINAL BATCH — production pipeline complete",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08) — 11th consecutive zero"
+    },
+    "option_consistency_protocol": "ACTIVE — all 12 items passed pre-ADV solution verification and option alignment",
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint": "EXACT ✓" },
+    "macro_area_distribution": { "RCM": 8, "RCV": 4 },
+    "l1_diversity_verification": {
+      "ITEM_001_H3": "IDENTIFICATION/explicit-central-idea / applied-water-cycle / distractor=exclusivity-injection ✓",
+      "ITEM_002_H6": "UNIT-RATE/scaling-up / applied-store-libretas / distractor=operation-inversion ✓",
+      "ITEM_003_H7": "SUPPLEMENTARY-ANGLES/recall / geometric-angle-pair / distractor=complementary-confusion ✓",
+      "cross_skill_coverage": "H3+H6+H7 — no repeated skill ✓",
+      "cross_structure_coverage": "IDENTIFICATION + UNIT-RATE + SUPPLEMENTARY-ANGLES — no repeated structure ✓",
+      "cross_context_coverage": "applied-natural-science + applied-commerce + geometric — no repeated context ✓",
+      "anti_repetition_vs_b011": "B011-L1: DIFFERENCE-BETWEEN(H2), ALTERNATING+3−1(H4), ADVERSATIVE-CONNECTOR(H5) → SKILLS DIFFERENT, STRUCTURES DIFFERENT ✓",
+      "anti_repetition_vs_b010": "B010-L1: PART-WHOLE(H2), CAUSAL-CONNECTOR(H5), GEOMETRIC-FORMULA(H7) → STRUCTURES DIFFERENT ✓"
+    },
+    "template_usage": {
+      "allowed_used": [
+        "T_H2_RCM_L2_01: 1 (ITEM_004) ✓",
+        "T_H3_RCV_L2_01: 2 (ITEM_001, ITEM_005) ✓",
+        "T_H4_RCM_L2_01: 2 (ITEM_006, ITEM_008) ✓",
+        "T_H5_RCV_L2_01: 2 (ITEM_007, ITEM_009) ✓",
+        "T_H6_RCM_L2_01: 1 (ITEM_002) ✓",
+        "T_H7_RCM_L2_01: 1 (ITEM_003) ✓"
+      ],
+      "limited_used": [
+        "T_H2_RCM_L3_01: 1 (ITEM_010) ✓",
+        "T_H6_RCM_L3_01: 1 (ITEM_011) ✓",
+        "T_H7_RCM_L3_01: 1 (ITEM_012) ✓"
+      ],
+      "limited_unused_this_batch": "T_H3_RCV_L3_01 — no H3-N3 slot in this batch",
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 persists — pipeline complete, flag archived"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–011",
+    "drift_check_vs_batch011": { "all_metric_deltas": "0.000", "drift_signal": "NONE DETECTED ✓" },
+    "cognitive_load_profile_vs_b011": {
+      "nivel_1_items": "3 ✓",
+      "nivel_2_items": "6 ✓",
+      "nivel_3_items": "3 ✓",
+      "limited_templates_used": "3 ✓",
+      "profile_match": "REPLICATED ✓"
+    },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12, "b005": 12,
+      "b006": 12, "b007": 12, "b008": 12, "b009": 12, "b010": 12,
+      "b011": 12, "b012": 12,
+      "total_approved": 141,
+      "training_target": 140,
+      "progress_pct": 100.7,
+      "status": "TARGET REACHED AND EXCEEDED ✓"
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 11,
+      "consecutive_zero_rejection_batches": 2,
+      "consecutive_exact_distribution_batches": 11
+    },
+    "pipeline_final_metrics": {
+      "total_batches": 12,
+      "total_approved_items": 141,
+      "overall_conflict_rate": 0.000,
+      "overall_ambiguity_rate": 0.000,
+      "overall_rejection_rate": 0.007,
+      "note_rejection": "Single option-miscalibration in BATCH_010/ITEM_010 attempt-1. Resolved internally. No template or prompt invalidation triggered across entire pipeline.",
+      "zero_conflict_streak": "BATCH_002 through BATCH_012 — 11 consecutive batches",
+      "flag_summary": "FLAG_001 archived (L1 template gap, known structural limitation). FLAG_002 closed (option miscalibration resolved in BATCH_011)."
+    },
+    "system_flags": [
+      "FLAG_001 archived — L1 template gap persisted throughout; pipeline complete, no corrective action required",
+      "FLAG_002 closed — resolved in BATCH_011"
+    ],
+    "next_action": "pipeline_complete — no further batches required"
+  }
+}

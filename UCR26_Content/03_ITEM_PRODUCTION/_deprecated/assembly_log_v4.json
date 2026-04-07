@@ -1,0 +1,114 @@
+{
+  "version": "v4",
+  "status": "ready_for_audit",
+  "duplicates_detected": 0,
+  "removals": [
+    {
+      "action": "removed",
+      "item_id": "ITEM_024_B026",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_030_B026",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_014_B025",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_004_B024",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_005_B024",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_007_B012",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_004_B012",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_006_B024",
+      "reason": "size_trim",
+      "segment": "training"
+    },
+    {
+      "action": "removed",
+      "item_id": "ITEM_006_B012",
+      "reason": "size_trim",
+      "segment": "training"
+    }
+  ],
+  "sim_1_validation": {
+    "skill_distribution": {
+      "H2": 8,
+      "H5": 12,
+      "H6": 6,
+      "H3": 11,
+      "H4": 5,
+      "H7": 3
+    },
+    "difficulty_distribution": "12/22/11",
+    "order_check": true,
+    "h1_rate": "31.11%"
+  },
+  "sim_2_validation": {
+    "skill_distribution": {
+      "H2": 8,
+      "H5": 12,
+      "H6": 6,
+      "H3": 11,
+      "H4": 5,
+      "H7": 3
+    },
+    "difficulty_distribution": "12/22/11",
+    "order_check": true,
+    "h1_rate": "37.78%"
+  },
+  "training_validation": {
+    "per_skill_counts": {
+      "H2": 23,
+      "H3": 23,
+      "H4": 23,
+      "H5": 24,
+      "H6": 20,
+      "H7": 18
+    },
+    "level_3_counts": {
+      "H2": 6,
+      "H3": 9,
+      "H4": 2,
+      "H5": 3,
+      "H6": 10,
+      "H7": 12
+    },
+    "h1_rate": "32.06%"
+  },
+  "counts": {
+    "diagnostic": 19,
+    "sim_1": 45,
+    "sim_2": 45,
+    "training": 131,
+    "buffer": 12,
+    "total": 252
+  }
+}

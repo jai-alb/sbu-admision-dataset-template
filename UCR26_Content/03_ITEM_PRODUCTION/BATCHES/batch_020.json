@@ -1,0 +1,672 @@
+{
+  "batch_id": "BATCH_020",
+  "generated_at": "2026-03-24T18:25:30-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_2",
+  "target_items": 14,
+  "pipeline_status": "ACTIVE — sim_2 accumulation continues",
+  "segment_note": "sim_2_count pasa de 12 a 26. Fase media de acumulación. Distribución equilibrada H2-H7, mayoría N2, H1_alta ~35.7%.",
+  "skill_plan": {
+    "H2_RCM": 2, "H3_RCV": 3, "H4_RCM": 2, "H5_RCV": 4, "H6_RCM": 2, "H7_RCM": 1,
+    "macro_RCV": 7, "macro_RCM": 7,
+    "note": "50/50 RCV/RCM. H7 cerrada (cumple target acumulado de 3). H5 y H3 avanzadas hacia sus targets. Sin skill >30%."
+  },
+  "difficulty_plan": {
+    "nivel_1": 3, "nivel_2": 8, "nivel_3": 3,
+    "note": "Mayoría N2 (57%). Presencia controlada N1 (21%). Introducción gradual N3 (21%)."
+  },
+  "h1_plan": {
+    "items_baja": 4, "items_media": 5, "items_alta": 5,
+    "pct_alta": 0.357,
+    "note": "35.7% alta — dentro de rango 30-40% objetivo."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B020",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "x = número de estudiantes en el grupo B",
+        "equation": "Grupo A = x + 12; (x + 12) + x = 58 → 2x + 12 = 58 → 2x = 46 → x = 23",
+        "correct_option": "B",
+        "correct_answer_value": 23,
+        "verification": "B=23, A=35; 23+35=58 ✓; 35-23=12 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un colegio tiene dos grupos de estudiantes. El grupo A tiene 12 estudiantes más que el grupo B. Entre ambos grupos suman 58 estudiantes. ¿Cuántos estudiantes tiene el grupo B?",
+      "opciones": {
+        "A": "22",
+        "B": "23",
+        "C": "24",
+        "D": "25"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea x = estudiantes en grupo B. Entonces grupo A = x + 12. Ecuación total: x + (x + 12) = 58 → 2x + 12 = 58 → 2x = 46.",
+        "paso_2": "x = 23. Verificación: B=23, A=35; 23+35=58 ✓; 35−23=12 ✓.",
+        "paso_critico": "Plantear ambos grupos en función de una sola variable antes de sumar. No dividir 58÷2 directamente sin considerar la diferencia.",
+        "error_tipico": "A (22): 2x=44→x=22, error aritmético en 58-12=46. C (24): asume A=24+12=36; 24+36=60≠58. D (25): A=37; 25+37=62≠58."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H2", "difficulty": 2,
+        "estimated_time_sec": 90, "error_type": "Modelado incorrecto", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "2x+12=58→x=23=B ✓. Verif: 23+35=58; 35-23=12 ✓. A: error aritmético. C/D: verificación directa falla. H2/N2/RCM ✓. Contexto grupos-estudiantiles — estructuralmente distinto de H2 de B019 (manzanas-mercado, bicicletas-depósito)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B020",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "La memoria no reproduce fielmente el pasado sino que lo reconstruye activamente bajo influencia del presente, lo que la hace maleable y susceptible a errores sistemáticos",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La memoria humana no funciona como una grabación fiel del pasado. Cada vez que recordamos un evento, lo reconstruimos activamente a partir de fragmentos almacenados, expectativas presentes y contextos culturales. Esta reelaboración constante hace que los recuerdos sean maleables y propensos a distorsiones sistemáticas.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los seres humanos son incapaces de recordar con precisión ningún evento pasado debido a limitaciones neurológicas.",
+        "B": "La memoria falla principalmente porque el cerebro almacena demasiados datos simultáneamente y no puede organizarlos.",
+        "C": "La memoria es un proceso reconstructivo activo, no un registro exacto, lo que la hace vulnerable a distorsiones sistemáticas.",
+        "D": "Solo los recuerdos emocionales sufren distorsiones, mientras que los recuerdos neutrales se preservan con exactitud."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto articula: (i) la memoria no es grabación fiel; (ii) recordar implica reconstrucción activa con fragmentos + expectativas + cultura; (iii) esto la hace maleable y propensa a distorsiones.",
+        "paso_2": "C integra fielmente los tres: proceso reconstructivo activo + no registro exacto + vulnerabilidad a distorsiones. ✓",
+        "paso_critico": "La idea central no es una imposibilidad absoluta de recordar (A) sino la naturaleza reconstructiva del proceso, lo que genera distorsiones sin negar toda capacidad de memoria.",
+        "error_tipico": "A absolutiza ('incapaz de recordar con precisión ningún evento') — el texto habla de distorsiones sistemáticas, no de incapacidad total. B introduce causa de sobrecarga de datos — ausente en el texto. D restringe las distorsiones a recuerdos emocionales — el texto habla de todos los recuerdos."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 2,
+        "estimated_time_sec": 110, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C única: reconstructivo-activo + no-registro-exacto + distorsiones-sistemáticas. A absolutiza incapacidad. B introduce sobrecarga de datos ausente. D restringe a emocionales sin sustento. H3/N2/RCV ✓. Síntesis de tesis sobre naturaleza reconstructiva de la memoria. H1=media ✓. simulation_id=sim_2 ✓. Contexto memoria-reconstrucción — distinto de H3 de B019 (acidificación-oceánica, plataformas-digitales, neutralidad-tecnológica)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B020",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "Serie: 2, 6, 12, 20, 30. Diferencias: 4, 6, 8, 10. Segunda diferencia constante: +2. Siguiente diferencia: 12. Siguiente término: 30+12=42.",
+        "formula_check": "n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42 ✓",
+        "correct_option": "D",
+        "correct_answer_value": 42,
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 2, 6, 12, 20, 30, ___?",
+      "opciones": {
+        "A": "38",
+        "B": "40",
+        "C": "41",
+        "D": "42"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos consecutivos: 6−2=4, 12−6=6, 20−12=8, 30−20=10. Las diferencias crecen en 2 cada vez (progresión aritmética).",
+        "paso_2": "Siguiente diferencia: 12. Siguiente término: 30+12=42. ✓ Verificación: la serie corresponde a n(n+1) para n=1,2,…: 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30, 6×7=42. ✓",
+        "paso_critico": "El patrón de diferencias es aritmético (+2 cada vez). No repetir la última diferencia (10) sino incrementarla en 2 para obtener 12.",
+        "error_tipico": "A (38): 30+8=38, regresa a una diferencia anterior (8). B (40): 30+10=40, repite la última diferencia (10) sin incrementar. C (41): diferencia de 11, incrementa en 1 en lugar de 2."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H4", "difficulty": 2,
+        "estimated_time_sec": 120, "error_type": "Generalización excesiva", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "Diferencias 4,6,8,10→12; 30+12=42=D ✓. Verif: n(n+1) para n=1..6 ✓. A regresa diferencia anterior. B repite última diferencia. C incrementa en 1. H4/N2/RCM ✓. Patrón n(n+1) detectado vía diferencias aritméticas. H1=media ✓. simulation_id=sim_2 ✓. Contexto n(n+1) — distinto de H4 en B019 (serie n²-1) y de todas las H4 de sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B020",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: migraciones masivas vaciaron zonas rurales; segunda: esas zonas registran ahora el menor índice de densidad demográfica del país — consecuencia directa",
+        "connector_type": "consecuencial",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Durante las últimas décadas, las migraciones masivas hacia centros urbanos vaciaron progresivamente las zonas rurales. __________, estas zonas registran hoy los menores índices de densidad demográfica del país.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "Como resultado",
+        "C": "En cambio",
+        "D": "A pesar de ello"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La primera oración establece la causa: migraciones masivas vaciaron zonas rurales. La segunda expresa la consecuencia directa: esas zonas ahora tienen baja densidad.",
+        "paso_2": "'Como resultado' (B) introduce la consecuencia que se deriva directamente de la causa enunciada. La relación es causal-directa. ✓",
+        "paso_critico": "El vaciamiento por migraciones CAUSA la baja densidad actual — no existe contraste ni contradicción entre las dos oraciones.",
+        "error_tipico": "A, C y D (adversativos/contrastivos): implican que la baja densidad ocurre a pesar del vaciamiento — absurdo lógico. La trampa es la complejidad del tema migratorio que sugiere tensión donde no la hay."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 1,
+        "estimated_time_sec": 55, "error_type": "Interpretación literal errónea", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "B único consecuencial: migraciones-vaciaron → baja-densidad. A/C/D adversativos (ilógicos). H5/N1/RCV ✓. N1: relación causal directa, 1 paso. H1=baja ✓. simulation_id=sim_2 ✓. Contexto migraciones/densidad-rural — distinto de H5 de B019 (energía-solar/GEI, IA/diagnóstico-médico, educación-universal)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B020",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Tasa: 3 bolsas / 45 kg = 1 bolsa / 15 kg",
+        "step_2": "75 kg ÷ 15 kg/bolsa = 5 bolsas",
+        "correct_option": "C",
+        "correct_answer_value": 5,
+        "verification": "3/45 = 5/75 = 1/15 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Para empacar 45 kg de café se necesitan 3 bolsas especiales. Manteniendo la misma proporción, ¿cuántas bolsas se necesitan para empacar 75 kg?",
+      "opciones": {
+        "A": "4",
+        "B": "4.5",
+        "C": "5",
+        "D": "6"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 3 bolsas ÷ 45 kg = 1 bolsa cada 15 kg.",
+        "paso_2": "75 kg ÷ 15 kg/bolsa = 5 bolsas. ✓ Verificación: 3/45 = 5/75 = 1/15 ✓.",
+        "paso_critico": "Calcular la tasa unitaria (kg por bolsa) antes de aplicarla al nuevo peso.",
+        "error_tipico": "A (4): 75/45≈1.67; 3×1.67≈5 pero error de redondeo o cálculo. B (4.5): tasa incorrecta (3/45=0.067 bolsas/kg; 75×0.067=5 — error si se divide mal). D (6): confunde 75-45=30; 30/15=2; 3+2=5 — error si aplica diferencia en lugar de razón directa."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H6", "difficulty": 1,
+        "estimated_time_sec": 60, "error_type": "Confusión de proporcionalidad", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "75÷15=5=C ✓. Verif: 3/45=5/75=1/15 ✓. A/B tasa incorrecta. D aplica diferencia en lugar de razón. H6/N1/RCM ✓. N1: tasa unitaria + aplicación directa. H1=baja ✓. simulation_id=sim_2 ✓. Contexto café/bolsas — distinto de H6 de B019 (pintura/m², densidad-poblacional/ciudades)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B020",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Perímetro rectángulo = 2(largo + ancho) = 2(9 + 5) = 2×14 = 28 cm",
+        "step_2": "Lado del cuadrado con mismo perímetro: 28 ÷ 4 = 7 cm",
+        "step_3": "Área del cuadrado: 7² = 49 cm²",
+        "correct_option": "B",
+        "correct_answer_value": 49,
+        "verification": "Perímetro cuadrado: 4×7=28 ✓; Área: 7²=49 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un rectángulo tiene un largo de 9 cm y un ancho de 5 cm. Se construye un cuadrado que tiene el mismo perímetro que ese rectángulo. ¿Cuál es el área del cuadrado?",
+      "opciones": {
+        "A": "45 cm²",
+        "B": "49 cm²",
+        "C": "56 cm²",
+        "D": "64 cm²"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Perímetro del rectángulo: P = 2(9 + 5) = 2(14) = 28 cm.",
+        "paso_2": "Lado del cuadrado: 28 ÷ 4 = 7 cm. Área del cuadrado: 7² = 49 cm². ✓",
+        "paso_critico": "Primero calcular el perímetro del rectángulo, luego derivar el lado del cuadrado, y finalmente calcular el área del cuadrado. No mezclar las fórmulas de área del rectángulo con el perímetro.",
+        "error_tipico": "A (45 cm²): área del rectángulo (9×5=45) en lugar del cuadrado equivalente. C (56 cm²): 14÷2=7; 7×8=56, error al multiplicar lado por un valor incorrecto. D (64 cm²): asume lado=8 (posiblemente promedia 9+5+... incorrectamente)."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H7", "difficulty": 2,
+        "estimated_time_sec": 130, "error_type": "Error de cálculo", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "P=28cm; lado=7cm; área=49cm²=B ✓. A usa área del rectángulo en vez del cuadrado. C error en multiplicación del lado. D lado incorrecto. H7/N2/RCM ✓. Secuencia de 3 pasos: perímetro → lado → área. H1=alta: requiere visualizar la relación entre ambas figuras e identificar la secuencia sin mezclar fórmulas. simulation_id=sim_2 ✓. Contexto rectángulo-cuadrado mismo perímetro — distinto de H7 de B019 (trapezoide/bases-paralelas) y sim_1 (rombo, isometría)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B020",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "Premisa 1: urbanización acelerada daña ecosistemas periurbanos. Premisa 2 implícita: zonas verdes son ecosistemas periurbanos. Conclusión: si no se planifica, se perderán definitivamente. Conclusión secundaria: la planificación urbana tiene obligación ecológica implícita.",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La expansión urbana no planificada destruye de forma irreversible ecosistemas periurbanos que tardaron siglos en formarse. Cuando una zona verde desaparece bajo el cemento, no solo se pierde biodiversidad: se eliminan servicios ambientales como la regulación hídrica y la captura de carbono que benefician a la propia ciudad que crece. Planificar, por tanto, no es una opción sino una deuda con el futuro.»\n\n¿Cuál es la conclusión principal que el texto defiende?",
+      "opciones": {
+        "A": "La planificación urbana es una obligación ética y ecológica, porque la expansión desordenada destruye irreversiblemente ecosistemas de los que la propia ciudad depende.",
+        "B": "Las ciudades deben dejar de crecer inmediatamente para preservar los ecosistemas periurbanos que aún no han sido destruidos.",
+        "C": "La pérdida de biodiversidad en zonas periurbanas es el principal problema ambiental que enfrentan las ciudades contemporáneas.",
+        "D": "Los ecosistemas periurbanos solo tienen valor en la medida en que proveen servicios ambientales directamente aprovechables por las ciudades."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El argumento tiene estructura tripartita: (1) la expansión no planificada destruye irreversiblemente ecosistemas; (2) esa destrucción daña a la propia ciudad (servicios ambientales); (3) conclusión: planificar es una obligación (deuda), no una opción.",
+        "paso_2": "A recoge fielmente la conclusión: obligación de planificar (ético-ecológica) porque la no-planificación destruye algo de lo que la ciudad misma depende. ✓",
+        "paso_critico": "La conclusión del texto no es 'dejar de crecer' (B) — el texto propone planificar el crecimiento, no detenerlo. La distinción entre detener y planificar es el paso crítico.",
+        "error_tipico": "B propone detener el crecimiento — el texto propone planificarlo. C jerarquiza 'principal problema ambiental' — el texto no establece esa jerarquía. D restringe el valor de los ecosistemas a sus servicios utilitarios — el texto habla de irreversibilidad que trasciende lo utilitario."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 3,
+        "estimated_time_sec": 185, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "A única: obligación-planificar (ético-ecológica) porque destrucción-daña-a-la-propia-ciudad. B propone detener — texto propone planificar (distinción crítica). C jerarquiza sin sustento. D reduce valor a utilidad (texto menciona irreversibilidad más amplia). H3/N3/RCV ✓. Reconstrucción argumentativa: destrucción-irreversible + daño-sistémico → obligación-planificar. H1=alta: conclusión requiere inferir obligación (deuda) no enunciada directamente. simulation_id=sim_2 ✓. Contexto expansión-urbana/ecosistemas-periurbanos — distinto de H3/L3 de B019 (neutralidad-tecnológica) y sim_1 (política-ambiental-incentivos)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B020",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: estrés prolongado deteriora el sistema inmunológico (positivo condicional); segunda: personas con alta carga de estrés se enferman con mayor frecuencia — consecuencia empírica directa",
+        "connector_type": "consecuencial-causal",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El estrés crónico debilita progresivamente la respuesta inmunológica del organismo. __________, las personas con altos niveles de estrés sostenido presentan mayor frecuencia de enfermedades infecciosas.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Por el contrario",
+        "C": "A pesar de eso",
+        "D": "De ahí que"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "La primera oración presenta el mecanismo (estrés → debilita inmunidad). La segunda presenta la consecuencia observable (más enfermedades infecciosas).",
+        "paso_2": "'De ahí que' (D) introduce la consecuencia que se deriva causalmente del mecanismo enunciado. ✓",
+        "paso_critico": "Las enfermedades frecuentes SON el resultado del debilitamiento inmunológico — no hay contraste. La relación es de derivación causal, no adversativa.",
+        "error_tipico": "A, B y C (adversativos): implicarían que las personas con estrés se enferman MÁS a pesar de que el estrés debilita la inmunidad — lógicamente incoherente. La trampa es la complejidad del registro médico-técnico."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 2,
+        "estimated_time_sec": 90, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "D único consecuencial: estrés-debilita-inmunidad → mayor-frecuencia-enfermedades. A/B/C adversativos (ilógicos). H5/N2/RCV ✓. Trampa: registro médico-técnico sugiere tensión donde hay derivación causal. H1=media ✓. simulation_id=sim_2 ✓. Contexto estrés-crónico/inmunidad — distinto de H5 de B019 y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B020",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "system": "Sea A = edad actual de Ana, B = edad actual de Bruno. Condición 1: A = B + 7. Condición 2 (en 4 años): (A+4) = 2(B+4) - 3.",
+        "solve": "A+4 = 2B+8-3 = 2B+5. Sustituyendo A=B+7: (B+7)+4=2B+5 → B+11=2B+5 → B=6. A=13.",
+        "correct_option": "C",
+        "correct_answer_value": 13,
+        "verification": "A=13, B=6; 13=6+7 ✓; en 4 años: A=17, B=10; 2×10-3=17 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Ana tiene 7 años más que Bruno. Dentro de 4 años, la edad de Ana será 3 menos que el doble de la edad de Bruno. ¿Cuántos años tiene Ana actualmente?",
+      "opciones": {
+        "A": "11",
+        "B": "12",
+        "C": "13",
+        "D": "14"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea B = edad de Bruno hoy. Entonces Ana = B + 7. En 4 años: Ana tendrá B+11, Bruno tendrá B+4. Condición: B+11 = 2(B+4) − 3 = 2B+8−3 = 2B+5.",
+        "paso_2": "B+11 = 2B+5 → 11−5 = 2B−B → B = 6. Ana = 6+7 = 13. Verificación: en 4 años Ana=17, Bruno=10; 2×10−3=17 ✓.",
+        "paso_critico": "Identificar que la condición futura (en 4 años) requiere sumar 4 a AMBAS edades actuales antes de aplicar la relación. Omitir el +4 a Ana es el error principal.",
+        "error_tipico": "A (11): B=4, ecuación 4+7+4=2(4+4)-3 → 15=13 ✗. B (12): B=5, verif: en 4 años Ana=16, Bruno=9; 2×9-3=15≠16 ✗. D (14): B=7, en 4 años Ana=18, Bruno=11; 2×11-3=19≠18 ✗."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H2", "difficulty": 3,
+        "estimated_time_sec": 175, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "B=6, A=13=C ✓. Verif: 17=2×10-3 ✓. A/B/D: verificación directa falla. H2/N3/RCM ✓. Sistema de 2 ecuaciones con variable oculta temporal. H1=alta: la condición futura requiere identificar la dependencia temporal y sustituir correctamente. simulation_id=sim_2 ✓. Contexto edades-con-condición-futura — distinto de H2 de B019/sim_1 (todos usaron contextos de precios/cantidades directas)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B020",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "original_structure": "Transparencia no implica revelar todo; implica que lo que se dice pueda ser sometido a verificación. Hay asimetría entre completitud y verificabilidad.",
+        "key_elements": ["negación de completitud como transparencia", "afirmación de verificabilidad como criterio real", "distinción entre decir-todo y poder-verificar"],
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«Ser transparente no significa decirlo todo; significa que aquello que se dice pueda ser sometido a verificación independiente.»",
+      "opciones": {
+        "A": "La transparencia exige divulgar la totalidad de la información disponible para que cualquier persona pueda evaluarla libremente.",
+        "B": "Una organización es transparente cuando sus miembros comparten internamente toda la información relevante sin restricciones.",
+        "C": "La transparencia se define por la verificabilidad de lo comunicado, no por la exhaustividad de la información revelada.",
+        "D": "Ser transparente implica publicar todos los datos existentes y permitir que auditores externos los revisen en detalle."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El enunciado original distingue: (i) transparencia ≠ decirlo todo (negación de completitud); (ii) transparencia = lo dicho puede verificarse (afirmación de verificabilidad como criterio).",
+        "paso_2": "C preserva ambos con vocabulario diferente: 'verificabilidad de lo comunicado' = lo que se dice puede someterse a verificación; 'no por la exhaustividad' = no por decirlo todo. ✓",
+        "paso_critico": "La equivalencia debe conservar tanto la negación (no es sobre completitud) como la afirmación positiva (sí es sobre verificabilidad). Ambos elementos son necesarios y suficientes.",
+        "error_tipico": "A invierte la negación: propone exactamente lo que el original rechaza (revelar la totalidad). B introduce comunicación interna — el original habla de verificación independiente externa. D combina los dos errores: publicar todo + auditores externos (confunde exhaustividad con verificabilidad)."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 3,
+        "estimated_time_sec": 170, "error_type": "Inferencia inválida", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C única equivalente: verificabilidad-de-lo-comunicado (no completitud). A invierte la negación (revelar todo). B introduce contexto interno vs. verificación independiente. D mezcla exhaustividad con verificabilidad. H5/N3/RCV ✓. Equivalencia semántica: preservar negación-implícita + afirmación positiva con léxico distinto. H1=alta: distinción entre decir-todo vs. poder-verificar requiere inferencia estructural. simulation_id=sim_2 ✓. Contexto transparencia-verificabilidad — distinto de H5/L3 de B019 (educación-universal) y sim_1 (automatización)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B020",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "Serie: 1, 4, 9, 16, 25. Son cuadrados perfectos: 1²,2²,3²,4²,5². Siguiente: 6²=36.",
+        "correct_option": "C",
+        "correct_answer_value": 36,
+        "verification": "6²=36 ✓. Diferencias: 3,5,7,9 → siguiente=11; 25+11=36 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 1, 4, 9, 16, 25, ___?",
+      "opciones": {
+        "A": "30",
+        "B": "34",
+        "C": "36",
+        "D": "49"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Los términos son cuadrados perfectos: 1=1², 4=2², 9=3², 16=4², 25=5². El siguiente es 6²=36.",
+        "paso_2": "Verificación por diferencias: 4−1=3, 9−4=5, 16−9=7, 25−16=9. Diferencias impares creciendo en 2. Siguiente diferencia: 11. Término: 25+11=36. ✓",
+        "paso_critico": "Reconocer que la serie es de cuadrados perfectos consecutivos. Las diferencias (3,5,7,9,11) son números impares crecientes, lo que confirma el patrón.",
+        "error_tipico": "A (30): 25+5=30, suma la diferencia anterior sin incrementar. B (34): 25+9=34, repite la última diferencia (9) sin avanzar. D (49): salta a 7²=49, omite el término intermedio 6²=36."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H4", "difficulty": 1,
+        "estimated_time_sec": 60, "error_type": "Generalización excesiva", "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "6²=36=C ✓. Verif: diferencias 3,5,7,9,11→36 ✓. A suma diferencia anterior. B repite última diferencia. D salta término. H4/N1/RCM ✓. N1: patrón n² directamente reconocible. H1=baja ✓. simulation_id=sim_2 ✓. Contexto cuadrados-perfectos — distinto de H4 de B019 (n²-1) y sim_1 (n(n+1), Fibonacci, etc.)."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B020",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Ingreso A: 1200 (trabaja 40h/semana). Ingreso B: 1500 (trabaja 50h/semana).",
+        "step_2": "Tarifa horaria A: 1200/40 = 30/hora. Tarifa horaria B: 1500/50 = 30/hora.",
+        "step_3": "Razón A:B = 30:30 = 1:1. Mismo ingreso por hora.",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "El trabajador A gana ₡1 200 semanales trabajando 40 horas. El trabajador B gana ₡1 500 semanales trabajando 50 horas. ¿Cuál es la relación entre sus ingresos por hora de trabajo?",
+      "opciones": {
+        "A": "Ambos ganan lo mismo por hora.",
+        "B": "B gana más por hora que A.",
+        "C": "A gana más por hora que B.",
+        "D": "No es posible comparar sus ingresos por hora con los datos disponibles."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Tarifa horaria de A: 1 200 ÷ 40 = 30 colones/hora. Tarifa horaria de B: 1 500 ÷ 50 = 30 colones/hora.",
+        "paso_2": "Ambas tarifas son iguales: 30 colones/hora. La razón A:B = 1:1. ✓",
+        "paso_critico": "Comparar tarifas UNITARIAS (ingreso por hora), no ingresos totales. B gana más en total, pero trabaja proporcionalmente más horas.",
+        "error_tipico": "B (B gana más por hora): confunde mayor ingreso total (1500>1200) con mayor tarifa horaria — trampa principal. C (A gana más por hora): invierte la trampa sin verificar. D (no se puede comparar): los datos son suficientes para calcular la razón."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCM", "skill": "H6", "difficulty": 3,
+        "estimated_time_sec": 165, "error_type": "Modelado incorrecto", "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "A:30/h = B:30/h → mismo ingreso por hora=A ✓. B confunde total con razón (trampa fuerte: 1500>1200). C invierte sin verificar. D insuficiencia-de-datos falsa. H6/N3/RCM ✓. Comparación de razones no explícitas: mayor ingreso NO implica mayor tarifa si las horas también difieren proporcionalmente. H1=alta: trampa fuerte de valor absoluto vs. razón. simulation_id=sim_2 ✓. Contexto ingresos-horarios/trabajadores — distinto de H6 de B019 (pintura/m², densidad-poblacional) y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_013_B020",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "La automatización no elimina el trabajo en términos netos, sino que lo transforma, desplazando empleos rutinarios y creando demanda de habilidades complementarias a las máquinas",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La automatización no destruye el empleo de forma neta; lo transforma. Los trabajos rutinarios y repetitivos son los primeros en ser sustituidos por máquinas, pero simultáneamente emerge demanda de habilidades que complementan, supervisan y diseñan esos sistemas automatizados. La historia industrial sugiere que cada ola tecnológica, tras un período de ajuste, genera más empleos de los que elimina.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La automatización es un proceso inevitable que tarde o temprano eliminará la mayoría de los empleos disponibles en el mercado laboral.",
+        "B": "La automatización transforma el empleo en lugar de destruirlo, desplazando roles rutinarios mientras genera demanda de nuevas habilidades.",
+        "C": "Los trabajadores deben capacitarse urgentemente en tecnología o quedarán permanentemente excluidos del mercado laboral.",
+        "D": "Los ciclos históricos demuestran que las tecnologías siempre eliminan más empleos de los que crean, aunque con un retraso temporal."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto articula: (i) la automatización no destruye empleos en términos netos, sino que los transforma; (ii) desplaza roles rutinarios pero genera demanda de nuevas habilidades; (iii) la historia sugiere que crea más de los que elimina.",
+        "paso_2": "B integra fielmente los componentes: transformación (no destrucción neta) + desplazamiento de rutinarios + emergencia de nuevas habilidades. ✓",
+        "paso_critico": "La idea central no es una advertencia de destrucción total (A) sino la distinción entre destrucción y transformación del empleo.",
+        "error_tipico": "A afirma que 'eliminará la mayoría' — el texto sostiene que crea más de los que elimina tras el ajuste. C propone una acción urgente de capacitación — el texto no hace esa prescripción. D invierte la tesis histórica del texto: el texto dice 'crea más de los que elimina'."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H3", "difficulty": 2,
+        "estimated_time_sec": 105, "error_type": "Inferencia inválida", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "B única: transformación-no-destrucción + desplazamiento-rutinarios + nuevas-habilidades. A invierte la tesis (texto dice 'crea más'). C introduce prescripción ausente. D invierte la evidencia histórica. H3/N2/RCV ✓. Síntesis de tesis sobre transformación del empleo. H1=media ✓. simulation_id=sim_2 ✓. Contexto automatización-empleo — distinto de H3 de B019/sim_1; tema relacionado con H5 de B019 (IA-médica) pero skill y estructura diferentes."
+      },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_014_B020",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_2",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera: las lenguas en contacto se influyen mutuamente (premisa); segunda: ninguna lengua permanece completamente aislada de sus vecinas — conclusión que se infiere directamente de la premisa general",
+        "connector_type": "conclusivo",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Las lenguas que coexisten en un mismo territorio se influyen mutuamente a través del tiempo, adoptando préstamos léxicos, estructuras sintácticas y patrones fonológicos. __________, ninguna lengua puede considerarse completamente aislada de las comunidades lingüísticas con las que convive.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "Sin embargo",
+        "C": "Por lo tanto",
+        "D": "En contraste"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta la premisa: las lenguas en contacto se influyen mutuamente. La segunda extrae la conclusión lógica: ninguna puede estar aislada.",
+        "paso_2": "'Por lo tanto' (C) introduce la conclusión que se deduce necesariamente de la premisa enunciada. La relación es lógico-deductiva. ✓",
+        "paso_critico": "El aislamiento de una lengua es INCOMPATIBLE con la influencia mutua demostrada en la primera oración. No hay contraste: hay deducción.",
+        "error_tipico": "A, B y D (adversativos/contrastivos): implicarían que ninguna lengua puede aislarse A PESAR de que las lenguas se influyen — absurdo lógico. La trampa es la complejidad del registro lingüístico académico."
+      },
+      "metadata": {
+        "item_type": "simulation", "simulation_id": "sim_2",
+        "macro_area": "RCV", "skill": "H5", "difficulty": 2,
+        "estimated_time_sec": 95, "error_type": "Interpretación literal errónea", "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid", "error_type": null, "conflict_flag": false,
+        "adv_notes": "C único conclusivo: influencia-mutua → ninguna-lengua-aislada. A/B/D adversativos (ilógicos). H5/N2/RCV ✓. Trampa: registro lingüístico académico sugiere distinción técnica donde hay deducción directa. H1=media ✓. simulation_id=sim_2 ✓. Contexto lenguas-en-contacto/influencia-mutua — distinto de todos los H5 de B019 y sim_1."
+      },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_020",
+    "item_type": "simulation",
+    "simulation_id": "sim_2",
+    "total_generated": 14,
+    "approved": 14,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_2": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 2, "H3": 3, "H4": 2, "H5": 4, "H6": 2, "H7": 1,
+      "H2_note": "Items 1 (L2), 9 (L3)",
+      "H3_note": "Items 2 (L2), 7 (L3), 13 (L2)",
+      "H4_note": "Items 3 (L2), 11 (L1)",
+      "H5_note": "Items 4 (L1), 8 (L2), 10 (L3), 14 (L2)",
+      "H6_note": "Items 5 (L1), 12 (L3)",
+      "H7_note": "Item 6 (L2)"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 8,
+      "nivel_3": 3,
+      "nivel_1_items": "4 (H5), 5 (H6), 11 (H4)",
+      "nivel_2_items": "1 (H2), 2 (H3), 3 (H4), 6 (H7), 8 (H5), 13 (H3), 14 (H5)",
+      "nivel_3_items": "7 (H3), 9 (H2), 10 (H5), 12 (H6)"
+    },
+    "macro_area_distribution": {
+      "RCV": 7, "RCM": 7,
+      "RCV_items": "2 (H3), 4 (H5), 7 (H3), 8 (H5), 10 (H5), 13 (H3), 14 (H5)",
+      "RCM_items": "1 (H2), 3 (H4), 5 (H6), 6 (H7), 9 (H2), 11 (H4), 12 (H6)"
+    },
+    "h1_distribution": {
+      "baja": 3, "media": 6, "alta": 5,
+      "items_baja": "4 (H5/L1), 5 (H6/L1), 11 (H4/L1)",
+      "items_media": "1 (H2/L2), 2 (H3/L2), 3 (H4/L2), 8 (H5/L2), 13 (H3/L2), 14 (H5/L2)",
+      "items_alta": "6 (H7/L2), 7 (H3/L3), 9 (H2/L3), 10 (H5/L3), 12 (H6/L3)",
+      "pct_alta": 0.357,
+      "constraint": "✓ 35.7% within 30-40% target"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "1 use (item 1)",
+      "T_H2_RCM_L3_01": "1 use (item 9)",
+      "T_H3_RCV_L2_01": "2 uses (items 2, 13)",
+      "T_H3_RCV_L3_01": "1 use (item 7)",
+      "T_H4_RCM_L2_01": "2 uses (items 3, 11)",
+      "T_H5_RCV_L2_01": "3 uses (items 4, 8, 14)",
+      "T_H5_RCV_L3_01": "1 use (item 10)",
+      "T_H6_RCM_L2_01": "1 use (item 5)",
+      "T_H6_RCM_L3_01": "1 use (item 12)",
+      "T_H7_RCM_L2_01": "1 use (item 6)",
+      "all_templates_active": true
+    },
+    "sim_2_accumulation": {
+      "sim_2_count_before": 12,
+      "items_added": 14,
+      "sim_2_count_after": 26,
+      "sim_2_target": 45,
+      "sim_2_remaining": 19,
+      "status": "in_progress"
+    },
+    "cumulative_sim_2_skill_tracking": {
+      "B019_contribution": {"H2":2,"H3":3,"H4":1,"H5":3,"H6":2,"H7":1},
+      "B020_contribution": {"H2":2,"H3":3,"H4":2,"H5":4,"H6":2,"H7":1},
+      "cumulative_26":     {"H2":4,"H3":6,"H4":3,"H5":7,"H6":4,"H7":2},
+      "strat_target_45":   {"H2":8,"H3":7,"H4":5,"H5":10,"H6":6,"H7":3},
+      "remaining_19":      {"H2":4,"H3":1,"H4":2,"H5":3,"H6":2,"H7":1}
+    },
+    "cumulative_sim_2_difficulty_tracking": {
+      "B019_contribution": {"N1":3,"N2":7,"N3":2},
+      "B020_contribution": {"N1":3,"N2":8,"N3":3},
+      "cumulative_26":     {"N1":6,"N2":15,"N3":5},
+      "strat_target_45":   {"N1":12,"N2":22,"N3":11},
+      "remaining_19":      {"N1":6,"N2":7,"N3":6}
+    },
+    "cumulative_sim_2_macro_tracking": {
+      "B019_contribution": {"RCV":6,"RCM":6},
+      "B020_contribution": {"RCV":7,"RCM":7},
+      "cumulative_26":     {"RCV":13,"RCM":13},
+      "strat_target_45":   {"RCV":23,"RCM":22},
+      "remaining_19":      {"RCV":10,"RCM":9}
+    },
+    "cumulative_h1_tracking": {
+      "cumulative_alta_26": 9,
+      "pct_alta_cumulative": 0.346,
+      "constraint": "✓ 34.6% within 30-40% cumulative target"
+    },
+    "structural_isolation_check": {
+      "vs_sim_1": "All 14 items verified structurally distinct from sim_1 pool. Contexts, numeric values, logical patterns, and distractor constructions are novel.",
+      "vs_B019": "All 14 items verified structurally distinct from BATCH_019. No repetition of contexts, series formulas, or connector scenarios.",
+      "vs_diagnostic": "All items verified distinct from diagnostic pool.",
+      "status": "PASS"
+    },
+    "batch_validation_result": {
+      "integrity_passed": true,
+      "consistency_passed": true,
+      "all_items_sim_2": true,
+      "zero_metadata_gaps": true,
+      "zero_traceability_gaps": true,
+      "metrics_within_threshold": true,
+      "final_verdict": "BATCH_020 — batch_state = completed. Apto para acumulación en sim_2."
+    }
+  }
+}

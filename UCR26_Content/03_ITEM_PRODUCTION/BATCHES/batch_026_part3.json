@@ -1,0 +1,404 @@
+{
+  "batch_id": "BATCH_026",
+  "part": "3_of_3",
+  "items_range": "35-45",
+  "items": [
+    {
+      "item_id": "ITEM_035_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L3_03",
+        "estimated_time_sec": 185,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea el siguiente fragmento crítico sobre la historia económica de las patentes:\n\n«Es una creencia arraigada que las leyes de patentes, al otorgar monopolios temporales a los inventores, nacieron exclusivamente para estimular el genio creativo y el progreso de la técnica humana. Un examen detallado de los Archivos Estatales Venecianos de 1474 muestra, inversamente, que la primera ley formal de patentes fue concebida no como una subvención a la creatividad, sino como un escudo proteccionista desesperado de la ciudad-estado para evitar la fuga masiva de maestros artesanos de soplado de vidrio hacia reinos rivales económicamente más atractivos.»\n\n¿Qué inferencia central sobre la legislación de patentes es respaldada implícitamente por el autor de este texto?",
+      "opciones": {
+        "A": "Las primeras regulaciones de propiedad intelectual ignoraron intencionalmente los derechos individuales para enfocarse en expropiaciones estatales.",
+        "B": "A lo largo de la historia, las patentes han fracasado totalmente en el fomento del progreso tecnológico debido a su origen medieval restrictivo.",
+        "C": "El propósito fundacional de la protección intelectual estuvo motivado estratégicamente por la geopolítica económica de retención laboral, antes que por el fomento del ingenio puro.",
+        "D": "Únicamente las repúblicas italianas empleaban legislaciones restrictivas para mantener control sobre el comercio de bienes de lujo en Europa."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto refuta la noción mítica ('nacieron exclusivamente para estimular el genio').",
+        "paso_2": "Aporta una evidencia histórica ('Venecia 1474').",
+        "paso_3": "Vincula el caso veneciano a un motivo real: frenar la fuga de maestros artesanos hacia rivales ('geopolítica de retención laboral / escudo proteccionista').",
+        "paso_4": "La opción C sintetiza la inferencia correctiva del autor: las leyes nacen de necesidades crudas de competencia (retener mano de obra) más que de utopías de protección al ingenio abstracto. ✓",
+        "paso_critico": "Concluir desde el ejemplo particular de Venecia hacia el propósito originario que el autor critica como malentendido histórico generalizado.",
+        "error_tipico": "A comete un extremismo violento de 'expropiaciones estatales'. B afirma que 'fracasaron totalmente', lo cual el texto jamás dice ni infiere. D asume arbitrariedad y exclusividad ('únicamente Italia') basándose de forma estrecha en el solo ejemplo provisto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Sintetiza la contraposición 'Ingenio vs Control Geopolítico Obrero'. C=✓. Excelente inferencia implícita (rechaza lectura literalista de D o fatalista de B). H1=alta por profundidad interpretativa. N3/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_036_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H2_RCM_L3_03",
+        "estimated_time_sec": 190,
+        "error_type": "Modelado indirecto"
+      },
+      "stem": "Un productor artesanal utiliza dos bombas mecánicas para envasar aceite. La primera bomba llena 1 botella cada 4 minutos. La segunda bomba es más antigua y llena 1 botella cada 6 minutos. Si el productor enciende ambas bombas simultáneamente y no las apaga hasta haber envasado exactamente 75 botellas en total, ¿cuántas de esas 75 botellas fueron llenadas exclusivamente por la primera bomba?",
+      "opciones": {
+        "A": "45",
+        "B": "30",
+        "C": "50",
+        "D": "25"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Determinar la tasa de llenado por minuto de cada bomba. Bomba 1: 1/4 botellas por minuto. Bomba 2: 1/6 botellas por minuto.",
+        "paso_2": "Calcular la tasa de llenado combinado. Sumamos las fracciones: 1/4 + 1/6 = 3/12 + 2/12 = 5/12 botellas por minuto trabajando juntas.",
+        "paso_3": "Calcular el tiempo total requerido para 75 botellas. Tiempo = Total / Tasa conjunta = 75 / (5/12) = (75 × 12) / 5 = 15 × 12 = 180 minutos de trabajo continuo para ambas bombas.",
+        "paso_4": "Calcular la producción exclusiva de la primera bomba en esos 180 minutos. Tasa (1/4) × Tiempo (180) = 45 botellas. ✓",
+        "paso_critico": "Unificar el rendimiento en una tasa combinada aditiva (5/12) para deducir el tiempo global real antes de asignar la cuota individual de la primera bomba.",
+        "error_tipico": "B (30) es la cantidad llenada por la segunda bomba. C (50) asume tasas lineales directas falsas (2/3 del total en vez de 3/5). D (25) es un error de razón cruzada."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Tasas: 1/4 y 1/6. Juntas: 5/12. Tiempo = 75 / (5/12) = 180 min. Botellas B1 = 180 * 1/4 = 45. A=✓. L3 H2 validado limpio."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_037_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_03",
+        "estimated_time_sec": 195,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Dada la siguiente regla fundamental del código de aviación corporativo:\n\n«Es una violación grave que un piloto altere la bitácora de mantenimiento, a no ser que el oficial de pista documente un daño severo en los trenes de aterrizaje y exista una imposibilidad técnica para contactar a los mecánicos de torre.»",
+      "opciones": {
+        "A": "Alterar la bitácora es permitido si el copiloto documenta problemas con el tren de aterrizaje y decide no buscar o llamar al personal mecánico.",
+        "B": "Solo la alteración de bitácoras por fallos del tren de aterrizaje está justificada como una excepción a las graves violaciones del código.",
+        "C": "Si se altera la bitácora sin cometer una violación grave, es ineludible que existía aislamiento técnico del área de mecánicos junto a fallas en el fuselaje rodante registradas.",
+        "D": "Contactar a los mecánicos siempre eximirá a cualquier piloto que haya sido acusado de cometer modificaciones sin autorización en los registros operativos."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Regla A: Alterar la bitácora es violación grave.",
+        "paso_2": "Excepción (A no se cumple) SÓLO cuando se cumplen DOS condiciones simultáneas: (1) Daño en trenes documentado por oficial Y (2) Imposibilidad técnica de contactar mecánicos.",
+        "paso_3": "Si ha ocurrido una alteración de la bitácora, pero resulta que NO fue considerada violación grave, entonces FORZOSAMENTE debieron cumplirse ambas condiciones eximentes (dado que es la única vía de escape mencionada en esta regla).",
+        "paso_4": "La opción C enuncia esto: Si (hizo alteración SIN violación), entonces ineludiblemente [(aislamiento de técnicos = imposibilidad) Y (fallas en fuselaje rodante/tren documentadas)]. ✓",
+        "paso_critico": "Identificar el contra-recíproco con doble condición anidada (operador Y). Equivalencia lógica formal nivel 3.",
+        "error_tipico": "A falla porque cambia al oficial de pista por 'copiloto' y trivializa el 'no contactar' en vez de imposibilidad. B generaliza a 'solo' y olvida el requisito del punto ciego de comunicación. D es una falacia de inversión lógica (afirmar la necesidad y pretender que anula solos los demás cargos)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'A será violación grave, a menos que (B y C)'. Inferencia correcta: Si (A pero no violación grave) -> (B y C). C es la traducción formal estricta con reformulación de términos. H1=alta en manejo de bicondicionalidades tácitas. N3/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_038_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H4_RCM_L3_03",
+        "estimated_time_sec": 190,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "Determine rigurosamente qué valor continúa esta sucesión estructural, la cual posee una arquitectura no progresiva estándar:\n\n1, 3, 2, 8, 4, 15, 8, 24, ___",
+      "opciones": {
+        "A": "35",
+        "B": "16",
+        "C": "12",
+        "D": "32"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Como la serie sube y baja erráticamente (1,3,2,8,4...), es una alternancia o serie combinada.",
+        "paso_2": "Separamos la serie de posiciones impares: 1, 2, 4, 8... . Esta progresión es multiplicar siempre por 2 (1x2=2, 2x2=4, 4x2=8...).",
+        "paso_3": "Separamos la serie de posiciones pares: 3, 8, 15, 24... . Las diferencias de estos son: 5, 7, 9... (crece sumando un número impar cada vez).",
+        "paso_4": "La serie completa cuenta con 8 números provistos (24 es la 8va posición, par). El número solicitado debe ir en la posición novena (impar).",
+        "paso_5": "Al seguir la regla impares: el elemento anterior fue un 8. Aplicamos: 8 × 2 = 16. ✓",
+        "paso_critico": "Saber no enredarse con el patrón par (3,8,15,24...) si la posición a averiguar corresponde al patrón impar.",
+        "error_tipico": "A (35) asume que tocaba usar el patrón par (24 + 11 = 35). C (12) suma en vez de multiplicar (4+4=8, 8+4=12). D (32) saltea o aplica multiplicador x4."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Sucesión Impar (2^n): 1,2,4,8,16. Sucesión Par(x^2 -1): 3,8,15,24,... El 9no lugar es impar -> 16. B=✓. Alternancia mixta explícitamente requerida como anti-patrón de H4. N3/H4 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_039_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_03",
+        "estimated_time_sec": 195,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Analice la afirmación:\n\n«Toda revolución conceptual que logre quebrar el pensamiento estático en las ciencias teóricas debe incorporar un margen de disonancia tolerado por las élites académicas, ya que de lo contrario sería erradicada como charlatanería antes de su divulgación madura.»\n\n¿Cuál es la traducción condicional de este argumento?",
+      "opciones": {
+        "A": "Cuando el margen de disonancia es tolerado generosamente por una élite de eruditos, automáticamente surgen revoluciones y hallazgos en la ciencia formal.",
+        "B": "Si un nuevo enfoque teórico superó el cerco de la charlatanería y fracturó a largo plazo el dogma, indudablemente albergó cierto margen disonante tolerado institucionalmente.",
+        "C": "A los intelectuales más innovadores no se les puede marginar si han decidido deliberadamente generar fracturas teóricas bajo la aprobación de las universidades.",
+        "D": "Sin un quiebre agresivo del pensamiento estático por medio del caos tolerado, toda innovación perderá inevitablemente su etiqueta de charlatanería."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto plantea: Para SER revolución exitosa (A), TIENE QUE incorporar disonancia tolerada (B). De lo contrario, Cae (no sobrevive).",
+        "paso_2": "Por ende, B es causa / requerimiento necesario de la supervivencia de la revolución madura y estructurada (A). Si A ocurre (logra éxito / madura / quiebra el estatismo), entonces B tuvo forzosamente que haber ocurrido.",
+        "paso_3": "La opción B dice: Si superó el problema (triunfó como revolución A), indudablemente albergó a su vez la disonancia tolerada (B). Esto es lógicamente correcto (Si A, B). ✓",
+        "paso_critico": "No confundir el requisito indispensable que habilita la supervivencia ('tolerancia al margen'), con una garantía que cause revoluciones automáticamente.",
+        "error_tipico": "A incurre en afirmar el antecedente con asunción de suficiencia (tener tolerancia causa la revolución mágicamente). C se desvía moralizando a los intelectuales. D invierte la relación final creando una mezcolanza sin sentido entre fracasar y charlatanería."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Para A se debe B' (A->B). B enuncia 'Si A (quebró estatismo sin morir), entonces B (fue tolerada por élites)'. B=✓. H1=alta por reformulación lingüística extrema de A y B en las opciones sin usar palabras del original literal. N3/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_040_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H6_RCM_L3_03",
+        "estimated_time_sec": 195,
+        "error_type": "Modelado indirecto"
+      },
+      "stem": "En un estudio demográfico cerrado, el 60 % de la población adulta está clasificada como población laboral activa. De dicha porción laboral activa, un 25 % es clasificada simultáneamente como población de muy bajo estrato económico. Si se tiene el registro fidedigno de que en toda esa comunidad rural hay exactamente 450 trabajadores ubicados en este muy bajo estrato económico, ¿a cuánto ascienden estrictamente las personas de la población adulta que NO son laboralmente activas?",
+      "opciones": {
+        "A": "1 800",
+        "B": "3 000",
+        "C": "1 200",
+        "D": "750"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar las conversiones anidadas. 25 % (que es 1/4) del sector activamente laboral equivale a la cifra de 450 civiles. \nMatemáticamente: 0.25 × Activa = 450.",
+        "paso_2": "Despejar la cantidad de población activa total. Activa = 450 / 0.25 = 1 800 habitantes.",
+        "paso_3": "Esa población activa (1 800 civiles) equivale únicamente al 60 % del núcleo poblacional adulto total.\n0.60 × Total = 1 800.",
+        "paso_4": "Despejar el total: Total = 1 800 / 0.60 = 3 000 habitantes adultos.",
+        "paso_5": "La gran trampa de la pregunta: pide únicamente los habitantes que NO son laboralmente activos (el 40 % restando al 60 %). Si Total es 3000 y Activos son 1800. Inactivos = 3000 - 1800 = 1 200 individuos vacantes. ✓",
+        "paso_critico": "Resolver dos ecuaciones porcentuales de relación filial inversa y NO entregar el valor de intersecciones, debiéndose computar el sector diametralmente excluido de la estadística.",
+        "error_tipico": "A (1 800) la población activa, omite el último paso. B (3 000) responde el total demográfico general sin descontar. D (750) mezcla cálculos equivocando denominadores a la baja (regla directa en lugar de inversa)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "(0.25 * 0.60 * T) = 450 -> 0.15T = 450 -> T=3000. Inactivos = 40% de 3000 = 1200. C=✓. Multiplicaciones fraccionales compuestas + inversión variable oculta (pide lo no activo). H1=alta absoluto. N3/H6 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_041_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L3_03",
+        "estimated_time_sec": 190,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Examine la siguiente disertación económica:\n\n«Los planes de recate de corporaciones gigantes respaldan la ilusión colectiva de que algunas instituciones son demasiado monumentales como para ser dejadas a la ruina, bajo la retórica de proteger el tejido del pequeño comercio y de los fondos de vejez. No obstante, al transferir invariablemente las primas de riesgo desde el ámbito ejecutivo cúpula al balance patrimonial masivo del Tesoro Público, terminamos desterrando todo mecanismo real de responsabilidad ejecutiva en la modernidad sistémica. Cuando el error ajeno nos cuesta a todos y su éxito solo paga réditos privados, el concepto original de libre mercado ya está irremediablemente sepultado.»\n\n¿A qué síntesis argumentativa central apunta ineludiblemente el autor?",
+      "opciones": {
+        "A": "A que el salvataje bancario debería limitarse explícitamente a industrias generadoras de jubilaciones.",
+        "B": "A que la asimetría sistémica, por la cual el riesgo se vuelve público mientras que los beneficios siguen siendo puramente privados, vicia de raíz la noción del libre mercado.",
+        "C": "A que las pequeñas industrias sufren en demasía porque los fondos del estado socorren únicamente a corporaciones gigantes durante las grandes rescisiones.",
+        "D": "A que los altos ejecutivos malversan el dinero conscientemente, seguros de que el Tesoro Público suplirá inevitablemente sus déficits en las finanzas."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Premisa 1: Riesgo / coste de ruina se traslada al Tesoro Público.",
+        "paso_2": "Premisa 2: Ganancia se queda en lo rentabilizado privado.",
+        "paso_3": "Conclusión del texto: Esta separación ('riesgo público, ganancias privadas') erradica la responsabilidad y entierra el mercado libre.",
+        "paso_4": "La opción B compila precisamente la esencia profunda y abarcadora de todo esto en argot académico correcto: la asimetría sistémica vicia el libre mercado. ✓",
+        "paso_critico": "No buscar sentencias emotivas, sino resúmenes lógico-conceptuales (riesgo público vs bono privado = colapso sistémico del concepto original económico).",
+        "error_tipico": "A dicta una medida resolutiva puntual en jubilaciones sin asidero. C inventa un conflicto directo inter-industrial Pymes vs Macroempresas que no es el eje central. D es una extrapolación maliciosa y puramente conjetural de la moral personal ('malversación consciente'), el texto critica la regla del sistema, no la ética cerebral individual."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B encapsula el ataque sistémico de 'privatización de ganancias = socialización de pérdidas -> ruina de la métrica fundacional de la teoría mercantil'. B=✓. Idea central implícita compleja. N3/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_042_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H2_RCM_L3_03",
+        "estimated_time_sec": 200,
+        "error_type": "Modelado indirecto"
+      },
+      "stem": "En una subasta a ciegas, adquirir un lote cerrado que contiene 3 estatuas de bronce y 4 de mármol cuesta $170. En la misma subasta, adquirir un lote que contiene 2 estatuas de bronce y 6 de mármol cuesta $180. Si un coleccionista desea comprar un lote personalizado que contenga exactamente 5 estatuas de bronce y 5 estatuas de mármol, ¿cuánto deberá pagar en total sabiendo que los precios unitarios son fijos?",
+      "opciones": {
+        "A": "$200",
+        "B": "$280",
+        "C": "$250",
+        "D": "$350"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Armar el sistema de ecuaciones con las incógnitas. B (Bronce), M (Mármol). Ecuación 1: 3B + 4M = 170. Ecuación 2: 2B + 6M = 180.",
+        "paso_2": "Simplificar la Ecuación 2 dividiendo todo por 2 para facilitar el cálculo: B + 3M = 90. Esto significa que B = 90 - 3M.",
+        "paso_3": "Sustituir B en la Ecuación 1: 3(90 - 3M) + 4M = 170. Lo cual es 270 - 9M + 4M = 170.",
+        "paso_4": "Resolver para M: 270 - 5M = 170 -> 100 = 5M -> M = 20. El precio de una estatua de mármol es $20.",
+        "paso_5": "Calcular B: B = 90 - 3(20) = 90 - 60 = 30. El precio de una estatua de bronce es $30.",
+        "paso_6": "Calcular el costo del lote solicitado: 5B + 5M = 5(30) + 5(20) = 150 + 100 = 250. ✓",
+        "paso_critico": "Modelar correctamente el sistema de dos ecuaciones con dos variables y despejar limpiamente para encontrar el valor unitario de cada estatua, o notar combinaciones lineales si aplica.",
+        "error_tipico": "A y B son sumas arbitrarias o estimuladas asumiendo valores en base a $10. D es la suma de ambos lotes completos originales sin filtrar (170+180=350, lo cual da 5B y 10M, no 5B y 5M)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Ec1: 3b+4m=170. Ec2: 2b+6m=180. b=30, m=20. 5(30)+5(20)=250. C=✓. Limpio H2 de L3 con operaciones de sistema 2x2 directo y pregunta derivada."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_043_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_03",
+        "estimated_time_sec": 195,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Identifique la oración lógicamente idéntica en rigor e implicancias a la presente advertencia jurídica:\n\n«Toda apelación introducida tras vencer los 15 días reglamentarios será ignorada por el tribunal sancionatorio, exceptuando aquellos casos singulares de fuerza mayor avalados por un notario estatal.»",
+      "opciones": {
+        "A": "Las apelaciones tardías tramitadas sin respaldo de notario del Estado, ineludiblemente culminan en ignorancia rotunda por parte del tribunal estructurado.",
+        "B": "Si un tribunal no llegó a ignorar una apelación procesada tras fenecer los quince días hábiles, se trató forzosamente de una apelación eximida por razones gubernamentales extremas.",
+        "C": "Si el notario avala razones imperantes de carácter mayor, un tribunal sancionatorio está en absoluto compromiso y obligación indiscutible de aprobar en pleno las apelaciones tardías.",
+        "D": "Únicamente si usted presenta su caso y apelaciones en 15 días tras el evento, estará blindado legalmente contra toda ignorancia y posible rechazo por razones notariales y procesuales."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Analizar la estructura P → Q, a menos que M.",
+        "paso_2": "Si apelación tardía (P), entonces es ignorada (Q), a menos que venga con aval notarial (M).",
+        "paso_3": "Es decir, si no hay aval M (sin respaldo), la regla P → Q aplica inexorablemente. Tardía sin respaldo = Quedará Ignorada.  \nLa opción A condensa esto perfectamente sin adornos: tardía y sin aval -> se ignora ineludiblemente. ✓",
+        "paso_critico": "No malinterpretar las 'excepciones'. La excepción evita el castigo (ser ignorado), pero NO te obliga al premio (ser aprobado en pleno), solo te habilita a que proceda tu petición a revulsivo.",
+        "error_tipico": "B añade conjeturas no presentes. C comete el error crítico y más común de todos: afirma que la excepción obliga al tribunal a 'aprobar' la petición, cuando el texto inicial lo más que dice es que el tribunal no la 'ignoraría'. D es una exageración fuera de lugar prometiendo 'blindaje total', lo cual es falaz lógicamente."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'X -> Y, a menos que Z'.  Ergo 'Si X y ~Z -> Y'. A formula esto de modo semántico y exacto. A=✓. B habla condicionales forzosas no respaldadas. C salta de 'no ignorar' a 'aprobar'. N3/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_044_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_03",
+        "estimated_time_sec": 190,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Verifique con atención la siguiente proposición y elija la alternativa que la refuta de modo concluyente y definitivo (que demuestra su falsedad formal en caso de ser cierta la alternativa):\n\n«Siempre que la Junta de la Reserva aumenta el tipo de interés base, los mercados de bienes raíces sin excepción ven detenida su expansión acelerada.»",
+      "opciones": {
+        "A": "Durante algunos ciclos económicos, los bienes raíces logran expandirse a un ritmo desacelerado en lugar de acelerado tras el incremento brusco en las tasas del Banco de Reserva.",
+        "B": "En el pasado mes de octubre, la Reserva elevó los intereses un cuarto de base porcentual y, contra los sondeos, el mercado de construcción y bienes raíces del sur mantuvo con vigor y prolongó su expansión acelerada sin freno aparente.",
+        "C": "Analistas globales afirman que antes de la intervención de la Junta de la Reserva, el bloque inmobilario suele tener colapsos de expansión.",
+        "D": "Una caída drástica en las tasas de interés ha causado recientemente que varios sectores inmobilarios fuesen erradicados en su aceleración a escala planetaria."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La afirmación condicional es: 'Todo aumento de interés (A) resulta en freno habitacional acelerado (B)'. Formalmente: A → B.",
+        "paso_2": "La única forma de demostrar de forma lógica y concluyente que 'Todo A es B' es completamente falso, es encontrando al menos un solo caso empírico donde haya ocurrido A, pero no ocurriera B. (La existencia demostrable de A ∩ ~B).",
+        "paso_3": "La opción B documenta empíricamente un caso puntual (octubre pasado) donde SÍ hubo incremento en las tasas por la Reserva (A) y, sin embargo, NO se detuvo la expansión habitacional acelerada del sur (~B). Refutación formal consumada. ✓",
+        "paso_critico": "Recordar qué refuta operativamente a un cuantificador universal afirmativo ('Siempre que...'): la aparición rotunda de un cuantificador particular negativo singular en contra de la regla.",
+        "error_tipico": "A se confunde en semántica de palabras y no crea el contraejemplo rotundo a la condición restrictiva. C y D debaten el antecedente (cuando la Reserva no operó, o cuando hizo lo opuesto bajando), y la regla 'A->B' no se afecta al testear 'no-A'. Testear no-A es inválido para refutación."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Refutación de Universal ('Todo A->B') = Existencia ('Algun A y no-B'). B documenta 'Ocurrió A y no-B'. Refuta lógicamente por contravención factual. H1=Alta por requerimiento atípico de 'Elige la refutación', aplicando H5 profunda sin conectores. N3/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_045_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H7_RCM_L3_03",
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia espacial"
+      },
+      "stem": "Se toma una cartulina cuadrada y se dobla por la mitad horizontalmente, formando un rectángulo. Luego, este rectángulo se dobla por la mitad verticalmente, formando un cuadrado más pequeño compuesto por 4 capas de papel. Con unas tijeras, se hace un único corte de lado a lado que elimina exclusivamente la esquina del cuadrado donde convergen los dobleces ciegos. Al desdoblar la cartulina por completo y estirarla sobre una mesa, ¿qué configuración espacial de vacíos se revelará en el formato de papel grande?",
+      "opciones": {
+        "A": "Cuatro agujeros triangulares ubicados cerca de los bordes externos de la cartulina.",
+        "B": "Un único agujero con forma de rombo o romboide ubicado en la región central de la cartulina.",
+        "C": "Una cruz o corte en aspa que llega casi a intersecar los bordes externos.",
+        "D": "Dos huecos rectangulares y paralelos ubicados entre sí en la parte media general."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Modelar el pliegue del papel en cuadrantes concéntricos (1 cuadrado original -> 1 rectángulo doblado al medio -> 1 cuadrado pequeño que alberga 4 capas en su plano).",
+        "paso_2": "Identificar el nodo ciego de convergencia de pliegues: esta esquina particular donde se interceptan los dobleces sin filos libres representa exactamente el centro topológico de la hoja primaria desplegada.",
+        "paso_3": "Al efectuar el tijeretazo perpendicular en ese único eje de pliegue ciego, se extirpa material que corresponde al punto central.",
+        "paso_4": "Efectos al desplegar: El corte en esquina de 90 grados, al operar sobre 4 paneles simétricos espejados, originará perimetralmente una forma central delimitada por 4 aristas oblicuas proyectadas desde un núcleo unificado, creando una única perforación con formato de rombo posicionado estrictamente en el centro espacial de la lámina original extendida. ✓",
+        "paso_critico": "Manejar la descompresión mental de la rotación cartesiana del vértice de un ángulo y su traslado virtual al cuadrante de todo el formato topológico consolidado (centro estricto).",
+        "error_tipico": "A se asume cuando el corte se imagina falsamente sobre las esquinas fraccionadas o abiertas. C imagina una rajadura bidimensional sin remoción volumétrica de sustrato material. D ocurre por error en el desdoblamiento axial y no cuadrangular del primer pliegue inicial."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Cortar esquinero hermético en ensamble de 4= 1 Perforación romboidal unificada interna global a escala. B=✓. Alta demanda espacial constructora sin numerología. N3/H7 L3 limpisimo."
+      },
+      "final_status": "approved"
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "batch_id": "BATCH_024",
+  "generated_at": "2026-03-25T04:07:31-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "correction_batch": true,
+  "correction_target": "Phase 4 buffer — minimum ≥10 buffer items required",
+  "pipeline_status": "BUFFER GENERATION — 6 new training items. Buffer: 4 → 10.",
+  "buffer_rationale": {
+    "buffer_before": 4,
+    "buffer_target": 10,
+    "items_to_generate": 6,
+    "h1_constraint_note": "Current rate: 45/150=30.0%. Adding 6 items with 2 alta: 47/156=30.1% ✓. Must include exactly 2 H1=alta to maintain ≥30% floor."
+  },
+  "generation_plan": {
+    "difficulty_1_count": 2,
+    "difficulty_2_count": 4,
+    "h1_alta_count": 2,
+    "h1_media_count": 3,
+    "h1_baja_count": 1,
+    "rcv_count": 3,
+    "rcm_count": 3,
+    "skill_spread": "H2(1), H3(2), H5(1), H6(1), H7(1) — max 2 per skill ✓"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B024",
+      "template_id": "T_H7_RCM_L1_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L1/H1=baja. H7 has 4 L1 items (triangle-angles, quadrilateral-angles, circumference, supplementary). New: interior angles of a pentagon — distinct polygon.",
+      "pre_adv_solution_check": {
+        "theorem": "Sum of interior angles of an n-gon = (n-2) × 180°",
+        "application": "Pentagon: n=5 → (5-2)×180 = 3×180 = 540°",
+        "correct_option": "C",
+        "correct_answer_value": 540,
+        "verification": "5-sided polygon: (5-2)×180 = 540° ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuántos grados suman los ángulos interiores de un pentágono?",
+      "opciones": {
+        "A": "360°",
+        "B": "450°",
+        "C": "540°",
+        "D": "720°"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Fórmula: suma de ángulos interiores de un polígono de n lados = (n − 2) × 180°.",
+        "paso_2": "Para un pentágono, n = 5: (5 − 2) × 180 = 3 × 180 = 540°. ✓",
+        "paso_critico": "1 paso: aplicar la fórmula correcta con n = 5. No confundir con la suma de los ángulos de un cuadrilátero (360°) ni de un hexágono (720°).",
+        "error_tipico": "A (360°): suma de ángulos del cuadrilátero (n=4) — confunde el polígono. B (450°): 90° × 5 = 450°, multiplica 90° por el número de lados — error de fórmula. D (720°): (6−2) × 180 = 720°, usa n=6 (hexágono) en lugar de n=5."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "difficulty": 1,
+        "estimated_time_sec": 55,
+        "error_type": "Error de cálculo",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "(5-2)×180=540=C ✓. A confunde con cuadrilátero (360°). B usa 90°×n (fórmula incorrecta). D usa n=6 hexágono. H7/L1/RCM ✓. Pentágono — nuevo, distinto de B007(triángulo/180°), B008(cuadrilátero/360°), B010(circunferencia/2πr), B012(suplementarios). H1=baja: 1 paso, fórmula directa. item_type=training ✓. Sin ambigüedad: C único ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B024",
+      "template_id": "T_H6_RCM_L1_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L1/H1=baja. H6 L1 existing: cuadernos(×2), automóvil(÷2), arroz(÷5×2), ciclista(×3), libretas(×8/5). New: pintura/paredes — new scaled-up context.",
+      "pre_adv_solution_check": {
+        "rate": "1 lata cubre 12 m². Necesita 36 m².",
+        "computation": "36 ÷ 12 = 3 latas",
+        "correct_option": "B",
+        "correct_answer_value": 3,
+        "verification": "3 × 12 = 36 m² ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Una lata de pintura alcanza para cubrir 12 m² de pared. ¿Cuántas latas se necesitan para cubrir 36 m²?",
+      "opciones": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "6"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 1 lata cubre 12 m².",
+        "paso_2": "Número de latas: 36 ÷ 12 = 3 latas. ✓",
+        "paso_critico": "1 paso: dividir la superficie total entre la superficie que cubre una lata.",
+        "error_tipico": "A (2): 36 ÷ 18 = 2, divide entre 18 (erróneamente considera que 1 lata cubre 18 m²). C (4): 36 ÷ 9 = 4, divide entre 9 — fracción incorrecta de 12. D (6): 36 ÷ 6 = 6, divide entre 6 en lugar de 12."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 1,
+        "estimated_time_sec": 50,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "36÷12=3=B ✓. A divide entre 18 (erróneo). C divide entre 9. D divide entre 6. H6/L1/RCM ✓. Proporcionalidad directa: 1 lata → 12m². Contexto pintura/paredes — distinto de B002(cuadernos), B004(automóvil), B006(arroz), B009(ciclista), B012(libretas). H1=baja: 1 paso, división directa. item_type=training ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B024",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L2/H1=media. H3 L2 existing contexts: cities/parking, bees, screens, volcanoes, indigenous languages, crisis/research, renewables, automation, tourism, sedentarism, bicycles, food waste, work-remote(B017), lexicon-cognition(B017). New: ocean acidification.",
+      "pre_adv_solution_check": {
+        "central_idea": "La acidificación oceánica pone en riesgo los organismos calcificadores y con ellos la cadena alimentaria marina.",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El aumento de CO₂ en la atmósfera no solo eleva las temperaturas globales; también provoca la acidificación de los océanos al disolverse en el agua marina. Este proceso afecta especialmente a los organismos que forman estructuras calcáreas, como corales y moluscos, debilitando sus caparazones y esqueletos. El deterioro de estos organismos compromete la cadena alimentaria marina en su conjunto.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La acidificación oceánica producida por el CO₂ atmosférico amenaza a los organismos calcificadores y, por extensión, a toda la cadena alimentaria marina.",
+        "B": "El aumento de CO₂ es el único factor responsable del cambio climático y de la destrucción de los ecosistemas acuáticos.",
+        "C": "Los corales y moluscos son las especies más importantes del océano porque forman las bases de todas las redes alimentarias.",
+        "D": "La acidificación oceánica afecta exclusivamente a los arrecifes de coral, sin impacto sobre otras especies marinas."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto establece una cadena: CO₂ → acidificación → debilitamiento de organismos calcificadores → compromiso de la cadena alimentaria.",
+        "paso_2": "A captura los dos extremos de esa cadena (CO₂ → amenaza calcificadores → cadena alimentaria) sin añadir elementos ausentes. ✓",
+        "paso_critico": "La idea central integra causa (CO₂/acidificación) + objeto afectado (calcificadores) + consecuencia (cadena alimentaria). No basta con mencionar solo uno de los tres.",
+        "error_tipico": "B introduce 'único factor' y 'destrucción total' — ambos ajenos al texto. C jerarquiza a corales/moluscos como 'los más importantes', valoración no sostenida. D restringe el impacto solo a corales ('exclusivamente arrecifes') cuando el texto menciona también moluscos y la cadena completa."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 115,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A única: CO₂→acidificación→calcificadores→cadena alimentaria — cadena completa integrada. B 'único factor'+'destrucción total' excede el texto. C jerarquiza sin base. D restringe a 'exclusivamente arrecifes'. H3/L2/RCV ✓. H1=media: idea central multi-componente pero explícita en el texto. Contexto acidificación-oceánica/CO₂ — nuevo, distinto de todos los H3/L2 anteriores. Sin ambigüedad: A único ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B024",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L2/H1=media. H5 L2 existing: many connectors (proyecto/adversativo, estudió-toda/noches, volcanes, experimento, redes-sociales, informe-redactado, gobierno-educación, temperaturas, empresa-medidas, ciclovías, candidato, informe-financiero, investigadores-publicaron, vecinos-municipio, etc.). New connector context: discovery/simultaneous.",
+      "pre_adv_solution_check": {
+        "relation": "S1: researchers discovered antibiotics; S2: that same decade, understanding of viral transmission advanced — additive-temporal (two parallel discoveries in same period)",
+        "connector_type": "aditivo temporal",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«En la primera mitad del siglo XX, los investigadores descubrieron las propiedades antibióticas de la penicilina. __________, avanzó significativamente la comprensión de la transmisión viral, lo que transformó para siempre la medicina preventiva.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Por esta razón",
+        "C": "En ese mismo período",
+        "D": "A pesar de ello"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta un avance científico (penicilina) ocurrido en la primera mitad del siglo XX. La segunda oración presenta un segundo avance (transmisión viral) como desarrollo paralelo en el tiempo.",
+        "paso_2": "'En ese mismo período' (C) establece la simultaneidad temporal entre los dos avances sin implicar causalidad ni contraste. ✓",
+        "paso_critico": "El segundo enunciado NO es consecuencia del primero ni lo contradice; ocurre en paralelo. La relación es de coordinación temporal aditiva.",
+        "error_tipico": "A y D (adversativos/concesivos): introducen contraste inexistente — el descubrimiento de la penicilina no se opone al avance en virología. B (causal): 'por esta razón' implicaría que entender la penicilina causó el avance en transmisión viral — relación no establecida en el texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 105,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único aditivo-temporal: simultaneidad sin causalidad ni contraste. A/D adversativos (contraste inexistente). B causal (relación no establecida). H5/L2/RCV ✓. Trampa: A es el error más frecuente (confunde 'distinto avance' con 'contraste'). Contexto penicilina/virología-primer-mitad-siglo-XX — nuevo, distinto de todos los H5/L2 anteriores. H1=media ✓. Sin ambigüedad: C único ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B024",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L2/H1=alta. H2 L2 existing: granja-gallinas-conejos, Roberto-edad, torneo-videojuegos, almacén-cajas, conductor-km, fábrica-productosAB, Carlos-Diego-feria, experimento-masas, receta-harina-azúcar, clase-laboratorio, libro-cuaderno, sala-cine-entradas, cajas-chocolates. New: three-party ratio with implicit total — distinct structure.",
+      "pre_adv_solution_check": {
+        "let": "v = vendedor, m = María",
+        "equations": [
+          "v = 3m  (vendedor tiene el triple que María)",
+          "v + m = Pedro + 8  (entre ambos tienen 8 más que Pedro)",
+          "Pedro = 16"
+        ],
+        "substitution": "3m + m = 16 + 8 = 24 → 4m = 24 → m = 6 → v = 18",
+        "correct_option": "C",
+        "correct_answer_value": 18,
+        "verification": "v=18, m=6 → v+m=24 = 16+8=24 ✓; v=3×6=18 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un vendedor tiene el triple de monedas que María. Entre los dos tienen 8 monedas más que Pedro. Si Pedro tiene 16 monedas, ¿cuántas monedas tiene el vendedor?",
+      "opciones": {
+        "A": "12",
+        "B": "16",
+        "C": "18",
+        "D": "24"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea m = monedas de María. Entonces el vendedor tiene 3m. El total de ambos: 3m + m = 4m.",
+        "paso_2": "Ese total es 8 más que Pedro: 4m = 16 + 8 = 24 → m = 6. El vendedor tiene 3 × 6 = 18 monedas. ✓",
+        "paso_3": "Verificación: vendedor(18) + María(6) = 24 = Pedro(16) + 8 ✓.",
+        "paso_critico": "La variable oculta es que Pedro define el total conjunto (vendedor + María), no el número de cada uno directamente. Hay que derivar ese total antes de aplicar el ratio.",
+        "inferencia_critica_H1": "El enunciado no da el total de vendedor+María directamente; se deriva de Pedro+8. Esta mediación de Pedro como referencia indirecta del total es la inferencia no explícita.",
+        "error_tipico": "A (12): 4m = 16 → m = 4 → v = 12, usa directamente Pedro como total sin sumar 8. B (16): entrega el valor de Pedro directamente — confusión entre referencia y solución. D (24): entrega el total vendedor+María (4m = 24) sin despejar el vendedor individualmente."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 145,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "4m=24→m=6→v=18=C ✓. Verificación: 18+6=24=16+8 ✓. A usa Pedro como total directo (sin +8). B entrega referencia (Pedro). D entrega total conjunto (4m) sin despejar. H2/L2/RCM ✓. Estructura: ratio-tripartito con total definido por referencia indirecta — distinto de todos los H2/L2 existentes (razones directas, edades, fábrica, etc.). H1=alta: variable oculta = Pedro+8 debe derivarse antes del ratio. item_type=training ✓. Un solo answer: C unívoco. Distractores fuertes: A (olvida +8), D (total sin individualizar) ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B024",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "buffer_note": "L2/H1=alta. H3 L2, H1=alta at L2 is rare but valid when the central idea requires reconstrucing an implicit argument not directly stated. Context: migración / economía digital.",
+      "pre_adv_solution_check": {
+        "central_idea": "La migración contemporánea responde cada vez más a oportunidades económicas digitales y no solo a necesidades de sobrevivencia, lo que exige repensar los marcos de protección internacional.",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Históricamente, la migración internacional se explicó como respuesta a factores de expulsión: conflictos, pobreza extrema o desastres naturales. Sin embargo, la expansión de la economía digital ha creado un nuevo perfil de migrante: el trabajador remoto que elige su residencia según criterios fiscales, de calidad de vida o de acceso a comunidades profesionales. Esta transformación pone en entredicho los marcos jurídicos de protección diseñados para los migrantes forzados.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La economía digital ha eliminado la necesidad de migrar, ya que el trabajo remoto permite residir en cualquier país sin desplazarse.",
+        "B": "Los marcos jurídicos de protección internacional son obsoletos y deben ser reemplazados por sistemas completamente nuevos.",
+        "C": "La pobreza extrema sigue siendo la causa principal de la migración internacional en el mundo contemporáneo.",
+        "D": "La aparición de un nuevo perfil de migrante económico-digital cuestiona la adecuación de los marcos de protección concebidos para la migración forzada."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El texto presenta un contraste histórico: migración forzada (factores de expulsión) vs. nueva migración por elección económico-digital.",
+        "paso_2": "La conclusión del texto es que esta nueva realidad 'pone en entredicho los marcos jurídicos'. D integra ambos elementos: el nuevo perfil (migrante digital) y la consecuencia sistémica (marcos de protección cuestionados). ✓",
+        "paso_critico": "La idea central NO es que el trabajo remoto elimina la migración (A invierte la tesis), ni que los marcos deben 'reemplazarse' (B exagera), sino que el nuevo perfil cuestiona la adecuación de los actuales.",
+        "inferencia_critica_H1": "La idea central exige reconstruir la tensión entre el modelo histórico y el emergente, y extraer la implicación sistémica (marcos cuestionados), que no está formulada como 'tesis explícita' sino inferida del contraste.",
+        "error_tipico": "A invierte la relación: la economía digital crea un nuevo migrante, no elimina la migración. B exagera 'reemplazados completamente' — el texto solo dice que los marcos 'se ponen en entredicho'. C contradice directamente al texto, que señala que la pobreza ya no es la única causa."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 140,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D única: nuevo-perfil-digital + marcos-cuestionados — reconstruye la tensión y la implicación. A invierte (elimina migración). B exagera 'reemplazar'. C contradice texto (pobreza como causa principal). H3/L2/RCV ✓. H1=alta: la tesis no se formula explícitamente — surge del contraste histórico/emergente + implicación sistémica. Contexto migración/economía-digital — nuevo, distinto de todos los H3/L2 anteriores. item_type=training ✓. Un solo answer: D unívoco. Distractores fuertes: A (inversión parcial plausible), B (exageración sutil) ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_024",
+    "batch_type": "buffer_correction",
+    "item_type": "training",
+    "total_generated": 6,
+    "approved": 6,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_training": true,
+      "no_difficulty_3_items": true,
+      "h1_alta_count": 2,
+      "h1_alta_max_constraint": "MAX 2 — SATISFIED ✓",
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 1,
+      "H3": 2,
+      "H5": 1,
+      "H6": 1,
+      "H7": 1,
+      "max_per_skill_constraint": "≤2 per skill — SATISFIED ✓"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 2,
+      "nivel_2": 4,
+      "nivel_3": 0,
+      "nivel_1_items": "ITEM_001 (H7), ITEM_002 (H6)",
+      "nivel_2_items": "ITEM_003 (H3), ITEM_004 (H5), ITEM_005 (H2), ITEM_006 (H3)",
+      "constraint": "2×L1 + 4×L2 — EXACT PER SPEC ✓"
+    },
+    "macro_area_distribution": {
+      "RCV": 3,
+      "RCM": 3,
+      "RCV_items": "ITEM_003 (H3), ITEM_004 (H5), ITEM_006 (H3)",
+      "RCM_items": "ITEM_001 (H7), ITEM_002 (H6), ITEM_005 (H2)",
+      "balance": "EXACT 50/50 ✓"
+    },
+    "h1_distribution": {
+      "baja": 2,
+      "media": 2,
+      "alta": 2,
+      "items_baja": "ITEM_001 (H7/L1), ITEM_002 (H6/L1)",
+      "items_media": "ITEM_003 (H3/L2), ITEM_004 (H5/L2)",
+      "items_alta": "ITEM_005 (H2/L2), ITEM_006 (H3/L2)",
+      "h1_alta_constraint": "MAX 2 — SATISFIED ✓"
+    },
+    "buffer_verification": {
+      "buffer_before": 4,
+      "items_added": 6,
+      "buffer_after": 10,
+      "target": "≥10",
+      "status": "SATISFIED ✓"
+    },
+    "h1_rate_protection": {
+      "rate_before": "45/150 = 30.0%",
+      "new_alta_items": 2,
+      "rate_after": "47/156 = 30.1%",
+      "threshold": "≥30%",
+      "status": "SATISFIED ✓",
+      "note": "2 H1=alta items (max allowed) were mandatory to preserve ≥30% floor. Without them: 45/156=28.8% — violation."
+    },
+    "anti_collision_verification": {
+      "H7_L1_new_context": "pentágono/(n-2)×180 — distinct from B007(triángulo), B008(cuadrilátero), B010(circunferencia), B012(suplementarios)",
+      "H6_L1_new_context": "pintura/latas/36m² — distinct from B002(cuadernos), B004(automóvil), B006(arroz), B009(ciclista), B012(libretas)",
+      "H3_L2_1_new_context": "acidificación-oceánica/CO₂ — distinct from all 12 previous H3/L2 contexts",
+      "H5_L2_new_context": "penicilina/virología-paralelo-temporal — distinct from all 15 previous H5/L2 connector contexts",
+      "H2_L2_new_context": "monedas/ratio-tripartito-referencia-indirecta — distinct from all 13 previous H2/L2 contexts",
+      "H3_L2_2_new_context": "migración/economía-digital — distinct from all previous H3/L2 contexts"
+    },
+    "distribution_safety_check": {
+      "skill_concentration": "NONE — 6 different skills covered (H2,H3×2,H5,H6,H7) ✓",
+      "difficulty_3_added": 0,
+      "h1_alta_distortion": "2/6 = 33% of new items — within spec (max 2) ✓",
+      "global_h1_post": "47/156 = 30.1% — minimal drift from 30.0%, within threshold ✓"
+    },
+    "training_cumulative_post_batch024": {
+      "total_approved": 156,
+      "training_target_original": 140,
+      "H1_alta_count": 47,
+      "H1_alta_rate": "47/156 = 30.1%",
+      "buffer_count": 10,
+      "buffer_target": "≥10",
+      "status": "ALL CONSTRAINTS SATISFIED ✓"
+    }
+  }
+}

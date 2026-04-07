@@ -1,0 +1,583 @@
+[
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B008",
+    "reason": "duplicate_removed",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B020",
+    "reason": "duplicate_removed",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_011_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_012_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_013_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_014_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_015_B013",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B016",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_011_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_012_B017",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B018",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_011_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_012_B019",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_011_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_012_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_013_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_014_B020",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_008_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_009_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_010_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_011_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_012_B021",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_001_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_002_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_003_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_004_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_005_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_006_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "removed",
+    "item_id": "ITEM_007_B022",
+    "reason": "legacy_simulation_replaced",
+    "segment": "none"
+  },
+  {
+    "action": "validation",
+    "counts": {
+      "diagnostic": 19,
+      "sim_1": 45,
+      "sim_2": 45,
+      "training": 151,
+      "buffer": 1,
+      "total": 261
+    },
+    "skill_distribution": {
+      "H2": 25,
+      "H3": 26,
+      "H4": 24,
+      "H5": 26,
+      "H6": 25,
+      "H7": 25
+    },
+    "difficulty_distribution": {
+      "H2": 6,
+      "H3": 9,
+      "H4": 2,
+      "H5": 3,
+      "H6": 10,
+      "H7": 12
+    },
+    "h1_rate": 0.2913907284768212,
+    "duplicates_detected": 2,
+    "status": "blocked",
+    "reason": "exact failure"
+  },
+  {
+    "status": "blocked",
+    "reason": "exact failure"
+  }
+]

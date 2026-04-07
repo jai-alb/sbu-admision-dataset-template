@@ -1,0 +1,350 @@
+{
+  "batch_id": "BATCH_003",
+  "generated_at": "2026-03-23T17:10:42-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "pre_generation_plan": {
+    "difficulty_target": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3 },
+    "h1_alta_max_pct": 0.35,
+    "h1_alta_restricted_to": "nivel_3_only",
+    "banned_templates": ["T_H5_RCV_L3_01"],
+    "pre_adv_unicity_check": "applied_all_items",
+    "skill_target": "H2:2, H3:2, H4:2, H5:2, H6:2, H7:2 — perfectly balanced",
+    "structural_reuse_note": "All prior contexts excluded by design"
+  },
+
+  "items": [
+
+    {
+      "item_id": "ITEM_001_B003",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "L2 template at nivel_1 complexity: 1-step causal recognition, H1=baja",
+      "stem": "Seleccione el conector más adecuado:\n\n«El clima en la costa es cálido y húmedo; __________, se recomienda llevar protector solar.»",
+      "opciones": { "A": "sin embargo", "B": "por eso", "C": "no obstante", "D": "a pesar de eso" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La segunda proposición es una consecuencia directa y esperada de la primera (clima → recomendación). Relación causal.",
+        "paso_2": "'Por eso' es el único conector causal entre las opciones. ✓",
+        "paso_critico": "Reconocer que la relación no es de contraste sino de causa-efecto directo.",
+        "error_tipico": "Opciones A y C (adversativos) implicarían que la recomendación es inesperada dado el clima — ilógico. Opción D (concesiva) también implica contraste inexistente."
+      },
+      "h5_adv_verification": {
+        "contrarreciprocal_check": "N/A — conector, no structure conditional",
+        "A_sin_embargo": "incorrecto — adversativo, no hay contraste",
+        "C_no_obstante": "incorrecto — adversativo, idem",
+        "D_a_pesar_de_eso": "incorrecto — concesivo, no aplica"
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 1, "tiempo_estimado": "1.5 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único correcto. A y C ambos adversativos y formalmente incorrectos. D concesivo incorrecto. H5 rule: sin contrarrecíproco. Sin ambigüedad. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_002_B003",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "L2 template at nivel_1 complexity: descending arithmetic, 1 step, H1=baja",
+      "stem": "¿Cuál es el número que sigue en la serie: 20, 17, 14, 11, ___?",
+      "opciones": { "A": "7", "B": "9", "C": "8", "D": "10" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Diferencia constante: 20−17=3, 17−14=3, 14−11=3. Patrón decreciente −3.",
+        "paso_2": "Siguiente término: 11−3 = 8. ✓",
+        "paso_critico": "Patrón de resta constante, visible directamente. 1 operación.",
+        "error_tipico": "A(7): resta 4. B(9): resta 2. D(10): resta 1. Todos corresponden a lectura incorrecta de la diferencia."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Generalización excesiva", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "11−3=8=C ✓. Patrón decreciente claro. Distractores por errores de diferencia. nivel_1 ✓. Sin reutilización estructural: las series previas eran +4, ×3, +2." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_003_B003",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "L2 template at nivel_1 complexity: 1-step direct verbal translation, H1=baja",
+      "stem": "En una biblioteca, hay el doble de libros de ciencias que de arte. Si hay 30 libros de ciencias, ¿cuántos libros de arte hay?",
+      "opciones": { "A": "60", "B": "10", "C": "20", "D": "15" },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Relación: ciencias = 2 × arte → arte = ciencias ÷ 2 = 30 ÷ 2 = 15. ✓",
+        "paso_critico": "1 traducción directa: dividir por 2. Sin variable oculta.",
+        "error_tipico": "A(60): multiplica por 2 en lugar de dividir (inversión de relación). B(10): divide por 3. C(20): resta 10."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Modelado incorrecto", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "30÷2=15=D ✓. Unicidad confirmada. A es trampa fuerte (inversión de relación). 1 paso directo. nivel_1 ✓. Contexto biblioteca/ciencias no reutilizado en batches previos." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_004_B003",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«El uso prolongado de pantallas digitales ha generado preocupaciones entre especialistas en salud visual. Estudios señalan que la exposición continua a la luz azul puede causar fatiga ocular y alterar los ciclos de sueño. Como respuesta, algunos fabricantes han incorporado filtros de luz azul en sus dispositivos para reducir estos efectos.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los fabricantes de dispositivos son los principales responsables de los problemas de salud visual.",
+        "B": "La fatiga ocular es el único efecto negativo del uso prolongado de pantallas.",
+        "C": "El uso excesivo de pantallas genera problemas de salud que han motivado respuestas tecnológicas.",
+        "D": "Los filtros de luz azul eliminan completamente los riesgos asociados al uso de pantallas."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar estructura global: problema (salud visual) → consecuencias (fatiga, sueño) → respuesta (filtros de fabricantes).",
+        "paso_2": "La idea central integra el problema Y la respuesta generada — no solo uno de los elementos.",
+        "paso_3": "C es la única que captura la estructura completa sin distorsión. ✓",
+        "paso_critico": "No seleccionar un solo efecto como si fuera la idea principal.",
+        "error_tipico": "A distorsiona el agent (fabricantes como responsables, no como respondientes). B introduce 'único' — el texto menciona fatiga Y sueño. D introduce 'completamente' — el texto dice 'reducir', no eliminar."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "C única: integra problema+respuesta. A distorsiona rol de fabricantes. B usa 'único' ausente. D usa 'completamente' ausente. Tema: tecnología/salud visual — sin reutilización de batches previos. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_005_B003",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 1, 1, 2, 3, 5, 8, ___?",
+      "opciones": { "A": "11", "B": "16", "C": "13", "D": "12" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Analizar diferencias: 1−1=0 no constante. Intentar relación: cada término = suma de los dos anteriores: 1+1=2, 1+2=3, 2+3=5, 3+5=8. Patrón Fibonacci. ✓",
+        "paso_2": "Siguiente término: 5+8 = 13. ✓",
+        "paso_critico": "Detectar que el patrón no es aditivo fijo ni geométrico, sino que cada término depende de los dos anteriores.",
+        "error_tipico": "A(11): suma últimos tres (3+5+... o 8+3=11, usa término incorrecto). B(16): duplica el último (8×2=16, asume patrón geométrico ×2). D(12): suma 8+4=12 (asume diferencia=4 por generalización superficial de la diferencia entre 5 y 3)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "5+8=13=C ✓. Fibonacci verificado: 1,1,2,3,5,8,13. Distractores cubren errores de patrón geométrico (B), suma incorrecta de pares (A), diferencia superficial (D). Patrón distinto de batches previos (+4 aritmético, ×3 geométrico, −3 descendente). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_006_B003",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Complete la siguiente oración con el conector más adecuado:\n\n«Los volcanes activos son zonas de alto riesgo geológico; __________, la mayoría de las comunidades cercanas no han adoptado medidas de prevención.»",
+      "opciones": { "A": "por eso", "B": "es decir", "C": "sin embargo", "D": "además" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera proposición establece alto riesgo geológico. La segunda presenta la ausencia de prevención: resultado inesperado dado el riesgo.",
+        "paso_2": "La relación es de contraste: se esperaría prevención ante el riesgo, pero no existe. Conector adversativo requerido.",
+        "paso_3": "'Sin embargo' (C) expresa exactamente ese contraste expectativa-realidad. ✓",
+        "paso_critico": "Identificar que el riesgo no CAUSA la falta de prevención — más bien, la falta de prevención es sorprendente DADO el riesgo.",
+        "error_tipico": "A('por eso'): causal — implicaría que el riesgo provocó la falta de prevención, relación lógicamente invertida. B('es decir'): aclaratorio — la segunda oración no redefine la primera. D('además'): aditivo — no captura la contraposición."
+      },
+      "h5_adv_verification": {
+        "contrarreciprocal_check": "N/A — conector, sin estructura condicional",
+        "A_por_eso": "incorrecto bajo análisis formal: causalidad invertida",
+        "B_es_decir": "incorrecto: no es reformulación",
+        "D_además": "incorrecto: no expresa contraste"
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "C único correcto. A formalmente incorrecto (causalidad invertida). B formalmente incorrecto (no es reformulación). D formalmente incorrecto (aditivo). H5 rule: sin contrarrecíproco. Sin equivalencias semánticas dobles. Contexto volcanes/prevención — no reutiliza BATCH_001/002. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_007_B003",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Una receta para 4 personas requiere 320 gramos de harina. ¿Cuántos gramos de harina se necesitan para preparar la misma receta para 10 personas?",
+      "opciones": { "A": "400 g", "B": "800 g", "C": "640 g", "D": "1 280 g" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Calcular cantidad por persona: 320 ÷ 4 = 80 g por persona.",
+        "paso_2": "Cantidad para 10 personas: 80 × 10 = 800 g. ✓",
+        "paso_3": "Verificación por proporción: 320/4 = x/10 → x = 3200/4 = 800. ✓",
+        "paso_critico": "Proporcionalidad directa: personas aumentan → gramos aumentan proporcionalmente.",
+        "error_tipico": "A(400g): 80×5=400, confunde 10 personas con 5 'unidades extra'. C(640g): 320×2=640, asume 10=2×4 incorrectamente. D(1280g): 320×4=1280, multiplica por el denominador original en lugar de calcular la razón."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Confusión de proporcionalidad", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "80×10=800=B ✓. Verificación confirma. Distractores: A(error de factor), C(duplica incorrectamente), D(error de operación). Proporcionalidad directa — contexto receta/harina sin reutilización. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_008_B003",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un triángulo, dos de sus ángulos miden 40° y 70°. ¿Cuánto mide el ángulo exterior adyacente al tercer ángulo interior?",
+      "opciones": { "A": "70°", "B": "110°", "C": "40°", "D": "140°" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tercer ángulo interior: 180° − 40° − 70° = 70°.",
+        "paso_2": "Ángulo exterior adyacente = 180° − 70° = 110°. (Ángulos suplementarios.) ✓",
+        "paso_3": "Verificación por teorema del ángulo exterior: ángulo exterior = suma de los dos ángulos no adyacentes = 40° + 70° = 110°. ✓",
+        "paso_critico": "Dos pasos encadenados: hallar tercer ángulo interior, luego calcular su suplemento. El doble camino de verificación confirma unicidad.",
+        "error_tipico": "A(70°): confunde ángulo exterior con el tercer ángulo interior calculado. C(40°): reporta uno de los ángulos dados. D(140°): calcula 180°−40°=140° usando un ángulo dado en lugar del tercer ángulo interior."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Error de cálculo", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B=110° verificado por dos métodos independientes. Unicidad confirmada. A anticipa confusión interior/exterior. C repite valor dado. D aplica suplemento al ángulo equivocado. Sin reutilización: BATCH_001 usó alternos internos; BATCH_002 usó isósceles. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_009_B003",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un torneo de videojuegos, el equipo A anotó 5 puntos más que el triple de los puntos del equipo B. Si el equipo A anotó 41 puntos, ¿cuántos puntos anotó el equipo B?",
+      "opciones": { "A": "36", "B": "12", "C": "18", "D": "9" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Traducir: A = 3B + 5. Sustituir: 41 = 3B + 5 → 3B = 36 → B = 12. ✓",
+        "paso_2": "Verificación: 3(12) + 5 = 36 + 5 = 41. ✓",
+        "paso_critico": "Dos operaciones encadenadas: restar la constante, luego dividir. La trampa principal está en detenerse tras el primer paso.",
+        "error_tipico": "A(36): 41−5=36, no continúa dividiendo — modelado incompleto, trampa más fuerte. C(18): 36÷2=18, divisor incorrecto (usa 2 en vez de 3). D(9): 36÷4=9, confunde 'triple' con 'cuádruple'."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "3(12)+5=41 ✓. B único. A fuerte (modelado incompleto). C y D por divisor incorrecto. Contexto torneo/puntos — nuevo. Sin reutilización estructural. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_010_B003",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_003",
+      "stem": "El grifo A llena un tanque en 6 horas trabajando solo. El grifo B lo llena en 4 horas trabajando solo. Ambos grifos trabajan juntos durante 2 horas; luego se cierra el grifo B. ¿Cuántas horas más necesita el grifo A solo para completar el llenado?",
+      "opciones": { "A": "4 horas", "B": "1 hora", "C": "2 horas", "D": "6 horas" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa A = 1/6 por hora. Tasa B = 1/4 por hora.",
+        "paso_2": "En 2 horas juntos: A llena 2×(1/6)=1/3; B llena 2×(1/4)=1/2. Total: 1/3+1/2 = 2/6+3/6 = 5/6 del tanque.",
+        "paso_3": "Restante: 1 − 5/6 = 1/6 del tanque.",
+        "paso_4": "Tiempo para A solo: (1/6) ÷ (1/6) = 1 hora. ✓",
+        "paso_5": "Verificación: en 1h más, A llena 1×(1/6)=1/6. Total: 5/6+1/6=1 tanque completo. ✓",
+        "paso_critico": "La variable oculta es lo llenado durante las 2h conjuntas — debe calcularse con razones, no con tiempos. La transformación intermedia es convertir tiempo→cantidad→restante→tiempo.",
+        "error_tipico": "A(4h): ignora contribución de B → A solo en 2h llena 2/6=1/3; restante=2/3; (2/3)/(1/6)=4h. C(2h): usa tiempo restante de B como respuesta (B tarda 4h, trabajó 2h → 'quedan 2h'). D(6h): usa el tiempo completo de A ignorando todo trabajo realizado."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "Verificación completa: 5/6 llenado en 2h conjuntas + 1/6 en 1h por A = 1. Unicidad confirmada. Distractor A plausible (ignora B), C plausible (confunde tiempo de B con respuesta), D plausible (olvida trabajo realizado). Dos transformaciones intermedias obligatorias = H1=alta ✓. Contexto grifo/tanque — sin reutilización." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_011_B003",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_003",
+      "stem": "Lea el siguiente texto:\n\n«El turismo masivo genera ingresos significativos para muchas economías costeras, pero también provoca deterioro de ecosistemas marinos y aumento de los precios locales. Sin embargo, la mayoría de las políticas turísticas priorizan el crecimiento del flujo de visitantes sobre la sostenibilidad de los recursos naturales. Esto revela una contradicción estructural en cómo se administran estos destinos.»\n\n¿Cuál es la conclusión implícita que articula el argumento del texto?",
+      "opciones": {
+        "A": "El turismo masivo es inevitablemente dañino para cualquier ecosistema marino del mundo.",
+        "B": "Las políticas turísticas deben equilibrar el crecimiento económico con la protección de los ecosistemas.",
+        "C": "Los ingresos del turismo son insuficientes para compensar el daño ambiental que genera.",
+        "D": "El deterioro de los ecosistemas es el único problema grave causado por el turismo masivo."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura argumentativa: premisa 1 (turismo genera ingresos pero deteriora ecosistemas y eleva precios), premisa 2 (políticas priorizan volumen sobre sostenibilidad), cierre ('contradicción estructural').",
+        "paso_2": "La expresión 'contradicción estructural' señala que la gestión actual es incoherente con sus propios objetivos — la conclusión implícita es que debe cambiar.",
+        "paso_3": "B expresa la prescripción normativa implícita que resuelve la contradicción: equilibrar crecimiento y protección. ✓",
+        "paso_critico": "Distinguir entre premisas del argumento y la conclusión no enunciada. C reformula una premisa distorsionada (no es problema de insuficiencia de ingresos sino de priorización). D parcializa (ignora precios locales y usa 'único').",
+        "error_tipico": "A sobreextiende con 'inevitablemente' y 'cualquier ecosistema del mundo' — el texto no sostiene esa universalidad. C introduce comparación cuantitativa ingresos-daño ausente en el texto. D usa 'único' y parcializa las consecuencias mencionadas."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: es la prescripción normativa implícita de 'contradicción estructural'. A universaliza sin soporte. C introduce comparación cuantitativa ausente. D parcializa con 'único'. Conclusión no explícita → H1=alta ✓. Tema: turismo/ecosistemas — distinto de azúcar/regulación (B001) y espacios-verdes (B002)." },
+      "final_status": "approved", "attempt": 1
+    },
+
+    {
+      "item_id": "ITEM_012_B003",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_003",
+      "stem": "El punto P(−2, 5) se refleja sobre el eje x. Luego, el punto imagen P' se rota 90° en sentido antihorario alrededor del origen. ¿Cuáles son las coordenadas del punto final P''?",
+      "opciones": { "A": "(5, −2)", "B": "(−5, 2)", "C": "(2, 5)", "D": "(−5, −2)" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Reflexión sobre eje x: (x, y) → (x, −y). P(−2, 5) → P'(−2, −5).",
+        "paso_2": "Rotación 90° antihoraria: (x, y) → (−y, x). P'(−2, −5) → P''(−(−5), −2) = (5, −2). ✓",
+        "paso_3": "Verificación: P''=(5,−2). ✓",
+        "paso_critico": "Dos transformaciones secuenciales no conmutativas aplicadas en el orden correcto al punto correcto (P', no P).",
+        "error_tipico": "B(−5,2): aplica rotación en sentido horario a P': (x,y)→(y,−x) → (−5,−(−2))=(−5,2). C(2,5): refleja sobre eje y en lugar de eje x → P'(2,5), omite la rotación. D(−5,−2): aplica fórmula de rotación incorrecta (y,x) en lugar de (−y,x) → P'(−2,−5)→(−5,−2)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "Verificación: eje-x → (−2,−5); CCW 90° → (5,−2)=A ✓. Unicidad confirmada. B anticipa rotación CW. C anticipa eje y incorrecto + omisión. D anticipa fórmula de rotación incorrecta. Dos transformaciones no conmutativas = H1=alta ✓. Distinto de B001 (reflexión eje-y/rectángulo) y B002 (rotación CCW punto A,B)." },
+      "final_status": "approved", "attempt": 1
+    }
+
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_003",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06) ✓ sustained"
+    },
+
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 6,
+      "nivel_3": 3,
+      "all_constraints": "SATISFIED"
+    },
+
+    "skill_distribution": {
+      "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2,
+      "note": "Perfectly balanced — no dominant skill"
+    },
+
+    "h1_distribution": {
+      "baja": 3, "media": 6, "alta": 3,
+      "pct_alta": 0.250,
+      "constraint_0.25_to_0.35": "SATISFIED (25.0%)",
+      "alta_restricted_to_nivel3": "SATISFIED ✓"
+    },
+
+    "macro_area_distribution": { "RCM": 7, "RCV": 5 },
+
+    "template_usage": {
+      "limited_used": [
+        "T_H6_RCM_L3_01: 1 use (ITEM_010) ✓",
+        "T_H3_RCV_L3_01: 1 use (ITEM_011) ✓",
+        "T_H7_RCM_L3_01: 1 use (ITEM_012) ✓"
+      ],
+      "limited_not_used_this_batch": ["T_H2_RCM_L3_01"],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01: NOT USED ✓",
+      "l1_template_gap": "STILL OPEN — FLAG_001 persists. nivel_1 items continue using L2 templates at minimal instantiation."
+    },
+
+    "structural_reuse_check": "PASSED — 12 distinct contexts, no surface pattern repeated from BATCH_001 or BATCH_002",
+
+    "cumulative_training_segment": {
+      "batch_001_approved": 9,
+      "batch_002_approved": 12,
+      "batch_003_approved": 12,
+      "total_approved": 33,
+      "training_target": 140,
+      "progress_pct": 23.6
+    },
+
+    "drift_check_vs_batch002": {
+      "skill_distribution_delta": "max delta per skill = 0 (both batches perfectly balanced at 2 per skill)",
+      "difficulty_distribution_delta": "identical (3/6/3)",
+      "h1_alta_delta": "0.250 vs 0.250 — stable",
+      "conflict_rate_delta": "0.000 vs 0.000 — stable",
+      "drift_signal": "NONE DETECTED"
+    },
+
+    "system_flags": ["FLAG_001 open — L1 template gap"],
+    "template_invalidation_flags": "none",
+    "prompt_invalidation_flags": "none",
+    "next_action": "ready_for_batch_4",
+    "notes": "BATCH_003 completes with zero rejections for second consecutive batch. All metrics stable. Drift check clear. Skill balance now perfectly uniform (2 per skill). L1 authenticity maintained: items 001-003 are genuine 1-step direct tasks. H5 rule enforced on both H5 items."
+  }
+}

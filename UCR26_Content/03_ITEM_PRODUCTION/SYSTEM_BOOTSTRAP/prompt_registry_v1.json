@@ -1,0 +1,61 @@
+[
+  {
+    "prompt_id": "GEN_v1",
+    "tipo": "GEN",
+    "input_schema": [
+      "template_id",
+      "macro_area",
+      "skill",
+      "nivel_dificultad",
+      "estructura_logica",
+      "tipo_distractor",
+      "trampa_recurrente"
+    ],
+    "output_schema": [
+      "item_id",
+      "template_id",
+      "prompt_id",
+      "stem",
+      "opciones",
+      "respuesta_correcta",
+      "justificacion",
+      "metadata"
+    ],
+    "constraints": [
+      "4 opciones exactas",
+      "1 única respuesta correcta",
+      "sin ambigüedad",
+      "coherencia con skill única",
+      "nivel cognitivo válido",
+      "justificación paso a paso obligatoria",
+      "explicación de error típico obligatoria",
+      "no reutilización estructural superficial"
+    ],
+    "estado": "active",
+    "version": "1.0"
+  },
+  {
+    "prompt_id": "ADV_v1",
+    "tipo": "ADV",
+    "input_schema": [
+      "item completo",
+      "metadata"
+    ],
+    "output_schema": [
+      "verdict",
+      "error_type",
+      "conflict_flag"
+    ],
+    "constraints": [
+      "validación independiente",
+      "verificación de unicidad de respuesta",
+      "detección de ambigüedad",
+      "detección de error lógico",
+      "detección de distractores débiles",
+      "detección de mala clasificación",
+      "conflicto → reject automático"
+    ],
+    "estado": "active",
+    "version": "1.0"
+  }
+]

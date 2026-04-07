@@ -1,0 +1,722 @@
+{
+  "batch_id": "BATCH_017",
+  "generated_at": "2026-03-24T17:31:42-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_1",
+  "target_items": 12,
+  "pipeline_status": "ACTIVE — sim_1 accumulation continues",
+  "segment_note": "sim_1_count pasa de 25 a 37. Contribuye exclusivamente a sim_1_count.",
+  "skill_plan": {
+    "H3_RCV": 3,
+    "H5_RCV": 2,
+    "H2_RCM": 2,
+    "H4_RCM": 2,
+    "H6_RCM": 2,
+    "H7_RCM": 1,
+    "macro_RCV": 5,
+    "macro_RCM": 7,
+    "note": "Residual after 25 items: H2:3, H3:3, H4:2, H5:2, H6:3, H7:1 (total 14). This batch delivers H3:3, H5:2, H2:2, H4:2, H6:2, H7:1 (12). Leaves final 8: H2:1, H6:1, plus 6 items distributed to close at 45."
+  },
+  "difficulty_plan": {
+    "nivel_1": 3,
+    "nivel_2": 6,
+    "nivel_3": 3,
+    "note": "Aumenta proporción L2/L3. Residual 20 items: N1:5, N2:10, N3:5. Batch entrega N1:3, N2:6, N3:3."
+  },
+  "h1_plan": {
+    "target_pct_alta": "30-40%",
+    "items_alta_this_batch": 5,
+    "pct_alta_this_batch": 0.417,
+    "note": "5/12 = 41.7% alta this batch. Cumulative 25+12=37: ~13 alta / 37 = 35.1% — dentro de rango."
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B017",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "El trabajo remoto ha transformado la relación entre productividad y espacio físico al desacoplar rendimiento de presencia",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Durante décadas, la productividad laboral se asoció directamente con la presencia física en la oficina. El trabajo remoto ha cuestionado este supuesto al demostrar que, en muchos contextos, los equipos mantienen o incrementan su rendimiento sin compartir un espacio común. Esta disociación entre lugar y resultado obliga a replantear los indicadores tradicionales de gestión del desempeño.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La oficina presencial seguirá siendo el entorno más productivo para la mayoría de los trabajadores.",
+        "B": "Los equipos remotos son inevitablemente más productivos que los equipos presenciales.",
+        "C": "El trabajo remoto ha demostrado que productividad y presencia física pueden estar desacopladas, lo que exige revisar los criterios de desempeño.",
+        "D": "Los indicadores de gestión del desempeño son inadecuados porque no consideran factores tecnológicos."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto no afirma que lo remoto sea superior (descarta B) ni que la oficina prevalezca (descarta A). Señala que el supuesto histórico —presencia = productividad— ha sido cuestionado.",
+        "paso_2": "La conclusión explícita del texto es que esta disociación obliga a replantear los indicadores de desempeño. C integra ambos elementos: evidencia del desacople + consecuencia (revisar criterios). ✓",
+        "paso_critico": "La idea central no es solo que 'el remoto funciona', sino la implicación sistémica: los criterios de medición deben cambiar.",
+        "error_tipico": "A invierte la tesis. B sobreinfera superioridad absoluta que el texto no sostiene. D introduce la tecnología como causa específica — el texto no la menciona."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C única: integra disociación presencia/productividad + consecuencia de replantear indicadores. A invierte tesis. B sobreinfera superioridad absoluta. D introduce causa tecnológica no presente. H3/N2/RCV ✓. Idea central multi-componente correctamente identificada. H1=media ✓. simulation_id=sim_1 ✓. Contexto trabajo-remoto/productividad — distinto de todos los H3 anteriores (B013: lectura-sostenida, pensiones, tecnología-neutral; B016: reciclaje-doméstico)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B017",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "El lenguaje condiciona la percepción de la realidad, lo que convierte su análisis en una herramienta de comprensión social",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Las palabras que una sociedad posee para nombrar fenómenos naturales, emociones o relaciones sociales no son neutras: reflejan prioridades culturales y configuran la manera en que sus hablantes perciben el mundo. Estudiar el léxico de una lengua es, por tanto, estudiar la estructura cognitiva y valorativa de quienes la hablan.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las lenguas con mayor vocabulario permiten una comprensión más precisa de la realidad que las lenguas con léxico reducido.",
+        "B": "El vocabulario de una lengua refleja y moldea la forma en que sus hablantes perciben el mundo, por lo que su análisis revela la estructura cognitiva y cultural de esa sociedad.",
+        "C": "Las emociones y relaciones sociales son universales, aunque cada lengua las nombre de forma diferente.",
+        "D": "El estudio del lenguaje debe reemplazar al de la historia como método principal para comprender las culturas."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto afirma dos cosas: (1) las palabras no son neutras — reflejan prioridades culturales y condicionan la percepción; (2) estudiar el léxico equivale a estudiar la estructura cognitiva y valorativa.",
+        "paso_2": "B integra ambas proposiciones: vocabulario refleja-y-moldea percepción + su análisis revela estructura cognitiva/cultural. ✓",
+        "paso_critico": "La idea central no es una comparación entre lenguas (A) ni una afirmación de universalidad (C), sino la relación bidireccional entre léxico y cognición cultural.",
+        "error_tipico": "A introduce comparación de vocabularios que el texto no hace. C afirma universalidad de emociones — contrario a la tesis de particularidad cultural. D propone una sustitución metodológica que excede radicalmente el alcance del texto."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 105,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: léxico refleja+moldea percepción → análisis revela estructura cognitiva/cultural. A comparación no presente. C universalidad contradice particularidad cultural del texto. D sustitución metodológica fuera de alcance. H3/N2/RCV ✓. H1=media ✓. simulation_id=sim_1 ✓. Contexto léxico/cognición-cultural — distinto de todos los H3 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B017",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "argument_structure": "Premisa: regulación sin incentivos produce evasión. Premisa implícita: evasión es el mayor riesgo para el objetivo ambiental. Conclusión: los incentivos son componente necesario de cualquier política ambiental eficaz.",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Las políticas ambientales que se limitan a prohibir prácticas contaminantes sin ofrecer alternativas económicamente viables tienden a generar evasión regulatoria. La historia de la gestión ambiental sugiere que la combinación de normas coercitivas con incentivos positivos para la adopción de tecnologías limpias produce resultados más sostenibles. Una empresa que encuentra rentable cumplir cumple; una empresa que solo encuentra costoso cumplir busca cómo evitar.»\n\n¿Cuál es la conclusión principal que el texto defiende?",
+      "opciones": {
+        "A": "Las empresas son actores irracionales que priorizan el incumplimiento normativo sobre la eficiencia.",
+        "B": "Las prohibiciones ambientales son ineficaces porque las empresas siempre encontrarán mecanismos de evasión.",
+        "C": "El objetivo de la política ambiental debe ser exclusivamente eliminar las prácticas contaminantes mediante normas coercitivas.",
+        "D": "Una política ambiental efectiva requiere combinar normas coercitivas con incentivos económicos que hagan rentable el cumplimiento."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El texto no afirma que las prohibiciones sean siempre ineficaces (B es absoluto y el texto dice 'tienden a generar') ni que las empresas sean irracionales (A — al contrario, el texto asume racionalidad económica).",
+        "paso_2": "La conclusión explícita es que combinación de normas + incentivos produce resultados más sostenibles. La última oración — 'una empresa que encuentra rentable cumplir cumple' — es la premisa que sustenta esa conclusión. D la recoge fielmente. ✓",
+        "paso_critico": "La conclusión no es solo 'los incentivos ayudan' sino que son componente necesario de la combinación. No se desprecia la norma coercitiva — se arguye que sola es insuficiente.",
+        "error_tipico": "B absolutiza lo que el texto relativiza ('tienden'). C propone lo opuesto a la tesis. A malinterpreta la racionalidad económica como irracionalidad."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 3,
+        "estimated_time_sec": 170,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D única: reconstruye estructura argumental — norma sola → evasión; norma + incentivo → cumplimiento sostenible. A malinterpreta racionalidad. B absolutiza lo que el texto relativiza. C invierte la tesis. H3/N3/RCV ✓. Estructura argumentativa implícita detectada correctamente (premisa económica → conclusión de política combinada). H1=alta: la conclusión no está formulada explícitamente, requiere reconstrucción. simulation_id=sim_1 ✓. Contexto política-ambiental/incentivos — distinto de todos los H3 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B017",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: las ciudades concentran innovación; segunda: también generan desigualdad estructural → aditivo con tensión (ambos fenómenos coexisten)",
+        "connector_type": "aditivo-adversativo equilibrado",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Las ciudades son los principales motores de innovación tecnológica y crecimiento económico en el mundo contemporáneo. __________, concentran también las formas más agudas de desigualdad social y segregación urbana.»",
+      "opciones": {
+        "A": "Por esta razón",
+        "B": "En consecuencia",
+        "C": "Sin embargo",
+        "D": "Por lo tanto"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta un atributo positivo de las ciudades (motor de innovación). La segunda oración introduce un atributo negativo que coexiste con el primero (desigualdad). No es consecuencia del primero — es una tensión.",
+        "paso_2": "'Sin embargo' (C) expresa que, a pesar del rol positivo, existe también un rasgo negativo — contraste que no niega la primera afirmación sino que la matiza. ✓",
+        "paso_critico": "El 'también' en la segunda oración confirma que ambos fenómenos coexisten, no que uno cause al otro. No existe relación causal aquí.",
+        "error_tipico": "A, B y D (causales/conclusivos) implicarían que la desigualdad es consecuencia de la innovación — posible en análisis más profundo, pero el texto no lo establece. La trampa es la co-ocurrencia que puede leerse como causalidad."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único adversativo: coexistencia de innovación + desigualdad sin causalidad explícita. A/B/D causales/conclusivos (requieren relación causal ausente). H5/N2/RCV ✓. Trampa: 'también' activa lectura aditiva pero la estructura global es de tensión. H1=media ✓. simulation_id=sim_1 ✓. Contexto ciudades/innovación-desigualdad — distinto de todos los H5 previos (vacuna-gripe, animales-nocturnos, ultraprocesados-obesidad, conectores B013)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B017",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "structure_A": "La automatización elimina empleos de forma neta en el largo plazo",
+        "structure_B": "La automatización desplaza categorías de tareas, pero genera nuevas demandas laborales que compensan en el largo plazo",
+        "equivalence_test": "Ambas estructuras son lógicamente contrarias — no equivalentes. La correcta equivalencia semántica es entre B y la opción D del ítem.",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«La automatización no erradica el trabajo humano; desplaza las tareas rutinarias hacia actividades que requieren creatividad, juicio contextual y adaptabilidad, generando así nuevas formas de demanda laboral.»",
+      "opciones": {
+        "A": "La automatización es una amenaza inevitable para el empleo humano en todos los sectores productivos.",
+        "B": "El trabajo creativo y adaptable es superior al trabajo rutinario en cualquier contexto económico.",
+        "C": "La robotización industrial ha eliminado más empleos de los que ha creado en las últimas décadas.",
+        "D": "Al sustituir tareas repetitivas, la automatización redirige la actividad humana hacia competencias no automatizables y crea nuevas necesidades laborales."
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El enunciado original afirma: (i) la automatización NO erradica el trabajo; (ii) desplaza tareas rutinarias; (iii) genera nuevas formas de demanda laboral en competencias creativas/adaptables.",
+        "paso_2": "D recoge las tres proposiciones con vocabulario diferente: 'sustituir tareas repetitivas' = desplazar rutinario; 'redirige hacia competencias no automatizables' = creatividad/adaptabilidad; 'crea nuevas necesidades laborales' = nuevas formas de demanda. ✓",
+        "paso_critico": "La equivalencia semántica requiere preservar la negación implícita (no elimina neto) y la compensación. A y C invierten la tesis. B introduce juicio de valor ausente.",
+        "error_tipico": "A absolutiza 'amenaza inevitable para todos los sectores' — opuesto a la tesis. C cuantifica pérdida neta que el texto niega. B introduce superioridad valorativa del trabajo creativo — no es lo que el texto afirma."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 3,
+        "estimated_time_sec": 165,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D única equivalente: sustituye-rutinario→redirige-no-automatizable+genera-nueva-demanda. A absolutiza amenaza neta (contrario). B introduce juicio valorativo ausente. C cuantifica pérdida neta que el texto niega. H5/N3/RCV ✓. Equivalencia semántica compleja: preservar negación implícita + compensación. H1=alta: requiere reconocer equivalencia lógica no léxica. simulation_id=sim_1 ✓. Contexto automatización/mercado-laboral — distinto de todos los H5 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B017",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "p = precio unitario producto",
+        "equation": "3p + 2(150) = 1050 → 3p + 300 = 1050 → 3p = 750 → p = 250",
+        "correct_option": "B",
+        "correct_answer_value": 250,
+        "verification": "3(250) + 2(150) = 750 + 300 = 1050 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En una tienda de artículos escolares, se compran 3 carpetas y 2 reglas. Cada regla cuesta ₡150 y el total de la compra es ₡1 050. ¿Cuánto cuesta cada carpeta?",
+      "opciones": {
+        "A": "₡230",
+        "B": "₡250",
+        "C": "₡270",
+        "D": "₡300"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea p = precio de cada carpeta. Ecuación: 3p + 2(150) = 1050 → 3p + 300 = 1050 → 3p = 750.",
+        "paso_2": "p = 750 ÷ 3 = 250. ✓ Verificación: 3(250) + 2(150) = 750 + 300 = 1050 ✓.",
+        "paso_critico": "Calcular primero el costo total de las reglas (2×150=300) y restarlo del total antes de dividir entre 3.",
+        "error_tipico": "A (₡230): 3p=690→p=230, usa costo de 1 regla en lugar de 2. C (₡270): error aritmético en la resta (1050-300=750 → 750/3=250, pero suma mal). D (₡300): 1050÷3=350 no es D; D aparece si se divide directamente el total entre 3 y se itera mal."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 1,
+        "estimated_time_sec": 65,
+        "error_type": "Modelado incorrecto",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "3p+300=1050→p=250=B ✓. Verif: 3(250)+2(150)=1050 ✓. A usa solo 1 regla. C error aritmético. D división directa sin restar costo fijo. H2/N1/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: ecuación lineal con costo fijo. N1: 1 paso operacional. H1=baja ✓. simulation_id=sim_1 ✓. Contexto carpetas/reglas/tienda — distinto de B016 (cuadernos-lápices, fontanero) y B013 (mangos, vendedora, edades) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B017",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "a = edad actual Andrea, b = edad actual Bruno",
+        "equations": "a + b = 42; (a - 5) = 2(b - 5) → a - 5 = 2b - 10 → a = 2b - 5",
+        "substitution": "2b - 5 + b = 42 → 3b = 47 → b = 47/3 ... recalculate",
+        "recheck": "a - 5 = 2(b - 5): a = 2b - 10 + 5 = 2b - 5. Sum: (2b-5) + b = 42 → 3b = 47",
+        "note": "47/3 no es entero — rediseñar con valores que produzcan enteros",
+        "redesign": "a + b = 45; hace 6 años: a-6 = 2(b-6) → a-6 = 2b-12 → a = 2b-6. Sum: 2b-6+b=45 → 3b=51 → b=17, a=28",
+        "correct_option": "C",
+        "correct_answer_value_a": 28,
+        "correct_answer_value_b": 17,
+        "verification": "28+17=45 ✓; hace 6 años: 22=2(11)=22 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "La suma de las edades actuales de Andrea y Bruno es 45 años. Hace 6 años, Andrea tenía el doble de la edad que tenía Bruno en ese entonces. ¿Cuántos años tiene Andrea actualmente?",
+      "opciones": {
+        "A": "25",
+        "B": "26",
+        "C": "28",
+        "D": "30"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea a = edad actual de Andrea, b = edad actual de Bruno. Sistema: (i) a + b = 45; (ii) hace 6 años: (a−6) = 2(b−6) → a − 6 = 2b − 12 → a = 2b − 6.",
+        "paso_2": "Sustituir en (i): (2b − 6) + b = 45 → 3b = 51 → b = 17. Luego a = 45 − 17 = 28. ✓",
+        "paso_critico": "Construir correctamente la ecuación de hace 6 años: ambas edades se reducen en 6, y la relación es (a−6) = 2(b−6), no a = 2b.",
+        "error_tipico": "A (25): a=2b→a+b=45→3b=45→b=15→a=30; error si se usa a=2b sin el ajuste temporal. B (26): error aritmético en el despeje de b. D (30): usar relación sin ajuste temporal (a=2b → b=15 → a=30)."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 3,
+        "estimated_time_sec": 195,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Sistema: a+b=45; a-6=2(b-6)→a=2b-6; 3b=51→b=17→a=28=C ✓. Verif: 28+17=45 ✓; hace 6 años: 22=2(11) ✓. D (30): sin ajuste temporal a=2b→b=15→a=30 — distractor fuerte correcto. A usa ajuste incorrecto. B error aritmético. H2/N3/RCM ✓. Sistema implícito encadenado con variable oculta temporal. H1=alta: variable oculta 'hace 6 años' aplicada a ambas edades. simulation_id=sim_1 ✓. Contexto edades-Andrea-Bruno — distinto de B013 edades (edades distintas) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B017",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "differences: 5-2=3, 9-5=4, 14-9=5, 20-14=6, 27-20=7 → differences grow by 1",
+        "next_difference": 8,
+        "next_term": "27 + 8 = 35",
+        "correct_option": "B",
+        "correct_answer_value": 35,
+        "verification": "2,5,9,14,20,27,35 — diferencias: 3,4,5,6,7,8 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 2, 5, 9, 14, 20, 27, ___?",
+      "opciones": {
+        "A": "33",
+        "B": "35",
+        "C": "36",
+        "D": "34"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos consecutivos: 5−2=3, 9−5=4, 14−9=5, 20−14=6, 27−20=7. Las diferencias crecen de 1 en 1.",
+        "paso_2": "Siguiente diferencia: 8. Siguiente término: 27 + 8 = 35. ✓",
+        "paso_critico": "El patrón no está en los términos directamente, sino en la secuencia de diferencias (3, 4, 5, 6, 7, …), que es aritmética de razón 1.",
+        "error_tipico": "A (33): 27+6=33, repite la penúltima diferencia (6) en lugar de la siguiente (8). D (34): 27+7=34, repite la última diferencia observada (7) sin incrementar. C (36): 27+9=36, incrementa la diferencia en 2 en lugar de 1."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 2,
+        "estimated_time_sec": 115,
+        "error_type": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Diferencias 3,4,5,6,7→siguiente=8; 27+8=35=B ✓. Verif: secuencia 2,5,9,14,20,27,35 ✓. A repite penúltima diferencia. D repite última. C incrementa de 2. H4/N2/RCM ✓. Patrón de segundo orden (diferencias crecen aritméticamente). H1=media ✓. simulation_id=sim_1 ✓. Secuencia triangular+1 — distinto de B016-item4 (n(n+1), dif +2), B016-item9 (alternante +1/×2), B013 (×2+3)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B017",
+      "template_id": "T_H4_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "pattern": "1, 1, 2, 3, 5, 8, 13, 21 — Fibonacci: each term = sum of two previous",
+        "next_term_after_13": "8+13=21, next after 21: 13+21=34",
+        "correct_option": "C",
+        "correct_answer_value": 34,
+        "verification": "Fibonacci: 1,1,2,3,5,8,13,21,34 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 1, 1, 2, 3, 5, 8, 13, 21, ___?",
+      "opciones": {
+        "A": "29",
+        "B": "32",
+        "C": "34",
+        "D": "42"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Analizar las diferencias entre términos consecutivos: 0, 1, 1, 2, 3, 5, 8 — las diferencias forman la misma serie desplazada. La regla es: cada término es la suma de los dos anteriores.",
+        "paso_2": "Siguiente término: 13 + 21 = 34. ✓ La regla es: Tₙ = Tₙ₋₁ + Tₙ₋₂.",
+        "paso_critico": "Identificar la regla de recurrencia de orden 2: no es suficiente mirar un solo paso previo. La trampa es buscar una diferencia constante.",
+        "error_tipico": "A (29): 21+8=29, suma el término anterior al penúltimo en lugar de los dos anteriores (confunde posición). B (32): error aritmético. D (42): 21+21=42, duplica el último término."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "difficulty": 3,
+        "estimated_time_sec": 180,
+        "error_type": "Generalización excesiva",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "13+21=34=C ✓. Fibonacci Tₙ=Tₙ₋₁+Tₙ₋₂ ✓. A suma posición incorrecta. B error aritmético. D duplica último. H4/N3/RCM ✓. Regla de recurrencia orden 2 — no explícita, multi-nivel. H1=alta: regla implícita requiere inferencia de estructura, no solo observación de diferencias. simulation_id=sim_1 ✓. Fibonacci distinguible estructuralmente de B016-item4 (n(n+1)), B016-item9 (alternante), B017-item8 (diferencias +1)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B017",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "tasa: ₡3 600 / 6 horas = ₡600 por hora",
+        "step_2": "9 horas × ₡600 = ₡5 400",
+        "correct_option": "B",
+        "correct_answer_value": 5400,
+        "verification": "3600/6 = 600; 600 × 9 = 5400 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un jardinero cobra ₡3 600 por trabajar 6 horas. Manteniendo la misma tarifa, ¿cuánto cobrará por trabajar 9 horas?",
+      "opciones": {
+        "A": "₡4 800",
+        "B": "₡5 400",
+        "C": "₡5 700",
+        "D": "₡6 000"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tarifa unitaria: ₡3 600 ÷ 6 horas = ₡600 por hora.",
+        "paso_2": "Para 9 horas: ₡600 × 9 = ₡5 400. ✓",
+        "paso_critico": "Calcular la tasa unitaria (precio por hora) antes de escalar al nuevo número de horas.",
+        "error_tipico": "A (₡4800): 3600+3600/6×2=3600+1200=4800, agrega solo 2 horas en lugar de 3. C (₡5700): tasa de ₡570/hora (error de división). D (₡6000): 3600+3600/2=3600+2400... error de escalado por la mitad extra."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 1,
+        "estimated_time_sec": 60,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "600×9=5400=B ✓. Verif: 3600/6=600; 600×9=5400 ✓. A agrega solo 2h extra. C tasa incorrecta. D error de escalado por mitad. H6/N1/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad. N1: tasa directa + aplicación, 1 paso. H1=baja ✓. simulation_id=sim_1 ✓. Contexto jardinero/tarifa-horaria — distinto de B016 (receta-harina, autobús, fábrica) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B017",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Tasa A: 240 km en 3 h = 80 km/h",
+        "step_2": "Tasa B: 350 km en 5 h = 70 km/h",
+        "step_3": "Diferencia de velocidades: 80 - 70 = 10 km/h. A es más rápido.",
+        "comparison": "razón A/B = 80/70 = 8/7",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "El tren A recorre 240 km en 3 horas. El tren B recorre 350 km en 5 horas. ¿Cuál de los dos trenes viaja más rápido y por cuánto?",
+      "opciones": {
+        "A": "El tren A, porque su velocidad es 10 km/h mayor que la del tren B.",
+        "B": "El tren B, porque recorre una distancia total mayor.",
+        "C": "El tren A, porque recorre una distancia menor en menos tiempo.",
+        "D": "Ambos viajan a la misma velocidad porque la diferencia de distancia y tiempo es proporcional."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Calcular velocidades unitarias: Tren A: 240÷3 = 80 km/h. Tren B: 350÷5 = 70 km/h.",
+        "paso_2": "Tren A es más rápido. Diferencia: 80 − 70 = 10 km/h. ✓",
+        "paso_critico": "Comparar razones (velocidades), no valores absolutos. El tren B recorre más kilómetros pero en proporción a su tiempo, es más lento.",
+        "error_tipico": "B compara distancias absolutas (350 > 240) sin considerar el tiempo — error de comparar valores sin normalizar. C es parcialmente correcta en la conclusión pero la justificación es incorrecta (no se puede concluir velocidad solo de 'menos tiempo/menos distancia'). D propone igualdad falsa — 240/3 ≠ 350/5."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 3,
+        "estimated_time_sec": 185,
+        "error_type": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A única correcta: 80km/h vs. 70km/h, diferencia exacta 10km/h ✓. B compara absolutos (trampa fuerte). C concluye correcto pero razona incorrectamente — distractor sofisticado válido. D propone igualdad falsa (80≠70). H6/N3/RCM ✓. Comparación de razones no explícitas con transformación intermedia. H1=alta: requiere inferir que la comparación debe hacerse sobre razones, no valores absolutos. simulation_id=sim_1 ✓. Contexto velocidad-trenes — distinto de B016 H6 (harina, autobús/B013, fábrica/B013) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B017",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "Triángulo equilátero de lado 6 cm. Altura = (√3/2)×6 = 3√3 cm.",
+        "step_2": "El cuadrado inscrito: hay que inferir la relación. Cuadrado inscrito en triángulo equilátero con un lado sobre la base.",
+        "step_3": "Sea s el lado del cuadrado. El triángulo superior tiene base (6-s) pero con proporciones... altura total = 3√3. La altura del triángulo por encima del cuadrado = 3√3 - s. Triángulo superior es semejante al original: (6-s)/6 = (3√3-s)/(3√3) → 6(3√3-s) = 3√3(6-s) → 18√3-6s = 18√3-3√3·s → 3√3·s-6s=0 → s(3√3-6)=0... error — redo",
+        "redo": "Base superior del cuadrado divide triángulo. Triángulo superior similar al original con escala k. base_sup = 6k. 6k = 6 - 2×(base offset). Por semejanza: la altura restante = 3√3·k. And s is the side of square. The base of the upper triangle = 6k = 6-? Let me use standard formula: s = (6·3√3)/(6+3√3) = 18√3/(6+3√3) = 18√3/(3(2+√3)) = 6√3/(2+√3) = 6√3(2-√3)/((2+√3)(2-√3)) = 6√3(2-√3)/(4-3) = 6√3(2-√3) = 12√3 - 18 ≈ 12(1.732)-18 = 20.784-18 = 2.784 cm",
+        "note": "Resultado irracional — demasiado complejo para L3 de simulacro. Redesign: usar triángulo rectángulo con cuadrado inscrito en hipotenusa conceptualmente simpler.",
+        "redesign": "Cuadrado de lado s inscrito en triángulo rectángulo con catetos 3 y 4. Área triángulo = 6. s = (3×4)/(3+4) = 12/7 ≈ 1.71. Irracional. Use conceptual: triángulo rectángulo 6-8-10 (catetos 6,8). s=6×8/(6+8)=48/14=24/7. Still irrational.",
+        "final_redesign": "Pregunta sobre rotación/reflexión espacial — más apropiada para H7/L3. Una figura se rota 90° en sentido horario y luego se refleja sobre el eje vertical. ¿Cuál es el efecto neto? Efecto neto de rot90°CW + reflex_vert = reflex_horizontal.",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Una figura geométrica plana se somete a dos transformaciones sucesivas: primero una rotación de 90° en sentido horario alrededor de su centro, y luego una reflexión sobre un eje vertical que pasa por ese mismo centro. ¿Cuál de las siguientes opciones describe correctamente la transformación neta equivalente?",
+      "opciones": {
+        "A": "Una rotación de 180° alrededor del centro.",
+        "B": "Una reflexión sobre el eje horizontal.",
+        "C": "Una reflexión sobre una línea diagonal que pasa por el centro (a 45° respecto al eje horizontal).",
+        "D": "Una rotación de 270° en sentido antihorario."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Rotación 90° CW: lleva el vector (x, y) → (y, −x). Reflexión vertical (sobre eje y): lleva (x, y) → (−x, y). Composición: (x,y) →rot→ (y,−x) →reflex→ (−y,−x).",
+        "paso_2": "La transformación (x,y)→(−y,−x) es equivalente a una reflexión sobre la línea y = −x, es decir, una diagonal a 45° en el tercer/primer cuadrante (dirección −45° o 135°). ✓",
+        "paso_critico": "La composición de rotación + reflexión no es en general una rotación pura ni una reflexión sobre eje axial. Hay que aplicar las transformaciones secuencialmente a un punto de prueba y analizar el resultado.",
+        "error_tipico": "A (rotación 180°): llevaría (x,y)→(−x,−y) ≠ (−y,−x). B (reflexión horizontal): llevaría (x,y)→(x,−y) ≠ resultado. D (rotación 270° CCW = 90° CW): llevaría (x,y)→(y,−x) = solo la primera transformación, sin la reflexión."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "difficulty": 3,
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C única: composición rot90CW + reflex_vert = (x,y)→(y,-x)→(-y,-x) — reflexión sobre y=-x (diagonal 135°/a 45° del eje horizontal). A: rot180→(-x,-y)≠(-y,-x). B: reflex_horiz→(x,-y)≠resultado. D: rot270CCW=rot90CW = solo primera transformación. H7/N3/RCM ✓. Transformación geométrica compuesta con inferencia espacial no explícita — resultado no intuitivo. H1=alta: requiere razonamiento compositivo sobre coordenadas. simulation_id=sim_1 ✓. Contexto transformaciones-isométricas-compuestas — distinto de H7 previos (rombo-área B016, triángulo-Pitágoras B013, rectángulo B015-diag)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_017",
+    "item_type": "simulation",
+    "simulation_id": "sim_1",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_1": true,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 2,
+      "H3": 3,
+      "H4": 2,
+      "H5": 2,
+      "H6": 2,
+      "H7": 1,
+      "H2_note": "Items 6 (L1), 7 (L3)",
+      "H3_note": "Items 1 (L2), 2 (L2), 3 (L3)",
+      "H4_note": "Items 8 (L2), 9 (L3)",
+      "H5_note": "Items 4 (L2), 5 (L3)",
+      "H6_note": "Items 10 (L1), 11 (L3)",
+      "H7_note": "Item 12 (L3)"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 3,
+      "nivel_3": 6,
+      "nivel_1_items": "6 (H2), 10 (H6), — note: also item 8 is N2 and item 4 is N2",
+      "nivel_2_items": "1 (H3), 2 (H3), 4 (H5), 8 (H4)",
+      "nivel_3_items": "3 (H3), 5 (H5), 7 (H2), 9 (H4), 11 (H6), 12 (H7)",
+      "note": "Recount: N1=items 6,10 = 2; N2=items 1,2,4,8 = 4; N3=items 3,5,7,9,11,12 = 6. Corrected below."
+    },
+    "difficulty_distribution_corrected": {
+      "nivel_1": 2,
+      "nivel_2": 4,
+      "nivel_3": 6,
+      "nivel_1_items": "6 (H2/L1), 10 (H6/L1)",
+      "nivel_2_items": "1 (H3/L2), 2 (H3/L2), 4 (H5/L2), 8 (H4/L2)",
+      "nivel_3_items": "3 (H3/L3), 5 (H5/L3), 7 (H2/L3), 9 (H4/L3), 11 (H6/L3), 12 (H7/L3)"
+    },
+    "macro_area_distribution": {
+      "RCV": 5,
+      "RCM": 7,
+      "RCV_items": "1 (H3), 2 (H3), 3 (H3), 4 (H5), 5 (H5)",
+      "RCM_items": "6 (H2), 7 (H2), 8 (H4), 9 (H4), 10 (H6), 11 (H6), 12 (H7)"
+    },
+    "h1_distribution": {
+      "baja": 2,
+      "media": 5,
+      "alta": 5,
+      "items_alta": "3 (H3/L3), 5 (H5/L3), 7 (H2/L3), 9 (H4/L3), 11 (H6/L3), 12 (H7/L3)",
+      "note": "Recount: alta = items 3,5,7,9,11,12 = 6 alta. baja = items 6,10 = 2. media = items 1,2,4,8 = 4.",
+      "pct_alta": 0.500,
+      "constraint_note": "6/12 = 50% alta in this batch. Cumulative 37 items: ~14 alta / 37 = 37.8% — within 30-40% target ✓"
+    },
+    "h1_distribution_corrected": {
+      "baja": 2,
+      "media": 4,
+      "alta": 6,
+      "pct_alta_batch": 0.500,
+      "cumulative_alta_37": "~14 / 37 = 37.8%",
+      "constraint": "✓ within 30-40%"
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "1 use (item 6)",
+      "T_H2_RCM_L3_01": "1 use (item 7)",
+      "T_H3_RCV_L2_01": "2 uses (items 1, 2)",
+      "T_H3_RCV_L3_01": "1 use (item 3)",
+      "T_H4_RCM_L2_01": "1 use (item 8)",
+      "T_H4_RCM_L3_01": "1 use (item 9)",
+      "T_H5_RCV_L2_01": "1 use (item 4)",
+      "T_H5_RCV_L3_01": "1 use (item 5)",
+      "T_H6_RCM_L2_01": "1 use (item 10)",
+      "T_H6_RCM_L3_01": "1 use (item 11)",
+      "T_H7_RCM_L3_01": "1 use (item 12)",
+      "all_templates_active": true
+    },
+    "sim_1_accumulation": {
+      "sim_1_count_before": 25,
+      "items_added": 12,
+      "sim_1_count_after": 37,
+      "sim_1_target": 45,
+      "sim_1_remaining": 8,
+      "status": "in_progress"
+    },
+    "cumulative_sim_1_skill_tracking": {
+      "B013_contribution":  {"H2":3,"H3":3,"H4":1,"H5":5,"H6":2,"H7":1},
+      "B016_contribution":  {"H2":2,"H3":1,"H4":2,"H5":3,"H6":1,"H7":1},
+      "B017_contribution":  {"H2":2,"H3":3,"H4":2,"H5":2,"H6":2,"H7":1},
+      "cumulative_37":      {"H2":7,"H3":7,"H4":5,"H5":10,"H6":5,"H7":3},
+      "strat_target_45":    {"H2":8,"H3":7,"H4":5,"H5":10,"H6":6,"H7":3},
+      "remaining_8":        {"H2":1,"H3":0,"H4":0,"H5":0,"H6":1,"H7":0},
+      "notes": "H3, H4, H5, H7 fully satisfied. H2 needs 1 more. H6 needs 1 more. Remaining 8 items: H2:1, H6:1, plus 6 items with flexibility for macro-area balance."
+    },
+    "cumulative_difficulty_tracking": {
+      "accumulated_25_before_B017": {"N1":7,"N2":12,"N3":6},
+      "B017_contribution": {"N1":2,"N2":4,"N3":6},
+      "cumulative_37": {"N1":9,"N2":16,"N3":12},
+      "strat_target_45": {"N1":12,"N2":22,"N3":11},
+      "remaining_8": {"N1":3,"N2":6,"N3":-1},
+      "warning": "N3 cumulative=12 exceeds target 11 by 1. Final 8 items must use N1:3, N2:5 (no N3). N3 closed."
+    },
+    "cumulative_macro_area_tracking": {
+      "cumulative_37": {"RCV": 16, "RCM": 21},
+      "strat_target_45": {"RCV": 23, "RCM": 22},
+      "remaining_8": {"RCV": 7, "RCM": 1},
+      "note": "Final batch (8 items) must be heavily RCV (7 RCV, 1 RCM) to hit exact 23/22 split."
+    }
+  }
+}

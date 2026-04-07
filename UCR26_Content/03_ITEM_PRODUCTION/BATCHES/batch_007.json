@@ -1,0 +1,293 @@
+{
+  "batch_id": "BATCH_007",
+  "generated_at": "2026-03-23T18:06:32-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "l1_diversity_plan": {
+    "ITEM_001_H3": "structure=IDENTIFICATION, context=verbal/nature, distractor=absolute-quantifier",
+    "ITEM_002_H5": "structure=DIRECT-LOGIC/connector, context=applied/economic, distractor=adversative-inversion",
+    "ITEM_003_H7": "structure=NUMERIC-PROPERTY-RECALL, context=geometric/calculation, distractor=adjacent-value"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B007",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: IDENTIFICATION structure — main idea explicitly stated, 1 step",
+      "stem": "Lea el siguiente texto:\n\n«Un bosque tropical puede albergar miles de especies de plantas y animales en un área relativamente pequeña. Esta biodiversidad lo convierte en uno de los ecosistemas más ricos del planeta.»\n\n¿Qué afirma principalmente el texto?",
+      "opciones": { "A": "Los bosques tropicales son los únicos ecosistemas biodiversos del planeta.", "B": "Los bosques tropicales son ecosistemas de extraordinaria riqueza biológica.", "C": "Las plantas de los bosques tropicales son más variadas que los animales.", "D": "La biodiversidad de los bosques tropicales es mayor que la de cualquier otro hábitat." },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La segunda oración enuncia explícitamente la idea principal: biodiversidad → ecosistema más rico.",
+        "paso_2": "B parafrasea fielmente sin distorsión. ✓",
+        "paso_critico": "1 paso: reconocimiento directo.",
+        "error_tipico": "A usa 'únicos' — el texto dice 'uno de los más ricos', no el único. C introduce comparación plantas/animales ausente. D sobreextiende con 'cualquier otro hábitat'."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 1, "tiempo_estimado": "1.5 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único. A/C/D distorsionan con cuantificadores o comparaciones ausentes. nivel_1 IDENTIFICATION ✓. Contexto bosques-tropicales — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B007",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: DIRECT LOGIC — 1-step causal connector, applied/economic context",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«El precio de los productos agrícolas cayó un 30% este mes. __________, muchos agricultores reportaron pérdidas significativas.»",
+      "opciones": { "A": "Sin embargo", "B": "Por eso", "C": "No obstante", "D": "Aunque" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Caída de precios → pérdidas. Relación causal directa y lógicamente esperada.",
+        "paso_2": "'Por eso' (B) es el único conector causal. ✓",
+        "paso_critico": "1 paso: reconocer consecuencia lógica directa.",
+        "error_tipico": "A y C (adversativos): implicarían que las pérdidas son inesperadas dado el precio — ilógico en contexto económico. D (concesivo): requeriría estructura subordinada diferente."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A": "incorrecto: adversativo", "C": "incorrecto: adversativo", "D": "incorrecto: concesivo, estructura incorrecta" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único causal. Sin contrarrecíproco. Contexto económico/precios — nuevo. nivel_1 DIRECT-LOGIC ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B007",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: NUMERIC-PROPERTY-RECALL — direct geometric fact, 1 step, H1=baja",
+      "stem": "¿Cuántos grados suman los ángulos interiores de un triángulo?",
+      "opciones": { "A": "90°", "B": "270°", "C": "360°", "D": "180°" },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Propiedad fundamental: la suma de los ángulos interiores de todo triángulo es 180°. ✓",
+        "paso_critico": "1 paso: recall directo de propiedad. No requiere cálculo.",
+        "error_tipico": "A(90°): confunde con ángulo recto individual. B(270°): 180°+90°, suma innecesaria. C(360°): suma de ángulos interiores de un cuadrilátero, no triangulo."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Error de cálculo", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "D=180° único. Distractores por confusión con otros polígonos o ángulos. nivel_1 NUMERIC-PROPERTY ✓. H7-L1 primera aparición — nuevo tipo para esta skill." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B007",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En un experimento, la masa del compuesto A es 5 veces la masa del compuesto B. Si la masa total de ambos es 84 gramos, ¿cuántos gramos tiene el compuesto B?",
+      "opciones": { "A": "70", "B": "14", "C": "42", "D": "17" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea B la masa de compuesto B. A = 5B. Total: 5B + B = 6B = 84 → B = 14 g. ✓",
+        "paso_2": "Verificación: A = 5×14 = 70. 70 + 14 = 84. ✓",
+        "paso_critico": "Plantear 6B = 84, no dividir directamente por 5.",
+        "error_tipico": "A(70): calcula la masa de A en lugar de B (variable intermedia). C(42): 84÷2=42 (divide igualitariamente). D(17): 84÷5=16.8≈17 (divide por el factor multiplicativo sin incluir B)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "6B=84→B=14=B ✓. A fuerte (variable intermedia A). C división igualitaria. D divisor incorrecto. Contexto química/masas — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B007",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Una receta requiere 4 partes de harina por cada 1 parte de azúcar. Si en total se usan 25 tazas, ¿cuántas tazas de harina se necesitan?",
+      "opciones": { "A": "5", "B": "20", "C": "12.5", "D": "10" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea A = tazas de azúcar. Harina = 4A. Total: 4A + A = 5A = 25 → A = 5.",
+        "paso_2": "Harina = 4×5 = 20 tazas. ✓",
+        "paso_3": "Verificación: 20 + 5 = 25. ✓",
+        "paso_critico": "La pregunta pide harina (4 partes), no azúcar (1 parte). Calcular el componente pedido.",
+        "error_tipico": "A(5): da las tazas de azúcar, no de harina (variable intermedia). C(12.5): 25÷2=12.5, divide igualitariamente asumiendo relación 1:1. D(10): 25÷(4/2)=12.5... o 25-15=10, error no sistemático."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "5A=25→A=5→harina=20=B ✓. A da azúcar. C/D errores de proporción. Contexto receta/partes — diferente de B003 que usó gramos+cantidad específica. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B007",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 2, 4, 8, 10, 20, 22, ___?",
+      "opciones": { "A": "24", "B": "44", "C": "42", "D": "40" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Analizar el patrón: 2→4 (+2), 4→8 (×2), 8→10 (+2), 10→20 (×2), 20→22 (+2).",
+        "paso_2": "El patrón alterna +2 y ×2. El siguiente paso es ×2: 22×2 = 44. ✓",
+        "paso_critico": "Detectar que el patrón es alternante, no de un solo tipo.",
+        "error_tipico": "A(24): 22+2=24 (continúa +2 sin alternar). C(42): 22×2−2=42 (aplica operación compuesta innecesaria). D(40): 22+18=40, diferencia arbitraria."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "22×2=44=B ✓. Patrón alternante +2/×2 — nuevo. A anticipa continuación sin alternancia. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B007",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 3, 5, 9, 17, 33, ___?",
+      "opciones": { "A": "49", "B": "65", "C": "64", "D": "57" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos: +2, +4, +8, +16. Las diferencias se duplican cada vez.",
+        "paso_2": "Siguiente diferencia: +32 → 33 + 32 = 65. ✓",
+        "paso_3": "Verificación alternativa: 3=2¹+1, 5=2²+1, 9=2³+1, 17=2⁴+1, 33=2⁵+1 → 2⁶+1=65. ✓",
+        "paso_critico": "Identificar que las diferencias se duplican sucesivamente, no aumentan linealmente.",
+        "error_tipico": "A(49): 33+16=49 (repite la diferencia anterior sin doblar). C(64): 2⁶=64, omite el +1 del patrón. D(57): 33+24=57, interpola incorrectamente."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "3 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "33+32=65=B ✓. Doble verificación vía 2^n+1. Distractores A(repite diff), C(omite +1), D(interpola). Patrón diferencias-doblantes — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B007",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«La empresa implementó nuevas medidas de seguridad en sus instalaciones. __________, el número de accidentes laborales se redujo considerablemente.»",
+      "opciones": { "A": "No obstante", "B": "Como resultado", "C": "Sin embargo", "D": "Aunque" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Medidas de seguridad → reducción de accidentes. Relación causal-consecuencial directa.",
+        "paso_2": "'Como resultado' (B) es el único conector que expresa consecuencia explícita. ✓",
+        "paso_critico": "La segunda proposición es un resultado esperado y lógico de la primera.",
+        "error_tipico": "A y C son adversativos: implicarían que la reducción de accidentes es inesperada dadas las medidas de seguridad — ilógico. D es concesivo y requiere estructura diferente."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A": "incorrecto: adversativo", "C": "incorrecto: adversativo", "D": "incorrecto: concesivo" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único consecuencial. Distractores adversativos formalmente incorrectos. Sin contrarrecíproco. Contexto empresa/seguridad — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B007",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Para preparar una mezcla de pintura, se combinan 2 partes de azul con 5 partes de blanco. Si se necesitan 840 mL de mezcla en total, ¿cuántos mL de pintura azul se deben usar?",
+      "opciones": { "A": "120", "B": "240", "C": "480", "D": "420" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Total de partes: 2 + 5 = 7. Fracción de azul: 2/7.",
+        "paso_2": "Volumen de azul: (2/7) × 840 = 240 mL. ✓",
+        "paso_3": "Verificación: 240 + 600 = 840 mL. ✓",
+        "paso_critico": "Calcular la fracción del componente pedido SOBRE el total de partes.",
+        "error_tipico": "A(120): 840÷7=120, calcula el valor de 1 parte pero olvida multiplicar por 2. C(480): usa 4 partes de azul en lugar de 2: 4/7×840=480. D(420): 840÷2=420, divide entre el numerador directamente."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Confusión de proporcionalidad", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "2/7×840=240=B ✓. A per-part sin multiplicar. C usa numerador incorrecto. D divide por numerador. Contexto pintura/mezcla — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B007",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_007",
+      "stem": "Lea el siguiente texto:\n\n«La masificación de dispositivos conectados a internet ha generado un flujo sin precedentes de datos personales. Las empresas tecnológicas utilizan estos datos para personalizar servicios, pero también los comercializan a terceros sin consentimiento explícito. Las regulaciones existentes en materia de privacidad digital han demostrado ser insuficientes para controlar estas prácticas.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "Los dispositivos conectados a internet deben ser prohibidos para proteger la privacidad.",
+        "B": "Se requieren regulaciones más robustas para proteger los datos personales en el entorno digital.",
+        "C": "Las empresas tecnológicas son las principales beneficiarias del comercio de datos personales.",
+        "D": "Los usuarios deben evitar usar servicios digitales para resguardar su privacidad."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Premisas: flujo masivo de datos → uso comercial sin consentimiento → regulaciones insuficientes.",
+        "paso_2": "La última premisa ('regulaciones insuficientes') apunta a una conclusión no enunciada.",
+        "paso_3": "B expresa la prescripción implícita: regulaciones más fuertes son necesarias. ✓",
+        "paso_critico": "La conclusión no está escrita — se infiere de la convergencia de las tres premisas.",
+        "error_tipico": "A introduce 'prohibición' — radicalización no sostenida. C es una premisa factual del texto, no la conclusión. D contradice la dirección del argumento (implica abstención, no regulación)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: prescripción implícita derivada de regulaciones-insuficientes. A radicaliza. C es premisa. D contradice. H1=alta ✓. Tema privacidad-digital — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B007",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_007",
+      "stem": "El vendedor A trabaja 6 horas al día y gana ₡45 000 diarios. El vendedor B trabaja 8 horas al día y gana ₡52 000 diarios. ¿Cuál vendedor tiene mayor ganancia por hora de trabajo y cuánto es esa ganancia horaria?",
+      "opciones": {
+        "A": "Vendedor A; ₡7 500/hora",
+        "B": "Vendedor B; ₡6 500/hora",
+        "C": "Vendedor A; ₡6 500/hora",
+        "D": "Vendedor B; ₡7 500/hora"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Tasa horaria A: ₡45 000 ÷ 6 h = ₡7 500/hora.",
+        "paso_2": "Tasa horaria B: ₡52 000 ÷ 8 h = ₡6 500/hora.",
+        "paso_3": "₡7 500 > ₡6 500 → Vendedor A tiene mayor ganancia por hora. ✓",
+        "paso_critico": "Comparar tasas (ganancia/hora), no ganancias absolutas. La trampa es elegir B por tener mayor ingreso total (₡52 000 > ₡45 000).",
+        "error_tipico": "B: elige B porque ₡52 000 > ₡45 000 sin dividir entre horas. C: elige A correctamente pero le asigna la tasa de B. D: elige B e invierte las tasas."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A=7500 > B=6500 ✓. Unicidad confirmada. Trampa B es fuerte (salario absoluto mayor). H1=alta ✓. Contexto vendedores/ganancia-horaria — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B007",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_007",
+      "stem": "En una circunferencia, el ángulo central AOB mide 120°. El punto C se ubica en el arco mayor (el arco que no contiene al arco AB). ¿Cuánto mide el ángulo inscrito ACB?",
+      "opciones": { "A": "120°", "B": "60°", "C": "240°", "D": "30°" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El teorema del ángulo inscrito establece: el ángulo inscrito que subtiende un arco es la mitad del ángulo central que subtiende el mismo arco.",
+        "paso_2": "El punto C está en el arco mayor, por lo tanto el ángulo ACB subtiende el arco menor AB (120°).",
+        "paso_3": "Ángulo ACB = 120° ÷ 2 = 60°. ✓",
+        "paso_critico": "La inferencia espacial no explícita: identificar que C en el arco mayor subtiende el arco MENOR (AB de 120°), no el arco mayor. Confundir qué arco se subtiende es la trampa principal.",
+        "error_tipico": "A(120°): iguala el ángulo inscrito al central sin aplicar el teorema. C(240°): usa la medida del arco mayor (360°−120°=240°). D(30°): divide 120° entre 4 en lugar de 2."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "120÷2=60=B ✓. Inferencia espacial: C en arco mayor → subtiende arco menor. A no aplica teorema. C usa arco incorrecto. D divide entre 4. H1=alta ✓. Ángulo inscrito/circunferencia — nuevo." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_007",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06) — 6th consecutive zero"
+    },
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint": "EXACT ✓" },
+    "macro_area_distribution": { "RCM": 7, "RCV": 5 },
+    "l1_diversity_verification": {
+      "ITEM_001_H3": "IDENTIFICATION / verbal-nature / distractor=absolute-quantifier ✓",
+      "ITEM_002_H5": "DIRECT-LOGIC / applied-economic / distractor=adversative-inversion ✓",
+      "ITEM_003_H7": "NUMERIC-PROPERTY-RECALL / geometric / distractor=adjacent-polygon-value ✓",
+      "cross_skill_coverage": "H3+H5+H7 — no repeated skill ✓",
+      "cross_structure_coverage": "IDENTIFICATION + DIRECT-LOGIC + NUMERIC-RECALL — no repeated structure ✓",
+      "cross_context_coverage": "verbal + applied-economic + numeric — no repeated context type ✓"
+    },
+    "template_usage": {
+      "limited_used": ["T_H3_RCV_L3_01: 1 (ITEM_010) ✓", "T_H6_RCM_L3_01: 1 (ITEM_011) ✓", "T_H7_RCM_L3_01: 1 (ITEM_012) ✓"],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 persists — H7-L1 instantiated for first time (geometry property recall)"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–006",
+    "drift_check_vs_batch006": { "all_metric_deltas": "0.000", "drift_signal": "NONE DETECTED ✓" },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12, "b005": 12, "b006": 12, "b007": 12,
+      "total_approved": 81,
+      "training_target": 140,
+      "progress_pct": 57.9
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 6,
+      "consecutive_zero_rejection_batches": 6,
+      "consecutive_exact_distribution_batches": 6
+    },
+    "system_flags": ["FLAG_001 open — L1 template gap"],
+    "next_action": "ready_for_batch_8"
+  }
+}

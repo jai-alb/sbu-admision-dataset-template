@@ -1,0 +1,768 @@
+{
+  "batch_id": "BATCH_025",
+  "part": "1_of_2",
+  "generated_at": "2026-03-25T04:36:28-06:00",
+  "note": "FULL REBUILD SIM_1 — 45 completely new items. Do NOT mix with previous sim_1 items.",
+  "simulation_id": "sim_1",
+  "item_type": "simulation",
+  "structure": {
+    "total_items": 45,
+    "RCV": 23,
+    "RCM": 22,
+    "RCV_skills": {"H3": 7, "H5": 10, "H3_note": "items across all difficulties", "H5_note": "items across all difficulties"},
+    "RCM_skills": {"H2": 8, "H4": 5, "H6": 6, "H7": 3},
+    "difficulty": {"L1": 12, "L2": 22, "L3": 11},
+    "ordering": "items 1-12 = L1, items 13-34 = L2, items 35-45 = L3",
+    "H1_alta_count": 15,
+    "H1_alta_pct": "33.3%"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 65,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Una tienda vende cajas de cereal a ₡1 500 cada una. Si Sofía compra 4 cajas y paga con un billete de ₡7 000, ¿cuánto recibirá de cambio?",
+      "opciones": {
+        "A": "₡1 000",
+        "B": "₡1 500",
+        "C": "₡5 500",
+        "D": "₡2 000"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Total pagado: 4 × ₡1 500 = ₡6 000.",
+        "paso_2": "Cambio: ₡7 000 − ₡6 000 = ₡1 000. ✓",
+        "paso_critico": "Calcular el total antes de restar al billete.",
+        "error_tipico": "B (₡1 500): precio de una sola caja. C (₡5 500): resta solo 3 cajas. D (₡2 000): error aritmético de resta."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "4×1500=6000; 7000-6000=1000=A ✓. B precio unitario. C omite una caja. D error aritmético. H2/L1/RCM ✓. Nuevo contexto cereal/cambio — no duplica training ni sim_1 anterior."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_002_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El café contiene cafeína, sustancia que estimula el sistema nervioso central. __________, muchas personas lo consumen por la mañana para iniciar el día con mayor energía.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "Sin embargo",
+        "C": "Por esta razón",
+        "D": "Aunque"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración explica la propiedad del café (estimula). La segunda da la consecuencia práctica (lo consumen para tener energía).",
+        "paso_2": "'Por esta razón' (C) expresa causa-efecto directo. ✓",
+        "paso_critico": "El segundo enunciado es resultado lógico del primero.",
+        "error_tipico": "A y B adversativos: implicarían que la gente lo toma a pesar de que estimula — ilógico. D concesivo: tampoco corresponde."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único consecuencial: cafeína-estimula → consumen para energía. A/B adversativos (ilógicos). D concesivo (no aplica). H5/L1/RCV ✓. Contexto café/cafeína — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_003_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_01",
+        "estimated_time_sec": 60,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Un grifo llena 12 litros de agua en 3 minutos. Manteniendo el mismo caudal, ¿cuántos litros llenará en 7 minutos?",
+      "opciones": {
+        "A": "24 litros",
+        "B": "28 litros",
+        "C": "21 litros",
+        "D": "16 litros"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 12 ÷ 3 = 4 litros por minuto.",
+        "paso_2": "En 7 minutos: 4 × 7 = 28 litros. ✓",
+        "paso_critico": "Calcular la tasa antes de escalar.",
+        "error_tipico": "A (24): 12×2=24, duplica en lugar de calcular la tasa. C (21): 12+9=21, suma error. D (16): 12+4=16, agrega solo un minuto extra."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "4×7=28=B ✓. A duplica. C suma incorrecta. D agrega 1 minuto solo. H6/L1/RCM ✓. Contexto grifo/caudal — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_004_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Beber agua de forma regular a lo largo del día evita la deshidratación y mejora la concentración. El cuerpo humano necesita reponer constantemente los líquidos que pierde a través de la respiración, el sudor y la orina.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La orina es el principal mecanismo por el que el cuerpo pierde líquidos.",
+        "B": "La hidratación regular es necesaria porque el cuerpo pierde líquidos continuamente y su reposición mejora el funcionamiento.",
+        "C": "Solo las personas que hacen ejercicio necesitan beber agua con frecuencia.",
+        "D": "El sudor es la causa más común de deshidratación en climas cálidos."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto presenta: beneficio (evitar deshidratación, mejorar concentración) y mecanismo (se pierde líquido constantemente).",
+        "paso_2": "B integra la causa (pérdida constante) y el efecto (hidratación mejora funcionamiento). ✓",
+        "paso_critico": "La idea central combina la necesidad y su justificación.",
+        "error_tipico": "A señala un solo mecanismo, no la idea global. C introduce exclusividad no sostenida. D introduce 'climas cálidos' ausente en el texto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: causa+efecto integrados. A parcial. C exclusividad errónea. D introduce contexto ausente. H3/L1/RCV ✓. Contexto hidratación/cuerpo — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_005_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 65,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "En un almacén hay 3 cajas con 24 botellas cada una. Se retiran 15 botellas para una entrega. ¿Cuántas botellas quedan en el almacén?",
+      "opciones": {
+        "A": "57",
+        "B": "72",
+        "C": "9",
+        "D": "63"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Total inicial: 3 × 24 = 72 botellas.",
+        "paso_2": "Después de retirar: 72 − 15 = 57 botellas. ✓",
+        "paso_critico": "Calcular el total antes de restar.",
+        "error_tipico": "B (72): total sin restar. C (9): 24-15=9 opera solo sobre una caja. D (63): 72-9=63, resta 9 en lugar de 15."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "3×24=72; 72-15=57=A ✓. B no resta. C opera 1 caja. D resta incorrecto. H2/L1/RCM ✓. Contexto almacén/botellas — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_006_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Los manglares protegen las costas de la erosión producida por las olas y tormentas. __________, son ecosistemas de gran valor para la conservación de la biodiversidad marina.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Por el contrario",
+        "C": "Además",
+        "D": "No obstante"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración señala un beneficio de los manglares (protección costera). La segunda agrega otro beneficio distinto (biodiversidad marina).",
+        "paso_2": "'Además' (C) suma información complementaria sin contradicción. ✓",
+        "paso_critico": "Ambos enunciados presentan atributos positivos. Relación aditiva.",
+        "error_tipico": "A, B y D adversativos: implicarían que el valor ecológico se da a pesar de la protección costera — ilógico. Los dos atributos coexisten."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único aditivo: dos beneficios coexisten. A/B/D adversativos (ilógicos). H5/L1/RCV ✓. Contexto manglares/ecosistemas — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_007_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_01",
+        "estimated_time_sec": 65,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 5, 10, 15, 20, 25, ___?",
+      "opciones": {
+        "A": "28",
+        "B": "30",
+        "C": "35",
+        "D": "40"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La serie aumenta de 5 en 5: 5, 10, 15, 20, 25.",
+        "paso_2": "Siguiente término: 25 + 5 = 30. ✓",
+        "paso_critico": "Identificar la diferencia constante entre términos.",
+        "error_tipico": "A (28): suma 3 arbitrariamente. C (35): suma 10 en lugar de 5. D (40): duplica el paso."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "25+5=30=B ✓. A suma arbitraria. C duplica paso. D suma 15. H4/L1/RCM ✓. Serie aritmética básica — contexto nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_008_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Caminar al menos 30 minutos al día reduce el riesgo de enfermedades cardiovasculares, contribuye al control del peso y mejora el estado de ánimo. Es una forma de ejercicio accesible para la mayor parte de la población.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Caminar es el único ejercicio recomendado por los médicos para personas con problemas cardíacos.",
+        "B": "Las enfermedades cardiovasculares son la principal causa de muerte en el mundo.",
+        "C": "Caminar 30 minutos diarios es una actividad física accesible con múltiples beneficios para la salud.",
+        "D": "El control del peso es la razón más importante para hacer ejercicio regularmente."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto presenta dos ideas: (1) beneficios de caminar 30 min; (2) accesibilidad del ejercicio.",
+        "paso_2": "C integra ambas: accesible + múltiples beneficios. ✓",
+        "paso_critico": "La idea central no es un beneficio específico sino la combinación accesibilidad + beneficios.",
+        "error_tipico": "A introduce exclusividad ('único') no presente. B introduce dato epidemiológico global no mencionado. D jerarquiza beneficios de manera que el texto no hace."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C única: accesible+beneficios múltiples integrados. A exclusividad incorrecta. B dato no presente. D jerarquiza sin base. H3/L1/RCV ✓. Contexto ejercicio-caminar — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_009_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_01",
+        "estimated_time_sec": 60,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Una impresora produce 40 páginas en 5 minutos. ¿Cuántas páginas producirá en 8 minutos al mismo ritmo?",
+      "opciones": {
+        "A": "56",
+        "B": "64",
+        "C": "48",
+        "D": "72"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa unitaria: 40 ÷ 5 = 8 páginas por minuto.",
+        "paso_2": "En 8 minutos: 8 × 8 = 64 páginas. ✓",
+        "paso_critico": "Calcular tasa y luego escalar.",
+        "error_tipico": "A (56): 40+16=56, agrega solo 2 min extra. C (48): 40+8=48, agrega un solo minuto adicional. D (72): 40×(8/5)=64 pero calcula mal."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "8×8=64=B ✓. A/C/D errores de escalado. H6/L1/RCM ✓. Contexto impresora/páginas — distinto de training y sim_1 anterior."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_010_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 60,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Las bibliotecas públicas ofrecen acceso gratuito a libros, revistas y materiales digitales. __________, constituyen espacios de encuentro comunitario y formación continua.»",
+      "opciones": {
+        "A": "Por el contrario",
+        "B": "Sin embargo",
+        "C": "Asimismo",
+        "D": "Aunque"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración enumera recursos de las bibliotecas. La segunda añade otra función (encuentro comunitario).",
+        "paso_2": "'Asimismo' (C) agrega información paralela y compatible. ✓",
+        "paso_critico": "Los dos enunciados son aditivos — no hay contraste.",
+        "error_tipico": "A, B y D adversativos o concesivos: implicarían que la función comunitaria se da pese a ofrecer libros — ilógico."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único aditivo paralelo. A/B/D adversativos (ilógicos). H5/L1/RCV ✓. Contexto bibliotecas — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_011_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H7_RCM_L2_01",
+        "estimated_time_sec": 70,
+        "error_type": "Error de cálculo"
+      },
+      "stem": "Un rectángulo tiene base de 9 cm y altura de 4 cm. ¿Cuál es su área?",
+      "opciones": {
+        "A": "26 cm²",
+        "B": "36 cm²",
+        "C": "13 cm²",
+        "D": "45 cm²"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Área de rectángulo: base × altura = 9 × 4 = 36 cm². ✓",
+        "paso_critico": "Aplicar fórmula correcta: área = base × altura.",
+        "error_tipico": "A (26): perímetro parcial: 2×(9+4)=26. C (13): suma base + altura. D (45): 9×5 error de un centímetro extra."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "9×4=36=B ✓. A perímetro. C suma. D error de dato. H7/L1/RCM ✓. Contexto rectángulo básico — nuevo contexto (no repetido exactamente)."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_012_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 1,
+      "H1": "baja",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 70,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El sueño reparador es fundamental para la consolidación de la memoria. Durante las fases de sueño profundo, el cerebro organiza y almacena la información adquirida durante el día, lo que incide directamente en el aprendizaje.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La falta de sueño provoca pérdida de memoria a largo plazo en personas mayores.",
+        "B": "El sueño profundo permite al cerebro procesar y almacenar información, lo que favorece el aprendizaje.",
+        "C": "Dormir muchas horas es siempre contraproducente para la concentración.",
+        "D": "El sueño tiene distintas fases que cumplen funciones idénticas."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto vincula sueño profundo → consolidación de memoria → aprendizaje.",
+        "paso_2": "B resume esa cadena con precisión. ✓",
+        "paso_critico": "La idea central es la relación sueño-memoria-aprendizaje.",
+        "error_tipico": "A introduce 'personas mayores' y 'largo plazo' no mencionados. C introduce 'muchas horas' y 'contraproducente' — contrario al argumento. D afirma funciones idénticas — el texto diferencia fases."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: sueño→memoria→aprendizaje. A introduce grupo etario. C invierte argumento. D afirma igualdad de fases (falso). H3/L1/RCV ✓. Contexto sueño/memoria-aprendizaje — distinto de diagnóstico (sueño adultos-mayores)."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_013_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Un electricista cobra ₡12 000 por hora de trabajo y adicionalmente ₡18 000 por el diagnóstico inicial. Si el costo total de la revisión fue ₡66 000, ¿cuántas horas trabajó?",
+      "opciones": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea h = horas. Ecuación: 12 000h + 18 000 = 66 000 → 12 000h = 48 000.",
+        "paso_2": "h = 48 000 ÷ 12 000 = 4. ✓",
+        "paso_critico": "Restar el costo fijo antes de dividir.",
+        "error_tipico": "A (3): 66000÷18000≈3.7≈3, divide total entre costo diagnóstico. C (5): 66000÷12000=5.5, divide sin restar costo fijo. D (6): error aritmético."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "12000h+18000=66000→h=4=B ✓. A divide por costo fijo. C no resta fijo. D error. H2/L2/RCM ✓. Contexto electricista/diagnóstico — distinto de fontanero (B016/B025 sim anterior)."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_014_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La minería a cielo abierto genera empleos directos en las comunidades rurales donde opera. __________, produce impactos irreversibles sobre el agua, el suelo y la biodiversidad local.»",
+      "opciones": {
+        "A": "Por lo tanto",
+        "B": "En consecuencia",
+        "C": "No obstante",
+        "D": "De hecho"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta un aspecto positivo (empleos). La segunda introduce un aspecto negativo que coexiste (impacto ambiental).",
+        "paso_2": "'No obstante' (C) introduce la tensión: a pesar del beneficio, existe un costo. ✓",
+        "paso_critico": "El segundo enunciado no es consecuencia del primero, sino tensión.",
+        "error_tipico": "A y B causales: implicarían que el impacto ambiental resulta de los empleos — no es lo que plantea el texto. D confirmatorio: el impacto no ratifica los empleos."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único adversativo: beneficio vs. costo ambiental. A/B causales (incorrectos). D confirmatorio (no corresponde). H5/L2/RCV ✓. Contexto minería/comunidades — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_015_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 2, 6, 18, 54, ___?",
+      "opciones": {
+        "A": "108",
+        "B": "162",
+        "C": "108",
+        "D": "216"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La serie se obtiene multiplicando cada término por 3: 2×3=6, 6×3=18, 18×3=54.",
+        "paso_2": "Siguiente: 54 × 3 = 162. ✓",
+        "paso_critico": "Es una progresión geométrica de razón 3.",
+        "error_tipico": "A y C (108): 54×2=108, aplica ×2 en lugar de ×3. D (216): 54×4=216, sobreestima la razón."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "54×3=162=B ✓. A/C ×2. D ×4. H4/L2/RCM ✓. Progresión geométrica ×3 — distinta de todas las series previas."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_016_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El uso extensivo de plaguicidas en la agricultura industrial afecta directamente a las poblaciones de abejas y otros polinizadores. Dado que estos insectos son responsables de la polinización de más del 70% de los cultivos alimentarios, su declive amenaza la seguridad alimentaria global.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los plaguicidas son indispensables para garantizar la productividad de la agricultura industrial moderna.",
+        "B": "El declive de los polinizadores causado por los plaguicidas compromete la seguridad alimentaria mundial.",
+        "C": "Las abejas son los únicos insectos capaces de polinizar los cultivos alimentarios.",
+        "D": "La agricultura industrial ha aumentado la eficiencia de la producción de alimentos a escala global."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto establece una cadena causal: plaguicidas → daño a polinizadores → amenaza a seguridad alimentaria.",
+        "paso_2": "B recoge esa cadena completa. ✓",
+        "paso_critico": "La idea central es la cadena causal completa, no un eslabón aislado.",
+        "error_tipico": "A invierte la valoración (plaguicidas como necesarios). C introduce exclusividad ('únicos'). D introduce argumento ajeno sobre eficiencia."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: plaguicidas→polinizadores→seguridad alimentaria completa. A invierte. C exclusividad. D argumento ajeno. H3/L2/RCV ✓. Contexto plaguicidas/polinizadores — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_017_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Un automóvil consume 6 litros de combustible por cada 100 km. ¿Cuántos litros necesitará para recorrer 350 km?",
+      "opciones": {
+        "A": "18",
+        "B": "21",
+        "C": "24",
+        "D": "30"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa: 6 L / 100 km = 0.06 L/km.",
+        "paso_2": "Para 350 km: 350 × 0.06 = 21 L. (O bien: 6/100 × 350 = 2100/100 = 21.) ✓",
+        "paso_critico": "Aplicar la razón correcta al nuevo valor.",
+        "error_tipico": "A (18): 6×3=18, calcula para 300 km. C (24): 6×4=24, calcula para 400 km. D (30): 6×5=30, calcula para 500 km."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "6/100×350=21=B ✓. A intervalo incorrecto de 300. C 400. D 500. H6/L2/RCM ✓. Contexto automóvil/consumo — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_018_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El consumo de sal en exceso eleva la presión arterial y aumenta el riesgo de enfermedades cardíacas. __________, las autoridades sanitarias recomiendan limitar su ingesta a menos de 5 gramos diarios.»",
+      "opciones": {
+        "A": "A pesar de ello",
+        "B": "Sin embargo",
+        "C": "Por esta razón",
+        "D": "Aunque"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El primer enunciado explica los daños del exceso de sal (causa). El segundo enuncia la recomendación derivada (consecuencia).",
+        "paso_2": "'Por esta razón' (C) expresa la relación causal directa. ✓",
+        "paso_critico": "La recomendación surge directamente del riesgo comprobado.",
+        "error_tipico": "A y B adversativos: implicarían que se recomienda limitar sal a pesar de sus daños — ilógico. D concesivo: tampoco corresponde."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único consecuencial: daño→recomendación. A/B adversativos (ilógicos). D concesivo (no aplica). H5/L2/RCV ✓. Contexto sal/presión-arterial — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_019_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Pedro tiene el triple de dinero que Laura. Si entre los dos suman ₡28 000, ¿cuánto tiene Pedro?",
+      "opciones": {
+        "A": "₡7 000",
+        "B": "₡14 000",
+        "C": "₡21 000",
+        "D": "₡18 000"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea L = dinero de Laura. Pedro = 3L. Ecuación: L + 3L = 28 000 → 4L = 28 000 → L = 7 000.",
+        "paso_2": "Pedro = 3 × 7 000 = 21 000. ✓",
+        "paso_critico": "La pregunta pide el dinero de Pedro, no de Laura. Error de asignación frecuente.",
+        "error_tipico": "A (₡7 000): reporta L (Laura) en lugar de Pedro. B (₡14 000): 28000÷2 divide equitativamente. D (₡18 000): error aritmético de multiplicación."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "4L=28000→L=7000; Pedro=21000=C ✓. A reporta Laura. B equidad. D error. H2/L2/RCM ✓. Contexto dinero/relación triple — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_020_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La educación financiera desde edades tempranas permite a las personas tomar decisiones más informadas sobre el ahorro, la inversión y el endeudamiento. Países con altos niveles de educación financiera tienden a mostrar mayor estabilidad económica a nivel familiar y menor vulnerabilidad ante crisis externas.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La inversión en bolsa de valores es la única forma de garantizar estabilidad económica a largo plazo.",
+        "B": "La educación financiera temprana fortalece las decisiones económicas individuales y contribuye a la estabilidad familiar ante crisis.",
+        "C": "Los países en desarrollo carecen de programas de educación financiera adecuados para su población.",
+        "D": "El endeudamiento personal es el principal obstáculo para la estabilidad económica en los hogares modernos."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto argumenta: educación financiera temprana → mejores decisiones → mayor estabilidad familiar + menor vulnerabilidad.",
+        "paso_2": "B recoge esta cadena: educación financiera → decisiones + estabilidad. ✓",
+        "paso_critico": "La idea central vincula la educación temprana con múltiples beneficios concretos.",
+        "error_tipico": "A introduce inversión en bolsa como única solución — no presente. C introduce juicio sobre países en desarrollo — ausente. D introduce endeudamiento como obstáculo principal — reduce el texto a un solo factor."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: educación financiera→decisiones+estabilidad. A exclusividad. C juicio ausente. D reduce. H3/L2/RCV ✓. Contexto educación-financiera — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_021_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_01",
+        "estimated_time_sec": 115,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 1, 4, 9, 16, 25, ___?",
+      "opciones": {
+        "A": "30",
+        "B": "36",
+        "C": "49",
+        "D": "32"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Los términos son cuadrados perfectos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25.",
+        "paso_2": "Siguiente: 6² = 36. ✓",
+        "paso_critico": "Reconocer el patrón de cuadrados perfectos consecutivos.",
+        "error_tipico": "A (30): 25+5=30, suma la diferencia previa sin incrementarla. C (49): 7²=49, salta un término. D (32): error aritmético."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "6²=36=B ✓. A suma diferencia anterior. C salta término. D error. H4/L2/RCM ✓. Cuadrados perfectos — distinto de series previas."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_022_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Las redes sociales han democratizado el acceso a la información y la expresión pública. __________, han amplificado la difusión de desinformación y el discurso de odio a escala global.»",
+      "opciones": {
+        "A": "Por esta razón",
+        "B": "En efecto",
+        "C": "Sin embargo",
+        "D": "De igual manera"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta un efecto positivo de las redes sociales. La segunda introduce un efecto negativo que coexiste.",
+        "paso_2": "'Sin embargo' (C) introduce la tensión: beneficio vs. costo. ✓",
+        "paso_critico": "No hay relación causal entre democratizar y difundir desinformación — es contraste.",
+        "error_tipico": "A causal (incorrecto: la desinformación no resulta de la democratización como efecto esperado). B confirmatorio. D aditivo sin contraste."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único adversativo: beneficio vs. costo. A causal (incorrecto). B confirmatorio. D aditivo sin contraste. H5/L2/RCV ✓. Contexto redes-sociales/desinformación — nuevo."
+      },
+      "final_status": "approved"
+    }
+  ]
+}

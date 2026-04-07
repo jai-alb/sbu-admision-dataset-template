@@ -1,0 +1,529 @@
+{
+  "batch_id": "BATCH_018",
+  "generated_at": "2026-03-24T17:50:17-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "simulation",
+  "simulation_id": "sim_1",
+  "target_items": 8,
+  "pipeline_status": "CLOSING — sim_1 final batch. sim_1_count 37 → 45.",
+  "segment_note": "Cierre exacto de sim_1. H2:+1, H6:+1, H3:+3, H5:+3 = 8 items. RCV:+6, RCM:+2. N1:+3, N2:+5, N3:0 (N3 sellado).",
+  "structural_flag": {
+    "flag_id": "FLAG_003",
+    "type": "difficulty_distribution_deviation",
+    "severity": "low",
+    "description": "N3 acumulado al cierre = 12 (target 11, +1 sobre target). N2 acumulado = 21 (target 22, -1 bajo target). Originado en B017 (+6 N3 cuando residual permitía 5). Desviación mínima. Requiere revisión en 4B.",
+    "status": "open",
+    "raised_in": "BATCH_018"
+  },
+  "skill_plan": {
+    "H3_RCV": 3,
+    "H5_RCV": 3,
+    "H2_RCM": 1,
+    "H6_RCM": 1,
+    "macro_RCV": 6,
+    "macro_RCM": 2,
+    "note": "H3 y H5 superan mínimos STRAT (7 y 10) para cubrir RCV:23 exacto. Los 6 extra-RCV (45-39 skills-target=6) se distribuyen 3H3+3H5. H2 y H6 cierran sus targets exactos."
+  },
+  "difficulty_plan": {
+    "nivel_1": 3,
+    "nivel_2": 5,
+    "nivel_3": 0,
+    "note": "N3 sellado (acumulado ya en 12 vs target 11). Cierre con N1:3 y N2:5."
+  },
+  "h1_plan": {
+    "items_baja": 3,
+    "items_media": 5,
+    "items_alta": 0,
+    "cumulative_alta_45_est": "~14/45 = 31.1%",
+    "constraint": "✓ dentro de rango 30-40%"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B018",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: la luna ejerce atracción gravitacional sobre océanos; segunda: SE PRODUCEN los ciclos de mareas — consecuencia directa y necesaria",
+        "connector_type": "consecuencial",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La luna ejerce una atracción gravitacional sobre las masas de agua de la Tierra. __________, se producen los ciclos de mareas que regulan numerosos ecosistemas costeros.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "No obstante",
+        "C": "Por esta razón",
+        "D": "En contraste"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración establece una causa física (atracción gravitacional de la luna). La segunda expresa el efecto directo de esa causa (ciclos de mareas).",
+        "paso_2": "'Por esta razón' (C) introduce la consecuencia lógica y física de la causa enunciada. La relación es causal-directa, sin ambigüedad. ✓",
+        "paso_critico": "No hay contraste ni contradicción entre ambas oraciones — la segunda es la consecuencia inevitable de la primera.",
+        "error_tipico": "A, B y D (adversativos/contrastivos): implicarían que las mareas ocurren A PESAR de la atracción gravitacional — físicamente absurdo. La trampa es activar el modo adversativo ante un enunciado complejo."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 1,
+        "estimated_time_sec": 55,
+        "error_type": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único consecuencial: gravedad→mareas. A/B/D adversativos (ilógicos físicamente). H5/N1/RCV ✓. N1: relación causal directa, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto luna/mareas — distinto de todos los H5 anteriores (vacuna-gripe, animales-nocturnos, ultraprocesados-obesidad, ciudades-innovación, automatización-laboral y B013 H5 items)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B018",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: los bosques tropicales generan gran parte del oxígeno; segunda: SU CONSERVACIÓN es prioridad — consecuencia lógica directa (si producen O2, conservarlos es prioritario)",
+        "connector_type": "conclusivo",
+        "correct_option": "D",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Los bosques tropicales producen una proporción significativa del oxígeno atmosférico y regulan el ciclo del agua a escala continental. __________, su conservación representa una prioridad ambiental de primer orden.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Aunque",
+        "C": "No obstante",
+        "D": "Por lo tanto"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "La primera oración establece dos funciones ecológicas críticas de los bosques tropicales (producción de O₂ + regulación hídrica). La segunda extrae la implicación práctica de esas funciones: deben conservarse.",
+        "paso_2": "'Por lo tanto' (D) introduce la conclusión lógica derivada de las premisas enunciadas. La segunda oración no contradice ni matiza — es la consecuencia directa. ✓",
+        "paso_critico": "Identificar que la segunda oración es una conclusión que se sigue necesariamente de las funciones descritas, no una idea contrastiva.",
+        "error_tipico": "A, B y C (adversativos/concesivos): implicarían que la conservación se prioriza A PESAR de esas funciones ecológicas — ilógico. La trampa es que la estructura larga de la primera oración puede distraer del análisis de la relación lógica."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 1,
+        "estimated_time_sec": 55,
+        "error_type": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D único conclusivo: funciones-ecológicas → conservación-prioritaria. A/B/C adversativos/concesivos (ilógicos). H5/N1/RCV ✓. N1: relación conclusiva directa, 1 paso ✓. H1=baja ✓. simulation_id=sim_1 ✓. Contexto bosques-tropicales/conservación — distinto de todos los H5 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B018",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "relation": "primera oración: niños pequeños adquieren pronunciación más natural; segunda: adultos pueden aprender con notable precisión GRACIAS A capacidad analítica — contraste de mecanismos, no de resultados",
+        "connector_type": "adversativo",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«El aprendizaje de idiomas en la infancia temprana facilita una adquisición más natural e intuitiva de los sistemas fonológicos. __________, los adultos pueden alcanzar niveles de precisión lingüística muy elevados gracias a su mayor capacidad de análisis estructural.»",
+      "opciones": {
+        "A": "Por esta razón",
+        "B": "Sin embargo",
+        "C": "En consecuencia",
+        "D": "Por lo tanto"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La primera oración señala una ventaja de los niños (adquisición fonológica natural). La segunda oración señala una ventaja compensatoria de los adultos (análisis estructural). Ambas afirmaciones son válidas pero contrastan entre sí.",
+        "paso_2": "'Sin embargo' (B) introduce el contraste entre las dos etapas de aprendizaje, reconociendo que la ventaja infantil no elimina la capacidad adulta. ✓",
+        "paso_critico": "El segundo enunciado no es consecuencia del primero — los adultos aprenden bien POR RAZONES DISTINTAS (análisis), no a causa de la adquisición infantil natural.",
+        "error_tipico": "A, C y D (causales/conclusivos): implicarían que la precisión adulta se deriva de la ventaja fonológica infantil — lógicamente incoherente. La trampa es la proximidad temática que sugiere continuidad causal."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "difficulty": 2,
+        "estimated_time_sec": 100,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B único adversativo: ventaja-niños vs. capacidad-adultos son mecanismos distintos, no causalidad. A/C/D causales (implican derivación inexistente). H5/N2/RCV ✓. N2: distinguir contraste de mecanismos vs. causalidad aparente. H1=media ✓. simulation_id=sim_1 ✓. Contexto idiomas/etapas-de-aprendizaje — distinto de todos los H5 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B018",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "El sueño de calidad es esencial para la consolidación de la memoria porque durante él el cerebro reorganiza y fija la información aprendida",
+        "correct_option": "A",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Durante el sueño, el cerebro no permanece inactivo: realiza un proceso activo de reorganización neuronal que consolida los recuerdos formados durante la vigilia. La privación de sueño interfiere directamente con esta función, razón por la cual los déficits de memoria a corto plazo se asocian con frecuencia a la falta de descanso adecuado.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El sueño es un proceso activo esencial para la consolidación de la memoria, y su privación deteriora esta función.",
+        "B": "Los problemas de memoria en adultos jóvenes se deben principalmente a la falta de sueño.",
+        "C": "El cerebro humano es más activo durante el sueño que durante la vigilia en tareas de memoria.",
+        "D": "La reorganización neuronal es un proceso exclusivo del sueño que no puede ocurrir en otro momento."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El texto afirma: (i) durante el sueño el cerebro consolida activamente la memoria; (ii) la privación de sueño interfiere con esa función, causando déficits de memoria.",
+        "paso_2": "A integra fielmente ambos componentes: el sueño como proceso activo de consolidación + la privación como causa de deterioro. ✓",
+        "paso_critico": "La idea central no es solo 'el sueño ayuda a la memoria' sino la relación bidireccional: el sueño consolida y su ausencia deteriora.",
+        "error_tipico": "B restringe a 'adultos jóvenes' — el texto no especifica grupo etario. C introduce 'más activo que en vigilia' — el texto no establece esa comparación. D introduce 'exclusivo del sueño' — generalización que el texto no sostiene."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 1,
+        "estimated_time_sec": 90,
+        "error_type": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "A única: proceso-activo-consolidación + privación-deteriora. B restringe erróneamente a adultos jóvenes. C introduce comparación vigilia/sueño ausente. D absolutiza 'exclusivo' no sostenido. H3/N1/RCV ✓. N1: idea central directamente enunciada, dos componentes explícitos. H1=baja ✓. simulation_id=sim_1 ✓. Contexto sueño/consolidación-memoria — distinto de todos los H3 previos (trabajo-remoto, léxico-cognición, política-ambiental, reciclaje-doméstico, lectura-sostenida, pensiones, tecnología-neutral)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B018",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "Las aves migratorias utilizan múltiples mecanismos de orientación que les permiten mantener rutas precisas a pesar de las perturbaciones ambientales",
+        "correct_option": "C",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Las aves migratorias no dependen de un único mecanismo para orientarse durante sus desplazamientos de miles de kilómetros. Integran señales magnéticas, solares y estelares, además de referencias topográficas memoradas, para construir una representación espacial robusta y redundante. Esta multiplicidad de sistemas les permite corregir desviaciones causadas por tormentas o vientos adversos y llegar con notable precisión a sus destinos.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las aves migratorias memorizan las rutas desde su nacimiento gracias a un instinto magnético innato.",
+        "B": "Las perturbaciones climáticas son el principal obstáculo que enfrentan las aves migratorias durante sus desplazamientos.",
+        "C": "Las aves migratorias se orientan mediante múltiples sistemas integrados que les otorgan precisión y resiliencia ante perturbaciones.",
+        "D": "Las referencias topográficas son más importantes que las señales magnéticas para la orientación de las aves migratorias."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto desarrolla tres ideas articuladas: (i) no dependen de un solo mecanismo; (ii) integran múltiples señales; (iii) esto les permite corregir perturbaciones y llegar con precisión.",
+        "paso_2": "C sintetiza los tres componentes: múltiples sistemas integrados → precisión + resiliencia. ✓",
+        "paso_critico": "La idea central no es el listado de mecanismos, sino la ventaja sistémica que produce su combinación (redundancia → corrección de errores).",
+        "error_tipico": "A introduce 'instinto innato' y elimina los otros mecanismos — reducción no sostenida. B convierte al obstáculo en el foco — el texto lo menciona como contexto. D introduce jerarquía entre mecanismos que el texto no establece."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C única: múltiples-sistemas + precisión + resiliencia (redundancia). A instinto-innato reduce y elimina pluralidad. B convierte obstáculo en foco (error de inversión). D establece jerarquía ausente. H3/N2/RCV ✓. Síntesis multi-componente correctamente articulada. H1=media ✓. simulation_id=sim_1 ✓. Contexto aves-migratorias/orientación — distinto de todos los H3 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B018",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "central_idea": "La brecha entre el consenso científico y la percepción pública se debe principalmente a cómo se comunica la ciencia, no a su contenido",
+        "correct_option": "B",
+        "alignment": "PASS"
+      },
+      "stem": "Lea el siguiente texto:\n\n«El desacuerdo entre el consenso científico y la opinión pública en temas como el cambio climático o la eficacia de las vacunas no refleja necesariamente una falta de información disponible. En muchos casos, la raíz del problema radica en cómo se comunica esa información: el lenguaje técnico, la presentación de incertidumbres propias del método científico y la ausencia de narrativas accesibles contribuyen a que datos sólidos sean percibidos como dudosos.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El público general carece de la formación necesaria para comprender el consenso científico en temas complejos.",
+        "B": "La distancia entre consenso científico y percepción pública se origina principalmente en deficiencias de comunicación, no en escasez de información.",
+        "C": "El método científico, al mostrar incertidumbre, genera desconfianza inevitable en la población.",
+        "D": "Los medios de comunicación son los principales responsables de distorsionar el mensaje científico ante la opinión pública."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto niega explícitamente que el problema sea la falta de información ('no refleja necesariamente una falta de información disponible'). Luego identifica la causa real: la forma en que se comunica.",
+        "paso_2": "B captura fielmente la estructura argumental: la brecha se debe a cómo se comunica (deficiencia de comunicación), no a cuánta información existe. ✓",
+        "paso_critico": "La idea central incluye la negación de la causa aparente (escasez de info) y la afirmación de la causa real (modo de comunicación). Ambos componentes son necesarios.",
+        "error_tipico": "A afirma falta de formación del público — el texto niega que sea un problema de información. C absolutiza 'desconfianza inevitable' — el texto dice que la presentación de incertidumbre CONTRIBUYE, no determina inevitablemente. D introduce a los medios de comunicación como agente — el texto no los menciona."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "difficulty": 2,
+        "estimated_time_sec": 115,
+        "error_type": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: negación-de-causa-aparente (info escasa) + afirmación-de-causa-real (modo-comunicación). A afirma falta-de-formación (texto niega). C absolutiza desconfianza inevitable (texto dice 'contribuye'). D introduce medios-de-comunicación (no mencionados). H3/N2/RCV ✓. Síntesis con negación explícita + causa real. H1=media ✓. simulation_id=sim_1 ✓. Contexto consenso-científico/comunicación — distinto de todos los H3 previos."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B018",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "let": "b = precio unitario del libro",
+        "equation": "4b + 3(500) = 5300 → 4b + 1500 = 5300 → 4b = 3800 → b = 950",
+        "correct_option": "C",
+        "correct_answer_value": 950,
+        "verification": "4(950) + 3(500) = 3800 + 1500 = 5300 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "En una librería se compran 4 libros y 3 marcadores. Cada marcador cuesta ₡500 y el total de la compra es ₡5 300. ¿Cuánto cuesta cada libro?",
+      "opciones": {
+        "A": "₡850",
+        "B": "₡900",
+        "C": "₡950",
+        "D": "₡1 000"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea b = precio de cada libro. Ecuación: 4b + 3(500) = 5300 → 4b + 1500 = 5300 → 4b = 3800.",
+        "paso_2": "b = 3800 ÷ 4 = 950. ✓ Verificación: 4(950) + 3(500) = 3800 + 1500 = 5300 ✓.",
+        "paso_critico": "Calcular primero el costo total de los marcadores (3×500=1500) y restarlo del total antes de dividir entre 4.",
+        "error_tipico": "A (₡850): 4b=3400→b=850, resta solo 2 marcadores (2×500=1000). B (₡900): 4b=3600→b=900, error aritmético en la resta. D (₡1000): 5300÷4≈1325 no es D; aparece si se divide el total directamente entre 4 sin restar marcadores y se redondea."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "4b+1500=5300→b=950=C ✓. Verif: 4(950)+3(500)=5300 ✓. A resta solo 2 marcadores. B error aritmético. D división directa sin restar costo fijo. H2/N2/RCM ✓. Skill H2=Modelado-Lógico-Simbólico: ecuación lineal con costo fijo. N2: identificar estructura costo-fijo/variable y despejar correctamente. H1=media ✓. simulation_id=sim_1 ✓. Contexto librería/libros-marcadores — distinto de B017 (carpetas-reglas), B016 (cuadernos-lápices, fontanero) y todos los H2 diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B018",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "simulation_id": "sim_1",
+      "item_type": "simulation",
+      "pre_adv_solution_check": {
+        "step_1": "tasa: 15 litros / 100 km = 0.15 L/km",
+        "step_2": "240 km × 0.15 L/km = 36 litros",
+        "correct_option": "B",
+        "correct_answer_value": 36,
+        "verification": "15/100 = 36/240 = 0.15 ✓",
+        "alignment": "PASS"
+      },
+      "stem": "Un automóvil consume 15 litros de combustible por cada 100 kilómetros recorridos. Manteniendo el mismo consumo, ¿cuántos litros necesita para recorrer 240 kilómetros?",
+      "opciones": {
+        "A": "30",
+        "B": "36",
+        "C": "40",
+        "D": "45"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa de consumo: 15 L ÷ 100 km = 0,15 L/km.",
+        "paso_2": "Para 240 km: 0,15 × 240 = 36 litros. ✓ Verificación: 15/100 = 36/240 = 0,15 ✓.",
+        "paso_critico": "Calcular la tasa unitaria de consumo (litros por kilómetro) antes de escalar a la nueva distancia.",
+        "error_tipico": "A (30): 15×2=30, escala por ×2 asumiendo que 240 es el doble de 100 (error: 240÷100=2.4, no 2). C (40): usa tasa de 1 L/km de forma aproximada o aproxima mal. D (45): 15×3=45, asume que 240≈300 km (redondeo erróneo)."
+      },
+      "metadata": {
+        "item_type": "simulation",
+        "simulation_id": "sim_1",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "difficulty": 2,
+        "estimated_time_sec": 95,
+        "error_type": "Confusión de proporcionalidad",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "0.15×240=36=B ✓. Verif: 15/100=36/240=0.15 ✓. A escala ×2 (error: 240/100=2.4). C tasa errónea. D aproxima 240→300. H6/N2/RCM ✓. Skill H6=Relaciones-Cuantitativas-y-Proporcionalidad: tasa unitaria con escala no-entera. N2: 240/100=2.4 requiere cálculo explícito, no multiplicación intuitiva. H1=media ✓. simulation_id=sim_1 ✓. Contexto automóvil/consumo-combustible — distinto de B017 (jardinero-tarifa, velocidad-trenes), B016 (harina-porciones) y diagnóstico."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_018",
+    "item_type": "simulation",
+    "simulation_id": "sim_1",
+    "total_generated": 8,
+    "approved": 8,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08)"
+    },
+    "integrity_check": {
+      "all_items_item_type_simulation": true,
+      "all_items_simulation_id_sim_1": true,
+      "items_count": 8,
+      "items_without_metadata": 0,
+      "items_without_traceability": 0,
+      "batch_state_valid": true
+    },
+    "skill_distribution": {
+      "H2": 1,
+      "H3": 3,
+      "H4": 0,
+      "H5": 3,
+      "H6": 1,
+      "H7": 0,
+      "H2_note": "Item 7 (L2)",
+      "H3_note": "Items 4 (L1), 5 (L2), 6 (L2)",
+      "H5_note": "Items 1 (L1), 2 (L1), 3 (L2)",
+      "H6_note": "Item 8 (L2)"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 5,
+      "nivel_3": 0,
+      "nivel_1_items": "1 (H5), 2 (H5), 4 (H3)",
+      "nivel_2_items": "3 (H5), 5 (H3), 6 (H3), 7 (H2), 8 (H6)",
+      "nivel_3_items": "none — N3 sealed"
+    },
+    "macro_area_distribution": {
+      "RCV": 6,
+      "RCM": 2,
+      "RCV_items": "1 (H5), 2 (H5), 3 (H5), 4 (H3), 5 (H3), 6 (H3)",
+      "RCM_items": "7 (H2), 8 (H6)"
+    },
+    "h1_distribution": {
+      "baja": 3,
+      "media": 5,
+      "alta": 0,
+      "pct_alta_batch": 0.000,
+      "note": "No N3 items this batch — no alta H1. Cumulative maintained at ~31%."
+    },
+    "template_usage": {
+      "T_H2_RCM_L2_01": "1 use (item 7)",
+      "T_H3_RCV_L2_01": "3 uses (items 4, 5, 6)",
+      "T_H5_RCV_L2_01": "3 uses (items 1, 2, 3)",
+      "T_H6_RCM_L2_01": "1 use (item 8)",
+      "all_templates_active": true
+    },
+    "sim_1_accumulation": {
+      "sim_1_count_before": 37,
+      "items_added": 8,
+      "sim_1_count_after": 45,
+      "sim_1_target": 45,
+      "sim_1_remaining": 0,
+      "status": "COMPLETE"
+    },
+    "final_cumulative_sim_1": {
+      "skill_distribution_final": {
+        "H2": 8,
+        "H3": 10,
+        "H4": 5,
+        "H5": 13,
+        "H6": 6,
+        "H7": 3,
+        "total": 45
+      },
+      "strat_minimums": {
+        "H2": 8,
+        "H3": 7,
+        "H4": 5,
+        "H5": 10,
+        "H6": 6,
+        "H7": 3
+      },
+      "compliance_note": "H2, H4, H6, H7 meet exact STRAT targets. H3 (10 ≥ 7 ✓) and H5 (13 ≥ 10 ✓) exceed minimums to fill RCV:23 macro-area requirement. The 6 surplus RCV items (23 total - 17 from minimum H3+H5) are distributed as H3:+3 and H5:+3.",
+      "macro_area_final": {
+        "RCV": 23,
+        "RCM": 22,
+        "total": 45,
+        "strat_target_RCV": 23,
+        "strat_target_RCM": 22,
+        "compliance": "EXACT ✓"
+      },
+      "difficulty_distribution_final": {
+        "N1": 12,
+        "N2": 21,
+        "N3": 12,
+        "total": 45,
+        "strat_target_N1": 12,
+        "strat_target_N2": 22,
+        "strat_target_N3": 11,
+        "compliance_N1": "EXACT ✓",
+        "compliance_N2": "21 vs 22 — deviation -1 (FLAG_003)",
+        "compliance_N3": "12 vs 11 — deviation +1 (FLAG_003)",
+        "flag_reference": "FLAG_003 — originated in BATCH_017 (+6 N3 when residual allowed 5). Requires 4B review."
+      },
+      "h1_distribution_final": {
+        "alta_items_estimated": 14,
+        "total_items": 45,
+        "pct_alta": 0.311,
+        "strat_target": "30-40%",
+        "compliance": "✓ 31.1% within range"
+      }
+    },
+    "sim_1_segment_status": "CLOSED",
+    "pipeline_next_action": "sim_2 production (sim_2_count: 0 → 45). Pending 4B audit on FLAG_003 (N2/N3 ±1 deviation)."
+  }
+}

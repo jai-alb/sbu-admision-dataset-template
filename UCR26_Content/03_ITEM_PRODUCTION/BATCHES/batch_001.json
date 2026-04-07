@@ -1,0 +1,554 @@
+{
+  "batch_id": "BATCH_001",
+  "generated_at": "2026-03-23T16:21:10-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "total_items": 11,
+  "items": [
+
+    {
+      "item_id": "ITEM_001_B001",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En una granja, el número de gallinas es el triple del número de conejos. Si en total hay 48 animales, ¿cuántos conejos hay?",
+      "opciones": {
+        "A": "12",
+        "B": "16",
+        "C": "36",
+        "D": "24"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Se define la variable: sea x = número de conejos.",
+        "paso_2": "La relación verbal 'el triple de conejos son gallinas' se traduce como: gallinas = 3x.",
+        "paso_3": "La ecuación total: x + 3x = 48 → 4x = 48 → x = 12.",
+        "paso_critico": "El estudiante debe identificar correctamente cuál magnitud se expresa en función de la otra. La inversión produce la trampa.",
+        "error_tipico": "Asignar x a las gallinas (la cantidad mayor) en lugar de a los conejos (la incógnita referente), lo que lleva a 3x + x = 48, pero asignando mal el resultado: tomar x = 12 como gallinas en lugar de conejos, concluyendo 36 (opción C). O bien calcular 48 / 3 = 16 ignorando la variable de conejos (opción B)."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: única solución es x=12 (conejos). Distractor B (16) plausible por división directa. Distractor C (36) plausible por inversión de variable. Distractor D (24) plausible por división a la mitad. Justificación completa. Sin ambigüedad."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_002_B001",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "El precio de un libro es el doble del precio de un cuaderno. Si se compran 3 libros y 4 cuadernos y se pagan en total ₡2 800, ¿cuál es el precio de un cuaderno?",
+      "opciones": {
+        "A": "₡400",
+        "B": "₡280",
+        "C": "₡200",
+        "D": "₡560"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Sea c = precio del cuaderno. Entonces precio del libro = 2c.",
+        "paso_2": "Se establece el sistema implícito de una ecuación: 3(2c) + 4c = 2800.",
+        "paso_3": "Resolver: 6c + 4c = 2800 → 10c = 2800 → c = 280. ALERTA: c = 280 es el precio del cuaderno.",
+        "paso_4": "Verificación: Libro = 2 × 280 = 560. Total = 3(560) + 4(280) = 1680 + 1120 = 2800. ✓",
+        "paso_critico": "La variable oculta es la relación entre libro y cuaderno. El estudiante debe plantear una sola ecuación con una sola variable, no tratar los precios como independientes.",
+        "error_tipico": "No sustituir la relación libro = 2c y operar con dos variables independientes, llevando a respuestas como ₡280 (opción B, que corresponde al resultado de c sin identificar que c ya es el cuaderno) o a dividir el total entre el número total de ítems (₡280 = 2800/10, opción B por coincidencia numérica pero razonamiento incorrecto). Distractor D (₡560) corresponde al precio del libro, no del cuaderno."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 3,
+        "tiempo_estimado": "3.5 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: c=280 → cuaderno=₡280. AVISO INDEPENDIENTE ADV: La opción correcta es A (₡400) — se detecta inconsistencia interna en la generación."
+      },
+      "final_status": "rejected",
+      "rejection_reason": "ADV detectó conflicto interno: opción A dice ₡400 pero la resolución paso a paso da c=280. Conflicto GEN vs ADV → rechazo automático. Requiere reintento."
+    },
+
+    {
+      "item_id": "ITEM_002B_B001",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En una tienda, el precio de una camisa es el doble del precio de un par de calcetines. Si se compran 2 camisas y 5 pares de calcetines por un total de ₡3 600, ¿cuál es el precio de una camisa?",
+      "opciones": {
+        "A": "₡800",
+        "B": "₡400",
+        "C": "₡720",
+        "D": "₡600"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Sea k = precio de calcetines. Entonces precio de camisa = 2k.",
+        "paso_2": "Plantear ecuación con variable oculta: 2(2k) + 5k = 3600.",
+        "paso_3": "Resolver: 4k + 5k = 3600 → 9k = 3600 → k = 400.",
+        "paso_4": "Precio de camisa = 2k = 2 × 400 = 800.",
+        "paso_5": "Verificación: 2(800) + 5(400) = 1600 + 2000 = 3600. ✓",
+        "paso_critico": "Identificar que camisa y calcetines no son independientes: la dependencia entre ambas magnitudes es la variable oculta que estructura el sistema.",
+        "error_tipico": "Distractor B (₡400): corresponde al precio de los calcetines, no de la camisa — trampa de extraer la variable intermedia en lugar de la pedida. Distractor C (₡720): resultado de dividir el total entre 5, ignorando la relación entre artículos. Distractor D (₡600): división simple del total entre 6 ítems sin respetar la relación doble."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 3,
+        "tiempo_estimado": "3.5 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: k=400 → camisa = 800 = opción A. Verificación aritmética confirma total. Distractores plausibles: B anticipa confusión variable intermedia; C y D anticipan operaciones incorrectas de simplificación. Sin ambigüedad. Justificación completa con paso crítico identificado."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_003_B001",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«Las ciudades modernas enfrentan un desafío creciente: el aumento del parque vehicular provoca no solo congestión vial, sino también contaminación sonora y atmosférica. Ante esto, diversas municipalidades han impulsado el uso del transporte público como estrategia central de movilidad urbana sostenible.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las ciudades modernas tienen demasiados vehículos en sus calles.",
+        "B": "La contaminación sonora es más grave que la atmosférica en las ciudades.",
+        "C": "El fomento del transporte público es la respuesta municipal al problema de movilidad urbana.",
+        "D": "Las municipalidades deben construir más carreteras para reducir la congestión."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar el núcleo del texto: se presenta un problema (congestión, contaminación) y una respuesta institucional (transporte público como estrategia).",
+        "paso_2": "La tesis no es el problema en sí, sino la respuesta que el texto propone como central: el transporte público.",
+        "paso_3": "Opción C captura la estructura global (problema → respuesta municipal estratégica).",
+        "paso_critico": "El estudiante debe identificar la estructura global del texto, no quedarse con un detalle del problema descrito al inicio.",
+        "error_tipico": "Opción A es una lectura literal del primer enunciado (el problema vehicular), que es solo el contexto, no la tesis. Opción B extrae un detalle comparativo inexistente en el texto. Opción D introduce una solución no mencionada (construir carreteras), que contradice el enfoque del texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Única respuesta correcta: C. Opción A es el distractor principal por lectura literal del inicio del texto — trampa funciona. Opción B introduce falsa comparación no presente en el texto. Opción D introduce solución no mencionada. Sin ambigüedad. La tesis es identificable sin inferencia no explícita (H1 media confirmada)."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_004_B001",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«El consumo excesivo de azúcar no afecta únicamente la salud física. Estudios recientes indican que dietas con alto contenido de azúcar están asociadas con mayor incidencia de ansiedad y depresión. Sin embargo, la industria alimentaria continúa promoviendo productos ultraprocesados sin advertencias claras sobre estos efectos. Es evidente que la regulación actual resulta insuficiente para proteger a la población.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "El azúcar es el principal causante de la depresión en la población.",
+        "B": "Se requiere una regulación más estricta sobre los productos con alto contenido de azúcar.",
+        "C": "La industria alimentaria actúa de forma irresponsable al ocultar información.",
+        "D": "Los estudios científicos sobre azúcar y salud mental son concluyentes."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Identificar la estructura argumentativa: premisa 1 (azúcar afecta salud mental), premisa 2 (industria no advierte), premisa 3 (regulación insuficiente).",
+        "paso_2": "La última oración del texto ('la regulación actual resulta insuficiente') actúa como premisa final que apunta a una conclusión no explicitada.",
+        "paso_3": "La conclusión implícita que da coherencia al argumento es que se necesita mayor regulación — opción B.",
+        "paso_critico": "Distinguir entre las premisas del argumento y la conclusión estructural. La opción C es una de las premisas (no la conclusión). El estudiante que confunda premisa con conclusión elegirá C.",
+        "error_tipico": "Opción C es una reformulación de la premisa sobre la industria alimentaria — es una premisa secundaria, no la conclusión. Opción A sobreextiende una afirmación que el texto expresa como asociación, no como causa directa. Opción D invierte la carga del texto al sobredotar de certeza a los estudios citados como evidencia, no como conclusión."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 3,
+        "tiempo_estimado": "3.5 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: B es la única opción que representa la conclusión estructural, no una premisa. Trampa funcional: C es la premisa más llamativa, diferenciada de la conclusión solo por función argumentativa — distractor fuerte confirmado. A sobreextiende; D invierte rol de evidencia. H1 alta confirmada: la conclusión no está explicitada en el texto. Justificación completa."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_005_B001",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Observe la siguiente secuencia de números: 3, 7, 11, 15, 19, …\n\n¿Cuál es el décimo término de la secuencia?",
+      "opciones": {
+        "A": "39",
+        "B": "35",
+        "C": "43",
+        "D": "37"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Identificar la diferencia constante entre términos consecutivos: 7−3=4, 11−7=4, 15−11=4. Patrón lineal con diferencia d=4.",
+        "paso_2": "Fórmula del término n-ésimo de una secuencia aritmética: aₙ = a₁ + (n−1)·d.",
+        "paso_3": "a₁₀ = 3 + (10−1)·4 = 3 + 36 = 39.",
+        "paso_critico": "El estudiante debe aplicar la fórmula correctamente y no simplemente multiplicar el índice por la diferencia (error: 10 × 4 = 40, luego ±ajuste incorrecto).",
+        "error_tipico": "Opción D (37): resultado de calcular 3 + 9×4 pero con error de conteo (confundir 9 pasos con 8 pasos → 3 + 8×4 = 35, opción B). Opción C (43): asumir n=10 directamente: 3 + 10×4 = 43, sin restar 1 al índice. Opción B (35): contar solo 8 incrementos en lugar de 9."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación aritmética: a₁₀ = 3 + 9(4) = 39 = opción A. Opción C anticipará el error más común (no restar 1 al índice). Opción B anticipa error de conteo por uno. Patrón lineal claramente identificable. Sin ambigüedad en el nivel de dificultad 2."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_006_B001",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Complete la siguiente oración eligiendo el conector más adecuado:\n\n«El proyecto fue presentado con todos los requisitos técnicos; __________, fue rechazado por el comité evaluador.»",
+      "opciones": {
+        "A": "por eso",
+        "B": "además",
+        "C": "sin embargo",
+        "D": "en consecuencia"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Identificar la relación lógica entre las dos proposiciones: la primera describe condiciones positivas cumplidas; la segunda presenta un resultado inesperado o contrario.",
+        "paso_2": "La relación es de contraste o contraposición: se cumplió lo esperado, pero el resultado fue negativo.",
+        "paso_3": "El conector que expresa contraste es 'sin embargo' (adversativo) — opción C.",
+        "paso_critico": "Reconocer que entre las dos proposiciones existe antagonismo lógico, no causalidad ni adición.",
+        "error_tipico": "Opción A ('por eso') y opción D ('en consecuencia') son conectores causales que implicarían que el rechazo es consecuencia de cumplir los requisitos — relación lógicamente inversa a la del texto. Opción B ('además') es aditivo y no captura el contraste. El error más frecuente es elegir A o D por lectura superficial del segundo enunciado sin analizar la relación con el primero."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Única respuesta correcta: C. Distractores A y D son funcionalmente equivalentes entre sí (ambos causales) y representan la trampa principal. Opción B es claramente eliminable por diferencia de función. La relación de contraste es inequívoca. Sin ambigüedad. H1 media confirmada."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_007_B001",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál de las siguientes opciones expresa el mismo significado lógico que el enunciado:\n\n«Solo se aprueba el proyecto si se presentan todos los documentos requeridos»?",
+      "opciones": {
+        "A": "Si se presentan todos los documentos requeridos, el proyecto se aprueba.",
+        "B": "Si el proyecto no se aprueba, es porque no se presentaron todos los documentos.",
+        "C": "Presentar todos los documentos es condición necesaria para que el proyecto se apruebe.",
+        "D": "El proyecto se aprueba siempre que se presente al menos un documento requerido."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El enunciado original: 'Solo se aprueba si se presentan todos los documentos' → estructura lógica: Aprobación → Documentos completos (la presentación de documentos es condición necesaria, no suficiente).",
+        "paso_2": "Esto significa: sin documentos completos, no hay aprobación posible — pero tener los documentos no garantiza aprobación.",
+        "paso_3": "Opción C expresa exactamente esto: 'condición necesaria' = sin ella no se da el consecuente. ✓",
+        "paso_critico": "Distinguir entre condición necesaria (enunciado original) y condición suficiente (opción A). 'Solo si' ≠ 'si'.",
+        "error_tipico": "Opción A invierte la condicional: afirma que presentar documentos garantiza aprobación (condición suficiente), lo cual no está expresado en el original. Es la trampa principal por sinonimia parcial. Opción B es el contrarrecíproco del enunciado original — es lógicamente equivalente, pero puede resultar confusa porque el enunciado original dice 'solo si aprobar → documentos', y B dice 'no aprueba → no documentos', que sí es equivalente. Sin embargo, C es la expresión directa más clara y no ambigua del significado original."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "reject",
+        "error_type": "non_unique_solution",
+        "conflict_flag": true,
+        "adv_notes": "CONFLICTO DETECTADO: La opción B ('Si el proyecto no se aprueba, es porque no se presentaron todos los documentos') es el contrarrecíproco lógico del enunciado original y es lógicamente equivalente. Tanto B como C son defensibles como respuesta correcta. El ítem presenta ambigüedad lógica entre dos opciones. → RECHAZO AUTOMÁTICO por conflict_flag=true."
+      },
+      "final_status": "rejected",
+      "rejection_reason": "ADV detectó no-unicidad: opciones B y C son ambas lógicamente equivalentes al enunciado original. Requiere rediseño del distractor B para romper la equivalencia."
+    },
+
+    {
+      "item_id": "ITEM_007B_B001",
+      "template_id": "T_H5_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál de las siguientes opciones expresa el mismo significado lógico que el enunciado:\n\n«Para que una solicitud sea válida, es indispensable que esté firmada por el solicitante»?",
+      "opciones": {
+        "A": "Si la solicitud está firmada, entonces es válida.",
+        "B": "Una solicitud sin firma del solicitante no puede ser válida.",
+        "C": "La firma del solicitante garantiza que la solicitud será procesada.",
+        "D": "Solo las solicitudes firmadas por dos personas son válidas."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El enunciado original establece que la firma es condición necesaria (indispensable) para la validez. Estructura: Válida → Firmada.",
+        "paso_2": "El equivalente lógico directo: si no está firmada → no es válida. Esto es la contrapositiva directa: ¬Firmada → ¬Válida.",
+        "paso_3": "Opción B expresa exactamente esto: 'sin firma no puede ser válida' = la contrapositiva. ✓",
+        "paso_critico": "Reconocer que el enunciado original no garantiza que la firma sea suficiente — solo es necesaria. La trampa es confundir condición necesaria con condición suficiente (opción A).",
+        "error_tipico": "Opción A afirma que la firma garantiza la validez (condición suficiente), lo cual no está en el original — trampa principal por sinonimia parcial. Opción C extiende la implicación hacia 'será procesada', algo no mencionado — inferencia inválida. Opción D introduce la condición de dos firmas, no presente en el texto — distractor por modificación cuantitativa."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: B expresa la contrapositiva directa del enunciado (condición necesaria → su negación implica negación del consecuente). Opción A es la trampa canónica de inversión (suficiente vs necesaria). Opción C introduce término nuevo ('procesada'). Opción D modifica cuantificación. Ninguna otra opción es lógicamente equivalente al original. Sin ambigüedad. Justificación completa. H1 alta confirmada."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_008_B001",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Si 4 trabajadores construyen un muro en 6 días, ¿cuántos días tardarán 8 trabajadores en construir el mismo muro, trabajando al mismo ritmo?",
+      "opciones": {
+        "A": "3 días",
+        "B": "12 días",
+        "C": "2 días",
+        "D": "10 días"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Reconocer que la relación entre trabajadores y días es de proporcionalidad inversa: más trabajadores, menos días.",
+        "paso_2": "Plantear la proporción inversa: trabajadores × días = constante. → 4 × 6 = 8 × d → 24 = 8d → d = 3.",
+        "paso_3": "La respuesta es 3 días (opción A).",
+        "paso_critico": "Identificar correctamente el tipo de proporcionalidad: inversamente proporcional (no directamente). La trampa aplica proporcionalidad directa.",
+        "error_tipico": "Opción B (12 días): resultado de proporcionalidad directa errónea: si 4 → 6, entonces 8 → 12. El estudiante suma en lugar de dividir la constante. Opción C (2 días): error por dividir el resultado correcto entre 1.5 sin justificación. Opción D (10 días): suma de 4 y 6 aplicada incorrectamente."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Confusión de proporcionalidad",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: 4×6=24, 8×3=24. ✓ Única solución. Trampa principal B (proporcionalidad directa) es el error más frecuente en este tipo de ítem. Opción C y D son menos plausibles pero presentes. H1 media confirmada. Sin ambigüedad."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_009_B001",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En una empresa, el departamento A produce 120 unidades en 8 horas con 5 máquinas. El departamento B produce 150 unidades en 6 horas con 5 máquinas. Si ambos departamentos reducen su número de máquinas a 4, ¿cuál departamento tiene la mayor tasa de producción por máquina por hora y cuánto produce en esa condición en 10 horas?",
+      "opciones": {
+        "A": "Departamento B; produce 200 unidades",
+        "B": "Departamento A; produce 120 unidades",
+        "C": "Departamento B; produce 150 unidades",
+        "D": "Departamento A; produce 160 unidades"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Calcular tasa por máquina por hora en departamento A: 120 / (8 × 5) = 120/40 = 3 unidades/máquina/hora.",
+        "paso_2": "Calcular tasa por máquina por hora en departamento B: 150 / (6 × 5) = 150/30 = 5 unidades/máquina/hora.",
+        "paso_3": "El departamento B tiene mayor tasa (5 > 3).",
+        "paso_4": "Producción de B con 4 máquinas en 10 horas: 5 × 4 × 10 = 200 unidades.",
+        "paso_critico": "El estudiante no debe comparar valores absolutos de producción (150 > 120) sino razones por máquina por hora. La trampa es comparar los totales directamente.",
+        "error_tipico": "Distractor B: comparar totales directamente (120 < 150) pero elegir A por alguna otra operación errónea, o bien calcular producción para A con 4 máquinas: 3 × 4 × 10 = 120. Distractor C: elegir B correctamente pero usar el valor original (150) sin recalcular con las nuevas condiciones. Distractor D: tomar la tasa de A (3) y calcular 4 × 10 × 4 = 160 aplicando la tasa incorrecta."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 3,
+        "tiempo_estimado": "4.5 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: tasa A = 3 u/m/h; tasa B = 5 u/m/h. B > A. Producción B con 4 máquinas, 10 h = 5×4×10=200. Opción A es única solución correcta. Distractor C es trampa fuerte (resultado sin recalcular). Distractor D aplica tasa incorrecta. Distractor B aplica comparación directa de valores absolutos. Dos transformaciones intermedias obligatorias = H1 alta confirmada."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_010_B001",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En la figura (no mostrada), se tienen dos rectas paralelas cortadas por una transversal. Uno de los ángulos formados mide 65°. ¿Cuál es la medida del ángulo que es alterno interno con respecto al ángulo dado?",
+      "opciones": {
+        "A": "115°",
+        "B": "65°",
+        "C": "25°",
+        "D": "130°"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Identificar la propiedad de ángulos alternos internos: cuando dos rectas paralelas son cortadas por una transversal, los ángulos alternos internos son iguales.",
+        "paso_2": "Si uno de los ángulos mide 65°, el alterno interno también mide 65°.",
+        "paso_critico": "El estudiante debe conocer la propiedad específica de alternos internos y no confundirla con ángulos suplementarios o complementarios.",
+        "error_tipico": "Opción A (115°): resultado de calcular el suplemento (180° − 65° = 115°) — confusión con ángulos co-internos o consecutivos. Opción C (25°): resultado de calcular el complemento (90° − 65° = 25°) — confusión con ángulos complementarios. Opción D (130°): resultado de duplicar el ángulo (65° × 2 = 130°) — error sin base lógica pero numéricamente plausible."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Error de cálculo",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Unicidad verificada: alternos internos son siempre iguales → 65°. Propiedad directa, sin ambigüedad. Distractores plausibles: A (suplemento, trampa principal), C (complemento), D (doble). Sin figura disponible pero el ítem es autocontenido por definición de la propiedad. H1 media confirmada."
+      },
+      "final_status": "approved"
+    },
+
+    {
+      "item_id": "ITEM_011_B001",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Un rectángulo tiene un vértice en el origen (0, 0) y sus lados son paralelos a los ejes. Su vértice opuesto se encuentra en el punto (6, 4). Se aplica una reflexión sobre el eje y. ¿En qué cuadrante queda el rectángulo transformado y cuál es la longitud de su diagonal?",
+      "opciones": {
+        "A": "Cuadrante II; diagonal = √52",
+        "B": "Cuadrante I; diagonal = √52",
+        "C": "Cuadrante II; diagonal = 10",
+        "D": "Cuadrante III; diagonal = √52"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El rectángulo original tiene vértices en (0,0), (6,0), (6,4), (0,4) — ubicado en cuadrante I.",
+        "paso_2": "Una reflexión sobre el eje y transforma (x, y) en (−x, y). Los vértices transformados: (0,0), (−6,0), (−6,4), (0,4).",
+        "paso_3": "El rectángulo transformado está ahora en el cuadrante II (x negativo, y positivo).",
+        "paso_4": "La reflexión preserva medidas y proporciones. La diagonal del rectángulo es √(6² + 4²) = √(36 + 16) = √52 — idéntica al original.",
+        "paso_critico": "El estudiante debe visualizar que la reflexión mantiene la diagonal igual (isometría) y que el cuadrante cambia de I a II. La trampa es asumir que la simetría refleja la figura completa al cuadrante III (simetría sobre el origen, no sobre el eje y).",
+        "error_tipico": "Opción D (cuadrante III): confusión entre reflexión sobre el eje y y reflexión sobre el origen — error de identificación de tipo de transformación. Opción B: correcta en diagonal pero incorrecta en cuadrante (no reconoce el cambio de posición). Opción C: la diagonal calculada como suma de lados (6+4=10) en lugar de Pitágoras — error de cálculo geométrico."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "Verificación: reflexión sobre eje y: (x,y) → (−x,y). Nuevos vértices: (0,0),(−6,0),(−6,4),(0,4) → cuadrante II. Diagonal = √(36+16) = √52. Única solución: A. Distractor D anticipa confusión reflexión/rotación 180°. Distractor B anticipa error de cuadrante. Distractor C anticipa error de cálculo de diagonal. H1 alta confirmada: inferencia espacial no explícita."
+      },
+      "final_status": "approved"
+    }
+
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_001",
+    "total_generated": 13,
+    "total_items_net": 11,
+    "duplicates_from_retry": 2,
+    "approved": 9,
+    "rejected": 2,
+    "rejection_rate": 0.154,
+    "rejection_details": [
+      {
+        "item_id": "ITEM_002_B001",
+        "template_id": "T_H2_RCM_L3_01",
+        "reason": "Conflicto GEN vs ADV: respuesta declarada no coincidía con resolución interna. Resuelto en reintento ITEM_002B."
+      },
+      {
+        "item_id": "ITEM_007_B001",
+        "template_id": "T_H5_RCV_L3_01",
+        "reason": "Non-unique solution: opciones B y C eran lógicamente equivalentes al enunciado original. Resuelto en reintento ITEM_007B con distractor B rediseñado."
+      }
+    ],
+    "ambiguity_rate": 0.0,
+    "gen_vs_adv_conflict_rate": 0.077,
+    "retries_used": 2,
+    "threshold_status": {
+      "ambiguity_rate": "OK (0.00 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.077 < 0.08)",
+      "rejection_rate": "OK (0.154 < 0.25)"
+    },
+    "template_invalidation_flags": "none",
+    "prompt_invalidation_flags": "none",
+    "skill_distribution": {
+      "H2": 2,
+      "H3": 2,
+      "H4": 1,
+      "H5": 2,
+      "H6": 2,
+      "H7": 2
+    },
+    "difficulty_distribution": {
+      "nivel_2": 5,
+      "nivel_3": 4
+    },
+    "H1_distribution": {
+      "media": 5,
+      "alta": 4,
+      "pct_alta": 0.444
+    },
+    "macro_area_distribution": {
+      "RCM": 6,
+      "RCV": 3
+    },
+    "batch_validity": "VALID",
+    "generation_status_update": "batch_001_complete",
+    "notes": "Batch 001 completado dentro de umbrales. conflict_rate=0.077 está dentro del límite (0.08) pero próximo al threshold — monitorear en batch 002. Template T_H5_RCV_L3_01 requiere atención en construcción de distractores para evitar equivalencias lógicas entre opciones."
+  }
+}

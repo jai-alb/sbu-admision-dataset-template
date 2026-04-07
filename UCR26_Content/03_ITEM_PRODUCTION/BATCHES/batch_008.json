@@ -1,0 +1,574 @@
+{
+  "batch_id": "BATCH_008",
+  "generated_at": "2026-03-23T18:35:09-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "l1_diversity_plan": {
+    "ITEM_001_H2": "structure=DIRECT-TRANSLATE/inversion-guard, context=abstract/age-proportional, distractor=role-inversion",
+    "ITEM_002_H5": "structure=CONCESSIVE-CONNECTOR, context=applied/medical-health, distractor=additive-confusion",
+    "ITEM_003_H7": "structure=NUMERIC-PROPERTY-RECALL/angle-sum, context=geometric/quadrilateral, distractor=wrong-polygon-value"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B008",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: DIRECT-TRANSLATE — 1-step relation, inversion-guard distractor, abstract age context",
+      "stem": "La edad de Ana es el triple de la edad de su hermano Luis. Si Luis tiene 8 años, ¿cuántos años tiene Ana?",
+      "opciones": {
+        "A": "24",
+        "B": "11",
+        "C": "5",
+        "D": "3"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Ana = 3 × Luis = 3 × 8 = 24 años. ✓",
+        "paso_critico": "1 paso: multiplicar directamente. Relación explícita sin variable oculta.",
+        "error_tipico": "B(11): 8+3=11, suma el factor en lugar de multiplicar. C(5): 8−3=5, resta el factor. D(3): devuelve el multiplicador como si fuera la incógnita."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 1,
+        "tiempo_estimado": "1 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "3×8=24=A único. B/C/D operaciones erróneas con el factor. Contexto edad/multiplicación — distinto de B006(jardín-rosas) y B007(química-masas, receta). nivel_1 DIRECT-TRANSLATE ✓. H1=baja ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B008",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: CONCESSIVE-CONNECTOR — 1-step, applied/medical context, distractor=additive-confusion",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«El paciente siguió el tratamiento indicado sin interrupciones. __________, los síntomas no desaparecieron por completo.»",
+      "opciones": {
+        "A": "Por lo tanto",
+        "B": "Además",
+        "C": "Sin embargo",
+        "D": "En consecuencia"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Tratamiento seguido correctamente → pero síntomas persisten. El resultado contradice la expectativa lógica.",
+        "paso_2": "'Sin embargo' (C) expresa el contraste entre lo esperado (recuperación) y lo ocurrido (síntomas persisten). ✓",
+        "paso_critico": "1 paso: identificar que el segundo enunciado contradice la expectativa del primero.",
+        "error_tipico": "A y D son consecuenciales: implicarían que los síntomas persisten PORQUE siguió el tratamiento — ilógico en contexto médico. B (aditivo): añade información, no expresa contraste."
+      },
+      "h5_adv_verification": {
+        "contrarreciprocal_check": "N/A — conector",
+        "A": "incorrecto: consecuencial — lógicamente incompatible",
+        "B": "incorrecto: aditivo — no expresa contraste",
+        "D": "incorrecto: consecuencial — lógicamente incompatible"
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 1,
+        "tiempo_estimado": "1 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C único adversativo. A/D consecuenciales (físicamente incoherentes en este contexto). B aditivo (no expresa contraste). Contexto médico/tratamiento — nuevo. nivel_1 CONCESSIVE ✓. H1=baja ✓. Distinción de B006(inversión/educación, temperatura/incendios) y B007(precios/pérdidas, empresa/seguridad) ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B008",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: NUMERIC-PROPERTY-RECALL — angle-sum of quadrilateral, 1 step, distractor=wrong-polygon-value",
+      "stem": "¿Cuántos grados suman los ángulos interiores de un cuadrilátero?",
+      "opciones": {
+        "A": "180°",
+        "B": "270°",
+        "C": "360°",
+        "D": "540°"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Propiedad fundamental: la suma de los ángulos interiores de un cuadrilátero es siempre 360°. ✓",
+        "paso_critico": "1 paso: recall directo de propiedad. No requiere cálculo adicional.",
+        "error_tipico": "A(180°): corresponde al triángulo, no al cuadrilátero. B(270°): suma incorrecta sin base geométrica. D(540°): corresponde al pentágono (3×180°=540°), confusión con el siguiente polígono."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 1,
+        "tiempo_estimado": "1 min",
+        "tipo_error": "Error de cálculo",
+        "H1": "baja"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "C=360° único. A = triángulo (usado en B007-ITEM_003). D = pentágono. Propiedad cuadrilátero — distinto de B007(triángulo/180°) y B006(rectas-intersectantes/suplementarios). Contexto distinto ✓. nivel_1 NUMERIC-PROPERTY ✓. H1=baja ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B008",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«La adopción de energías renovables ha crecido de manera sostenida en las últimas décadas, impulsada por la reducción en los costos de producción y las políticas gubernamentales de incentivo. A pesar de esto, los combustibles fósiles siguen representando la mayor parte del consumo energético mundial, en parte porque las infraestructuras existentes fueron diseñadas para ellos.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los gobiernos son los únicos responsables de la transición hacia energías limpias.",
+        "B": "El avance de las energías renovables coexiste con la persistencia del dominio de los combustibles fósiles.",
+        "C": "Las energías renovables son ya más económicas que los combustibles fósiles en todos los mercados.",
+        "D": "La reducción de costos en energías renovables garantizará el abandono total de los combustibles fósiles."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Primera parte del texto: crecimiento sostenido de renovables (causas: costos + políticas).",
+        "paso_2": "Segunda parte: los fósiles aún dominan (causa: infraestructura existente).",
+        "paso_3": "La idea central articula ambas dimensiones: avance de renovables + persistencia de fósiles. B la captura fielmente. ✓",
+        "paso_critico": "Ninguna dimensión por sí sola es la idea central; el texto presenta una tensión entre ambas.",
+        "error_tipico": "A introduce 'únicos' y centraliza en gobiernos — el texto menciona también costos. C extiende la reducción de costos a 'todos los mercados' — afirmación no sostenida. D infiere una garantía de abandono total que el texto no enuncia."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: integra crecimiento-renovables + dominio-fósiles. A centraliza excesivamente en gobiernos. C sobreextiende a 'todos los mercados'. D garantiza abandono total — no sostenido. Contexto energías/transición-energética — nuevo. H1=media ✓. Estructura INTEGRACIÓN-TENSIÓN — distinta de B007(IDENTIFICATION) y B006(identificación-dual-dimensión)."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B008",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 2, 6, 18, 54, ___?",
+      "opciones": {
+        "A": "108",
+        "B": "162",
+        "C": "60",
+        "D": "72"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Razón entre términos consecutivos: 6÷2=3, 18÷6=3, 54÷18=3. El patrón es ×3 en cada paso.",
+        "paso_2": "Siguiente término: 54 × 3 = 162. ✓",
+        "paso_critico": "Identificar la razón constante (patrón geométrico ×3), no asumir diferencia aritmética.",
+        "error_tipico": "A(108): 54×2=108, usa ×2 en lugar de ×3. C(60): 54+6=60, suma la diferencia inicial en lugar de multiplicar. D(72): 54+18=72, suma el penúltimo término."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "54×3=162=B ✓. A usa ×2. C/D convierten a suma. Progresión geométrica ×3 — nueva (B006 usó −10, triangulares; B007 usó +2/×2 alternante, diferencias-doblantes). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B008",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En una bodega, la relación entre cajas de manzanas y cajas de naranjas es de 3:5. Si hay 48 cajas en total, ¿cuántas cajas de naranjas hay?",
+      "opciones": {
+        "A": "18",
+        "B": "30",
+        "C": "16",
+        "D": "24"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Total de partes: 3 + 5 = 8. Fracción de naranjas: 5/8.",
+        "paso_2": "Cajas de naranjas = (5/8) × 48 = 30. ✓",
+        "paso_3": "Verificación: manzanas = 3/8 × 48 = 18. Suma: 18 + 30 = 48. ✓",
+        "paso_critico": "Usar la fracción del componente pedido (5/8) sobre el total, no sobre la otra parte.",
+        "error_tipico": "A(18): calcula manzanas (3/8 × 48), confunde el componente pedido. C(16): 48÷3=16, divide entre el numerador de manzanas. D(24): 48÷2=24, asume partes iguales entre los dos componentes."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Confusión de proporcionalidad",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "5/8×48=30=B ✓. A da manzanas (compuesto equivocado). C divide por numerador incorrecto. D asume partes iguales. Contexto bodega/cajas-frutas — nuevo, distinto de B007(pintura/mezcla, 2:5 ratio) y B006(arroz/kg proporcional directo). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B008",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "En una clase hay 3 veces más estudiantes que en la clase de laboratorio. Si en total entre ambas clases hay 40 estudiantes, ¿cuántos estudiantes hay en la clase de laboratorio?",
+      "opciones": {
+        "A": "30",
+        "B": "10",
+        "C": "13",
+        "D": "20"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea L = estudiantes en laboratorio. Clase regular = 3L. Total: 3L + L = 4L = 40 → L = 10. ✓",
+        "paso_2": "Verificación: 30 + 10 = 40. ✓",
+        "paso_critico": "Plantear 4L = 40 (no dividir 40 entre 3 directamente).",
+        "error_tipico": "A(30): calcula la clase regular en lugar del laboratorio (variable intermedia). C(13): 40÷3≈13.3, divide el total entre el multiplicador sin considerar el sumando restante. D(20): 40÷2=20, asume cantidades iguales entre ambas clases."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H2",
+        "dificultad": 2,
+        "tiempo_estimado": "2.5 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "4L=40→L=10=B ✓. A da el complemento (variable intermedia). C divide por el factor sin sumar. D asume mitades. Contexto educativo/clases — nuevo, distinto de B007(química-masas 5×, receta 4:1 partes) y B006(jardín-rosas 2×, inversión 3×%). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B008",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 1, 4, 9, 16, 25, ___?",
+      "opciones": {
+        "A": "30",
+        "B": "36",
+        "C": "35",
+        "D": "49"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Los términos son cuadrados perfectos: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25.",
+        "paso_2": "Siguiente: 6² = 36. ✓",
+        "paso_3": "Verificación alternativa vía diferencias: +3, +5, +7, +9 → diferencias impares. Siguiente diferencia: +11 → 25+11=36. ✓",
+        "paso_critico": "Reconocer la serie de cuadrados perfectos, no cometer error al identificar la diferencia creciente.",
+        "error_tipico": "A(30): 25+5=30, repite la diferencia anterior (+5 en lugar de +11). C(35): 25+10=35, usa diferencia arbitraria. D(49): 7²=49, salta un término (omite el 6°)."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H4",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Generalización excesiva",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "6²=36=B ✓. Doble verificación: cuadrados + diferencias-impares. A repite diferencia. C diferencia arbitraria. D salta un cuadrado. Cuadrados perfectos — nuevo (B006 usó triangulares, B007 usó alternante y diferencias-doblantes). H1=media ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B008",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«La ciudad construyó nuevas ciclovías y amplió los carriles exclusivos para buses. __________, el uso del transporte público y la bicicleta aumentó de manera notable.»",
+      "opciones": {
+        "A": "No obstante",
+        "B": "A pesar de ello",
+        "C": "En cambio",
+        "D": "Como consecuencia"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Inversión en infraestructura de movilidad sostenible → mayor uso de transporte público y bicicleta. Relación causal directa y esperada.",
+        "paso_2": "'Como consecuencia' (D) es el único conector que expresa consecuencia directa. ✓",
+        "paso_critico": "El segundo enunciado es un resultado esperado y lógico de las acciones del primero.",
+        "error_tipico": "A y B son adversativos/concesivos: implicarían que el aumento de uso es inesperado dada la infraestructura — ilógico. C (contrastivo): sugiere que ocurrió algo diferente, no como resultado."
+      },
+      "h5_adv_verification": {
+        "contrarreciprocal_check": "N/A — conector",
+        "A": "incorrecto: adversativo",
+        "B": "incorrecto: concesivo-adversativo",
+        "C": "incorrecto: contrastivo"
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H5",
+        "dificultad": 2,
+        "tiempo_estimado": "2 min",
+        "tipo_error": "Interpretación literal errónea",
+        "H1": "media"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "D único consecuencial. A/B adversativos/concesivos — lógicamente incompatibles con relación causal directa. C contrastivo. Contexto movilidad-urbana/ciclovías — nuevo. Distinto de B006(educación/analfabetismo adversativo, temperatura/incendios causal) y B007(precios/pérdidas causal, empresa/seguridad causal). H1=media ✓. Sin contrarrecíproco ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B008",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_008",
+      "stem": "Lea el siguiente texto:\n\n«El acceso a agua potable sigue siendo desigual a nivel global. En numerosas regiones rurales de países en desarrollo, las comunidades dependen de fuentes no tratadas, lo que genera altas tasas de enfermedades transmitidas por el agua. Las inversiones en infraestructura hídrica realizadas hasta la fecha han beneficiado principalmente a áreas urbanas, dejando sin atención las zonas más vulnerables.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "La contaminación del agua es el principal problema ambiental que enfrenta el mundo actualmente.",
+        "B": "Es necesario redirigir las inversiones en infraestructura hídrica hacia las comunidades rurales más vulnerables.",
+        "C": "Los países en desarrollo son responsables exclusivos de las inequidades en el acceso al agua.",
+        "D": "El acceso al agua potable en zonas urbanas debe ser suspendido hasta resolver la situación rural."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Premisa 1: acceso desigual al agua a nivel global.",
+        "paso_2": "Premisa 2: zonas rurales dependen de fuentes no tratadas → enfermedades.",
+        "paso_3": "Premisa 3: inversiones beneficiaron principalmente áreas urbanas, dejando vulnerables sin atención.",
+        "paso_4": "La convergencia de las tres premisas apunta a una conclusión prescriptiva no enunciada: redirigir recursos hacia zonas rurales vulnerables. B la expresa. ✓",
+        "paso_critico": "La conclusión no está escrita — se infiere del patrón de inequidad + omisión documentada.",
+        "error_tipico": "A introduce 'principal problema ambiental' — el texto no compara con otros problemas. C introduce 'responsables exclusivos' — el texto no señala exclusividad ni culpabilidad. D propone solución radical de suspensión urbana no sugerida ni implícita en el texto."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCV",
+        "skill": "H3",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B única: prescripción implícita clara derivada de inequidad-documentada + omisión-rural. A introduce comparación con otros problemas ambientales — ausente. C culpabiliza exclusivamente a países en desarrollo — no sostenido. D propone solución radical absurda. H1=alta ✓. Tema agua-potable/inequidad-rural — nuevo, distinto de B007(privacidad-digital) y B006: —. Estructura PRESCRIPTIVA-IMPLÍCITA distinta."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B008",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_008",
+      "stem": "La máquina A produce 120 unidades en 4 horas. La máquina B produce 180 unidades en 5 horas. ¿Cuál máquina tiene mayor tasa de producción por hora y cuántas unidades por hora produce esa máquina?",
+      "opciones": {
+        "A": "Máquina A; 30 u/h",
+        "B": "Máquina B; 36 u/h",
+        "C": "Máquina A; 36 u/h",
+        "D": "Máquina B; 30 u/h"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa A = 120 ÷ 4 = 30 unidades/hora.",
+        "paso_2": "Tasa B = 180 ÷ 5 = 36 unidades/hora.",
+        "paso_3": "36 > 30 → Máquina B tiene mayor tasa. ✓",
+        "paso_critico": "Comparar tasas (unidades/hora), no producción total. La trampa es elegir A porque tiene menos tiempo total trabajado (más eficiente en percepción), pero B tiene mayor tasa unitaria.",
+        "error_tipico": "A(Máq. A; 30): elige A porque 4h < 5h (menor tiempo = más eficiente, razonamiento incorrecto) con tasa correcta de A. C(Máq. A; 36): elige A incorrectamente y le asigna la tasa de B. D(Máq. B; 30): elige B correctamente pero invierte las tasas."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H6",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Modelado incorrecto",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "B=36 > A=30 ✓. Unicidad confirmada. Trampa: menor tiempo de A induce selección errónea. A elige A con tasa correcta. C elige A con tasa cruzada. D elige B con tasas invertidas. Contexto industrial/tasa-producción — nuevo, distinto de B007(vendedores/ganancia-horaria) y B006(municipios/densidad-poblacional). H1=alta ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B008",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_008",
+      "stem": "El punto P(−2, 3) se refleja sobre el eje y. ¿Cuáles son las coordenadas del punto imagen P'?",
+      "opciones": {
+        "A": "(2, −3)",
+        "B": "(−2, −3)",
+        "C": "(2, 3)",
+        "D": "(3, −2)"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Regla de reflexión sobre el eje y: (x, y) → (−x, y). La coordenada x cambia de signo; la coordenada y permanece igual.",
+        "paso_2": "P(−2, 3) → P'(−(−2), 3) = P'(2, 3). ✓",
+        "paso_critico": "La inferencia espacial no explícita: identificar que SOLO x cambia de signo en la reflexión sobre el eje y, no y. Confundir con reflexión sobre el eje x o con rotación es la trampa principal.",
+        "error_tipico": "A(2, −3): cambia AMBAS coordenadas de signo — equivale a reflexión sobre el origen, no sobre el eje y. B(−2, −3): cambia solo y de signo — equivale a reflexión sobre el eje x. D(3, −2): intercambia y también invierte — confusión con reflexión sobre la recta y=x con error."
+      },
+      "metadata": {
+        "item_type": "training",
+        "macro_area": "RCM",
+        "skill": "H7",
+        "dificultad": 3,
+        "tiempo_estimado": "4 min",
+        "tipo_error": "Inferencia inválida",
+        "H1": "alta"
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "error_type": null,
+        "conflict_flag": false,
+        "adv_notes": "(2,3)=C único. A=reflexión sobre origen. B=reflexión sobre eje x. D=intercambio con inversión. Reflexión sobre eje y — distinto de B007(ángulo inscrito/circunferencia) y B006(homotecia/dilatación). Transformación y contexto completamente nuevos ✓. H1=alta ✓."
+      },
+      "final_status": "approved",
+      "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_008",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08) — 7th consecutive zero"
+    },
+    "difficulty_distribution": {
+      "nivel_1": 3,
+      "nivel_2": 6,
+      "nivel_3": 3,
+      "constraint": "EXACT MATCH ✓"
+    },
+    "skill_distribution": {
+      "H2": 2,
+      "H3": 2,
+      "H4": 2,
+      "H5": 2,
+      "H6": 2,
+      "H7": 2,
+      "balance": "PERFECTLY BALANCED ✓"
+    },
+    "h1_distribution": {
+      "baja": 3,
+      "media": 6,
+      "alta": 3,
+      "pct_alta": 0.250,
+      "constraint": "EXACT ✓"
+    },
+    "macro_area_distribution": {
+      "RCM": 7,
+      "RCV": 5
+    },
+    "l1_diversity_verification": {
+      "ITEM_001_H2": "DIRECT-TRANSLATE / abstract-age / distractor=role-inversion ✓",
+      "ITEM_002_H5": "CONCESSIVE-CONNECTOR / applied-medical / distractor=additive-confusion ✓",
+      "ITEM_003_H7": "NUMERIC-PROPERTY-RECALL / geometric-quadrilateral / distractor=wrong-adjacent-polygon ✓",
+      "cross_skill_coverage": "H2+H5+H7 — no repeated skill ✓",
+      "cross_structure_coverage": "DIRECT-TRANSLATE + CONCESSIVE-CONNECTOR + NUMERIC-RECALL — no repeated structure ✓",
+      "cross_context_coverage": "abstract-age + applied-medical + geometric-quadrilateral — no repeated context type ✓",
+      "anti_repetition_vs_b006": "B006-L1: jardín-doble (DIRECT-MULT), −10 pattern, proporción-arroz → ALL DIFFERENT ✓",
+      "anti_repetition_vs_b007": "B007-L1: bosque-IDENTIFICATION, precios-DIRECT-LOGIC/causal, triángulo-PROPERTY → ALL DIFFERENT ✓"
+    },
+    "template_usage": {
+      "allowed_used": [
+        "T_H2_RCM_L2_01: 2 (ITEM_001, ITEM_007) ✓",
+        "T_H3_RCV_L2_01: 1 (ITEM_004) ✓",
+        "T_H4_RCM_L2_01: 2 (ITEM_005, ITEM_008) ✓",
+        "T_H5_RCV_L2_01: 2 (ITEM_002, ITEM_009) ✓",
+        "T_H6_RCM_L2_01: 1 (ITEM_006) ✓",
+        "T_H7_RCM_L2_01: 1 (ITEM_003) ✓"
+      ],
+      "limited_used": [
+        "T_H3_RCV_L3_01: 1 (ITEM_010) ✓",
+        "T_H6_RCM_L3_01: 1 (ITEM_011) ✓",
+        "T_H7_RCM_L3_01: 1 (ITEM_012) ✓"
+      ],
+      "limited_unused_this_batch": "T_H2_RCM_L3_01 — deferred (no nivel_3 H2 slot needed)",
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 persists — H7-L1 instantiated via T_H7_RCM_L2_01 (ITEM_003: cuadrilátero property recall)"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–007",
+    "drift_check_vs_batch007": {
+      "all_metric_deltas": "0.000",
+      "drift_signal": "NONE DETECTED ✓"
+    },
+    "cognitive_load_profile_vs_b007": {
+      "nivel_1_items": "3 (identical count ✓)",
+      "nivel_2_items": "6 (identical count ✓)",
+      "nivel_3_items": "3 (identical count ✓)",
+      "limited_templates_used": "3 of possible 4 (same as B007 ✓)",
+      "profile_match": "REPLICATED ✓"
+    },
+    "cumulative_training_segment": {
+      "b001": 9,
+      "b002": 12,
+      "b003": 12,
+      "b004": 12,
+      "b005": 12,
+      "b006": 12,
+      "b007": 12,
+      "b008": 12,
+      "total_approved": 93,
+      "training_target": 140,
+      "progress_pct": 66.4
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 7,
+      "consecutive_zero_rejection_batches": 7,
+      "consecutive_exact_distribution_batches": 7
+    },
+    "system_flags": ["FLAG_001 open — L1 template gap (persists)"],
+    "next_action": "ready_for_batch_9"
+  }
+}

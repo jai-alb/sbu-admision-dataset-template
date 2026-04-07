@@ -1,0 +1,65 @@
+{
+  "batch_id": "BATCH_026",
+  "generated_at": "2026-03-25T05:07:00-06:00",
+  "prompt_id_gen": "GEN_v2_anti_patterns",
+  "prompt_id_adv": "ADV_v2_anti_patterns",
+  "item_type": "simulation",
+  "simulation_id": "sim_2",
+  "mission": "FULL REBUILD SIM_2 — 45 completely new items ensuring ZERO structural violations and LOWER pattern repetition vs sim_1.",
+  "files": {
+    "part1": "batch_026_part1.json (items 1-22)",
+    "part2": "batch_026_part2.json (items 23-34)",
+    "part3": "batch_026_part3.json (items 35-45)"
+  },
+  "batch_state": "completed",
+  "total_generated": 45,
+  "approved": 45,
+  "rejected": 0,
+  "rejection_rate": 0.000,
+  "VALIDATION_FINAL": {
+    "total_items": {"value": 45, "target": 45, "status": "✓"},
+    "macro_area": {
+      "RCV": {"value": 23, "target": 23, "status": "✓"},
+      "RCM": {"value": 22, "target": 22, "status": "✓"}
+    },
+    "skill_distribution": {
+      "H2": {"value": 8, "target": 8, "status": "✓"},
+      "H3": {"value": 9, "target": 9, "status": "✓"},
+      "H4": {"value": 5, "target": 5, "status": "✓"},
+      "H5": {"value": 14, "target": 14, "status": "✓"},
+      "H6": {"value": 6, "target": 6, "status": "✓"},
+      "H7": {"value": 3, "target": 3, "status": "✓"}
+    },
+    "difficulty_distribution": {
+      "L1": {"value": 12, "target": 12, "status": "✓", "items": "1-12"},
+      "L2": {"value": 22, "target": 22, "status": "✓", "items": "13-34"},
+      "L3": {"value": 11, "target": 11, "status": "✓", "items": "35-45"}
+    },
+    "ordering": {
+      "strictly_ascending": true,
+      "status": "✓"
+    },
+    "H1_distribution": {
+      "alta_items": [24, 26, 27, 30, 33, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+      "alta_count": 16,
+      "target_range": "14-16 (30-40%)",
+      "pct_alta": "35.5%",
+      "status": "✓ within 30-40%"
+    },
+    "anti_pattern_rules": {
+      "H5_diversity": "Enforced: Equivalencia lógica, condición necesaria, inferencias formales (Ej. ítems 6, 14, 24, 30, 37, 43, 44)",
+      "H3_inference": "Enforced: Conclusión no explícita, premisas implícitas, evitar 'idea central' plana (Ej. ítems 16, 20, 26, 32, 35, 41)",
+      "H4_patterns": "Enforced: Alternancia, doble regla, diferencias de segundo orden (Ej. ítems 7, 15, 21, 29, 38)",
+      "H6_proportionality": "Enforced: Inversa y Compuesta de 3 variables, multi-paso (Ej. ítems 17, 25, 33, 40)",
+      "H7_spatial": "Enforced: Transformación geométrica pura, intersección, topología (Ej. ítems 11, 27, 45)",
+      "status": "✓ All anti-patterns implemented successfully"
+    },
+    "segment_isolation": {
+      "no_duplicate_options_within_stem": true,
+      "no_reuse_of_sim_1_surface_patterns": true,
+      "status": "✓"
+    }
+  },
+  "ALL_CONSTRAINTS_SATISFIED": true,
+  "READY_FOR_FINAL_AUDIT": true
+}

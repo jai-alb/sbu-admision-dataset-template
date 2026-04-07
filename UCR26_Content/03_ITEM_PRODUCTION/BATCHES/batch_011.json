@@ -1,0 +1,353 @@
+{
+  "batch_id": "BATCH_011",
+  "generated_at": "2026-03-23T19:14:55-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "option_consistency_protocol": "ACTIVE — solution computed before options; correct option verified against computed result before finalizing each item",
+  "l1_diversity_plan": {
+    "ITEM_001_H2": "structure=DIFFERENCE-BETWEEN/two-quantities, context=applied/sports-score, distractor=sum-confusion",
+    "ITEM_002_H4": "structure=ALTERNATING-PATTERN/+3-1, context=abstract/numeric, distractor=rule-application-error",
+    "ITEM_003_H5": "structure=ADVERSATIVE-CONNECTOR, context=applied/academic-conference, distractor=causal-confusion"
+  },
+  "items": [
+    {
+      "item_id": "ITEM_001_B011",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: DIFFERENCE-BETWEEN/two-quantities — 1-step, applied/sports-score context, distractor=sum-confusion",
+      "pre_adv_solution_check": { "operation": "5 − 3 = 2", "correct_answer_value": 2, "correct_option": "B", "option_B_value": 2, "alignment": "PASS" },
+      "stem": "En un partido de fútbol, el equipo local anotó 5 goles y el equipo visitante anotó 3 goles. ¿Por cuántos goles ganó el equipo local?",
+      "opciones": { "A": "3", "B": "2", "C": "8", "D": "1" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencia de goles = 5 − 3 = 2. ✓",
+        "paso_critico": "1 paso: restar el marcador del visitante al del local. No sumar los dos marcadores.",
+        "error_tipico": "A(3): entrega el marcador del equipo visitante en lugar de la diferencia. C(8): 5 + 3 = 8, suma ambos marcadores. D(1): error aritmético de sustracción (3 − 2 = 1, confunde los operandos)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Modelado incorrecto", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "5−3=2=B único. A da marcador visitante. C suma marcadores. D error resta. Contexto fútbol/marcador-diferencia — nuevo, distinto de B010(presupuesto/fracción), B009(papelería/suma-diferencia), B008. DIFFERENCE-BETWEEN distinto de PART-WHOLE(B010), DIRECT-TRANSLATE(B008). H1=baja ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B011",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: ALTERNATING-PATTERN/+3−1 — 1-step, abstract/numeric context, distractor=rule-application-error",
+      "pre_adv_solution_check": { "pattern": "+3, −1, +3, −1, +3, −1, +3", "sequence": "2, 5, 4, 7, 6, 9, 8, ___", "last_step": "8 + 3 = 11", "correct_answer_value": 11, "correct_option": "C", "option_C_value": 11, "alignment": "PASS" },
+      "stem": "¿Cuál es el número que sigue en la serie: 2, 5, 4, 7, 6, 9, 8, ___?",
+      "opciones": { "A": "10", "B": "9", "C": "11", "D": "12" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La serie alterna dos reglas: +3 y −1. Pasos: 2+3=5, 5−1=4, 4+3=7, 7−1=6, 6+3=9, 9−1=8.",
+        "paso_2": "El siguiente paso aplica +3: 8 + 3 = 11. ✓",
+        "paso_critico": "Identificar el patrón alternante de dos reglas. El error típico es aplicar −1 cuando corresponde +3.",
+        "error_tipico": "A(10): 8 + 2 = 10, promedia las dos reglas (3−1=2) y aplica ese promedio. B(9): repite el término anterior (confunde posición). D(12): 9 + 3 = 12, salta un término y aplica +3 al penúltimo en vez del último."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Generalización excesiva", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "8+3=11=C único. A promedia reglas. B repite término. D salta posición. ALTERNATING-PATTERN/+3−1 — nuevo, distinto de B010(diferencias-duplicadas, geométrica-decreciente), B009(Fibonacci, aritmética+4), B008(geométrica×3, cuadrados). H1=baja ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B011",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: ADVERSATIVE-CONNECTOR — 1-step, applied/academic-conference context, distractor=causal-confusion",
+      "h5_special_rule_applied": true,
+      "pre_adv_solution_check": { "relation": "evento programado a las 10:00 → muchos llegaron tarde: contraste entre expectativa y resultado real", "connector_type": "adversativo", "correct_answer_value": "Sin embargo", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Seleccione el conector más adecuado:\n\n«La conferencia fue programada para las 10:00 de la mañana. __________, muchos participantes llegaron después de las 11:00.»",
+      "opciones": { "A": "Sin embargo", "B": "Por lo tanto", "C": "Asimismo", "D": "En consecuencia" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "El primer enunciado establece una hora programada (expectativa de puntualidad). El segundo enunciado contradice esa expectativa: muchos llegaron tarde.",
+        "paso_2": "'Sin embargo' (A) expresa el contraste entre lo esperado (asistencia puntual) y lo ocurrido (llegada tardía). ✓",
+        "paso_critico": "1 paso: identificar que el segundo enunciado es un resultado opuesto al que lógicamente se esperaría de una conferencia a las 10:00.",
+        "error_tipico": "B y D son consecuenciales: implicarían que la gente llegó tarde PORQUE la conferencia fue programada a las 10:00 — ilógico. C (aditivo): añade información coordinada sin expresar contraste."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "B": "incorrecto: consecuencial — lógicamente incompatible", "C": "incorrecto: aditivo — no expresa contraste", "D": "incorrecto: consecuencial — lógicamente incompatible" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Interpretación literal errónea", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A único adversativo. B/D consecuenciales (ilógicos). C aditivo. Contexto académico/conferencia-impuntualidad — nuevo, distinto de B010(político/debate-resultado, medioambiental/causal), B009(laboral/adversativo, museo/aditivo), B008(médico/concesivo, movilidad/causal). ADVERSATIVE en N1 — distinto de B010-N1(CAUSAL) y B009-N1(ADDITIVE). H1=baja ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B011",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "step_1": "5 × 3500 = 17500", "step_2": "25500 − 17500 = 8000", "step_3": "8000 ÷ 2000 = 4", "correct_answer_value": 4, "correct_option": "B", "option_B_value": 4, "alignment": "PASS" },
+      "stem": "Una sala de cine vende entradas para adultos a ₡3 500 y para niños a ₡2 000. Se vendieron 5 entradas para adultos y el ingreso total fue de ₡25 500. ¿Cuántas entradas para niños se vendieron?",
+      "opciones": { "A": "3", "B": "4", "C": "6", "D": "8" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Ingreso por adultos: 5 × ₡3 500 = ₡17 500.",
+        "paso_2": "Ingreso restante para niños: ₡25 500 − ₡17 500 = ₡8 000.",
+        "paso_3": "Entradas para niños: ₡8 000 ÷ ₡2 000 = 4. ✓",
+        "paso_critico": "Calcular el ingreso de adultos primero, descontar del total y dividir el remanente entre el precio de niño. No usar el total directamente.",
+        "error_tipico": "A(3): 25500÷3500≈7.28, redondea y descuenta 5 incorrectamente → confunde tickets en lugar de ingresos. C(6): 25500÷(3500+2000)≈4.6, divide el total entre la suma de precios sin multiplicar adultos. D(8): 8000÷1000=8, usa mitad del precio de niño como divisor."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Modelado incorrecto", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "17500+8000=25500 ✓. 8000÷2000=4=B único. A confunde tickets/ingresos. C divide total entre suma de precios. D usa divisor incorrecto. Contexto cine/entradas-dos-precios — nuevo, distinto de B010(ferretería/compra-mixta-H4), B009(papelería/precio-diferencia), B008(clases-multiplicador). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B011",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "central_idea": "La bicicleta crece como transporte urbano por inversión pública, pero enfrenta barreras culturales y de seguridad que limitan adopción masiva", "correct_option": "B", "alignment": "PASS" },
+      "stem": "Lea el siguiente texto:\n\n«La bicicleta como medio de transporte urbano ha ganado popularidad en ciudades de todo el mundo. Diversas administraciones municipales han invertido en infraestructura ciclista —como ciclovías segregadas y estacionamientos— con el objetivo de reducir la congestión vehicular y las emisiones de carbono. No obstante, su adopción masiva enfrenta barreras significativas, como la percepción de inseguridad vial y la ausencia de cultura ciclista en muchas comunidades.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Las ciudades deben prohibir los automóviles para promover el uso de la bicicleta como solución al tráfico.",
+        "B": "La bicicleta avanza como transporte urbano gracias a inversiones públicas, pero enfrenta obstáculos de seguridad y cultura que limitan su adopción generalizada.",
+        "C": "Las ciclovías son la única solución efectiva para reducir las emisiones de carbono en zonas urbanas.",
+        "D": "La bicicleta ha reemplazado por completo al automóvil en las ciudades donde se ha promovido la infraestructura ciclista."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Primera parte: la bicicleta gana popularidad como transporte urbano.",
+        "paso_2": "Segunda parte: hay inversión pública en infraestructura ciclista con objetivos ambientales y de movilidad.",
+        "paso_3": "Tercera parte: la adopción masiva enfrenta barreras de seguridad y cultura. B integra las tres dimensiones: avance + inversión + barreras. ✓",
+        "paso_critico": "La idea central articula tanto el avance como el obstáculo; ninguna dimensión por sí sola la representa.",
+        "error_tipico": "A introduce 'prohibir automóviles' — medida radical no mencionada en el texto. C introduce 'única solución' — exclusividad no sostenida por el texto. D afirma 'reemplazado por completo' — el texto habla de adopción limitada por barreras, no de sustitución total."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: integra popularidad + inversión + barreras. A introduce prohibición radical. C introduce exclusividad. D introduce sustitución total. Contexto movilidad-urbana/bicicleta — nuevo, distinto de B010(salud/sedentarismo, turismo/sostenibilidad), B009(automatización/empleo), B008(energías-renovables). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B011",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "differences": "2, 4, 6, 8, 10 (incrementing by 2)", "sequence": "0, 2, 6, 12, 20, ___", "last_diff": 10, "step": "20 + 10 = 30", "correct_answer_value": 30, "correct_option": "C", "option_C_value": 30, "alignment": "PASS" },
+      "stem": "¿Cuál es el término que sigue en la serie: 0, 2, 6, 12, 20, ___?",
+      "opciones": { "A": "24", "B": "28", "C": "30", "D": "36" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos consecutivos: 2−0=2, 6−2=4, 12−6=6, 20−12=8. Las diferencias aumentan de 2 en 2.",
+        "paso_2": "Siguiente diferencia: 8 + 2 = 10. Siguiente término: 20 + 10 = 30. ✓",
+        "paso_3": "Verificación alternativa: cada término = n(n−1). Para n=6: 6×5=30. ✓",
+        "paso_critico": "Las diferencias no son constantes; aumentan. Hay que calcular la siguiente diferencia antes de aplicarla.",
+        "error_tipico": "A(24): 20 + 4 = 24, repite la diferencia del inicio (+4) sin avanzar. B(28): 20 + 8 = 28, repite la última diferencia sin incrementarla. D(36): 20 + 16 = 36, dobla la última diferencia en vez de sumarle 2."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "20+10=30=C ✓. Doble verificación: diferencias crecientes (+2) y fórmula n(n−1). A usa diff inicial. B repite última diff. D dobla última diff. Diferencias-incrementales-+2 — nuevo, distinto de B011-ITEM_002(alternante), B010(diffs-duplicadas, geométrica-decreciente), B009(Fibonacci). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B011",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "pre_adv_solution_check": { "relation": "datos económicos favorables → junta decide NO aumentar dividendos: resultado opuesto al esperado", "connector_type": "adversativo/concesivo", "correct_answer_value": "Sin embargo", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Seleccione el conector más adecuado:\n\n«El informe financiero reveló resultados muy favorables para la empresa durante el último trimestre. __________, la junta directiva decidió no aumentar los dividendos.»",
+      "opciones": { "A": "Sin embargo", "B": "En consecuencia", "C": "Por lo tanto", "D": "De igual manera" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Resultados financieros favorables → el resultado esperado sería un aumento de dividendos. El segundo enunciado contradice esa expectativa (no hubo aumento).",
+        "paso_2": "'Sin embargo' (A) expresa el contraste entre los buenos resultados y la decisión inesperada de no aumentar dividendos. ✓",
+        "paso_critico": "La segunda proposición es opuesta a lo que lógicamente se esperaría de los buenos resultados financieros.",
+        "error_tipico": "B y C son consecuenciales: implicarían que la junta no aumentó dividendos PORQUE los resultados fueron favorables — ilógico en el contexto financiero habitual. D (aditivo): añade información coordinada sin expresar contraste."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "B": "incorrecto: consecuencial — lógicamente incompatible con relación causa-efecto esperada", "C": "incorrecto: consecuencial — idéntico fallo lógico que B", "D": "incorrecto: aditivo — no expresa contraste" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A único adversativo. B/C consecuenciales (ilógicos en contexto financiero). D aditivo. Contexto financiero/dividendos-inesperados — nuevo, distinto de B011-ITEM_003(académico/conferencia-adversativo), B010(político/consequential, medioambiental/causal), B009(laboral/adversativo). H1=media ✓. Sin contrarrecíproco ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B011",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "rate": "240 ÷ 8 = 30 pág/min", "target": "30 × 15 = 450", "correct_answer_value": 450, "correct_option": "B", "option_B_value": 450, "alignment": "PASS" },
+      "stem": "Una impresora produce 240 páginas en 8 minutos. ¿Cuántas páginas producirá en 15 minutos a la misma tasa?",
+      "opciones": { "A": "360", "B": "450", "C": "32", "D": "400" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa: 240 pág ÷ 8 min = 30 pág/min.",
+        "paso_2": "En 15 min: 30 × 15 = 450 páginas. ✓",
+        "paso_3": "Verificación: 450 ÷ 15 = 30 pág/min. ✓",
+        "paso_critico": "Calcular la tasa unitaria primero; luego multiplicar por el nuevo tiempo. No escalar directamente con el denominador original.",
+        "error_tipico": "A(360): 240 × 15 / 10 = 360, usa 10 como denominador (posible error de lectura del denominador: 8 → 10). C(32): 240 × 8 / 60 ≈ 32, convierte mal las unidades. D(400): 240 + 8 × 20 = 400, error de planteo sin base en la razón."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Confusión de proporcionalidad", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "30×15=450=B ✓. A usa denominador incorrecto. C convierte unidades mal. D error de planteo. Contexto impresora/páginas-por-minuto — nuevo, distinto de B010(grifo/llenado-depósito, velocidad-media-automóvil), B009(ciclista, receta), B008(bodega/cajas-frutas). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B011",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "pre_adv_solution_check": { "formula": "A = (base × altura) / 2", "computation": "(14 × 10) / 2 = 140 / 2 = 70", "correct_answer_value": 70, "correct_option": "B", "option_B_value": "70 cm²", "alignment": "PASS" },
+      "stem": "Un triángulo tiene una base de 14 cm y una altura de 10 cm. ¿Cuál es su área?",
+      "opciones": { "A": "140 cm²", "B": "70 cm²", "C": "35 cm²", "D": "280 cm²" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Fórmula del área del triángulo: A = (base × altura) ÷ 2.",
+        "paso_2": "A = (14 × 10) ÷ 2 = 140 ÷ 2 = 70 cm². ✓",
+        "paso_critico": "La fórmula requiere dividir entre 2. No confundir con el área del rectángulo (base × altura sin dividir).",
+        "error_tipico": "A(140 cm²): 14 × 10 = 140, omite la división por 2 (usa fórmula del rectángulo). C(35 cm²): 70 ÷ 2 = 35, divide por 2 dos veces. D(280 cm²): 14 × 10 × 2 = 280, multiplica por 2 en vez de dividir."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Error de cálculo", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "140÷2=70=B ✓. A omite /2. C divide por 2 dos veces. D multiplica por 2. Área de triángulo — nuevo, distinto de B010(Pitágoras, rotación-90°), B009(triángulo-isósceles/ángulo, rotación-antihoraria), B008(reflexión-eje-y, cuadrilátero-ángulos). H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B011",
+      "template_id": "T_H3_RCV_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H3_RCV_L3_01 en BATCH_011",
+      "pre_adv_solution_check": { "implicit_conclusion": "necesidad de marcos regulatorios con auditoría y rendición de cuentas para IA en selección laboral", "correct_option": "A", "alignment": "PASS" },
+      "stem": "Lea el siguiente texto:\n\n«La integración de sistemas de inteligencia artificial en los procesos de selección de personal permite procesar grandes volúmenes de solicitudes de manera eficiente y reducir los tiempos de contratación. Sin embargo, investigaciones recientes han documentado que estos sistemas pueden replicar y amplificar sesgos presentes en los datos de entrenamiento, afectando de manera desproporcionada a grupos históricamente subrepresentados. Las regulaciones actuales en muchos países no contemplan mecanismos específicos de auditoría o rendición de cuentas para el uso de IA en decisiones de empleo.»\n\n¿Cuál es la conclusión implícita que estructura el argumento del texto?",
+      "opciones": {
+        "A": "Es necesario desarrollar marcos regulatorios con mecanismos de auditoría y rendición de cuentas específicos para el uso de inteligencia artificial en la selección de personal.",
+        "B": "La inteligencia artificial debe ser prohibida en todos los procesos de selección de personal para eliminar cualquier riesgo de discriminación.",
+        "C": "Los sesgos en los sistemas de inteligencia artificial son inevitables y no pueden corregirse con ningún tipo de regulación.",
+        "D": "La eficiencia de la IA en la contratación compensa cualquier impacto discriminatorio que pueda generar."
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Premisa 1: la IA en selección laboral es eficiente (dimensión positiva).",
+        "paso_2": "Premisa 2: puede replicar sesgos y afectar a grupos subrepresentados (problema documentado).",
+        "paso_3": "Premisa 3: las regulaciones actuales no contemplan mecanismos de auditoría ni rendición de cuentas (laguna normativa).",
+        "paso_4": "Convergencia: problema documentado + laguna regulatoria → prescripción implícita: crear marcos con auditoría. A la expresa. ✓",
+        "paso_critico": "La conclusión no está escrita; se infiere del patrón: eficiencia sin regulación adecuada + daño documentado = necesidad regulatoria.",
+        "error_tipico": "B introduce 'prohibición total' — el texto no descarta la IA sino la falta de regulación. C introduce 'inevitables' e 'imposibles de corregir' — el texto documenta el problema sin afirmar que sea irremediable. D propone que la eficiencia compensa — razonamiento no presente ni implicado en el texto."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "A única: prescripción regulatoria derivada de laguna-normativa + problema-documentado. B prohibición radical (texto propone regulación, no eliminación). C introduce inevitabilidad no sostenida. D introduce compensación no implicada. Contexto IA/selección-laboral-sesgo — nuevo, distinto de B010(automóvil/velocidad-media), B009(vacunas/hesitación), B008(agua/inequidad-rural). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B011",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_011",
+      "pre_adv_solution_check": {
+        "rate_A": "1/4 tarea/hora",
+        "rate_B": "1/12 tarea/hora",
+        "combined_rate": "1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3 tarea/hora",
+        "time": "1 ÷ (1/3) = 3 horas",
+        "correct_answer_value": 3,
+        "correct_option": "B",
+        "option_B_value": "3 horas",
+        "alignment": "PASS"
+      },
+      "stem": "El operario A puede completar una tarea en 4 horas. El operario B puede completar la misma tarea en 12 horas. Si trabajan juntos sin interrupciones, ¿en cuántas horas completarán la tarea?",
+      "opciones": { "A": "8 horas", "B": "3 horas", "C": "16 horas", "D": "6 horas" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa de A: 1/4 de la tarea por hora. Tasa de B: 1/12 de la tarea por hora.",
+        "paso_2": "Tasa combinada: 1/4 + 1/12 = 3/12 + 1/12 = 4/12 = 1/3 de la tarea por hora.",
+        "paso_3": "Tiempo total: 1 ÷ (1/3) = 3 horas. ✓",
+        "paso_4": "Verificación: en 3 h, A completa 3/4 y B completa 3/12 = 1/4. Suma: 3/4 + 1/4 = 1 tarea completa. ✓",
+        "paso_critico": "La variable oculta es trabajar con tasas (fracción por hora) y no con los tiempos directamente. La trampa es promediar o sumar los tiempos.",
+        "error_tipico": "A(8 horas): (4 + 12) ÷ 2 = 8, promedia los tiempos individuales. C(16 horas): 4 + 12 = 16, suma los tiempos. D(6 horas): 12 ÷ 2 = 6, toma la mitad del tiempo de B ignorando a A."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "1/4+1/12=1/3→3h=B ✓. Verificación: 3/4+1/4=1 ✓. A promedia tiempos. C suma tiempos. D mitad del tiempo de B. Trabajo-combinado-dos-operarios — nuevo, distinto de B010(velocidad-media-dos-tramos, grifo/llenado), B009(ciclista, receta), B008(máquinas-producción-horaria). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B011",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_011",
+      "pre_adv_solution_check": {
+        "theorem": "Ángulo exterior = suma de los dos ángulos interiores no adyacentes",
+        "computation": "125° = 55° + x → x = 125° − 55° = 70°",
+        "correct_answer_value": 70,
+        "correct_option": "B",
+        "option_B_value": "70°",
+        "alignment": "PASS",
+        "verification": "55° + 70° = 125° ✓ | ángulo interior adyacente = 180° − 125° = 55°, suma interior = 55° + 55° + 70° = 180° ✓"
+      },
+      "stem": "En un triángulo, un ángulo exterior mide 125°. Si uno de los ángulos interiores no adyacentes a ese ángulo exterior mide 55°, ¿cuánto mide el otro ángulo interior no adyacente?",
+      "opciones": { "A": "55°", "B": "70°", "C": "125°", "D": "180°" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Teorema del ángulo exterior: un ángulo exterior de un triángulo es igual a la suma de los dos ángulos interiores no adyacentes.",
+        "paso_2": "125° = 55° + x → x = 125° − 55° = 70°. ✓",
+        "paso_3": "Verificación doble: ángulo interior adyacente = 180° − 125° = 55°. Suma de ángulos del triángulo: 55° + 55° + 70° = 180°. ✓",
+        "paso_critico": "La inferencia no explícita: reconocer y aplicar el teorema del ángulo exterior, que NO es una propiedad de recall directo sino de inferencia geométrica. La trampa es confundirlo con propiedades del ángulo suplementario.",
+        "error_tipico": "A(55°): asume que ambos ángulos no adyacentes son iguales (como en triángulo isósceles) → 55°+55°=110°≠125°. C(125°): entrega el ángulo exterior como si fuera el ángulo pedido. D(180°): 55° + 125° = 180°, suma el ángulo dado con el exterior confundiendo la propiedad suplementaria."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "125−55=70=B ✓. Doble verificación: suma interior 55+55+70=180 ✓. A asume isósceles erróneo. C repite exterior. D confunde suplementario. Teorema ángulo exterior — nuevo, distinto de B010(Pitágoras-terna-5-12-13), B009(rotación-90°), B008(reflexión-eje-y), B007(ángulo-inscrito). H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_011",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.08) — 10th consecutive zero"
+    },
+    "option_consistency_protocol": "ACTIVE — all items passed pre-ADV solution verification and option alignment check",
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint": "EXACT ✓" },
+    "macro_area_distribution": { "RCM": 8, "RCV": 4 },
+    "l1_diversity_verification": {
+      "ITEM_001_H2": "DIFFERENCE-BETWEEN/two-quantities / applied-sports-score / distractor=sum-confusion ✓",
+      "ITEM_002_H4": "ALTERNATING-PATTERN/+3−1 / abstract-numeric / distractor=rule-application-error ✓",
+      "ITEM_003_H5": "ADVERSATIVE-CONNECTOR / applied-academic-conference / distractor=causal-confusion ✓",
+      "cross_skill_coverage": "H2+H4+H5 — no repeated skill ✓",
+      "cross_structure_coverage": "DIFFERENCE-BETWEEN + ALTERNATING-PATTERN + ADVERSATIVE-CONNECTOR — no repeated structure ✓",
+      "cross_context_coverage": "applied-sports + abstract-numeric + applied-academic — no repeated context ✓",
+      "anti_repetition_vs_b010": "B010-L1: PART-WHOLE(H2), ALTERNATING+GEOM-decreciente(H4), CAUSAL-CONNECTOR(H5) → STRUCTURES DIFFERENT ✓",
+      "anti_repetition_vs_b009": "B009-L1: ARITHMETIC-SEQUENCE(H4), ADDITIVE-CONNECTOR(H5), DIRECT-PROPORTION(H6) → SKILLS DIFFERENT, STRUCTURES DIFFERENT ✓"
+    },
+    "template_usage": {
+      "allowed_used": [
+        "T_H2_RCM_L2_01: 2 (ITEM_001, ITEM_004) ✓",
+        "T_H3_RCV_L2_01: 1 (ITEM_005) ✓",
+        "T_H4_RCM_L2_01: 2 (ITEM_002, ITEM_006) ✓",
+        "T_H5_RCV_L2_01: 2 (ITEM_003, ITEM_007) ✓",
+        "T_H6_RCM_L2_01: 1 (ITEM_008) ✓",
+        "T_H7_RCM_L2_01: 1 (ITEM_009) ✓"
+      ],
+      "limited_used": [
+        "T_H3_RCV_L3_01: 1 (ITEM_010) ✓",
+        "T_H6_RCM_L3_01: 1 (ITEM_011) ✓",
+        "T_H7_RCM_L3_01: 1 (ITEM_012) ✓"
+      ],
+      "limited_unused_this_batch": "T_H2_RCM_L3_01 — no H2-N3 slot in this batch",
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 persists"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–010",
+    "drift_check_vs_batch010": { "all_metric_deltas": "0.000", "drift_signal": "NONE DETECTED ✓" },
+    "cognitive_load_profile_vs_b010": {
+      "nivel_1_items": "3 ✓",
+      "nivel_2_items": "6 ✓",
+      "nivel_3_items": "3 ✓",
+      "limited_templates_used": "3 ✓",
+      "profile_match": "REPLICATED ✓"
+    },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12, "b005": 12,
+      "b006": 12, "b007": 12, "b008": 12, "b009": 12, "b010": 12, "b011": 12,
+      "total_approved": 129,
+      "training_target": 140,
+      "progress_pct": 92.1
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 10,
+      "consecutive_zero_rejection_batches": 1,
+      "consecutive_exact_distribution_batches": 10
+    },
+    "system_flags": [
+      "FLAG_001 open — L1 template gap (persists)",
+      "FLAG_002 closed — ITEM_010/B010 option miscalibration resolved in prior batch; option consistency protocol now active"
+    ],
+    "next_action": "ready_for_batch_12"
+  }
+}

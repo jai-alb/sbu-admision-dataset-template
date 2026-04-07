@@ -1,0 +1,436 @@
+{
+  "batch_id": "BATCH_026",
+  "part": "2_of_3",
+  "items_range": "23-34",
+  "items": [
+    {
+      "item_id": "ITEM_023_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_03",
+        "estimated_time_sec": 105,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "En una planta de reciclaje, la máquina principal procesa 15 toneladas métricas (TM) de cartón cada hora de operación, pero requiere 30 minutos de mantenimiento inactivo obligatorio después de cada bloque continuo de 3 horas de trabajo. Si la planta necesita procesar 60 TM en el menor tiempo posible, ¿cuántas horas en total tomará el proceso desde el inicio?",
+      "opciones": {
+        "A": "4 horas",
+        "B": "4 horas y 30 minutos",
+        "C": "5 horas",
+        "D": "5 horas y 30 minutos"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Capacidad por hora: 15 TM. Total necesario: 60 TM. Tiempo total de operación pura de la máquina: 60 / 15 = 4 horas.",
+        "paso_2": "La regla indica que hay una parada obligatoria de 30 minutos tras CADA 3 horas continuas. Al procesar las primeras 45 TM, han pasado 3 horas. Por lo tanto, se hace un mantenimiento de 30 minutos.",
+        "paso_3": "Luego del mantenimiento, queda procesar 15 TM, lo cual toma 1 hora adicional. Tiempo total: 3h (trabajo) + 0.5h (mantenimiento) + 1h (trabajo) = 4.5 horas (4 horas y 30 min). ✓",
+        "paso_critico": "Modelar temporalmente los intervalos de trabajo y descanso. El descanso no se divide proporcionalmente, ocurre tras hitos completos de 3 horas.",
+        "error_tipico": "A (4h) es el tiempo de procesamiento matemático puro, sin el descanso obligatorio. C (5h) asume descansos cada hora o dos descansos de 30 min. D (5.5h) asume descansos que no corresponden."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "60TM = 45TM(3h) + descanso(0.5h) + 15TM(1h) = 4.5h. B=✓. Modelado discontinuo para evitar cálculos lineales directos. Anti-patrón aplicado (dinámica de intervalos). N2/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_024_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_03",
+        "estimated_time_sec": 100,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Determine qué oración es semánticamente equivalente a la regla normativa expresada a continuación:\n\n«Es imposible inscribir el proyecto en el concurso nacional si no se adjunta el acta de viabilidad presupuestaria firmada por el director.»",
+      "opciones": {
+        "A": "Todo proyecto que adjunte el acta de viabilidad firmada será inscrito automáticamente en el concurso nacional.",
+        "B": "Si un proyecto logró ser inscrito en el concurso nacional, se adjuntó obligatoriamente su acta de viabilidad firmada.",
+        "C": "La inexistencia de la firma del director en el acta no impide que el proyecto adquiera viabilidad presupuestaria.",
+        "D": "Para ganar el concurso nacional de proyectos, la viabilidad presupuestaria con firma es el único requerimiento oficial."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura formal del original: Imposible A (Inscribir) sin B (Acta). Equivalente a: Para tener A, se necesita B. Dicho de otro modo, B es condición necesaria para A.",
+        "paso_2": "Si ocurre el evento principal (Inscripción), tiene que haber ocurrido inevitablemente la condición necesaria (Acta adjunta). La formulación lógica es: A → B (Si A, entonces B).",
+        "paso_3": "La opción B traduce exactamente esto: Si ocurrió la inscripción, debió haberse adjuntado el acta. ✓",
+        "paso_critico": "El error clásico del evaluado en normativa es asumir que cumplir el requisito mínimo basta para la meta (condición suficiente) cuando solo es una condición necesaria.",
+        "error_tipico": "A es falsa (confunde necesidad con suficiencia, asume que teniendo la firma basta para inscribir, pero podría haber otros requisitos). C es una inferencia sobre 'adquirir' viabilidad que escapa al texto. D asume que el objetivo es 'ganar', cuando el texto habla de 'inscribir'."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "A sin B = imposible -> B es necesario para A -> Si A, entonces B. B=✓. Condición necesaria evaluada normativamente sin conectores lineales, refuerza equivalencia semántica profunda. H1=alta por equivalencia formal estricta. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_025_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_03",
+        "estimated_time_sec": 110,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "En un molino de granos antiguo operado por caballos, 3 caballos jalando a un ritmo constante pueden moler 120 kg de trigo en 40 minutos. Si el molinero necesita procesar urgéntemente un pedido masivo de 360 kg de trigo pero solo tiene 1 hora (60 minutos) para hacerlo antes del cierre, ¿cuántos caballos en total debe enganchar al molino, asumiendo que todos mantienen el mismo ritmo constante de los primeros?",
+      "opciones": {
+        "A": "8",
+        "B": "6",
+        "C": "9",
+        "D": "12"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Determinar la tasa unitaria de trabajo. 3 caballos muelen 120 kg en 40 min. Por tanto, 3 caballos muelen 3 kg de trigo por minuto (120/40 = 3).",
+        "paso_2": "Si 3 caballos muelen 3 kg/minuto, entonces 1 caballo muele exactamente 1 kg de trigo cada minuto (3/3 = 1).",
+        "paso_3": "Para moler 360 kg en 60 minutos, la tasa exigida total es: 360 / 60 = 6 kg por minuto.",
+        "paso_4": "Como un caballo muele 1 kg/minuto, se necesitan 6 caballos (6 / 1 = 6). ✓",
+        "paso_critico": "Resolver una regla de tres compuesta o desagregar el problema en tasas unitarias de tres variables (sujetos, producción, tiempo).",
+        "error_tipico": "A (8) surge de aplicar proporciones equivocadas o truncar una relación. C (9) es lo que se requeriría si el tiempo no aumentara a 60 min, manteniéndose en 40. D (12) es aplicar una regla directa a todo."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Tasa= 1cab=1kg/min. Req= 360kg/60min = 6kg/min = 6 cab. B=✓. Compuesta (3 variables: obreros/obra/tiempo). Aplica regla de H6 para N2 (al menos 2 compuestas). N2/H6 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_026_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_03",
+        "estimated_time_sec": 115,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea el siguiente texto crítico:\n\n«Es una falacia del diseño urbano moderno asumir que simplemente trazar más autopistas o avenidas anchas mitigará el tráfico. Paradójicamente, expandir la oferta vial estimula de inmediato lo que los urbanistas llaman 'demanda inducida', atrayendo conductores que antes preferían rutas alternas o el transporte colectivo. Lo que realmente distribuye el flujo no es la anchura del asfaltado, sino la densidad de conexiones cortas en redes reticulares o en cuadrícula densa.»\n\n¿Cuál es la crítica subyacente central expresada por el autor?",
+      "opciones": {
+        "A": "Que las inversiones públicas deberían destinarse exclusivamente al tren subterráneo y eliminar la construcción de nuevas avenidas.",
+        "B": "Que la construcción incontrolada de autopistas deteriora ecológicamente las grandes ciudades causando un caos vehicular irreparable.",
+        "C": "Que solucionar la congestión no depende de aumentar indiscriminadamente la capacidad de las vías aisladas, sino de rediseñar cómo estas se conectan estructuralmente entre sí.",
+        "D": "Que el diseño urbano en cuadrículas ha sido históricamente la única estrategia eficiente y económica para reducir los costos del asfaltado vial a gran escala."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto rechaza explícitamente la idea de que 'más vías o vías más anchas = menos tráfico', atribuyéndolo a la demanda inducida.",
+        "paso_2": "Aporta una alternativa en la oración final: 'lo que distribuye el flujo... es la densidad de conexiones cortas en redes reticulares'.",
+        "paso_3": "Al unir el rechazo (crecer en tamaño de vía aislada no sirve) y la alternativa (fomentar conectividad y red), se llega a la crítica que resume la opción C: no se trata de capacidad (anchura), sino de conectividad (rediseño estructural). ✓",
+        "paso_critico": "No buscar en el texto una mención explícita sobre ecología o sistemas ferroviarios. La comparación es estructural (autopista ancha vs cuadrícula densa).",
+        "error_tipico": "A impone una conclusión 'exclusiva' sobre transporte público (tren subterráneo) no mencionada. B apela al deterioro ecológico, ajeno al argumento técnico planteado. D mezcla el costo económico (no mencionado) con la reducción estructural."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Premisa sobre urbanismo: capacidad volumétrica vs capacidad conectiva. C es la inferencia sobre el enfoque preferido del autor. H1=alta. Estructura argumentativa inferencial probada y validada. N2/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_027_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H7_RCM_L2_03",
+        "estimated_time_sec": 125,
+        "error_type": "Inferencia espacial"
+      },
+      "stem": "Un diseñador de jardines tiene un terreno cuadrado perfecto de 10 metros de lado. Quiere construir en el centro exacto una piscina circular que toque los cuatro bordes del terreno cuadrado (es decir, el cuadrado y el círculo son tangentes en 4 puntos). En las cuatro esquinas sobrantes, recubiertas de tierra entre el cuadrado y el círculo, planea sembrar pasto. ¿Cuál será el área aproximada total de la zona cubierta de pasto? Tome el valor de π (pi) como 3.14.",
+      "opciones": {
+        "A": "86 m²",
+        "B": "50 m²",
+        "C": "21.5 m²",
+        "D": "78.5 m²"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Visualizar las figuras: Un cuadrado externo de lado 10m y, dentro de él, un círculo interno cuyo diámetro es igual al lado del cuadrado (10m).",
+        "paso_2": "Área del cuadrado = lado × lado = 10 × 10 = 100 m².",
+        "paso_3": "Área de la piscina (círculo) = π × radio². Como diámetro = 10, radio = 5. Área del círculo = 3.14 × (5)² = 3.14 × 25 = 78.5 m².",
+        "paso_4": "El área del pasto son las esquinas sobrantes (la sustracción entre ambas figuras). Pasto = 100 m² - 78.5 m² = 21.5 m². ✓",
+        "paso_critico": "Identificar el diámetro del círculo a partir de la tangencia lateral (si toca los bordes, el diámetro es igual al lado del cuadrado).",
+        "error_tipico": "A (86) asume radio = 10 e inventa un valor. B (50) divide el terreno a la mitad. D (78.5) reporta el área de la piscina en lugar de la del pasto (zona vacía)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Sustracción de áreas: Cuadrado (100) - Círculo inscrito (78.5) = 21.5. C=✓. Anti-patrón aplicado (composición/sustracción de áreas con figuras no explícitamente segmentadas). H1=alta por modelado visual necesario. N2/H7 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_028_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_03",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector lógico que mantenga la coherencia en la transición argumentativa:\n\n«Durante décadas, los biólogos asumieron que las herramientas eran patrimonio exclusivo de los primates superiores. __________, el descubrimiento sistemático de cuervos que fabrican varillas curvas para extraer insectos de cortezas profundas ha obligado a reescribir por completo la teoría de la evolución cognitiva aviar.»",
+      "opciones": {
+        "A": "En consecuencia",
+        "B": "Consecuentemente",
+        "C": "No obstante",
+        "D": "Asimismo"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La O1 menciona un paradigma establecido excluyente: 'herramientas = solo primates'.",
+        "paso_2": "La O2 muestra algo que desafía directamente lo anterior: 'cuervos (aves) hacen herramientas'. Es un contraste absoluto entre paradigma y nueva evidencia.",
+        "paso_3": "Para presentar una interrupción tan adversativa con la creencia inicial, el conector debe reflejar concesión o adversación drástica. 'No obstante' introduce que, pese a lo que se asumía, ocurre lo contrario. ✓",
+        "paso_critico": "Determinar que el descubrimiento no es una CONSECUENCIA de la asunción errónea de los biólogos, sino un hecho que la contradice de base.",
+        "error_tipico": "A y B son conectores de causación/consecuencia; si fuesen correctos significaría que los cuervos hacen herramientas PORQUE los biólogos asumieron algo sobre los monos (absurdo total). D es un conector de semejanza aditiva."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Oposición entre paradigma vs evidencia nueva= 'No obstante' (adversativo/concesivo). C=✓. A/B causal-absurdo. D suma. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_029_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_03",
+        "estimated_time_sec": 110,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "En un algoritmo de cifrado, una clave numérica maestra cambia diariamente siguiendo el siguiente patrón de generación encadenada:\n\n1, 2, 6, 21, 88, ___\n\nSuponiendo que hoy el sistema generó el 88, ¿cuál será la clave maestra para el día de mañana?",
+      "opciones": {
+        "A": "345",
+        "B": "352",
+        "C": "445",
+        "D": "440"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Analizar la transición entre términos que involucre sumas y multiplicaciones conjuntas (típico nivel 2 de H4).",
+        "paso_2": "1 a 2: (1 × 1) + 1 = 2.\n2 a 6: (2 × 2) + 2 = 6.\n6 a 21: (6 × 3) + 3 = 18 + 3 = 21.\n21 a 88: (21 × 4) + 4 = 84 + 4 = 88.",
+        "paso_3": "El patrón es que cada término N se multiplica por su posición M (o M consecutivo) y se le suma esa misma M. La regla es: Termino_Siguiente = (Termino_Previo × K) + K, donde K incrementa (1, 2, 3, 4...).",
+        "paso_4": "Para el último término: (88 × 5) + 5 = 440 + 5 = 445. ✓",
+        "paso_critico": "Esta es una 'doble regla' (multiplica e incrementa con variable móvil). Es el anti-patrón no lineal exigido.",
+        "error_tipico": "A es cálculo erróneo. B no suma la variable terminal. D (440) es solo la multiplicación 88x5, olvidando el +5 final."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "(X * K) + K. K=1,2,3,4,5. 88*5 + 5 = 445. C=✓. Anti-patrón de doble regla no lineal aplicado. Excelente para inferencia matricial en N2. N2/H4 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_030_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_03",
+        "estimated_time_sec": 105,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "¿Cuál de las opciones provee la misma certeza implícita que la afirmación siguiente?\n\n«Ninguna persona que reciba ingresos salariales y al mismo tiempo posea propiedades de alquiler está exenta de presentar la declaración anual de tributos, a menos que el Estado fije una moratoria temporal.»",
+      "opciones": {
+        "A": "Cualquier ciudadano que obtenga ingresos de un salario o reciba el alquiler de propiedades está incondicionalmente obligado a sufragar tributos estatales.",
+        "B": "Una persona con ingresos salariales o propiedades en arriendo solo podrá evitar la declaración si una ley gubernamental elimina definitivamente el cobro anual.",
+        "C": "Si alguien tiene simultáneamente salario y propiedades alquiladas, pero el gobierno determina una moratoria temporal, la presentación de su declaración fiscal no es obligatoria.",
+        "D": "Todas las personas asalariadas con bienes en alquiler deberán presentar invariablemente la declaración de tributos a menos que demuestren que carecen de ingresos directos."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Condición del sujeto: Tener salario Y tener propiedades (simultaneidad).",
+        "paso_2": "Norma general para ese subgrupo: NO está exenta de presentar, ES DECIR, es obligatoria su presentación.",
+        "paso_3": "Excepción ('a menos que'): Si se presenta una 'moratoria temporal' fijada por el Estado, la norma se suspende.",
+        "paso_4": "La opción C dice exactamente eso: si se tiene la condición simultánea (salario y propiedades) PERO ocurre la excepción (gobierno da moratoria temporal), entonces se invierte la norma (no es obligatoria). ✓",
+        "paso_critico": "Comprender la regla exceptiva: Obligación general salva excepción. Si ocurre la excepción, la obligación cesa.",
+        "error_tipico": "A comete un error grave al pasar de 'Y' (simultáneo) a 'o' (cualquiera de los dos), además ignora la excepción. B habla de 'elimina definitivamente' (cambia la certeza del texto original, que hablaba de 'temporal'). D ignora la moratoria proponiendo un requisito inexistente (demostrar carencia de ingresos)."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Ningún (A y B) exento, a menos que M' = Si [(A y B) pero M], entonces exento. C=✓. Equivalencia de conectores de simultaneidad y excepción (operadores lógicos complejos). H1=alta en equivalencia semántica de matriz condicional. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_031_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_03",
+        "estimated_time_sec": 105,
+        "error_type": "Modelado indirecto"
+      },
+      "stem": "Un distribuidor compra botellas de jugo de naranja al por mayor a ₡500 cada una y las vende comercialmente en paquetes promocionales; cada paquete contiene 4 botellas y se vende por un precio total de ₡3 200. Si en determinado evento, luego de deducir todo el costo inicial que le cobró el mayorista, el distribuidor obtuvo una ganancia neta pura de ₡18 000, ¿cuántas botellas de jugo había comprado y vendido en total el comerciante?",
+      "opciones": {
+        "A": "40 botellas",
+        "B": "60 botellas",
+        "C": "30 botellas",
+        "D": "80 botellas"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Calcular costo y venta a nivel de PAQUETE, ya que se vende de 4 en 4.",
+        "paso_2": "Costo de 1 paquete (4 botellas): 4 × 500 = ₡2 000 costo mayorista.",
+        "paso_3": "Ingreso por 1 paquete (4 botellas): = ₡3 200 precio de venta comercial.",
+        "paso_4": "Ganancia neta por cada paquete de 4 botellas: 3 200 - 2 000 = ₡1 200.",
+        "paso_5": "Si la ganancia total fue ₡18 000. Número de paquetes vendidos = 18 000 / 1 200 = 15 paquetes.",
+        "paso_6": "La pregunta pide el total de BOTELLAS (cantidad unitaria), no de paquetes: 15 paquetes × 4 = 60 botellas totales. ✓",
+        "paso_critico": "No detenerse en 'paquetes' (15) o calcular ganancias en botellas sueltas con errores fraccionarios, estandarizar a la unidad base que es el paquete transaccional de 4.",
+        "error_tipico": "A y D son tanteos comunes. El error clásico si se pedía botellas es calcular los paquetes (15) y no ver que son botellas, aunque aquí 15 no está opcionado lo cual simplifica. El evaluado deduce (18000/300=60) ya que la ganancia 'unitaria real' es ₡300 por botella. Costo 500, venta=800 (3200/4), d=300. 18000/300=60."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Botella: Venta(800) - Costo(500) = 300 Ganancia d. 18000/300 = 60. B=60 ✓. Modelado de agrupaciones e ingresos-costos netos. N2/H2 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_032_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_03",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea y analice el siguiente texto corporativo:\n\n«Al implementar nuestra política de puertas abiertas, notamos que si bien el volumen de comunicación informal entre jefaturas y subordinados aumentó exponencialmente, el índice de quejas formales en materia de equidad salarial no descendió en lo absoluto. Conversar libremente sobre aficiones de fin de semana no mitiga el resentimiento que produce un estancamiento en el ascenso salarial o la disparidad frente a un nuevo empleado.»\n\n¿A qué conclusión está invitando implícitamente la directiva?",
+      "opciones": {
+        "A": "A que la política de puertas abiertas fracasó rotundamente y debe ser completamente abolida en todas las instancias.",
+        "B": "A que se detengan permanentemente las conversaciones triviales en la oficina para mejorar el respeto por el trabajo y la jerarquía de mandos.",
+        "C": "A que las mejoras superficiales en el clima laboral interpersonal no resuelven, ni deben sustituir, el manejo de injusticias estructurales concretas de la gerencia.",
+        "D": "A que el nuevo empleado gana un salario superior porque tiene mejor disposición para participar de las actividades sociales de la jefatura pertinente."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El texto contrasta dos esferas: lo superficial (puertas abiertas, charlar de aficiones) vs lo estructural (quejas de equidad, estancamiento de ascensos).",
+        "paso_2": "La observación central es que una esfera ('el clima interpersonal') aumentó bien, PERO esto no sirvió de herramienta para arreglar la segunda ('injusticias formales resguardando equidad salarial').",
+        "paso_3": "La conclusión implícita invita a entender que el manejo de injusticias formales (dinero, equidad) no puede mitigarse con actos de cordialidad informal. La opción C resume esta conclusión analítica. ✓",
+        "paso_critico": "Abstraer la anécdota de la oficina ('puertas abiertas') a sus categorías rectoras ('mejoras superficiales' vs 'injusticias estructurales').",
+        "error_tipico": "A propone una anulación absolutista (el texto no dice que abolir la política arregle algo). B moraliza las conversaciones triviales como falta de respeto. D lee literalmente el 'nuevo empleado' derivando chismes (ganó dinero por su sociabilidad) no respaldados en la lectura."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Cordialidad no mitiga injusticia estructural'. C=✓. Inferencia implícita, no repinta la idea central y abstractiza la lección analítica. H3 de argumentación en N2 validado para anti-patrón de sim 1. N2/H3 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_033_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_03",
+        "estimated_time_sec": 115,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Un agricultor estima que 4 recolectores de café, laborando jornadas regulares durante 10 días, le cuestan a la finca ₡400 000 en provisión de viáticos y salarios. En temporada pico, para no perder una cosecha incipiente, necesita operar repentinamente con 12 recolectores durante apenas 4 días. Bajo la asunción de que el costo por recolector por día se mantiene estrictamente idéntico, ¿qué presupuesto base requiere apartar en total para este nuevo contingente laboral exprés?",
+      "opciones": {
+        "A": "₡640 000",
+        "B": "₡480 000",
+        "C": "₡360 000",
+        "D": "₡520 000"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Determinar la métrica de costo unitario: Costo por día por cada recolector.",
+        "paso_2": "Total inicial: ₡400 000 en 10 días por 4 recolectores. Esto equivale a 40 días de trabajo-hombre (4 recolectores × 10 días).",
+        "paso_3": "Costo por día por persona: 400 000 / 40 = ₡10 000.",
+        "paso_4": "El nuevo evento requiere: 12 recolectores por 4 días = 48 días de trabajo-hombre totales.",
+        "paso_5": "Costo del nuevo contingente: 48 días-hombre × ₡10 000 = ₡480 000. ✓",
+        "paso_critico": "Manejar la proporcionalidad conjunta de las dos dimensiones ('personas×días') directamente, en lugar de intentar escalados confusos y truncados entre las variables por separado.",
+        "error_tipico": "A (640 000) puede surgir de un mal factor. C (360 000) o (400k - algo) se da si creen que menos días equivalen a menos total a pesar de subir de 4 a 12 los hombres que comen y cobran diarios. En B se ve que el neto sube."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "K=400000/(4*10) = 10000. New= 10000*(12*4) = 480000. B=✓. Compuesta evaluada en doble vía (personal y días variable independiente, costo dependiente). Típica doble proporcionalidad evaluada por UCR. H1 aumenta por la fraseología engañosa. N2/H6 ✓."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_034_B026",
+      "item_type": "simulation",
+      "simulation_id": "sim_2",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_03",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector que enlaza las ideas con la mayor exactitud interpretativa en el marco del contexto ofrecido:\n\n«Es una obligación ética proteger identidades al divulgar estudios sobre enfermedades mentales crónicas. __________, al evitar de forma extrema compartir historiales clínicos con colegas de hospitales interconectados regionalmente, se entorpece notoriamente el desarrollo de protocolos conjuntos de prevención ciudadana por ignorancia de casuísticas compartidas.»",
+      "opciones": {
+        "A": "Puesto que",
+        "B": "En el mismo sentido",
+        "C": "Adicionalmente",
+        "D": "No obstante"
+      },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "El primer enunciado plantea la existencia de una obligación rígida e irreductible (proteger identidades por ética). Es una instrucción o mandato fuertemente 'positivo'.",
+        "paso_2": "El segundo argumento detalla cómo la exageración ('evitar de forma extrema') de esa misma protección causa un efecto totalmente negativo en un rubro que también importa (el desarrollo de prevención regional conjunta).",
+        "paso_3": "Se confronta una buena práctica con su consecuencia perniciosa por exceso, de tal modo que O2 desafía u obstaculiza a la O1. Por ello se exige un operador de contraste. 'No obstante' funge esta posición de contraste atenuativo. ✓",
+        "paso_critico": "La frase muestra la tensión y contraste entre cumplir el deber A y destruir con ello el objetivo B.",
+        "error_tipico": "A (puesto que) es indicativo causal estricto sumiso: implicaría que entorpecer el protocolo prevencional 'es la CAUSA' de proteger las normas, un desastre ético. B (en el mismo sentido) anularía la tensión. C (adicionalmente) es puramente sumar puntos a favor pero sin tensión."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Deber A' vs 'Exceso de A mata B'. Contraste explícito D=✓. A causal, B equivalencia, C suma. Aplicación canónica de concesión frente a un dilema moral institucional en N2. N2/H5 ✓."
+      },
+      "final_status": "approved"
+    }
+  ]
+}

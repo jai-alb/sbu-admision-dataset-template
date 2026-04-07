@@ -1,0 +1,791 @@
+{
+  "batch_id": "BATCH_025",
+  "part": "2_of_2",
+  "items_range": "23-45",
+  "items": [
+    {
+      "item_id": "ITEM_023_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H7_RCM_L2_01",
+        "estimated_time_sec": 120,
+        "error_type": "Error de cálculo"
+      },
+      "stem": "Un triángulo tiene base de 10 cm y altura de 6 cm. ¿Cuál es su área?",
+      "opciones": {
+        "A": "60 cm²",
+        "B": "30 cm²",
+        "C": "16 cm²",
+        "D": "20 cm²"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Área de triángulo: (base × altura) ÷ 2 = (10 × 6) ÷ 2 = 60 ÷ 2 = 30 cm². ✓",
+        "paso_critico": "Recordar que el área del triángulo divide entre 2, a diferencia del rectángulo.",
+        "error_tipico": "A (60 cm²): base×altura sin dividir — confunde con rectángulo. C (16): suma base+altura. D (20): 10×6/3 usa divisor incorrecto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "(10×6)/2=30=B ✓. A sin /2. C suma. D divisor 3. H7/L2/RCM ✓. Contexto triángulo-área — distinto de triángulo-Pitágoras-perímetro (sim_1 anterior)."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_024_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La música activa múltiples regiones del cerebro de forma simultánea: zonas relacionadas con el movimiento, la emoción, la memoria y el lenguaje. Esta activación coordinada explica por qué la musicoterapia ha mostrado resultados prometedores en el tratamiento de trastornos neurológicos como el Parkinson y el Alzheimer.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La musicoterapia ha demostrado ser más efectiva que los fármacos en el tratamiento del Alzheimer.",
+        "B": "La música estimula simultáneamente varias zonas cerebrales, lo que fundamenta su uso terapéutico en trastornos neurológicos.",
+        "C": "El Parkinson y el Alzheimer son las únicas enfermedades que responden al tratamiento musical.",
+        "D": "Escuchar música es la actividad que mayor cantidad de neuronas activa en el cerebro humano."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto establece: mecanismo (música activa múltiples zonas cerebrales) → explicación de uso terapéutico (musicoterapia en trastornos neurológicos).",
+        "paso_2": "B recoge el mecanismo y la consecuencia terapéutica. ✓",
+        "paso_critico": "La idea central vincula el mecanismo neurológico con la aplicación clínica.",
+        "error_tipico": "A introduce comparación con fármacos — ausente en el texto. C introduce exclusividad ('únicas enfermedades'). D introduce superlativo no sostenido."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: mecanismo+aplicación terapéutica. A comparación ausente. C exclusividad. D superlativo. H3/L2/RCV ✓. Contexto musicoterapia/neurología — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_025_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "En una librería, los libros de texto cuestan ₡4 200 cada uno y los cuadernos cuestan ₡800 cada uno. Valeria compra 2 libros de texto y 3 cuadernos. ¿Cuánto paga en total?",
+      "opciones": {
+        "A": "₡10 000",
+        "B": "₡10 800",
+        "C": "₡9 400",
+        "D": "₡8 400"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Libros: 2 × ₡4 200 = ₡8 400. Cuadernos: 3 × ₡800 = ₡2 400.",
+        "paso_2": "Total: ₡8 400 + ₡2 400 = ₡10 800. ✓",
+        "paso_critico": "Calcular subtotales separados antes de sumar.",
+        "error_tipico": "A (₡10 000): error aritmético. C (₡9 400): 2×4200+800=9400, cuenta solo un cuaderno. D (₡8 400): solo los libros."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "2×4200+3×800=10800=B ✓. A error. C 1 cuaderno. D solo libros. H2/L2/RCM ✓. Contexto librería/libros-cuadernos — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_026_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 105,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«Las energías renovables han reducido drásticamente su costo de producción en la última década. __________, aún representan un porcentaje minoritario de la matriz energética global.»",
+      "opciones": {
+        "A": "Por esta razón",
+        "B": "Asimismo",
+        "C": "Sin embargo",
+        "D": "En consecuencia"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "La primera oración presenta una tendencia positiva (reducción de costos). La segunda introduce un dato que contradice la expectativa derivada (aún son minoría en la matriz).",
+        "paso_2": "'Sin embargo' (C) expresa que a pesar de los costos bajos, la participación sigue siendo pequeña — tensión entre esperado y real. ✓",
+        "paso_critico": "El segundo enunciado frustra la expectativa generada por el primero. No hay relación causal.",
+        "error_tipico": "A y D causales: implicarían que su posición minoritaria resulta de la reducción de costos — ilógico. B aditivo: no expresa la tensión."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C único adversativo: expectativa frustrada (bajos costos → aún minoría). A/D causales (ilógicos). B aditivo (no expresa tensión). H5/L2/RCV/H1=alta ✓. H1=alta: la relación entre expectativa generada y dato contradictorio requiere inferencia sobre dirección argumentativa implícita. Contexto energías-renovables — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_027_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "Si 5 trabajadores pueden pintar una bodega en 8 días, ¿cuántos días tardarán 10 trabajadores pintando al mismo ritmo?",
+      "opciones": {
+        "A": "16",
+        "B": "4",
+        "C": "6",
+        "D": "10"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Proporcionalidad inversa: más trabajadores, menos días. Total de trabajo: 5 × 8 = 40 unidades-trabajador.",
+        "paso_2": "Con 10 trabajadores: 40 ÷ 10 = 4 días. ✓",
+        "paso_critico": "La relación trabajadores-días es inversa, no directa.",
+        "error_tipico": "A (16): 8×2=16, multiplica días al doblar trabajadores (proporcionalidad directa errada). C (6): error aritmético. D (10): iguala días al número de trabajadores."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "5×8=40; 40/10=4=B ✓. A aplica directo. C error. D dato confundido. H6/L2/RCM ✓. Proporcionalidad inversa — distinta de todos los H6 previos (directa)."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_028_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 115,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Históricamente, las sociedades han considerado el tiempo libre como opuesto al trabajo productivo. Sin embargo, investigaciones recientes en psicología y economía del comportamiento sugieren que el descanso activo —entendido como actividad creativa no remunerada— es un factor determinante en la innovación y la productividad a largo plazo.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El trabajo remunerado produce mayores beneficios cognitivos que las actividades no remuneradas.",
+        "B": "La oposición tradicional entre trabajo y tiempo libre ignora la contribución del descanso activo a la productividad e innovación.",
+        "C": "Los trabajadores que descansan más tiempo ganan salarios más altos a largo plazo.",
+        "D": "Las investigaciones recientes han demostrado que el tiempo libre es más valioso que el trabajo formal."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto argumenta: (1) visión tradicional = tiempo libre vs. trabajo productivo; (2) evidencia reciente = el descanso activo impulsa innovación y productividad.",
+        "paso_2": "B recoge ambas: la visión tradicional errónea y la evidencia que la contradice. ✓",
+        "paso_critico": "La idea central contrasta la visión histórica con la evidencia nueva.",
+        "error_tipico": "A introduce comparación entre remunerado/no remunerado que el texto no hace. C introduce salarios — ausente. D absolutiza 'más valioso' — el texto no establece superioridad sino complementariedad."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: contraste visión-tradicional vs. evidencia-actual. A comparación salarial ausente. C salarios. D absolutiza. H3/L2/RCV/H1=alta ✓. H1=alta: la idea central implica reconocer la estructura argumental de contraste histórico vs. evidencia — no es explícita. Contexto tiempo-libre/innovación — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_029_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 100, 50, 25, 12.5, ___?",
+      "opciones": {
+        "A": "5",
+        "B": "6",
+        "C": "6.25",
+        "D": "10"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Cada término se obtiene dividiendo (o multiplicando por 1/2) el anterior: 100÷2=50, 50÷2=25, 25÷2=12.5.",
+        "paso_2": "Siguiente: 12.5 ÷ 2 = 6.25. ✓",
+        "paso_critico": "Reconocer la progresión geométrica de razón 1/2.",
+        "error_tipico": "A (5): 12.5−7.5=5, busca diferencia aritmética errónea. B (6): error de división. D (10): 12.5−2.5=10, resta distinto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "12.5/2=6.25=C ✓. A diferencia aritmética errónea. B error división. D resta incorrecta. H4/L2/RCM ✓. Progresión geométrica ÷2 — distinta de todas las series previas."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_030_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 95,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La pandemia aceleró la adopción de herramientas digitales en la educación. __________, puso en evidencia las profundas brechas de acceso tecnológico que existen entre distintos sectores sociales.»",
+      "opciones": {
+        "A": "En consecuencia",
+        "B": "A su vez",
+        "C": "Por lo tanto",
+        "D": "Además"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La primera oración señala un efecto de la pandemia (adopción digital). La segunda señala otro efecto simultáneo (evidenciar brechas).",
+        "paso_2": "'A su vez' (B) introduce un segundo efecto paralelo del mismo fenómeno. ✓",
+        "paso_critico": "Ambas son consecuencias de la pandemia, pero la segunda no se deriva de la primera.",
+        "error_tipico": "A y C causales: implicarían que las brechas se evidenciaron porque hubo adopción digital — posible inferencia pero el texto no la establece. D aditivo ('además') es plausible pero 'a su vez' expresa mejor la simultaneidad de efectos del mismo origen."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B único paralelo-causal: dos efectos independientes del mismo evento. A/C causales (relación no establecida). D aceptable pero B más preciso para la simultaneidad. H5/L2/RCV ✓. Contexto pandemia/brecha-digital — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_031_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H2_RCM_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Un artesano tarda 3 horas en elaborar una pieza de cerámica. Si trabaja 7 horas al día, ¿cuántas piezas completas puede terminar en 4 días?",
+      "opciones": {
+        "A": "8",
+        "B": "9",
+        "C": "12",
+        "D": "10"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Horas totales disponibles: 7 × 4 = 28 horas.",
+        "paso_2": "Piezas completadas: 28 ÷ 3 = 9.33 → solo piezas COMPLETAS = 9. ✓",
+        "paso_critico": "Solo se cuentan piezas completas, truncar el decimal.",
+        "error_tipico": "A (8): error en las horas totales (7×3=21, 21/3=7 — cuenta días distintos). C (12): 4×3=12, multiplica jornada por tiempo por pieza sin dividir. D (10): redondea al alza."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "28÷3=9.33→piezas completas=9=B ✓. A error de horas totales. C multiplicación sin división. D redondeo al alza. H2/L2/RCM ✓. Contexto artesano/cerámica — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_032_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H3_RCV_L2_01",
+        "estimated_time_sec": 110,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La pesca artesanal sostiene la seguridad alimentaria de millones de familias costeras en el mundo. A diferencia de la pesca industrial, opera con impacto ambiental significativamente menor y preserva saberes culturales transmitidos por generaciones. Su declive, impulsado por la competencia desigual con el sector industrial, representa una pérdida económica, cultural y ecológica simultánea.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "La pesca industrial debería ser prohibida para proteger las tradiciones de las comunidades costeras.",
+        "B": "La pérdida de la pesca artesanal por la presión industrial implica una triple pérdida: económica, cultural y ecológica.",
+        "C": "La pesca artesanal es más rentable que la industrial cuando se considera su impacto ambiental.",
+        "D": "Las comunidades costeras deben modernizar sus técnicas de pesca para competir con la industria."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto argumenta: la pesca artesanal tiene múltiples valores (alimentario, bajo impacto, cultural); su declive genera pérdida triple.",
+        "paso_2": "B captura la causa (presión industrial) y las consecuencias múltiples de la pérdida. ✓",
+        "paso_critico": "La idea central integra la amenaza y la triple dimensión de la pérdida.",
+        "error_tipico": "A propone prohibición que el texto no plantea. C introduce rentabilidad como comparación no hecha. D prescribe modernización opuesta al argumento del texto."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: amenaza industrial + pérdida económica+cultural+ecológica. A prohibición. C rentabilidad. D prescripción contraria. H3/L2/RCV ✓. Contexto pesca-artesanal — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_033_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 2,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H6_RCM_L2_01",
+        "estimated_time_sec": 105,
+        "error_type": "Confusión de proporcionalidad"
+      },
+      "stem": "En una encuesta, el 40% de los encuestados prefiere el transporte público. Si 320 personas prefieren el transporte público, ¿cuántas personas participaron en la encuesta en total?",
+      "opciones": {
+        "A": "640",
+        "B": "500",
+        "C": "800",
+        "D": "960"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Si el 40% representa 320 personas, el total es: 320 ÷ 0.40 = 800 personas. ✓",
+        "paso_2": "Verificación: 40% × 800 = 320 ✓.",
+        "paso_critico": "La variable oculta es el total — no se multiplica sino que se divide el valor conocido entre la razón dada.",
+        "error_tipico": "A (640): 320×2=640, asume que 40% es la mitad. B (500): 320+180=500, suma arbitraria. D (960): 320×3=960, error de factor."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "320/0.4=800=C ✓. Verif: 0.4×800=320 ✓. A asume mitad. B suma arbitraria. D factor errado. H6/L2/RCM/H1=alta ✓. H1=alta: se da el porcentaje y su valor, la variable oculta es el total — requiere inversión de la relación. Contexto encuesta/transporte — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_034_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 2,
+      "H1": "media",
+      "metadata": {
+        "template_id": "T_H5_RCV_L2_01",
+        "estimated_time_sec": 100,
+        "error_type": "Interpretación literal errónea"
+      },
+      "stem": "Seleccione el conector más adecuado:\n\n«La producción de carne bovina requiere grandes extensiones de tierra y enormes cantidades de agua. __________, genera emisiones de gases de efecto invernadero equivalentes a las del sector transporte global.»",
+      "opciones": {
+        "A": "Sin embargo",
+        "B": "Además",
+        "C": "Por el contrario",
+        "D": "No obstante"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "La primera oración señala recursos consumidos (tierra, agua). La segunda añade otro impacto (emisiones de GEI).",
+        "paso_2": "'Además' (B) suma un tercer tipo de impacto ambiental. ✓",
+        "paso_critico": "Los dos enunciados enumeran impactos del mismo fenómeno. No hay contraste.",
+        "error_tipico": "A, C y D adversativos: implicarían que las emisiones se dan a pesar del consumo de tierra/agua — ilógico, ambos son impactos paralelos negativos."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B único aditivo: dos tipos de impacto del mismo fenómeno. A/C/D adversativos (ilógicos). H5/L2/RCV ✓. Contexto ganadería/emisiones-GEI — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_035_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H2_RCM_L3_01",
+        "estimated_time_sec": 195,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Carmen tiene el doble de libros que Daniel. Si Carmen le regala 10 libros a Daniel, ambos quedan con la misma cantidad. ¿Cuántos libros tiene Carmen actualmente?",
+      "opciones": {
+        "A": "20",
+        "B": "30",
+        "C": "40",
+        "D": "50"
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Sea d = libros de Daniel. Carmen = 2d. Después de dar 10: Carmen = 2d−10, Daniel = d+10.",
+        "paso_2": "Ecuación: 2d−10 = d+10 → d = 20. Carmen = 2(20) = 40. ✓",
+        "paso_3": "Verificación: Carmen(40)→30, Daniel(20)→30. Iguales ✓.",
+        "paso_critico": "La igualación ocurre DESPUÉS de la transferencia — la variable oculta es que ambas cantidades cambian.",
+        "error_tipico": "A (20): reporta d (Daniel). B (30): reporta la cantidad final de cada uno. D (50): 2×25 — asume que el total se conserva y divide equitativamente."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "d=20→Carmen=40=C ✓. Verif: 30=30 ✓. A reporta Daniel. B cantidad final. D asume reparto. H2/L3/RCM ✓. N3: sistema implícito + variable oculta (igualación post-transferencia). H1=alta. Nuevo contexto libros/regalar."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_036_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L3_01",
+        "estimated_time_sec": 185,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea el siguiente texto:\n\n«Los sistemas educativos que priorizan la evaluación estandarizada como principal métrica de calidad generan un fenómeno bien documentado: los docentes enseñan para la prueba, no para el aprendizaje. Cuando el indicador de calidad se convierte en el objetivo, deja de ser un buen indicador de calidad. La consecuencia es que los sistemas con mejores resultados en pruebas internacionales no son necesariamente los que producen mayor pensamiento crítico o creatividad.»\n\n¿Cuál es la conclusión principal que el texto defiende?",
+      "opciones": {
+        "A": "Los sistemas educativos deben eliminar completamente las pruebas estandarizadas para fomentar la creatividad.",
+        "B": "Optimizar métricas de evaluación convierte el indicador en un fin en sí mismo, distorsionando el objetivo real y vaciando su validez.",
+        "C": "Los países con mejores resultados en pruebas internacionales forman a los mejores profesionales.",
+        "D": "Los docentes que enseñan para la prueba son incompetentes y deberían ser reemplazados."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El texto argumenta que cuando el indicador se convierte en objetivo, el indicador deja de medir lo que debería (Goodhart's Law implícita). La evidencia es el fenómeno 'enseñar para la prueba'.",
+        "paso_2": "B recoge esa conclusión implícita: el problema no es medir, sino que la métrica se corrompe al convertirse en meta. ✓",
+        "paso_critico": "La conclusión no critica las pruebas en sí (A sería extremo), sino el fenómeno de optimización que las distorsiona.",
+        "error_tipico": "A propone eliminación que el texto no plantea. C invierte la tesis del texto. D culpa a los docentes — el texto culpa al sistema, no a los individuos."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: Goodhart's Law — indicador→objetivo→deja de ser indicador válido. A eliminar (extremo). C invierte tesis. D culpa individuo vs. sistema. H3/L3/RCV ✓. N3: argumento implícito multi-paso, trampa conceptual fuerte. H1=alta. Nuevo contexto evaluación-educativa."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_037_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H4",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H4_RCM_L2_01",
+        "estimated_time_sec": 175,
+        "error_type": "Generalización excesiva"
+      },
+      "stem": "¿Cuál es el término que sigue en la serie: 3, 7, 13, 21, 31, ___?",
+      "opciones": {
+        "A": "41",
+        "B": "43",
+        "C": "45",
+        "D": "39"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos: 7−3=4, 13−7=6, 21−13=8, 31−21=10. Las diferencias crecen de 2 en 2.",
+        "paso_2": "Siguiente diferencia: 12. Siguiente término: 31 + 12 = 43. ✓",
+        "paso_critico": "El patrón está en las diferencias de segundo orden (crecen de 2 en 2), no en los términos directamente.",
+        "error_tipico": "A (41): 31+10=41, repite la última diferencia (10) sin incrementar. C (45): 31+14=45, incrementa la diferencia en 4. D (39): 31+8=39, retrocede en el incremento."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Diferencias 4,6,8,10→siguiente=12; 31+12=43=B ✓. A repite última. C incremento doble. D retrocede. H4/L3/RCM ✓. N3: diferencias de segundo orden, trampa de repetir última diferencia. H1=alta. Distinto de series previas B025."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_038_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_01",
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones es lógicamente equivalente a la siguiente?\n\n«Ningún sistema político elimina por completo la inequidad económica.»",
+      "opciones": {
+        "A": "Existe al menos un sistema político que logra eliminar por completo la inequidad económica.",
+        "B": "Todo sistema político mantiene algún nivel de inequidad económica.",
+        "C": "Los sistemas políticos generan inevitablemente inequidad económica como parte de su funcionamiento.",
+        "D": "La eliminación de la inequidad económica depende exclusivamente de la voluntad de los gobernantes."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Enunciado original: 'Ningún S es P' → equivalente lógico: 'Todo S es no-P'. En palabras: todo sistema político mantiene alguna inequidad (no-P = no elimina por completo). ✓",
+        "paso_2": "B expresa exactamente eso: todo sistema político mantiene algún nivel de inequidad. Es la traducción directa de 'ninguno elimina completamente'. ✓",
+        "paso_critico": "'Ningún A es B' equivale a 'Todo A es no-B'. No confundir con 'Existe algún A que no es B' (que sería consecuencia, no equivalencia).",
+        "error_tipico": "A es la negación exacta del enunciado original. C introduce 'inevitablemente genera' — el enunciado no habla de generación sino de eliminación. D introduce causa (voluntad de gobernantes) — ausente en el enunciado original."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "Ningún S es P ↔ Todo S es no-P. B=Todo sistema mantiene inequidad. A=negación directa. C introduce causalidad. D introduce causa ajena. H5/L3/RCV ✓. Equivalencia lógica formal (cuantificadores universales negativos). H1=alta. Nuevo contexto inequidad-económica."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_039_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H6",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H6_RCM_L3_01",
+        "estimated_time_sec": 185,
+        "error_type": "Modelado incorrecto"
+      },
+      "stem": "Un grifo A puede llenar un tanque en 4 horas. Un grifo B puede llenarlo en 6 horas. ¿Cuántas horas tardarán ambos grifos trabajando juntos en llenar el tanque?",
+      "opciones": {
+        "A": "2 horas",
+        "B": "2 horas y 24 minutos",
+        "C": "3 horas",
+        "D": "5 horas"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Tasa A: 1/4 del tanque por hora. Tasa B: 1/6 del tanque por hora. Juntos: 1/4 + 1/6 = 3/12 + 2/12 = 5/12 del tanque por hora.",
+        "paso_2": "Tiempo total: 1 ÷ (5/12) = 12/5 = 2.4 horas = 2 horas 24 minutos. ✓",
+        "paso_critico": "Sumar tasas (fracciones del tanque por hora) y calcular el recíproco. No promediar tiempos.",
+        "error_tipico": "A (2h): (4+6)/2÷2=2.5≈2, promedia tiempos y redondea. C (3h): (4+6)/2-(4+6)/2÷... promedia los tiempos directamente = (4+6)/2=5≠3. D (5h): suma tiempos directamente sin calcular tasas."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "1/4+1/6=5/12; 12/5=2.4h=2h24min=B ✓. A promedia incorrectamente. C promedio de tiempos. D suma tiempos. H6/L3/RCM ✓. N3: razones no explícitas (tasas de llenado) + transformación intermedia. H1=alta. Contexto grifos/tanque — nuevo."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_040_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_01",
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones es lógicamente equivalente a la siguiente?\n\n«Solo los acuerdos ratificados por dos tercios del Congreso tienen fuerza de ley.»",
+      "opciones": {
+        "A": "Si un acuerdo es ratificado por dos tercios del Congreso, entonces tiene fuerza de ley.",
+        "B": "Si un acuerdo no tiene fuerza de ley, entonces no fue ratificado por dos tercios del Congreso.",
+        "C": "Los acuerdos ratificados por dos tercios del Congreso generalmente tienen fuerza de ley.",
+        "D": "Si un acuerdo fue ratificado por dos tercios del Congreso, puede o no tener fuerza de ley."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "'Solo A puede B' equivale a 'Si B entonces A'. Aquí: Si tiene fuerza de ley (B), entonces fue ratificado por 2/3 (A).",
+        "paso_2": "El contrarrecíproco de 'Si B entonces A' es 'Si no A entonces no B': 'Si no fue ratificado por 2/3, entonces no tiene fuerza de ley'. O equivalentemente: 'Si no tiene fuerza de ley, entonces no fue ratificado por 2/3'. Eso es B. ✓",
+        "paso_critico": "'Solo A puede hacer B' NO implica que A garantice B (A podría no tener fuerza de ley por otras razones). La equivalencia exacta es el contrarrecíproco.",
+        "error_tipico": "A convierte la condición necesaria en suficiente — error lógico clásico. C introduce 'generalmente' que debilita la relación lógica. D niega la necesidad de la condición, contradiciendo el enunciado."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "'Solo A→B' ≡ 'B→A'; contrarrecíproco: '¬A→¬B' = B. A afirma suficiencia (error). C debilita. D niega necesidad. H5/L3/RCV ✓. N3: equivalencia lógica 'solo' + contrarrecíproco. H1=alta. Nuevo contexto normativa/congreso."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_041_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H2",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H2_RCM_L3_01",
+        "estimated_time_sec": 200,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Hace 4 años, la edad de Rodrigo era el triple de la edad de su sobrino Tomás. Actualmente, la suma de sus edades es 48. ¿Cuántos años tiene Rodrigo ahora?",
+      "opciones": {
+        "A": "34",
+        "B": "36",
+        "C": "38",
+        "D": "40"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Sea r = edad actual de Rodrigo, t = edad actual de Tomás. Sistema: r + t = 48; hace 4 años: (r−4) = 3(t−4) → r − 4 = 3t − 12 → r = 3t − 8.",
+        "paso_2": "Sustitución: (3t − 8) + t = 48 → 4t = 56 → t = 14. Rodrigo = 48 − 14 = 34. ✓",
+        "paso_3": "Verificación: r=34, t=14. Hace 4 años: 30 = 3(10) = 30 ✓. Suma actual: 34+14=48 ✓.",
+        "paso_critico": "La relación de edades ocurre hace 4 años — ambas edades deben retroceder.",
+        "error_tipico": "B (36): r=3t → r+t=48, sin retroceso temporal → 3t+t=48→t=12→r=36. No aplica 'hace 4 años'. C: error aritmético. D: asume t=8."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "r=34, t=14: 34+14=48 ✓; hace 4: 30=3(10) ✓. B=36 sin retroceso temporal (trampa fuerte). C/D errores. H2/L3/RCM ✓. Sistema implícito+variable oculta temporal. H1=alta. Nuevo contexto Rodrigo-Tomás."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_042_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H3",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H3_RCV_L3_01",
+        "estimated_time_sec": 190,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Lea el siguiente texto:\n\n«La inteligencia artificial generativa puede producir textos, imágenes y código indistinguibles de los creados por humanos. Quienes argumentan que esto democratiza la creatividad ignoran que la democratización sin alfabetización crítica tiende a reforzar, no a reducir, las asimetrías de poder existentes. Quien controla los modelos, los datos y la infraestructura determina quién se beneficia realmente.»\n\n¿Cuál es la conclusión implícita del argumento del autor?",
+      "opciones": {
+        "A": "La inteligencia artificial generativa debe ser prohibida para evitar que incremente las desigualdades sociales.",
+        "B": "La democratización tecnológica no garantiza equidad si no va acompañada de alfabetización crítica y redistribución del control sobre la infraestructura.",
+        "C": "Los usuarios de inteligencia artificial generativa producen trabajo de menor calidad que los creadores humanos.",
+        "D": "La creatividad humana es intrínsecamente superior a la creatividad generada por algoritmos de inteligencia artificial."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El argumento tiene dos premisas: (1) democratización sin alfabetización critica refuerza asimetrías; (2) quien controla la infraestructura controla el beneficio.",
+        "paso_2": "La conclusión implícita (no formulada): la democratización sola es insuficiente — requiere alfabetización y redistribución de control. B recoge esa conclusión. ✓",
+        "paso_critico": "El texto no pide prohibición (A), no compara calidad (C), no defiende superioridad humana (D). La conclusión es sobre condiciones estructurales de equidad.",
+        "error_tipico": "A propone prohibición que el texto no sugiere. C introduce juicio de calidad ausente. D introduce superioridad humana — el texto no la afirma."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: democratización insuficiente sin alfabetización + redistribución de control. A prohibición. C calidad ausente. D superioridad humana. H3/L3/RCV ✓. Argumento implícito multi-paso. H1=alta. Nuevo contexto IA-generativa."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_043_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_01",
+        "estimated_time_sec": 195,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«Cuando una sociedad invierte en educación pública de calidad, no solo mejora las perspectivas individuales de sus ciudadanos, sino que fortalece su capacidad colectiva de adaptación ante cambios económicos y tecnológicos.»",
+      "opciones": {
+        "A": "La educación pública de calidad beneficia únicamente a quienes tienen acceso directo a ella.",
+        "B": "Invertir en educación pública es costoso y solo se justifica cuando la economía nacional crece.",
+        "C": "La calidad de la educación pública determina tanto el desarrollo individual como la resiliencia colectiva frente a transformaciones económicas y tecnológicas.",
+        "D": "Las personas con mejor educación tienden a ser más productivas, lo cual reduce la desigualdad económica en el largo plazo."
+      },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "El enunciado original afirma: (i) la inversión en educación mejora perspectivas individuales; (ii) fortalece la capacidad colectiva de adaptación ante cambios.",
+        "paso_2": "C preserva ambas dimensiones (individual: desarrollo personal; colectiva: resiliencia ante transformaciones) con vocabulario equivalente. ✓",
+        "paso_critico": "La equivalencia semántica requiere conservar AMBAS dimensiones (individual + colectiva) y el tipo de cambios mencionados (económicos y tecnológicos).",
+        "error_tipico": "A reduce a beneficiarios directos — el texto dice colectiva. B introduce condicionalidad económica ausente. D introduce causalidad desigualdad→productividad que el texto no establece."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "C única: preserva individual+colectiva+tipo de cambios. A reduce. B introduce condicionalidad. D causa ausente. H5/L3/RCV ✓. Equivalencia semántica compleja multi-dimensión. H1=alta. Nuevo contexto educación-pública/resiliencia."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_044_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCM",
+      "skill": "H7",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H7_RCM_L3_01",
+        "estimated_time_sec": 205,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "Un cuadrado de lado 6 cm tiene inscritos cuatro triángulos rectángulos isósceles, uno en cada esquina, con catetos de 2 cm. ¿Cuál es el área del octógono que queda en el centro?",
+      "opciones": {
+        "A": "28 cm²",
+        "B": "32 cm²",
+        "C": "24 cm²",
+        "D": "20 cm²"
+      },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Área del cuadrado: 6² = 36 cm².",
+        "paso_2": "Área de cada triángulo rectángulo isósceles con catetos 2 cm: (2×2)/2 = 2 cm². Cuatro triángulos: 4 × 2 = 8 cm².",
+        "paso_3": "Área del octógono central: 36 − 8 = 28 cm². ✓",
+        "paso_critico": "Inferir la figura implícita (octógono) como el cuadrado menos cuatro triángulos de esquina. La variable oculta es la forma del área resultante.",
+        "error_tipico": "B (32 cm²): solo resta 2 triángulos. C (24 cm²): usa cateto=3 (mitad del lado) en lugar de 2. D (20 cm²): resta 16 cm² asumiendo triángulos mayores."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "36-4×2=36-8=28=A ✓. B resta 2 triángulos. C cateto incorrecto. D triángulos mayores. H7/L3/RCM ✓. Transformación geométrica+inferencia espacial no explícita (octógono implícito). H1=alta. Nuevo contexto cuadrado-triángulos-octógono."
+      },
+      "final_status": "approved"
+    },
+    {
+      "item_id": "ITEM_045_B025",
+      "item_type": "simulation",
+      "simulation_id": "sim_1",
+      "macro_area": "RCV",
+      "skill": "H5",
+      "difficulty": 3,
+      "H1": "alta",
+      "metadata": {
+        "template_id": "T_H5_RCV_L3_01",
+        "estimated_time_sec": 210,
+        "error_type": "Inferencia inválida"
+      },
+      "stem": "¿Cuál de las siguientes afirmaciones expresa la misma idea que la siguiente?\n\n«La presencia de regulación ambiental estricta no impide el crecimiento económico; lo reorienta hacia formas más sostenibles.»",
+      "opciones": {
+        "A": "La regulación ambiental estricta siempre genera una desaceleración económica que luego se compensa con desarrollo sostenible.",
+        "B": "La regulación ambiental estricta es compatible con el crecimiento económico si este adopta modalidades sostenibles.",
+        "C": "Sin regulación ambiental estricta, el crecimiento económico sería inevitable y permanente.",
+        "D": "El crecimiento económico sostenible solo puede lograrse en ausencia de regulación ambiental restrictiva."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "El enunciado original afirma: (i) regulación no impide crecimiento; (ii) lo reorienta (cambia su forma, no lo elimina).",
+        "paso_2": "B preserva ambas ideas: compatibilidad (no impide) y condición de sostenibilidad (la forma que adopta). ✓",
+        "paso_critico": "La equivalencia semántica debe conservar la negación ('no impide') y la reorientación ('hacia sostenible'), sin agregar 'desaceleración' (A) ni negar la regulación (D).",
+        "error_tipico": "A introduce 'desaceleración' y 'compensación' — proceso temporal ausente. C introduce 'en ausencia de regulación' — invierte la premisa. D directamente contradice el enunciado."
+      },
+      "adv_verdict": {
+        "verdict": "valid",
+        "conflict_flag": false,
+        "adv_notes": "B única: compatibilidad+reorientación. A distorsiona con proceso temporal. C invierte premisa. D contradice. H5/L3/RCV ✓. Equivalencia semántica compleja. H1=alta. Nuevo contexto regulación-ambiental/crecimiento."
+      },
+      "final_status": "approved"
+    }
+  ]
+}

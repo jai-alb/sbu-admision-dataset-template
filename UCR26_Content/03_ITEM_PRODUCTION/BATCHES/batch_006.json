@@ -1,0 +1,281 @@
+{
+  "batch_id": "BATCH_006",
+  "generated_at": "2026-03-23T17:56:00-06:00",
+  "prompt_id_gen": "GEN_v1",
+  "prompt_id_adv": "ADV_v1",
+  "item_type": "training",
+  "target_items": 12,
+  "items": [
+    {
+      "item_id": "ITEM_001_B006",
+      "template_id": "T_H2_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: 1-step direct verbal translation, H1=baja",
+      "stem": "En un jardín hay el doble de rosas que de tulipanes. Si hay 18 rosas, ¿cuántos tulipanes hay?",
+      "opciones": { "A": "36", "B": "9", "C": "6", "D": "16" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "rosas = 2 × tulipanes → tulipanes = 18 ÷ 2 = 9. ✓",
+        "paso_critico": "1 paso: dividir por 2. Relación explícita.",
+        "error_tipico": "A(36): 18×2=36, invierte la relación. C(6): 18÷3, divisor incorrecto. D(16): 18−2=16, resta en lugar de dividir."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Modelado incorrecto", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "18÷2=9=B ✓. Contexto jardín/rosas — nuevo. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_002_B006",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: descending −10 pattern, 1 step",
+      "stem": "¿Cuál es el número que sigue en la serie: 100, 90, 80, 70, ___?",
+      "opciones": { "A": "65", "B": "60", "C": "68", "D": "80" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencia constante: −10 en cada paso. Siguiente: 70−10 = 60. ✓",
+        "paso_critico": "Patrón de resta fija, visible directamente.",
+        "error_tipico": "A(65): usa Δ=−5. C(68): diferencia arbitraria. D(80): repite el término anterior."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Generalización excesiva", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "70−10=60=B ✓. Patrón −10 nuevo (previos: −3, +2, +3, ÷2, ×2, ×3, Fibonacci, cuadrados). nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_003_B006",
+      "template_id": "T_H6_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "l1_instantiation_note": "nivel_1: single-step direct proportion",
+      "stem": "Si 5 kg de arroz cuestan ₡2 500, ¿cuánto costarán 2 kg?",
+      "opciones": { "A": "5 000", "B": "500", "C": "1 000", "D": "1 250" },
+      "respuesta_correcta": "C",
+      "justificacion": {
+        "paso_1": "Precio por kg: ₡2500 ÷ 5 = ₡500/kg. Para 2 kg: ₡500 × 2 = ₡1 000. ✓",
+        "paso_critico": "Proporcionalidad directa explícita. 1 paso.",
+        "error_tipico": "A(5000): duplica el total. B(500): da tasa unitaria, olvida multiplicar. D(1250): 2500÷2=1250, divide total entre cantidad pedida."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 1, "tiempo_estimado": "1 min", "tipo_error": "Confusión de proporcionalidad", "H1": "baja" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "500×2=1000=C ✓. Contexto arroz/kg — nuevo. nivel_1 ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_004_B006",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«Las lenguas indígenas de América Latina representan un patrimonio cultural invaluable. Sin embargo, muchas se encuentran en peligro de extinción por el desplazamiento lingüístico causado por el español y el portugués. Los esfuerzos de revitalización impulsados por comunidades locales y algunos gobiernos han mostrado resultados alentadores, aunque insuficientes para revertir el proceso.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "El español y el portugués son los únicos idiomas que deben preservarse en América Latina.",
+        "B": "Las lenguas indígenas están en peligro, pero los esfuerzos de revitalización muestran resultados prometedores aunque parciales.",
+        "C": "Los gobiernos latinoamericanos son los únicos responsables del rescate de las lenguas indígenas.",
+        "D": "La extinción de las lenguas indígenas es un proceso irreversible que no puede detenerse."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura global: peligro de extinción → esfuerzos de revitalización con resultados limitados.",
+        "paso_2": "B integra ambas dimensiones (peligro + respuesta parcial). ✓",
+        "paso_critico": "No quedarse con una sola dimensión del texto.",
+        "error_tipico": "A contradice la premisa del texto. C introduce 'únicos' — el texto menciona también comunidades. D usa 'irreversible' — contradicho por 'resultados alentadores'."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única: integra peligro+respuesta. A/C/D distorsionan. Tema lenguas-indígenas — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_005_B006",
+      "template_id": "T_H4_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "¿Cuál es el término que sigue en la secuencia: 1, 3, 6, 10, 15, ___?",
+      "opciones": { "A": "18", "B": "21", "C": "20", "D": "25" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Diferencias entre términos: +2, +3, +4, +5. Las diferencias aumentan en +1 cada vez.",
+        "paso_2": "Siguiente diferencia: +6 → 15 + 6 = 21. ✓",
+        "paso_3": "Son los números triangulares: 1, 3, 6, 10, 15, 21.",
+        "paso_critico": "Identificar que las diferencias no son constantes sino que crecen en +1.",
+        "error_tipico": "A(18): repite Δ=+3 (segundo incremento). C(20): usa Δ=+5 repetido. D(25): suma el valor 10 como diferencia (error de generalización)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H4", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Generalización excesiva", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "15+6=21=B ✓. Números triangulares — nuevo. Distractores por errores en detección de incremento. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_006_B006",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«El gobierno invirtió una suma considerable en educación. __________, los índices de analfabetismo no disminuyeron de manera significativa.»",
+      "opciones": { "A": "Por lo tanto", "B": "En consecuencia", "C": "Asimismo", "D": "Sin embargo" },
+      "respuesta_correcta": "D",
+      "justificacion": {
+        "paso_1": "Inversión positiva (educación) → resultado negativo inesperado (analfabetismo persiste). Contraste.",
+        "paso_2": "'Sin embargo' (D) expresa el contraste entre expectativa y resultado. ✓",
+        "paso_critico": "La segunda proposición contradice lo esperado de la primera.",
+        "error_tipico": "A y B son consecuenciales: implicarían que la inversión causó el analfabetismo. C es aditivo-equitativo, no expresa contraste."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A": "incorrecto: consecuencial", "B": "incorrecto: consecuencial", "C": "incorrecto: aditivo" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "D único. Distractores formalmente incorrectos. Sin contrarrecíproco. Contexto inversión-educación/analfabetismo — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_007_B006",
+      "template_id": "T_H5_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "h5_special_rule_applied": true,
+      "stem": "Seleccione el conector más adecuado:\n\n«Las temperaturas en la región han aumentado considerablemente en los últimos años. __________, la frecuencia de sequías e incendios forestales se ha incrementado.»",
+      "opciones": { "A": "Sin embargo", "B": "Por consiguiente", "C": "No obstante", "D": "En cambio" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Temperatura aumenta → sequías e incendios aumentan. Relación causal directa y lógica.",
+        "paso_2": "'Por consiguiente' (B) es el único conector que expresa consecuencia causal. ✓",
+        "paso_critico": "La segunda proposición es consecuencia directa y esperada de la primera — no hay contraste.",
+        "error_tipico": "A y C son adversativos: implicarían que los incendios son inesperados dado el aumento de temperatura — ilógico. D es contrastivo, misma dirección incorrecta."
+      },
+      "h5_adv_verification": { "contrarreciprocal_check": "N/A — conector", "A": "incorrecto: adversativo", "C": "incorrecto: adversativo", "D": "incorrecto: contrastivo" },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H5", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B único. Distractores adversativos formalmente incorrectos en contexto causal. Contexto temperaturas/sequías — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_008_B006",
+      "template_id": "T_H3_RCV_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Lea el siguiente texto:\n\n«Durante períodos de crisis económica, la inversión en investigación y desarrollo suele ser de las primeras áreas en sufrir recortes. Sin embargo, los países que mantuvieron esta inversión durante las crisis mostraron una recuperación más rápida y mayor capacidad de innovación en el largo plazo.»\n\n¿Cuál es la idea central del texto?",
+      "opciones": {
+        "A": "Los recortes en investigación son inevitables durante las crisis económicas.",
+        "B": "La inversión sostenida en investigación durante las crisis favorece una recuperación más sólida.",
+        "C": "La innovación es el único factor que determina la velocidad de recuperación económica.",
+        "D": "Los países en crisis deben priorizar el gasto social sobre la investigación."
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Estructura: tendencia común (recortes) vs. evidencia contrastante (países que invirtieron se recuperaron mejor).",
+        "paso_2": "La idea central es la relación entre inversión mantenida y recuperación exitosa. B la captura. ✓",
+        "paso_critico": "La primera oración da el contexto, no la tesis. La tesis está en la segunda oración.",
+        "error_tipico": "A toma la primera oración como tesis (es solo contexto). C introduce 'único factor' ausente. D introduce prioridad sobre gasto social no mencionada."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCV", "skill": "H3", "dificultad": 2, "tiempo_estimado": "2.5 min", "tipo_error": "Interpretación literal errónea", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B única. A usa contexto como tesis. C/D introducen elementos ausentes. Tema crisis/investigación — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_009_B006",
+      "template_id": "T_H7_RCM_L2_01",
+      "prompt_id": "GEN_v1",
+      "stem": "Dos rectas se intersectan formando cuatro ángulos. Si uno de los ángulos mide 70°, ¿cuánto mide el ángulo adyacente a ese ángulo?",
+      "opciones": { "A": "70°", "B": "110°", "C": "20°", "D": "140°" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Los ángulos adyacentes formados por dos rectas son suplementarios: suman 180°.",
+        "paso_2": "Ángulo adyacente = 180° − 70° = 110°. ✓",
+        "paso_critico": "Distinguir ángulo adyacente (suplementario) de ángulo opuesto (igual).",
+        "error_tipico": "A(70°): confunde adyacente con opuesto por el vértice. C(20°): 90°−70°=20° (complementario, no aplica). D(140°): 70°×2=140° (duplica sin base)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 2, "tiempo_estimado": "2 min", "tipo_error": "Error de cálculo", "H1": "media" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "180−70=110=B ✓. A anticipa confusión opuesto/adyacente. Contexto rectas-intersectantes — nuevo. H1=media ✓." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_010_B006",
+      "template_id": "T_H2_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H2_RCM_L3_01 en BATCH_006",
+      "stem": "Una empresa invirtió en dos proyectos. En el proyecto A invirtió 3 veces más que en el proyecto B. Si la inversión total fue ₡2 800 000 y el proyecto A generó una ganancia del 10% sobre lo invertido en él, ¿cuánto ganó la empresa con el proyecto A?",
+      "opciones": { "A": "₡700 000", "B": "₡210 000", "C": "₡280 000", "D": "₡70 000" },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Sea B = inversión en proyecto B. A = 3B. Total: 3B + B = 4B = ₡2 800 000 → B = ₡700 000.",
+        "paso_2": "Inversión en A = 3 × ₡700 000 = ₡2 100 000.",
+        "paso_3": "Ganancia de A = 10% × ₡2 100 000 = ₡210 000. ✓",
+        "paso_4": "Verificación: 0.10 × 2100000 = 210000. ✓",
+        "paso_critico": "Variable oculta: hallar la inversión de A primero. La segunda transformación aplica el porcentaje sobre el monto correcto.",
+        "error_tipico": "A(₡700000): da la inversión de B, no la ganancia de A. C(₡280000): 10% del total (2800000×0.10=280000), aplica la tasa sobre el total en lugar de sobre A. D(₡70000): 10% de B (700000×0.10=70000), aplica la tasa sobre el monto incorrecto."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H2", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "4B=2800000→B=700000→A=2100000→10%=210000=B ✓. Unicidad confirmada. A da inversión B. C aplica % sobre total. D aplica % sobre B. H1=alta ✓. Contexto inversión/porcentaje — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_011_B006",
+      "template_id": "T_H6_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H6_RCM_L3_01 en BATCH_006",
+      "stem": "En el municipio A viven 45 000 personas en 150 km². En el municipio B viven 28 000 personas en 80 km². ¿Cuál municipio tiene mayor densidad poblacional y cuántas personas por km² tiene ese municipio?",
+      "opciones": {
+        "A": "Municipio A; 300 personas/km²",
+        "B": "Municipio B; 350 personas/km²",
+        "C": "Municipio A; 450 personas/km²",
+        "D": "Municipio B; 280 personas/km²"
+      },
+      "respuesta_correcta": "B",
+      "justificacion": {
+        "paso_1": "Densidad A = 45000 ÷ 150 = 300 personas/km².",
+        "paso_2": "Densidad B = 28000 ÷ 80 = 350 personas/km².",
+        "paso_3": "B > A en densidad (350 > 300). ✓",
+        "paso_critico": "Comparar razones (densidad), no valores absolutos de población. Trampa: A tiene mayor población total pero menor densidad.",
+        "error_tipico": "A(Municipio A; 300): compara poblaciones absolutas (45000 > 28000) y elige A sin calcular densidad. C(Municipio A; 450): elige A con cálculo incorrecto (45000÷100=450, wrong km²). D(Municipio B; 280): densidad calculada con km² incorrecto (28000÷100=280)."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H6", "dificultad": 3, "tiempo_estimado": "4 min", "tipo_error": "Modelado incorrecto", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "B=350 > A=300 ✓. Trampa principal: comparación de valores absolutos vs razones. H1=alta ✓. Contexto densidad-poblacional — nuevo." },
+      "final_status": "approved", "attempt": 1
+    },
+    {
+      "item_id": "ITEM_012_B006",
+      "template_id": "T_H7_RCM_L3_01",
+      "prompt_id": "GEN_v1",
+      "template_usage": "LIMITED — único uso de T_H7_RCM_L3_01 en BATCH_006",
+      "stem": "Se aplica una homotecia (dilatación) de razón 2 con centro en el punto C(1, 2) al punto P(3, 5). ¿Cuáles son las coordenadas del punto imagen P'?",
+      "opciones": { "A": "(5, 8)", "B": "(6, 10)", "C": "(2, 4)", "D": "(7, 12)" },
+      "respuesta_correcta": "A",
+      "justificacion": {
+        "paso_1": "Fórmula de homotecia con centro (h,k) y razón r: P' = (h + r(x−h), k + r(y−k)).",
+        "paso_2": "P'= (1 + 2(3−1), 2 + 2(5−2)) = (1 + 4, 2 + 6) = (5, 8). ✓",
+        "paso_critico": "Aplicar la fórmula con el centro correcto (no el origen). La inferencia espacial no explícita es el desplazamiento desde el centro antes de escalar.",
+        "error_tipico": "B(6,10): aplica la dilatación desde el origen: 2×P=(6,10), ignora el centro (C). Trampa más fuerte. C(2,4): dobla el centro en lugar de P: 2×C=(2,4), confunde qué punto se transforma. D(7,12): suma el centro AL resultado de la dilatación desde el origen: 2×P+C=(6,10)+(1,2)=(7,12), doble conteo."
+      },
+      "metadata": { "item_type": "training", "macro_area": "RCM", "skill": "H7", "dificultad": 3, "tiempo_estimado": "4.5 min", "tipo_error": "Inferencia inválida", "H1": "alta" },
+      "adv_verdict": { "verdict": "valid", "error_type": null, "conflict_flag": false, "adv_notes": "(1+4, 2+6)=(5,8)=A ✓. B fuerte (ignora centro). C dobla centro. D doble conteo. Homotecia desde centro no-origen — nueva transformación no usada antes. H1=alta ✓." },
+      "final_status": "approved", "attempt": 1
+    }
+  ],
+
+  "batch_summary": {
+    "batch_id": "BATCH_006",
+    "total_generated": 12,
+    "approved": 12,
+    "rejected": 0,
+    "retries_used": 0,
+    "batch_state": "completed",
+    "rejection_rate": 0.000,
+    "ambiguity_rate": 0.000,
+    "gen_vs_adv_conflict_rate": 0.000,
+    "threshold_status": {
+      "rejection_rate": "OK (0.000 < 0.25)",
+      "ambiguity_rate": "OK (0.000 < 0.10)",
+      "gen_vs_adv_conflict_rate": "OK (0.000 < 0.06) — 5th consecutive zero"
+    },
+    "difficulty_distribution": { "nivel_1": 3, "nivel_2": 6, "nivel_3": 3, "constraint": "EXACT MATCH ✓" },
+    "skill_distribution": { "H2": 2, "H3": 2, "H4": 2, "H5": 2, "H6": 2, "H7": 2, "balance": "PERFECTLY BALANCED ✓" },
+    "h1_distribution": { "baja": 3, "media": 6, "alta": 3, "pct_alta": 0.250, "constraint": "EXACT ✓" },
+    "macro_area_distribution": { "RCM": 7, "RCV": 5 },
+    "template_usage": {
+      "limited_used": ["T_H2_RCM_L3_01: 1 (ITEM_010) ✓", "T_H6_RCM_L3_01: 1 (ITEM_011) ✓", "T_H7_RCM_L3_01: 1 (ITEM_012) ✓"],
+      "banned_confirmed_unused": "T_H5_RCV_L3_01 ✓",
+      "l1_gap_flag": "FLAG_001 persists"
+    },
+    "structural_reuse_check": "PASSED — all contexts distinct from BATCH_001–005",
+    "drift_check_vs_batch005": { "all_metric_deltas": "0.000", "drift_signal": "NONE DETECTED ✓" },
+    "cumulative_training_segment": {
+      "b001": 9, "b002": 12, "b003": 12, "b004": 12, "b005": 12, "b006": 12,
+      "total_approved": 69,
+      "training_target": 140,
+      "progress_pct": 49.3
+    },
+    "stability_metrics": {
+      "consecutive_zero_conflict_batches": 5,
+      "consecutive_zero_rejection_batches": 5,
+      "consecutive_exact_distribution_batches": 5
+    },
+    "system_flags": ["FLAG_001 open — L1 template gap"],
+    "next_action": "ready_for_batch_7"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "generation_status": "active",
+  "pipeline_state": "active",
+  "last_batch": "BATCH_013",
+  "last_updated": "2026-03-24T11:43:07-06:00",
+  "batches_completed": 13,
+  "segment_counts": {
+    "training_count": 141,
+    "training_target": 140,
+    "training_status": "complete",
+    "diagnostic_count": 0,
+    "diagnostic_target": "18–20",
+    "diagnostic_status": "pending",
+    "sim_1_count": 15,
+    "sim_1_target": 45,
+    "sim_1_status": "in_progress",
+    "sim_2_count": 0,
+    "sim_2_target": 45,
+    "sim_2_status": "pending"
+  },
+  "current_segment": "sim_1",
+  "next_action": "generate BATCH_014 — continue sim_1 accumulation (30 items remaining)",
+  "overall_conflict_rate": 0.000,
+  "overall_ambiguity_rate": 0.000,
+  "open_flags": [
+    { "flag_id": "FLAG_001", "type": "template_gap", "severity": "medium", "status": "archived", "description": "No L1 templates in v1. Pipeline complete — no corrective action required.", "raised_in": "BATCH_002", "archived_in": "BATCH_012" },
+    { "flag_id": "FLAG_002", "type": "option_miscalibration", "severity": "low", "status": "closed", "description": "Resolved in BATCH_011 via option consistency protocol.", "raised_in": "BATCH_010", "closed_in": "BATCH_011" }
+  ]
+}
