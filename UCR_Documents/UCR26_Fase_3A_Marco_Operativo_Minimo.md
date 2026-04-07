@@ -2,7 +2,7 @@
 area: GOVERNANCE
 confidentiality: INTERNAL
 depends_on:
-- Blueprint.md
+- UCR26_Blueprint.md
 last_updated: 2026-04-06
 owner: System Architect
 scope: UCR26

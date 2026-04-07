@@ -2,12 +2,12 @@
 area: PROD
 confidentiality: INTERNAL
 depends_on:
-- UCR26_Fase_4A_Production-System.md
+- UCR26_Fase_4A_Production_System.md
 last_updated: 2026-04-06
 owner: System Architect
 scope: UCR26
 status: ARCHIVED
-title: UCR26_Fase_4B_Bank-System.md
+title: UCR26_Fase_4B_Bank_System.md
 version:
   major: 1
   minor: 0

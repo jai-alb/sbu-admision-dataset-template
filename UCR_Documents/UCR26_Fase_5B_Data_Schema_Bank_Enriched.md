@@ -2,12 +2,12 @@
 area: DATA_SCHEMA
 confidentiality: INTERNAL
 depends_on:
-- UCR26_Fase_5A_Governance_Bank-Build.md
+- UCR26_Fase_5A_Governance_Bank_Build.md
 last_updated: 2026-04-06
 owner: System Architect
 scope: UCR26
 status: ARCHIVED
-title: UCR26_Fase_5B_Data-Schema_Bank-Enriched.md
+title: UCR26_Fase_5B_Data_Schema_Bank_Enriched.md
 version:
   major: 1
   minor: 0

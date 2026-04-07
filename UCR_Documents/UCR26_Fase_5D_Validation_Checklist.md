@@ -2,12 +2,12 @@
 area: VALIDATION
 confidentiality: INTERNAL
 depends_on:
-- UCR26_Fase_5C_Build-Protocol.md
+- UCR26_Fase_5C_Build_Protocol.md
 last_updated: 2026-04-06
 owner: System Architect
 scope: UCR26
 status: ARCHIVED
-title: UCR26_Fase_5D_Validation-Checklist.md
+title: UCR26_Fase_5D_Validation_Checklist.md
 version:
   major: 1
   minor: 0

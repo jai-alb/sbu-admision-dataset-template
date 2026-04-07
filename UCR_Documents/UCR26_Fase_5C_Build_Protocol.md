@@ -2,12 +2,12 @@
 area: EXECUTION
 confidentiality: INTERNAL
 depends_on:
-- UCR26_Fase_5B_Data-Schema_Bank-Enriched.md
+- UCR26_Fase_5B_Data_Schema_Bank_Enriched.md
 last_updated: 2026-04-06
 owner: System Architect
 scope: UCR26
 status: ARCHIVED
-title: UCR26_Fase_5C_Build-Protocol.md
+title: UCR26_Fase_5C_Build_Protocol.md
 version:
   major: 1
   minor: 0

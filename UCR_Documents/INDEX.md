@@ -48,21 +48,21 @@ version:
 
 | Archivo | Descripción |
 |---|---|
-| **Blueprint.md** | Documento histórico de debate estratégico (ARCHIVED). Define el modelo de producción industrial IA para UCR 2026: arquitectura de 45 ítems / 110 min / 4 opciones, mapa cognitivo oficial con 7 habilidades nucleares (H2–H7), banco mínimo de ~250–255 ítems, decisiones de gobernanza multi-fuente y protocolo Clean Room. No es operativo; sirve como registro estratégico que antecede los SSoT. |
+| **UCR26_Blueprint.md** | Documento histórico de debate estratégico (ARCHIVED). Define el modelo de producción industrial IA para UCR 2026: arquitectura de 45 ítems / 110 min / 4 opciones, mapa cognitivo oficial con 7 habilidades nucleares (H2–H7), banco mínimo de ~250–255 ítems, decisiones de gobernanza multi-fuente y protocolo Clean Room. No es operativo; sirve como registro estratégico que antecede los SSoT. |
 | **INDEX.md** | Índice maestro del motor de contenido. Describe el estado general del sistema, su jerarquía de autoridad (reglas de inmutabilidad), mapping de directorios y el dataset final operativo. Es el documento de referencia principal de arquitectura. |
-| **F2_Explanation-System_Spec_v1.md** | Especificación para el sistema de generación de explicaciones (Fase 2). Define restricciones de prompts, comportamiento del sistema y reglas metodológicas para explicaciones estructuradas de ítems. |
-| **F2_PROMPTS_LIBRARY.md** | Repositorio central de plantillas de prompts e instrucciones del sistema utilizadas durante la ejecución del sistema de generación en la Fase 2. |
-| **F2_VALIDATION_SYSTEM.md** | Define los protocolos de validación y controles de aseguramiento de calidad QA aplicados exclusivamente a los outputs de generación de explicaciones. |
+| **UCR26_Fase_2A_Explanation_System.md** | Especificación para el sistema de generación de explicaciones (Fase 2). Define restricciones de prompts, comportamiento del sistema y reglas metodológicas para explicaciones estructuradas de ítems. |
+| **UCR26_Fase_2B_Prompt_Library.md** | Repositorio central de plantillas de prompts e instrucciones del sistema utilizadas durante la ejecución del sistema de generación en la Fase 2. |
+| **UCR26_Fase_2C_Validation_System.md** | Define los protocolos de validación y controles de aseguramiento de calidad QA aplicados exclusivamente a los outputs de generación de explicaciones. |
 | **UCR26_Fase_3A_Marco_Operativo_Minimo.md** | Define el marco mínimo obligatorio antes de iniciar extracciones. Establece estructura de directorios, plantillas de extracción, revisión cruzada, registro de decisiones ambiguas y el Batch Consistency Control (métricas obligatorias, deriva, consistencia entre agentes). |
 | **UCR26_Fase_3B_Protocolo_Extraccion_Estructural.md** | Protocolo formal de extracción estructural para agentes de IA. Define la secuencia de 11 pasos, criterios de clasificación, validación por batch, Cross-Source Convergence Check y reglas de falla/salida. |
 | **UCR26_Fase_3C_Muestra_Piloto_Controlada.md** | Valida la coherencia global del sistema de extracción sobre un examen (45 ítems). Confirma que los logs e inferencias escalan consistentemente, estableciendo la condición de entrada desde 3B. |
-| **UCR26_Fase_4A_Production-System.md** | Define el sistema de producción industrial automático. Cubre Template System, Prompt System, Item Gen System, Adversarial Validation y Metrics System de generación directa. Operativo 100% sin humanos. |
-| **UCR26_Fase_4B_Bank-System.md** | Define el ensamblaje lógico de batches. Establece segmentación estricta (diagnostic / simulation / training), aislamiento de segmentos, auditorías binarias, trazabilidad de fallos. Output pre-fase 5 dictó el bloque funcional de 252. |
-| **UCR26_Fase_4C_Pipeline-Execution.md** | Orquestación end-to-end del pipeline de producción automatizada de contenido. Control de flujos, reintentos, error mapping (error→acción) manual e inyección de datos. |
-| **UCR26_Fase_5A_Governance_Bank-Build.md** | Gobernanza de construcción final: reglas formales sin modificación conceptual o "reclasificación" de ítems tras la compilación exitosa en las fases previas. |
-| **UCR26_Fase_5B_Data-Schema_Bank-Enriched.md** | Estructura vinculante del `bank_v1_enriched.json`. Especifica field rules, trazabilidad exigida, y constantes de normalización JSON. Toda violación de esquema invalida un dataset. |
-| **UCR26_Fase_5C_Build-Protocol.md** | Protocolo explícito (10 pasos) para ensamblar el `bank_v1_enriched.json` mediante extracción de batch, normalizaciones ID y agregado analítico de simulación. |
-| **UCR26_Fase_5D_Validation-Checklist.md** | Checklist definitivo del SSoT (Schema compliance, count validation STRAT, duplicaciones, serialization, entre otros). Aprueba a JSON final para uso en plataforma mediante [UCR26-GOV-004] excepción formal de "252" ítems mínimamente válidos. |
+| **UCR26_Fase_4A_Production_System.md** | Define el sistema de producción industrial automático. Cubre Template System, Prompt System, Item Gen System, Adversarial Validation y Metrics System de generación directa. Operativo 100% sin humanos. |
+| **UCR26_Fase_4B_Bank_System.md** | Define el ensamblaje lógico de batches. Establece segmentación estricta (diagnostic / simulation / training), aislamiento de segmentos, auditorías binarias, trazabilidad de fallos. Output pre-fase 5 dictó el bloque funcional de 252. |
+| **UCR26_Fase_4C_Pipeline_Execution.md** | Orquestación end-to-end del pipeline de producción automatizada de contenido. Control de flujos, reintentos, error mapping (error→acción) manual e inyección de datos. |
+| **UCR26_Fase_5A_Governance_Bank_Build.md** | Gobernanza de construcción final: reglas formales sin modificación conceptual o "reclasificación" de ítems tras la compilación exitosa en las fases previas. |
+| **UCR26_Fase_5B_Data_Schema_Bank_Enriched.md** | Estructura vinculante del `bank_v1_enriched.json`. Especifica field rules, trazabilidad exigida, y constantes de normalización JSON. Toda violación de esquema invalida un dataset. |
+| **UCR26_Fase_5C_Build_Protocol.md** | Protocolo explícito (10 pasos) para ensamblar el `bank_v1_enriched.json` mediante extracción de batch, normalizaciones ID y agregado analítico de simulación. |
+| **UCR26_Fase_5D_Validation_Checklist.md** | Checklist definitivo del SSoT (Schema compliance, count validation STRAT, duplicaciones, serialization, entre otros). Aprueba a JSON final para uso en plataforma mediante [UCR26-GOV-004] excepción formal de "252" ítems mínimamente válidos. |
 
 ---
 
