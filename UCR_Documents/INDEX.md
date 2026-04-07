@@ -1,151 +1,81 @@
-# axion-u-content-engine — INDEX
+# INDEX — axion-u-content-engine
 
-**STATUS: CLOSED (ARCHIVED PRODUCTION SYSTEM)**
-
-### System Role:
-Cognitive content production engine for UCR 2026.
-
-### System State:
-- Phases 3A–5D fully completed
-- Pipeline frozen
-- No active execution allowed
-- System is immutable unless explicitly versioned
-
-### Final Output:
-- **File:** `UCR26_Content/03_ITEM_PRODUCTION/bank_v1_enriched.json`
-- **Total items:** 252
-- **Status:** `production_ready`
-- **Role:** Single Source of Truth (SSoT), exported to main system.
+**Sistema:** UCR 2026 Content Engine  
+**Estado:** **CLOSED (ARCHIVED PRODUCTION SYSTEM)**  
 
 ---
 
-## System Layers
+## Reglas Críticas e Inmutabilidad (System Rules)
 
-### 1. Normative Layer (Execution Rules)
-**Location:** `/UCR_Documents/`
+1. **El motor está CERRADO.** No se permite la ejecución activa.
+2. **Sistema inmutable:** Ninguna fase (F3–F5) puede ser re-ejecutada y no se permite la generación de ítems.
+3. **Restricción de datos:** Ninguna modificación al dataset final está permitida. El sistema solo es modificable si es posicionado bajo un versionado explícitamente nuevo.
+4. **Relación con Producción (Main System):** Este repositorio es *upstream* de AXION U. AXION U consume **ÚNICAMENTE** el dataset final. No existe dependencia de runtime entre los sistemas y este motor NO es parte de producción en vivo.
 
-- **`F2_Explanation-System_Spec_v1.md`**  
-  Specification for the Phase 2 explanation generation system, defining prompt constraints, system behavior, and structured item explanation rules.
+### Jerarquía de Autoridad (Internal Hierarchy)
+1. **`bank_v1_enriched.json`** → Absolute SSoT (Single Source of Truth).
+2. **`Decision_Log.md`** → Excepciones y overrides de gobernanza.
+3. **Documentos normativos** (Fases 2–5) → Reglas teóricas y protocolos.
+4. **Artefactos de ejecución** → Evidencia histórica (No vinculante, no SSoT).
 
-- **`F2_PROMPTS_LIBRARY.md`**  
-  Central repository of prompt templates and system instructions used during Phase 2 execution.
-
-- **`F2_VALIDATION_SYSTEM.md`**  
-  Defines the validation protocols and quality assurance checks applied to the explanation generation outputs.
-
-- **`UCR26_Fase_3A_Marco_Operativo_Minimo.md`**  
-  Defines the minimum operational framework for Phase 3, establishing the baseline rules and conditions for execution.
-
-- **`UCR26_Fase_3B_Protocolo_Extraccion_Estructural.md`**  
-  Protocol detailing the methodology for the structural extraction of cognitive patterns from source materials.
-
-- **`UCR26_Fase_3C_Muestra_Piloto_Controlada.md`**  
-  Outlines the controlled pilot sample execution, defining the scope and expected outcomes for initial verification.
-
-- **`UCR26_Fase_4A_Production-System.md`**  
-  Defines the architecture and operational rules for the Phase 4 item production system.
-
-- **`UCR26_Fase_4B_Bank-System.md`**  
-  Specifies the structure and management protocols for the staging bank system prior to compilation.
-
-- **`UCR26_Fase_4C_Pipeline-Execution.md`**  
-  Details the execution steps and orchestration of the automated production pipeline.
-
-- **`UCR26_Fase_5A_Governance_Bank-Build.md`**  
-  Establishes the governance rules and decision-making criteria for assembling the final Phase 5 bank build.
-
-- **`UCR26_Fase_5B_Data-Schema_Bank-Enriched.md`**  
-  Defines the definitive JSON data schema for the final enriched item bank dataset.
-
-- **`UCR26_Fase_5C_Build-Protocol.md`**  
-  Step-by-step protocol for assembling against schemas and compiling the final production-ready dataset.
-
-- **`UCR26_Fase_5D_Validation-Checklist.md`**  
-  Final validation checklist ensuring the structural integrity and compliance of the complete bank before system lock.
-
-**Rule:**
-These documents define the full execution system but are now **CLOSED** and **NON-EXECUTABLE**.
+> **FINAL RULE:**
+> Si se intenta regenerar ítems, modificar el dataset, o reinterpretar las fases directamente aquí, el sistema debe considerarse **VIOLATED**.
 
 ---
 
-### 2. Data Layer (Core Assets)
-**Location:** `/UCR26_Content/`
+## Capa 1: Normativa y Reglas de Ejecución
+**Ubicación:** `/UCR_Documents/`  
+*Estos documentos definen todo el sistema de ejecución pero actualmente son **CLOSED** y **NON-EXECUTABLE**.*
 
-- **`03_ITEM_PRODUCTION/bank_v1_enriched.json`** → FINAL DATASET (SSoT)  
-  The final compiled dataset and Absolute Single Source of Truth containing all cognitive items (252) ready for runtime consumption.
-
-- **`02_PATTERN_REGISTRY/MASTER_Structural_Patterns.md`** → cognitive pattern base  
-  The definitive registry of cognitive patterns and structural rules used during structural extraction and item generation.
-
-**Notes:**
-- `bank_v1_enriched.json` is the **ONLY** valid output of this system.
-- No regeneration or modification allowed.
-
----
-
-### 3. Governance & Traceability Layer
-**Location:** `/UCR26_Content/05_GOVERNANCE/` and `/UCR26_Content/04_VALIDATION/`
-
-- **`Decision_Log.md`**  
-  Records all structural and architectural decisions, acting as the governance override for systematic exceptions.
-
-- **`Version_Log.md`**  
-  Tracks historical phases, repository versions, and execution progression throughout the project.
-
-- **`Cross_Review_Log.md`**  
-  Documents peer reviews, cross-validations, and exception handlings executed during the final validation phases.
-
-**Purpose:**
-- Record all structural decisions.
-- Track exceptions (e.g. bank size adjustment to 252).
-- Ensure full auditability of the system.
+| Archivo | Descripción |
+|---|---|
+| **Blueprint.md** | Documento histórico de debate estratégico (ARCHIVED). Define el modelo de producción industrial IA para UCR 2026: arquitectura de 45 ítems / 110 min / 4 opciones, mapa cognitivo oficial con 7 habilidades nucleares (H2–H7), banco mínimo de ~250–255 ítems, decisiones de gobernanza multi-fuente y protocolo Clean Room. No es operativo; sirve como registro estratégico que antecede los SSoT. |
+| **INDEX.md** | Índice maestro del motor de contenido. Describe el estado general del sistema, su jerarquía de autoridad (reglas de inmutabilidad), mapping de directorios y el dataset final operativo. Es el documento de referencia principal de arquitectura. |
+| **F2_Explanation-System_Spec_v1.md** | Especificación para el sistema de generación de explicaciones (Fase 2). Define restricciones de prompts, comportamiento del sistema y reglas metodológicas para explicaciones estructuradas de ítems. |
+| **F2_PROMPTS_LIBRARY.md** | Repositorio central de plantillas de prompts e instrucciones del sistema utilizadas durante la ejecución del sistema de generación en la Fase 2. |
+| **F2_VALIDATION_SYSTEM.md** | Define los protocolos de validación y controles de aseguramiento de calidad QA aplicados exclusivamente a los outputs de generación de explicaciones. |
+| **UCR26_Fase_3A_Marco_Operativo_Minimo.md** | Define el marco mínimo obligatorio antes de iniciar extracciones. Establece estructura de directorios, plantillas de extracción, revisión cruzada, registro de decisiones ambiguas y el Batch Consistency Control (métricas obligatorias, deriva, consistencia entre agentes). |
+| **UCR26_Fase_3B_Protocolo_Extraccion_Estructural.md** | Protocolo formal de extracción estructural para agentes de IA. Define la secuencia de 11 pasos, criterios de clasificación, validación por batch, Cross-Source Convergence Check y reglas de falla/salida. |
+| **UCR26_Fase_3C_Muestra_Piloto_Controlada.md** | Valida la coherencia global del sistema de extracción sobre un examen (45 ítems). Confirma que los logs e inferencias escalan consistentemente, estableciendo la condición de entrada desde 3B. |
+| **UCR26_Fase_4A_Production-System.md** | Define el sistema de producción industrial automático. Cubre Template System, Prompt System, Item Gen System, Adversarial Validation y Metrics System de generación directa. Operativo 100% sin humanos. |
+| **UCR26_Fase_4B_Bank-System.md** | Define el ensamblaje lógico de batches. Establece segmentación estricta (diagnostic / simulation / training), aislamiento de segmentos, auditorías binarias, trazabilidad de fallos. Output pre-fase 5 dictó el bloque funcional de 252. |
+| **UCR26_Fase_4C_Pipeline-Execution.md** | Orquestación end-to-end del pipeline de producción automatizada de contenido. Control de flujos, reintentos, error mapping (error→acción) manual e inyección de datos. |
+| **UCR26_Fase_5A_Governance_Bank-Build.md** | Gobernanza de construcción final: reglas formales sin modificación conceptual o "reclasificación" de ítems tras la compilación exitosa en las fases previas. |
+| **UCR26_Fase_5B_Data-Schema_Bank-Enriched.md** | Estructura vinculante del `bank_v1_enriched.json`. Especifica field rules, trazabilidad exigida, y constantes de normalización JSON. Toda violación de esquema invalida un dataset. |
+| **UCR26_Fase_5C_Build-Protocol.md** | Protocolo explícito (10 pasos) para ensamblar el `bank_v1_enriched.json` mediante extracción de batch, normalizaciones ID y agregado analítico de simulación. |
+| **UCR26_Fase_5D_Validation-Checklist.md** | Checklist definitivo del SSoT (Schema compliance, count validation STRAT, duplicaciones, serialization, entre otros). Aprueba a JSON final para uso en plataforma mediante [UCR26-GOV-004] excepción formal de "252" ítems mínimamente válidos. |
 
 ---
 
-### 4. Execution Evidence (Non-SSoT)
-**Location:**
-- `/UCR26_Content/03_ITEM_PRODUCTION/BATCHES/`
-- `/UCR26_Content/03_ITEM_PRODUCTION/_deprecated/`
-- scripts (.js, .py, .ps1)
+## Capa 2: Datos y Core Assets (Absolute SSoT)
+**Ubicación:** `/UCR26_Content/`
 
-**Purpose:**
-- Historical evidence of execution.
-- Debugging and reproducibility.
+### Output Final Operativo:
+- **`03_ITEM_PRODUCTION/bank_v1_enriched.json`** → **FINAL DATASET (SSoT)**  
+  El banco final compilado que actúa como única fuente de verdad validada. Contiene la totalidad de los ítems cognitivos (`252`) y es el único archivo listo para consumo runtime. No se permite regeneración ni modificación.
 
-**Rule:**
-These are **NOT SSoT** and must not be used for rebuilding without explicit reactivation.
+### Recursos Raw y Estructurales (Históricos):
 
----
-
-## System Rules (Critical)
-1. This engine is **CLOSED**.
-2. No phase (3–5) can be re-executed.
-3. No item generation is allowed.
-4. No modification to dataset is allowed.
-5. All documents are historical except logs.
+| Subdirectorio / Archivo | Descripción |
+|---|---|
+| **`00_SOURCE_RAW/UCR_2025_V1.md`** | Fuente raw del examen UCR 2025 en formato Markdown. Insumo estricto original para extracción estructural. Inmutable. |
+| **`01_EXTRACTION_STRUCTURAL/UCR_2025_V1.md`** | Extracción estructural y clasificación de tipología cognitiva ítem por ítem del examen UCR_2025_V1 siguiendo F3A. |
+| **`01_EXTRACTION_STRUCTURAL/UCR_2025_V3.md`** | Segunda fuente independiente utilizada para Cross-Source Convergence Check validado transversalmente. |
+| **`02_PATTERN_REGISTRY/MASTER_Structural_Patterns.md`** | Registro maestro base con leyes y patrones estructurales lógicos detectados repetidamente (Placeholder base; reglas se embebieron por pipeline). |
+| **`03_ITEM_PRODUCTION/BATCHES/`** | Directorio con evidencia transitoria de ejecución temporal por automatización (Not SSoT). |
 
 ---
 
-## Authority Hierarchy (Internal)
-1. **bank_v1_enriched.json** → Absolute SSoT
-2. **Decision_Log.md** → governance overrides
-3. **Normative documents** (F3–F5)
-4. **Execution artifacts** (non-binding)
+## Capa 3: Ejecución, Validación y Gobernanza
+**Ubicación:** `/UCR26_Content/04_VALIDATION/` y `/UCR26_Content/05_GOVERNANCE/`  
+*Propósito: Rastrear decisiones operativas de modificación masiva y justificar alteraciones métricas sobre la marcha.*
 
----
-
-## Relationship to Main System
-- This repository is upstream of **AXION U**.
-- AXION U consumes **ONLY** the dataset.
-- No runtime dependency exists between systems.
-- Engine is not part of production runtime.
-
----
-
-## Final Rule
-If any attempt is made to:
-- regenerate items
-- modify dataset
-- reinterpret phases
-
-→ system must be considered **VIOLATED**
+| Archivo | Descripción |
+|---|---|
+| **`04_VALIDATION/Cross_Review_Log.md`** | Log de evidencia de revisión cruzada inter-agente durante la extracción de datos inicial. Los conflictos relevantes terminaban en el Decision Log. |
+| **`05_GOVERNANCE/Decision_Log.md`** | Registro oficial y de máxima autoridad humana sobre gobernanza. Contiene overriding estructurado (ej. ajuste oficial GOV-004 validando el tamaño del banco a 252 ítems por recortes estructurales vs targets originales). |
+| **`05_GOVERNANCE/Version_Log.md`** | Historial progresivo de los estados de arquitectura (ej. v1.5: cierre definitivo, pipeline frozen, SSoT declarado). |
+| **`05_GOVERNANCE/UCR_2025_V1_aggregates_v2.md`** | Resumen cuantitativo generado sobre métricas extraídas en fases investigativas. |
+| **`05_GOVERNANCE/UCR_2025_V1_comparison_FINAL.md`** | Registro final sobre la comparación estructural (Cross-Source Convergence Check evidenciado). |
+| **`05_GOVERNANCE/UCR_2025_V1_dataset_validation.md`** | Validación comprobada de cumplimiento de fase inicial (3B/3C). |
+| **`05_GOVERNANCE/UCR_2025_V1_pilot_selection.md`** | Elección y registro explícito que determinó por qué un examen piloto específico operaría como muestra base en las validaciones tempranas. |
