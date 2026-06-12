@@ -1,0 +1,83 @@
+{
+  "_instructions": "Copy this file to exams/<exam-id>/exam_config.json and fill in every field. Remove all _instructions and _note fields before running the engine. See engine/config.schema.json for the full schema and docs/HOW_TO_ADD_AN_EXAM.md for guidance.",
+
+  "exam_id":   "REPLACE_WITH_LOWERCASE_SLUG",
+  "exam_name": "REPLACE_WITH_FULL_EXAM_NAME",
+  "language":  "es",
+
+  "_note_skill_taxonomy": "Define one entry per skill. Use H1 (or equivalent) for the cognitive load dimension if your exam has one. All other entries are evaluable skills.",
+  "skill_taxonomy": {
+    "H1": {
+      "label": "REPLACE_cognitive_load_dimension_name",
+      "description": "REPLACE_description",
+      "type": "cognitive_load"
+    },
+    "H2": {
+      "label": "REPLACE_skill_name",
+      "description": "REPLACE_description",
+      "type": "skill",
+      "macro_area": "REPLACE_macro_area_id"
+    }
+  },
+
+  "_note_macro_areas": "Group skills into broad assessment domains. Each 'skills' array lists skill IDs that belong to this domain.",
+  "macro_areas": [
+    {
+      "id":     "REPLACE_AREA_ID",
+      "label":  "REPLACE_Area_Full_Name",
+      "skills": ["H2"]
+    }
+  ],
+
+  "_note_segments": "Set target item counts for each segment. Only 'training' requires explanation_layer: true.",
+  "segments": {
+    "training":   { "target": 150, "explanation_layer": true },
+    "diagnostic": { "target": 20,  "explanation_layer": false },
+    "simulation": { "sets": 2, "items_per_set": 45, "explanation_layer": false }
+  },
+
+  "difficulty_levels": {
+    "L1": { "label": "Fundamental",   "description": "Direct solution, minimal inference." },
+    "L2": { "label": "Intermediate",  "description": "2 chained steps, plausible distractors." },
+    "L3": { "label": "High",          "description": "Strong inference, structural trap." }
+  },
+
+  "_note_explanation_rules": "These rules govern generation AND validation. correct_line1_pattern is a regex string applied as new RegExp(...). Prefixes are the literal strings required at the start of each line.",
+  "explanation_rules": {
+    "correct_line1_pattern":  "^[A-ZÁÉÍÓÚÑ][^?!\\n]{10,}\\.$",
+    "incorrect_line1_prefix": "Error:",
+    "incorrect_line2_prefix": "Corrección:",
+    "forbidden_words": [
+      "REPLACE_word1", "REPLACE_word2"
+    ],
+    "forbidden_replacements": {
+      "REPLACE_word1": "REPLACE_replacement1"
+    },
+    "prohibited_substrings": [
+      "REPLACE_phrase1"
+    ],
+    "min_line_length": 40,
+    "max_line_length": 120
+  },
+
+  "_note_explanation_fallbacks": "One entry per skill ID. Used when the item's justification fields are too short. All four fields required per skill.",
+  "explanation_fallbacks": {
+    "H2": {
+      "correct_line1": "REPLACE — fallback explanation_correct line 1 for this skill.",
+      "correct_line2": "REPLACE — fallback explanation_correct line 2 for this skill.",
+      "error":         "REPLACE — fallback error description (without prefix) for this skill.",
+      "correction":    "REPLACE — fallback correction text (without prefix) for this skill."
+    }
+  },
+
+  "validation_thresholds": {
+    "ambiguity_rate":           0.10,
+    "gen_vs_adv_conflict_rate": 0.08,
+    "rejection_rate":           0.25
+  },
+
+  "output": {
+    "dataset_filename":      "dataset_v1.json",
+    "explanations_filename": "explanations_v1.json"
+  }
+}

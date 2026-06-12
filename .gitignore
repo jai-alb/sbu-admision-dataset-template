@@ -1,3 +1,6 @@
+# Exam instance data — private (never commit exam content)
+exams/
+
 # Node
 node_modules/
 npm-debug.log*

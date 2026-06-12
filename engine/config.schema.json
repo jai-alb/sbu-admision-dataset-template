@@ -1,0 +1,191 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dataset Engine — Exam Configuration Schema",
+  "description": "Every exam processed by this engine must provide a JSON file conforming to this schema. The engine reads it at runtime and derives all exam-specific behavior from it.",
+  "type": "object",
+  "required": [
+    "exam_id", "exam_name", "language",
+    "skill_taxonomy", "macro_areas", "segments",
+    "difficulty_levels", "explanation_rules", "explanation_fallbacks",
+    "output"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "exam_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "Unique lowercase slug. Used as folder name and output file prefix. Example: 'ucr26'"
+    },
+    "exam_name": {
+      "type": "string",
+      "description": "Human-readable full name of the exam. Example: 'UCR 2026 Admissions Exam'"
+    },
+    "language": {
+      "type": "string",
+      "pattern": "^[a-z]{2}$",
+      "description": "ISO 639-1 two-letter language code for the exam content. Example: 'es', 'en'"
+    },
+    "skill_taxonomy": {
+      "type": "object",
+      "description": "Map of skill IDs to their definitions. Each key is a skill identifier (e.g., H1, H2). H1 is reserved for the cognitive load dimension if present.",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["label"],
+        "properties": {
+          "label": { "type": "string" },
+          "description": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["cognitive_load", "skill"],
+            "description": "cognitive_load: cross-cutting dimension (like H1). skill: evaluable competency."
+          },
+          "macro_area": {
+            "type": "string",
+            "description": "Which macro area this skill belongs to. Must match an id in macro_areas[]."
+          }
+        }
+      }
+    },
+    "macro_areas": {
+      "type": "array",
+      "description": "Groupings of skills into broad assessment domains.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "skills"],
+        "properties": {
+          "id":     { "type": "string" },
+          "label":  { "type": "string" },
+          "skills": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "segments": {
+      "type": "object",
+      "description": "Target counts and properties for each output segment.",
+      "required": ["training"],
+      "properties": {
+        "training": {
+          "type": "object",
+          "required": ["target", "explanation_layer"],
+          "properties": {
+            "target":            { "type": "integer", "minimum": 1 },
+            "explanation_layer": { "type": "boolean", "description": "Whether this segment gets the F2 explanation layer." }
+          }
+        },
+        "diagnostic": {
+          "type": "object",
+          "properties": {
+            "target":            { "type": "integer", "minimum": 0 },
+            "explanation_layer": { "type": "boolean" }
+          }
+        },
+        "simulation": {
+          "type": "object",
+          "properties": {
+            "sets":              { "type": "integer", "minimum": 1 },
+            "items_per_set":     { "type": "integer", "minimum": 1 },
+            "explanation_layer": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "difficulty_levels": {
+      "type": "object",
+      "description": "Map of difficulty level IDs to their definitions.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["label"],
+        "properties": {
+          "label":       { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "explanation_rules": {
+      "type": "object",
+      "description": "Rules that govern how explanation pairs are generated and validated.",
+      "required": [
+        "correct_line1_pattern",
+        "incorrect_line1_prefix",
+        "incorrect_line2_prefix",
+        "forbidden_words",
+        "forbidden_replacements",
+        "prohibited_substrings",
+        "min_line_length",
+        "max_line_length"
+      ],
+      "properties": {
+        "correct_line1_pattern": {
+          "type": "string",
+          "description": "Regex string for explanation_correct line 1 validation. Applied as new RegExp(...)."
+        },
+        "incorrect_line1_prefix": {
+          "type": "string",
+          "description": "Required prefix for explanation_incorrect_common line 1. Example: 'Error:'"
+        },
+        "incorrect_line2_prefix": {
+          "type": "string",
+          "description": "Required prefix for explanation_incorrect_common line 2. Example: 'Corrección:'"
+        },
+        "forbidden_words": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Words that must not appear in generated explanation text."
+        },
+        "forbidden_replacements": {
+          "type": "object",
+          "description": "Map of forbidden_word → replacement_word used by the generation cleaner.",
+          "additionalProperties": { "type": "string" }
+        },
+        "prohibited_substrings": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Multi-word phrases that must not appear anywhere in output (case-insensitive)."
+        },
+        "min_line_length": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Minimum character length per explanation line."
+        },
+        "max_line_length": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Maximum character length per explanation line."
+        }
+      }
+    },
+    "explanation_fallbacks": {
+      "type": "object",
+      "description": "Fallback explanation text used by the generator when the item's justification fields are too short or empty. Keyed by skill ID matching skill_taxonomy.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["correct_line1", "correct_line2", "error", "correction"],
+        "properties": {
+          "correct_line1": { "type": "string", "description": "Fallback for explanation_correct line 1." },
+          "correct_line2": { "type": "string", "description": "Fallback for explanation_correct line 2." },
+          "error":         { "type": "string", "description": "Fallback error description (without prefix)." },
+          "correction":    { "type": "string", "description": "Fallback correction text (without prefix)." }
+        }
+      }
+    },
+    "validation_thresholds": {
+      "type": "object",
+      "description": "Quality gates for the generation pipeline (from execution_config.json).",
+      "properties": {
+        "ambiguity_rate":            { "type": "number", "minimum": 0, "maximum": 1 },
+        "gen_vs_adv_conflict_rate":  { "type": "number", "minimum": 0, "maximum": 1 },
+        "rejection_rate":            { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "output": {
+      "type": "object",
+      "required": ["dataset_filename", "explanations_filename"],
+      "description": "Output filenames relative to the exam folder. Paths are resolved as: exam_dir/03_item_production/<dataset_filename> and exam_dir/04_validation/<explanations_filename>.",
+      "properties": {
+        "dataset_filename":      { "type": "string", "default": "dataset_v1.json" },
+        "explanations_filename": { "type": "string", "default": "explanations_v1.json" }
+      }
+    }
+  }
+}
