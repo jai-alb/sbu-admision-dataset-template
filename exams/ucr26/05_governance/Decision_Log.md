@@ -1,4 +1,4 @@
-# Decision Log - UCR26 Content System
+# Decision Log [exam: ucr26]
 
 ## DEC-XXX
 - **Date:** 

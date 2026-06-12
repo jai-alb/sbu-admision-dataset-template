@@ -1,4 +1,4 @@
-# Version Log - UCR26 Content System
+# Version Log [exam: ucr26]
 
 ## 2026-03-12 - v0.1 - System Initialization
 - Completion of Phase 3A: Marco Operativo Mínimo.
